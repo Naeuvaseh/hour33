@@ -1,6 +1,37 @@
 <ActionBar class="action-bar" 
            [backgroundColor]="theme.actionBarColor"
            [color]="theme.actionBarTextColor">
-        <Label class="action-bar-title" text="Search"></Label>
-    </ActionBar>
-<Label text="search page"></Label>
+    <Label class="action-bar-title" text="Search"></Label>
+</ActionBar>
+<ScrollView row="0">
+    <WrapLayout orientation="horizontal">
+        <GridLayout *ngFor="let item of items" 
+                    width="100%" 
+                    columns="auto, *" 
+                    rows="auto, *"
+                    [backgroundColor]="theme.pageBackgroundColor">
+            <Label
+                column="0"
+                row="0"
+                text="{{ item.vendorName }}"
+                horizontalAlignment="center"
+                verticalAlignment="bottom"
+                width="100%"
+                padding="10"
+                fontSize="18"
+                [color]="theme.accentColor"
+            ></Label>
+            <Label
+                column="0"
+                row="1"
+                text="{{ item.phone }}"
+                horizontalAlignment="center"
+                verticalAlignment="bottom"
+                width="100%"
+                padding="0 0 5 10"
+                fontSize="13"
+                [color]="theme.inactiveColor"
+        ></Label>
+        </GridLayout>
+    </WrapLayout>
+</ScrollView>
