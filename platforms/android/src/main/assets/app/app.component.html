@@ -1,0 +1,16 @@
+<GridLayout rows="*, auto">
+    <StackLayout row="0" 
+                 orientation="vertical"
+                 [backgroundColor]="white">
+       <page-router-outlet></page-router-outlet>
+    </StackLayout>
+    <BottomBar row="1" 
+              [items]="items" 
+              [hide]="hidden" 
+              [titleState]="titleState" 
+              (loaded)="tabLoaded($event)" 
+              (tabSelected)="tabSelected($event)" 
+              [inactiveColor]="inactiveColor" 
+              [accentColor]="accentColor" 
+              colored="true"></BottomBar>
+</GridLayout>
