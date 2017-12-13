@@ -1,11 +1,23 @@
 [
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\icon.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\person.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\person.png"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\icon.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\account.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\account.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\account.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\account.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\logo.png",
@@ -16,12 +28,28 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\star.png"
     },
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\background.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\favorite.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\favorite.png"
     },
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\star.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\star.png"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\search.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\search.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\search.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\search.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\favorite.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\favorite.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\background.png",
@@ -30,5 +58,9 @@
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\person.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\person.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\logo.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
     }
 ]
