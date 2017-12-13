@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Theme } from '../../settings';
 
 @Component({
   selector: 'account',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AccountComponent {
 
-  constructor() {
-
-  }
+  private theme;
+  
+    constructor() {
+      this.theme = Theme;
+    }
 }

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { Theme } from '../../settings';
 
 @Component({
   selector: 'favorites',
-  templateUrl: './components/favorites/favorites.html'
+  templateUrl: './components/favorites/favorites.component.html'
 })
 export class FavoritesComponent {
 
-  constructor() {
-
-  }
+  private theme;
+  
+    constructor() {
+      this.theme = Theme;
+    }
 }

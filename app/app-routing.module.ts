@@ -8,7 +8,7 @@ const routes: Routes = [
     { path: "search", loadChildren: './components/search/search.module#SearchModule' },
     { path: "specials", loadChildren: './components/specials/specials.module#SpecialsModule' },
     { path: "favorites", loadChildren: './components/favorites/favorites.module#FavoritesModule' },
-    { path: "account", loadChildren: './components/account/account.module#AccounthModule' },
+    { path: "account", loadChildren: './components/account/account.module#AccountModule' },
 ];
 
 @NgModule({
