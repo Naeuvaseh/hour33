@@ -3,36 +3,44 @@
            [color]="theme.actionBarTextColor">
     <Label class="action-bar-title" text="Search"></Label>
 </ActionBar>
-<ScrollView row="0">
-    <WrapLayout orientation="horizontal">
+<ScrollView>
+    <WrapLayout>
         <GridLayout *ngFor="let item of items" 
                      width="100%" 
+                     height="100%"
                      columns="auto, *, *, *, *" 
-                     rows="auto, auto, auto, *"
+                     rows="auto, *, *, *, *"
                     [backgroundColor]="theme.pageBackgroundColor">
-            <StackLayout colSpan="3" row="0">
+            <!-- Venue Details -->
+            <StackLayout colSpan="4" 
+                         row="0"
+                         col="0"
+                         orientation="vertical">
+                <!-- Venue Name -->
                 <Label
                     column="0"
                     row="0"
+                    textWrap="true"
                     text="{{ item.vendorName }}"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
                     padding="10 10 5 10"
-                    fontSize="18"
-                    [color]="theme.accentColor"
-                ></Label>
+                    fontSize="20"
+                    [color]="theme.accentColor"></Label>
+                <!-- Description -->
                 <Label
                     column="0"
                     row="1"
+                    textWrap="true"
                     text="{{ item.description }}"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
-                    padding="0 0 10 10"
-                    fontSize="13"
-                    [color]="theme.inactiveColor"
-                ></Label>
+                    padding="0 0 0 10"
+                    fontSize="14"
+                    [color]="theme.inactiveColor"></Label>
+                <!-- Phone Number -->
                 <Label
                     column="0"
                     row="2"
@@ -41,14 +49,92 @@
                     verticalAlignment="center"
                     width="100%"
                     padding="0 0 0 10"
-                    fontSize="13"
+                    fontSize="14"
+                    [color]="theme.inactiveColor"></Label>
+            </StackLayout>
+            <!-- Likes/Dislikes -->
+            <GridLayout row="0"
+                        col="5"
+                        width="100%"
+                        rows="auto, auto, auto, auto, auto"
+                        columns="50, 50"
+                        class="likes-dislikes">
+                <!-- Thumbs Up -->
+                <Image src="res://thumb_up"
+                    row="0"
+                    col="0"
+                    width="30"
+                    height="30"
+                    stretch="aspectFill"
+                    horizontalAlignment="center"
+                    verticalAlignment="bottom"
+                ></Image>
+                <!-- Thumbs Down -->
+                <Image src="res://thumb_down"
+                    row="0"
+                    col="1"
+                    width="30"
+                    height="30"
+                    stretch="aspectFill"
+                    horizontalAlignment="center"
+                    verticalAlignment="bottom"
+                ></Image>
+                <Label 
+                    row="1"
+                    col="0"
+                    text="60"
+                    horizontalAlignment="center"
+                    verticalAlignment="top"
                     [color]="theme.inactiveColor"
                 ></Label>
-            </StackLayout>
-            <StackLayout>
-                
-            </StackLayout>
-            
+                <Label 
+                    row="1"
+                    col="1"
+                    text="16"
+                    horizontalAlignment="center"
+                    verticalAlignment="top"
+                    [color]="theme.inactiveColor"
+                ></Label>
+                <Label 
+                    row="2"
+                    col="0"
+                    rowSpan="2"
+                    text="20"
+                    padding="0 2 0 0"
+                    horizontalAlignment="right"
+                    verticalAlignment="center"
+                    [color]="theme.accentColor"
+                    fontSize="30"
+                ></Label>
+                <Label 
+                    row="2"
+                    col="1"
+                    text="min."
+                    padding="0 0 0 2"
+                    horizontalAlignment="left"
+                    verticalAlignment="bottom"
+                    [color]="theme.inactiveColor"
+                ></Label>
+                <Label 
+                    row="3"
+                    col="1"
+                    text="away"
+                    padding="0 0 0 2"
+                    horizontalAlignment="left"
+                    verticalAlignment="top"
+                    [color]="theme.inactiveColor"
+                ></Label>
+                <Label
+                    row="4"
+                    col="0"
+                    colSpan="2"
+                    padding="2 0 5 0"
+                    horizontalAlignment="center"
+                    verticalAlignment="top"
+                    text="(12.4 miles)"
+                    color="#8D8B8B"
+                ></Label>
+            </GridLayout>           
         </GridLayout>
     </WrapLayout>
 </ScrollView>
