@@ -2,6 +2,18 @@
            [backgroundColor]="theme.actionBarColor"
            [color]="theme.actionBarTextColor">
     <Label class="action-bar-title" text="Search"></Label>
+    <ActionItem tap="onFilter()"
+                icon="res://filter"
+                height="50%"
+                width="50%"></ActionItem>
+    <ActionItem *ngIf="listViewVisible"
+                tap="onListMapToggle()"
+                icon="res://location"
+                android.position="actionBar"></ActionItem>
+    <ActionItem *ngIf="!listViewVisible"
+                tap="onListMapToggle()"
+                icon="res://beenhere"
+                android.position="actionBar"></ActionItem>
 </ActionBar>
 <ScrollView>
     <WrapLayout>
@@ -103,7 +115,7 @@
                 <StackLayout orientation="vertical"
                              row="0"
                              col="0"
-                             padding="10 0 0 2"
+                             padding="10 0 0 4"
                              horizontalAlignment="right"
                              verticalAlignment="center">
                     <!-- Icon -->
@@ -128,7 +140,7 @@
                 <StackLayout orientation="vertical"
                              row="0"
                              col="1"
-                             padding="10 0 0 2"
+                             padding="10 0 0 4"
                              horizontalAlignment="left"
                              verticalAlignment="center">
                     <!-- Icon -->
@@ -155,7 +167,7 @@
                     col="0"
                     rowSpan="2"
                     text="20"
-                    padding="0 2 0 0"
+                    padding="0 4 0 0"
                     horizontalAlignment="right"
                     verticalAlignment="center"
                     [color]="theme.accentColor"
@@ -167,7 +179,7 @@
                     rowSpan="2"
                     text="min. away"
                     textWrap="true"
-                    padding="0 0 0 2"
+                    padding="0 0 0 4"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     fontSize="12"

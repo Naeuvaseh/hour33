@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
 
   private theme;
   private items: SearchResult[];
+  public listViewVisible: boolean = true;
 
 
   constructor() {
@@ -461,6 +462,15 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     },]
+  }
+
+  onFilter(){
+    console.log("Filter button tapped.");
+  }
+
+  onListMapToggle(){
+    console.log("ListMap toggle tapped.");
+    this.listViewVisible = !this.listViewVisible;
   }
 
   todaysHappyHours(hours: HoursOfOperation[]): string {
