@@ -10,6 +10,8 @@
                      height="100%"
                      columns="auto, *, *, *, *" 
                      rows="auto, *, *, *, *"
+                     borderWidth="0 0 .5 0"
+                     borderColor="#8D8B8B"
                     [backgroundColor]="theme.pageBackgroundColor">
             <!-- Venue Details -->
             <StackLayout colSpan="4" 
@@ -59,42 +61,48 @@
                         rows="auto, auto, auto, auto, auto"
                         columns="50, 50"
                         class="likes-dislikes">
-                <!-- Thumbs Up -->
-                <Image src="res://thumb_up"
-                    row="0"
-                    col="0"
-                    width="30"
-                    height="30"
-                    stretch="aspectFill"
-                    horizontalAlignment="center"
-                    verticalAlignment="bottom"
-                ></Image>
-                <!-- Thumbs Down -->
-                <Image src="res://thumb_down"
-                    row="0"
-                    col="1"
-                    width="30"
-                    height="30"
-                    stretch="aspectFill"
-                    horizontalAlignment="center"
-                    verticalAlignment="bottom"
-                ></Image>
-                <Label 
-                    row="1"
-                    col="0"
-                    text="60"
-                    horizontalAlignment="center"
-                    verticalAlignment="top"
-                    [color]="theme.inactiveColor"
-                ></Label>
-                <Label 
-                    row="1"
-                    col="1"
-                    text="16"
-                    horizontalAlignment="center"
-                    verticalAlignment="top"
-                    [color]="theme.inactiveColor"
-                ></Label>
+                <StackLayout orientation="vertical"
+                             row="0"
+                             col="0"
+                             padding="5 0 0 0">
+                    <!-- Thumbs Up -->
+                    <Image src="res://thumb_up"
+                        row="0"
+                        col="0"
+                        width="30"
+                        height="30"
+                        stretch="aspectFill"
+                        horizontalAlignment="center"
+                        verticalAlignment="bottom"></Image>
+                    <Label 
+                        row="1"
+                        col="0"
+                        text="60"
+                        horizontalAlignment="center"
+                        verticalAlignment="top"
+                        [color]="theme.inactiveColor"></Label>
+                </StackLayout>
+                <StackLayout orientation="vertical"
+                             row="0"
+                             col="1"
+                             padding="5 0 0 0">
+                    <!-- Thumbs Down -->
+                    <Image src="res://thumb_down"
+                        row="0"
+                        col="1"
+                        width="30"
+                        height="30"
+                        stretch="aspectFill"
+                        horizontalAlignment="center"
+                        verticalAlignment="bottom"></Image>
+                    <Label 
+                        row="1"
+                        col="1"
+                        text="16"
+                        horizontalAlignment="center"
+                        verticalAlignment="top"
+                        [color]="theme.inactiveColor"></Label>
+                </StackLayout>
                 <Label 
                     row="2"
                     col="0"
@@ -109,21 +117,14 @@
                 <Label 
                     row="2"
                     col="1"
-                    text="min."
+                    rowSpan="2"
+                    text="min. away"
+                    textWrap="true"
                     padding="0 0 0 2"
                     horizontalAlignment="left"
-                    verticalAlignment="bottom"
-                    [color]="theme.inactiveColor"
-                ></Label>
-                <Label 
-                    row="3"
-                    col="1"
-                    text="away"
-                    padding="0 0 0 2"
-                    horizontalAlignment="left"
-                    verticalAlignment="top"
-                    [color]="theme.inactiveColor"
-                ></Label>
+                    verticalAlignment="center"
+                    fontSize="12"
+                    [color]="theme.inactiveColor"></Label>
                 <Label
                     row="4"
                     col="0"
