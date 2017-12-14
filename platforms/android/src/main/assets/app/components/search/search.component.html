@@ -6,32 +6,49 @@
 <ScrollView row="0">
     <WrapLayout orientation="horizontal">
         <GridLayout *ngFor="let item of items" 
-                    width="100%" 
-                    columns="auto, *" 
-                    rows="auto, *"
+                     width="100%" 
+                     columns="auto, *, *, *, *" 
+                     rows="auto, auto, auto, *"
                     [backgroundColor]="theme.pageBackgroundColor">
-            <Label
-                column="0"
-                row="0"
-                text="{{ item.vendorName }}"
-                horizontalAlignment="center"
-                verticalAlignment="bottom"
-                width="100%"
-                padding="10"
-                fontSize="18"
-                [color]="theme.accentColor"
-            ></Label>
-            <Label
-                column="0"
-                row="1"
-                text="{{ item.phone }}"
-                horizontalAlignment="center"
-                verticalAlignment="bottom"
-                width="100%"
-                padding="0 0 5 10"
-                fontSize="13"
-                [color]="theme.inactiveColor"
-        ></Label>
+            <StackLayout colSpan="3" row="0">
+                <Label
+                    column="0"
+                    row="0"
+                    text="{{ item.vendorName }}"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    width="100%"
+                    padding="10 10 5 10"
+                    fontSize="18"
+                    [color]="theme.accentColor"
+                ></Label>
+                <Label
+                    column="0"
+                    row="1"
+                    text="{{ item.description }}"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    width="100%"
+                    padding="0 0 10 10"
+                    fontSize="13"
+                    [color]="theme.inactiveColor"
+                ></Label>
+                <Label
+                    column="0"
+                    row="2"
+                    text="Phone: {{ item.phone }}"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    width="100%"
+                    padding="0 0 0 10"
+                    fontSize="13"
+                    [color]="theme.inactiveColor"
+                ></Label>
+            </StackLayout>
+            <StackLayout>
+                
+            </StackLayout>
+            
         </GridLayout>
     </WrapLayout>
 </ScrollView>
