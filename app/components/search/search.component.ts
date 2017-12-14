@@ -3,6 +3,7 @@ import { Theme } from '../../settings';
 
 // Interfaces
 import { SearchResult } from '../../interfaces/search-result.interface';
+import { HoursOfOperation } from '../../interfaces/hours-of-operation.interface';
 
 // Enums
 import { Day } from '../../enums/day.enum';
@@ -460,5 +461,13 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     },]
+  }
+
+  todaysHappyHours(hours: HoursOfOperation[]): string {
+    let result: string;
+
+
+    
+    return "11:00 AM - 2:00 AM";
   }
 }

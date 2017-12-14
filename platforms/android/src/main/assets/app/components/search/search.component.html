@@ -30,12 +30,36 @@
                     padding="10 10 5 10"
                     fontSize="20"
                     [color]="theme.accentColor"></Label>
-                <!-- Description -->
+                <!-- Happy Hour Label -->
                 <Label
-                    column="0"
                     row="1"
-                    textWrap="true"
-                    text="{{ item.description }}"
+                    column="0"
+                    colSpan="2"
+                    text="Today's Happy Hours:"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    width="100%"
+                    padding="0 0 0 10"
+                    fontSize="14"
+                    [color]="theme.inactiveColor"></Label>
+                <!-- Happy Hour Hours -->
+                <Label
+                    row="1"
+                    column="0"
+                    colSpan="2"
+                    [text]="todaysHappyHours(item?.hoursOfOperation)"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    width="100%"
+                    padding="0 0 0 10"
+                    fontSize="14"
+                    [color]="theme.inactiveColor"></Label>
+                <!-- Phone Label -->
+                <Label
+                    row="1"
+                    column="2"
+                    colSpan="2"
+                    text="Phone:"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
@@ -44,16 +68,30 @@
                     [color]="theme.inactiveColor"></Label>
                 <!-- Phone Number -->
                 <Label
-                    column="0"
                     row="2"
-                    text="Phone: {{ item.phone }}"
+                    column="2"
+                    colSpan="2"
+                    text="{{ item.phone }}"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="14"
                     [color]="theme.inactiveColor"></Label>
-            </StackLayout>
+                <!-- Description -->
+                <Label
+                    column="0"
+                    row="3"
+                    colSpan="4"
+                    textWrap="true"
+                    text="{{ item.description }}"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    width="100%"
+                    padding="0 0 10 10"
+                    fontSize="14"
+                    [color]="theme.inactiveColor"></Label>
+                </StackLayout>
             <!-- Likes/Dislikes -->
             <GridLayout row="0"
                         col="5"
@@ -61,11 +99,14 @@
                         rows="auto, auto, auto, auto, auto"
                         columns="50, 50"
                         class="likes-dislikes">
+                <!-- Thumbs Up Container -->
                 <StackLayout orientation="vertical"
                              row="0"
                              col="0"
-                             padding="5 0 0 0">
-                    <!-- Thumbs Up -->
+                             padding="10 0 0 2"
+                             horizontalAlignment="right"
+                             verticalAlignment="center">
+                    <!-- Icon -->
                     <Image src="res://thumb_up"
                         row="0"
                         col="0"
@@ -74,6 +115,7 @@
                         stretch="aspectFill"
                         horizontalAlignment="center"
                         verticalAlignment="bottom"></Image>
+                    <!-- Count -->
                     <Label 
                         row="1"
                         col="0"
@@ -82,11 +124,14 @@
                         verticalAlignment="top"
                         [color]="theme.inactiveColor"></Label>
                 </StackLayout>
+                <!-- Thumbs Down Container -->
                 <StackLayout orientation="vertical"
                              row="0"
                              col="1"
-                             padding="5 0 0 0">
-                    <!-- Thumbs Down -->
+                             padding="10 0 0 2"
+                             horizontalAlignment="left"
+                             verticalAlignment="center">
+                    <!-- Icon -->
                     <Image src="res://thumb_down"
                         row="0"
                         col="1"
@@ -95,6 +140,7 @@
                         stretch="aspectFill"
                         horizontalAlignment="center"
                         verticalAlignment="bottom"></Image>
+                    <!-- Count -->
                     <Label 
                         row="1"
                         col="1"
@@ -103,6 +149,7 @@
                         verticalAlignment="top"
                         [color]="theme.inactiveColor"></Label>
                 </StackLayout>
+                <!-- Minutes Label -->
                 <Label 
                     row="2"
                     col="0"
@@ -112,8 +159,8 @@
                     horizontalAlignment="right"
                     verticalAlignment="center"
                     [color]="theme.accentColor"
-                    fontSize="30"
-                ></Label>
+                    fontSize="30"></Label>
+                <!-- Minutes Text -->
                 <Label 
                     row="2"
                     col="1"
@@ -125,6 +172,7 @@
                     verticalAlignment="center"
                     fontSize="12"
                     [color]="theme.inactiveColor"></Label>
+                <!-- Distance Label -->
                 <Label
                     row="4"
                     col="0"
@@ -134,7 +182,7 @@
                     verticalAlignment="top"
                     text="(12.4 miles)"
                     color="#8D8B8B"
-                ></Label>
+                    fontSize="12"></Label>
             </GridLayout>           
         </GridLayout>
     </WrapLayout>
