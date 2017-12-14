@@ -15,9 +15,13 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\components\se
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\components\specials\specials-routing.module.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\components\specials\specials.component.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\components\specials\specials.module.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\enums\day.enum.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\enums\days.enum.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home-routing.module.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home.component.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home.module.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\hours-of-operation.interface.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\search-result.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\element-registry.js
