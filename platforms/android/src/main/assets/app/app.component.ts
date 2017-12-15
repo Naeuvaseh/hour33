@@ -1,18 +1,21 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { registerElement } from 'nativescript-angular';
 import { BottomBar, BottomBarItem, TITLE_STATE, SelectedIndexChangedEventData, Notification } from 'nativescript-bottombar';
 import { Theme } from './settings';
 import { NativeScriptRouterModule, RouterExtensions } from "nativescript-angular/router";
 import { Router, NavigationStart, NavigationEnd } from "@angular/router";
+import { PerformanceMonitor, PerformanceMonitorSample } from 'nativescript-performance-monitor';
+import { Color } from "color";
  
 registerElement('BottomBar', () => BottomBar);
+const performanceMonitor: PerformanceMonitor = new PerformanceMonitor();
  
 @Component({
     selector: "ns-app",
     templateUrl: "app.component.html",
 })
  
-export class AppComponent {
+export class AppComponent implements OnInit {
     public hidden: boolean;
     public titleState: TITLE_STATE;
     public _bar: BottomBar;
@@ -27,12 +30,29 @@ export class AppComponent {
         name: 'slide',
         duration: 200,
         curve: 'linear'
-    }
+    };
+    public cpu: string;
  
     constructor(private router: Router, private routerExt: RouterExtensions){
         this.theme = Theme;
         this.selectedTab.index = 0;
         this.selectedTab.title = 'Search';
+    }
+
+    ngOnInit(){
+        performanceMonitor.start({
+            textColor: new Color("white"),
+            backgroundColor: new Color("black"),
+            borderColor: new Color("black"),
+            hide: false,
+            onSample: (sample: PerformanceMonitorSample) => {
+              this.cpu = "FPS: " + sample.fps.toString();
+              console.log("FPS: " + sample.fps);
+              if (sample.cpu) { // iOS only 
+                console.log("CPU %: " + sample.cpu);
+              }
+            }
+          });
     }
     
     public items: Array<BottomBarItem> = [

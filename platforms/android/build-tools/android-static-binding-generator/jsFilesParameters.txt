@@ -21,6 +21,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home-rou
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home.component.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home.module.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\hours-of-operation.interface.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\rating.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\search-result.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js
@@ -104,6 +105,8 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\n
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\index.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-performance-monitor\performance-monitor.common.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-performance-monitor\performance-monitor.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application.js

@@ -1469,6 +1469,7 @@ android.support.transition.ViewGroupUtilsImpl
 com.aurelhubert.ahbottomnavigation.AHBottomNavigation.OnNavigationPositionListener
 com.aurelhubert.ahbottomnavigation.AHBottomNavigation.OnTabSelectedListener
 com.aurelhubert.ahbottomnavigation.VerticalScrollingBehavior.ScrollDirection
+jp.wasabeef.takt.Audience
 org.ow2.asmdex.Opcodes
 org.ow2.asmdex.specificAnnotationParser.ISpecificAnnotationParser
 org.ow2.asmdex.structureWriter.IAnnotationsHolder

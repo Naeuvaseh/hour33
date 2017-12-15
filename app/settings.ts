@@ -9,5 +9,6 @@ export const Theme ={
 }
 
 export const Debug = {
+    fps: false,
     backgroundColor: false
 }
