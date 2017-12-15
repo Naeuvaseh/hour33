@@ -20,146 +20,164 @@
         <GridLayout *ngFor="let item of items" 
                      width="100%" 
                      height="100%"
-                     columns="auto, *, *, *, *" 
+                     columns="15, *, *, *, *" 
                      rows="auto, *, *, *, *"
                      borderWidth="0 0 .5 0"
                      borderColor="#8D8B8B"
                     [backgroundColor]="theme.pageBackgroundColor">
-            <!-- Venue Details -->
-            <StackLayout colSpan="4" 
-                         row="0"
-                         col="0"
-                         orientation="vertical">
+                <!-- Venue Details -->
                 <!-- Venue Name -->
                 <Label
-                    column="0"
                     row="0"
+                    col="0"
+                    colSpan="4"
                     textWrap="true"
                     text="{{ item.vendorName }}"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
-                    padding="10 10 5 10"
-                    fontSize="20"
+                    padding="5 10 0 10"
+                    fontSize="22"
+                    fontWeight="500"
+                    [backgroundColor]="(debug.backgroundColor) ? '#CCC'  : theme.pageBackgroundColor"
                     [color]="theme.accentColor"></Label>
                 <!-- Happy Hour Label -->
                 <Label
                     row="1"
-                    column="0"
-                    colSpan="2"
+                    col="0"
+                    colSpan="3"
                     text="Today's Happy Hours:"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="14"
+                    fontWeight="500"
+                    [backgroundColor]="(debug.backgroundColor) ? '#0073e6' : theme.pageBackgroundColor"
                     [color]="theme.inactiveColor"></Label>
                 <!-- Happy Hour Hours -->
                 <Label
-                    row="1"
-                    column="0"
-                    colSpan="2"
+                    row="2"
+                    col="0"
+                    colSpan="3"
                     [text]="todaysHappyHours(item?.hoursOfOperation)"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="14"
+                    fontWeight="300"                    
+                    [backgroundColor]="(debug.backgroundColor) ? '#0073e6' : theme.pageBackgroundColor"
                     [color]="theme.inactiveColor"></Label>
                 <!-- Phone Label -->
                 <Label
                     row="1"
-                    column="2"
-                    colSpan="2"
+                    col="3"
                     text="Phone:"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="14"
+                    fontWeight="500"
+                    [backgroundColor]="(debug.backgroundColor) ? '#339966' : theme.pageBackgroundColor"
                     [color]="theme.inactiveColor"></Label>
                 <!-- Phone Number -->
                 <Label
                     row="2"
-                    column="2"
-                    colSpan="2"
+                    col="3"
                     text="{{ item.phone }}"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="14"
+                    fontWeight="300"                    
+                    [backgroundColor]="(debug.backgroundColor) ? '#339966' : theme.pageBackgroundColor"
                     [color]="theme.inactiveColor"></Label>
                 <!-- Description -->
                 <Label
-                    column="0"
                     row="3"
+                    col="0"
                     colSpan="4"
                     textWrap="true"
                     text="{{ item.description }}"
                     horizontalAlignment="left"
                     verticalAlignment="center"
                     width="100%"
-                    padding="0 0 10 10"
+                    padding="5 0 10 10"
                     fontSize="14"
+                    [backgroundColor]="(debug.backgroundColor) ? '#cc0000' : theme.pageBackgroundColor"
                     [color]="theme.inactiveColor"></Label>
-                </StackLayout>
             <!-- Likes/Dislikes -->
             <GridLayout row="0"
                         col="5"
-                        width="100%"
-                        rows="auto, auto, auto, auto, auto"
+                        rowSpan="5"
+                        rows="auto, *, *, *, *"
                         columns="50, 50"
-                        class="likes-dislikes">
-                <!-- Thumbs Up Container -->
-                <StackLayout orientation="vertical"
-                             row="0"
-                             col="0"
-                             padding="10 0 0 4"
-                             horizontalAlignment="right"
-                             verticalAlignment="center">
-                    <!-- Icon -->
-                    <Image src="res://thumb_up"
-                        row="0"
-                        col="0"
-                        width="30"
-                        height="30"
-                        stretch="aspectFill"
-                        horizontalAlignment="center"
-                        verticalAlignment="bottom"></Image>
-                    <!-- Count -->
-                    <Label 
-                        row="1"
-                        col="0"
-                        text="60"
-                        horizontalAlignment="center"
-                        verticalAlignment="top"
-                        [color]="theme.inactiveColor"></Label>
+                        class="likes-dislikes"
+                        padding="5"
+                        [backgroundColor]="(debug.backgroundColor) ? '#ccffcc' : theme.pageBackgroundColor"
+                        horizontalAlignment="right"
+                        verticalAlignment="center">
+                <!-- Left Column -->
+                <StackLayout 
+                    row="0"
+                    col="0"
+                    rowSpan="2"
+                    horizontalAlignment="right"
+                    verticalAlignment="center"
+                    padding="0 4 0 0"
+                    [backgroundColor]="(debug.backgroundColor) ? '#ff1a66' : theme.pageBackgroundColor">
+                        <!-- Thumbs Up Icon -->
+                        <Image src="res://thumb_up"
+                            row="0"
+                            col="0"
+                            width="30"
+                            height="30"
+                            horizontalAlignment="center"
+                            verticalAlignment="bottom"
+                            stretch="aspectFill"
+                            [backgroundColor]="(debug.backgroundColor) ? '#800000' : theme.pageBackgroundColor"></Image>
+                        <!-- Count -->
+                        <Label 
+                            row="1"
+                            col="0"
+                            text="60"
+                            horizontalAlignment="center"
+                            verticalAlignment="top"
+                            [backgroundColor]="(debug.backgroundColor) ? '#008080' : theme.pageBackgroundColor"                        
+                            [color]="theme.inactiveColor"></Label>
                 </StackLayout>
-                <!-- Thumbs Down Container -->
-                <StackLayout orientation="vertical"
-                             row="0"
-                             col="1"
-                             padding="10 0 0 4"
-                             horizontalAlignment="left"
-                             verticalAlignment="center">
-                    <!-- Icon -->
-                    <Image src="res://thumb_down"
-                        row="0"
-                        col="1"
-                        width="30"
-                        height="30"
-                        stretch="aspectFill"
-                        horizontalAlignment="center"
-                        verticalAlignment="bottom"></Image>
-                    <!-- Count -->
-                    <Label 
-                        row="1"
-                        col="1"
-                        text="16"
-                        horizontalAlignment="center"
-                        verticalAlignment="top"
-                        [color]="theme.inactiveColor"></Label>
+                <!--  Right Column -->
+                <StackLayout 
+                    row="0"
+                    col="1"
+                    rowSpan="2"
+                    horizontalAlignment="left"
+                    verticalAlignment="center"
+                    padding="0 0 0 4"
+                    [backgroundColor]="(debug.backgroundColor) ? '#00cc00' : theme.pageBackgroundColor">
+                        <!-- Thumbs Down -->
+                        <!-- Icon -->
+                        <Image src="res://thumb_down"
+                            row="0"
+                            col="1"
+                            width="30"
+                            height="30"
+                            horizontalAlignment="center"
+                            verticalAlignment="bottom"
+                            stretch="aspectFill"
+                            [backgroundColor]="(debug.backgroundColor) ? '#000099' : theme.pageBackgroundColor"></Image>
+                        <!-- Count -->
+                        <Label 
+                            row="1"
+                            col="1"
+                            text="16"
+                            horizontalAlignment="center"
+                            verticalAlignment="top"
+                            [backgroundColor]="(debug.backgroundColor) ? '#cc0000' : theme.pageBackgroundColor"                        
+                            [color]="theme.inactiveColor"></Label>
                 </StackLayout>
                 <!-- Minutes Label -->
                 <Label 
@@ -167,9 +185,10 @@
                     col="0"
                     rowSpan="2"
                     text="20"
-                    padding="0 4 0 0"
+                    padding="0 4 0 -4"
                     horizontalAlignment="right"
                     verticalAlignment="center"
+                    [backgroundColor]="(debug.backgroundColor) ? '#ffd11a' : theme.pageBackgroundColor"
                     [color]="theme.accentColor"
                     fontSize="30"></Label>
                 <!-- Minutes Text -->
@@ -178,23 +197,24 @@
                     col="1"
                     rowSpan="2"
                     text="min. away"
-                    textWrap="true"
                     padding="0 0 0 4"
+                    textWrap="true"
+                    fontSize="12"
                     horizontalAlignment="left"
                     verticalAlignment="center"
-                    fontSize="12"
+                    [backgroundColor]="(debug.backgroundColor) ? '#993399' : theme.pageBackgroundColor"
                     [color]="theme.inactiveColor"></Label>
                 <!-- Distance Label -->
                 <Label
                     row="4"
                     col="0"
                     colSpan="2"
-                    padding="2 0 5 0"
                     horizontalAlignment="center"
                     verticalAlignment="top"
                     text="(12.4 miles)"
-                    color="#8D8B8B"
-                    fontSize="12"></Label>
+                    [backgroundColor]="(debug.backgroundColor) ? '#ffccff' : theme.pageBackgroundColor"
+                    [color]="theme.darkGrey"
+                    fontSize="10"></Label>
             </GridLayout>           
         </GridLayout>
     </WrapLayout>

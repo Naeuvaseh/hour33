@@ -4,6 +4,10 @@ export const Theme ={
     actionBarTextColor: '#FFF',
     bottombarColor: '#3D3638',
     inactiveColor: '#FFF',
-    pageBackgroundColor: '#262324'
+    pageBackgroundColor: '#262324',
+    darkGrey: '#8D8B8B'
+}
 
+export const Debug = {
+    backgroundColor: false
 }

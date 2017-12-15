@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Theme } from '../../settings';
+import { Theme, Debug } from '../../settings';
 
 // Interfaces
 import { SearchResult } from '../../interfaces/search-result.interface';
@@ -15,12 +15,14 @@ import { Day } from '../../enums/day.enum';
 export class SearchComponent implements OnInit {
 
   private theme;
+  private debug;
   private items: SearchResult[];
   public listViewVisible: boolean = true;
 
 
   constructor() {
     this.theme = Theme;
+    this.debug = Debug;
   }
 
   ngOnInit() {
@@ -34,84 +36,84 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
     }, {
-      vendorName: "Marble",
+      vendorName: "Happy hours at Anodyne Pool Hall & Cocktails",
       description: "Local brewery for the 505!",
-      phone: "505-335-3973",
-      rating: { likes: 60, dislikes: 18 }, 
+      phone: "505-375-3073",
+      rating: { likes: 28, dislikes: 8 }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
-        close: "2:00 AM",
+        open: "3:00 PM",
+        close: "12:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
-        close: "2:00 AM",
+        open: "4:00 PM",
+        close: "10:00 PM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
-        close: "2:00 AM",
+        open: "5:30 PM",
+        close: "11:00 PM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
-        close: "2:00 AM",
+        open: "6:00 PM",
+        close: "7:00 PM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "4:15 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
-        close: "2:00 AM",
+        open: "3:30 PM",
+        close: "10:00 PM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
     }, {
-      vendorName: "The Library",
-      description: "Not yo' momma's normal library.",
+      vendorName: "High Noon Restaurant & Saloon",
+      description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
       phone: "505-235-2833",
       rating: { 
         likes: 60, 
@@ -119,37 +121,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "4:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
-        close: "2:00 AM",
+        open: "6:00 PM",
+        close: "12:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:30 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "4:30 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "5:15 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "4:45 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -163,37 +165,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -207,37 +209,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -251,37 +253,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -295,37 +297,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -339,37 +341,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -383,37 +385,37 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
@@ -427,41 +429,41 @@ export class SearchComponent implements OnInit {
       }, 
       hoursOfOperation: [{
         day: Day.Sunday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Monday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Tuesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Wednesday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Thursday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Friday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       }, {
         day: Day.Saturday,
-        open: "11:00 AM",
+        open: "3:00 PM",
         close: "2:00 AM",
         holiday: false
       },]
-    },]
+    }]
   }
 
   onFilter(){
@@ -474,10 +476,8 @@ export class SearchComponent implements OnInit {
   }
 
   todaysHappyHours(hours: HoursOfOperation[]): string {
-    let result: string;
-
-
-    
-    return "11:00 AM - 2:00 AM";
+    var filteredHours = hours.filter(result => result.day === new Date().getDay())
+                             .map(result => Object.assign({}, result));
+    return filteredHours[0].open + ' - ' + filteredHours[0].close;
   }
 }
