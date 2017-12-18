@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes } from "@angular/router";
+import { Routes, PreloadAllModules } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 const routes: Routes = [
@@ -12,7 +12,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [NativeScriptRouterModule.forRoot(routes)],
+   // imports: [NativeScriptRouterModule.forRoot(routes)], ---- was this prior to change preloading strategy -- TS 12/15/17
+    imports: [NativeScriptRouterModule.forRoot(<any>routes, { preloadingStrategy: PreloadAllModules })],
     exports: [NativeScriptRouterModule]
 })
 export class AppRoutingModule { }

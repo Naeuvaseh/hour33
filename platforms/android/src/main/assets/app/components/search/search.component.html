@@ -15,6 +15,153 @@
                 icon="res://beenhere"
                 android.position="actionBar"></ActionItem>
 </ActionBar>
+
+<GridLayout rows="*" borderWidth="0 0 .5 0" borderColor="#8D8B8B">
+    <ListView [items]="items" (itemTap)="onVendorTap($event)" separatorColor="transparent">
+        <ng-template let-vendor="item" let-i="index">
+            <!-- <vendor-listing [vender]="vendor" [index]="index"></vendor-listing> -->
+            <FlexboxLayout flexDirection="row" [backgroundColor]="theme.pageBackgroundColor">
+                <!-- Vendor Deatails -->
+                <FlexboxLayout width="75%" flexDirection="column">
+                    <!-- Venue Name -->
+                    <Label
+                        textWrap="true"
+                        [text]="vendor.vendorName"
+                        padding="5 10 0 10"
+                        fontSize="22"
+                        width="100%"
+                        fontWeight="500"
+                        [backgroundColor]="(debug.backgroundColor) ? '#CCC'  : theme.pageBackgroundColor"
+                        [color]="theme.accentColor"></Label>
+                    <FlexboxLayout flexDirection="row">
+                        <FlexboxLayout flexDirection="column">
+                        <!-- Happy Hour Label -->
+                        <Label
+                            text="Today's Happy Hours:"
+                            width="100%"
+                            padding="0 0 0 10"
+                            fontSize="14"
+                            fontWeight="500"
+                            [backgroundColor]="(debug.backgroundColor) ? '#0073e6' : theme.pageBackgroundColor"
+                            [color]="theme.inactiveColor"></Label>
+                        <!-- Happy Hour Hours -->
+                        <Label
+                            [text]="todaysHappyHours(vendor?.hoursOfOperation)"
+                            width="100%"
+                            padding="0 0 0 10"
+                            fontSize="14"
+                            fontWeight="300"                    
+                            [backgroundColor]="(debug.backgroundColor) ? '#0073e6' : theme.pageBackgroundColor"
+                            [color]="theme.inactiveColor"></Label>
+                        </FlexboxLayout>
+                        <FlexboxLayout flexDirection="column">
+                            <!-- Phone Label -->
+                            <Label
+                                text="Phone:"
+                                width="100%"
+                                padding="0 0 0 10"
+                                fontSize="14"
+                                fontWeight="500"
+                                [backgroundColor]="(debug.backgroundColor) ? '#339966' : theme.pageBackgroundColor"
+                                [color]="theme.inactiveColor"></Label>
+                            <!-- Phone Number -->
+                            <Label
+                                [text]="vendor.phone"
+                                width="100%"
+                                padding="0 0 0 10"
+                                fontSize="14"
+                                fontWeight="300"                    
+                                [backgroundColor]="(debug.backgroundColor) ? '#339966' : theme.pageBackgroundColor"
+                                [color]="theme.inactiveColor"></Label>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
+                    <!-- Description -->
+                    <Label
+                        textWrap="true"
+                        [text]="vendor.description"
+                        width="100%"
+                        padding="5 0 10 10"
+                        fontSize="14"
+                        [backgroundColor]="(debug.backgroundColor) ? '#cc0000' : theme.pageBackgroundColor"
+                        [color]="theme.inactiveColor"></Label>
+                 </FlexboxLayout>
+                <!-- Likes/Dislikes -->
+                <FlexboxLayout width="25%" [backgroundColor]="theme.pageBackgroundColor" flexDirection="column" alignItems="center" alignSelf="center" padding="10">
+                    <FlexboxLayout flexDirection="row">
+                        <!-- Left Column -->
+                        <FlexboxLayout flexDirection="column" alignItems="center" padding="0 4 0 0">
+                            <!-- Thumbs Up Icon -->
+                            <Image src="res://thumb_up"
+                                width="30"
+                                height="30"
+                                horizontalAlignment="center"
+                                verticalAlignment="bottom"
+                                stretch="aspectFill"
+                                [backgroundColor]="(debug.backgroundColor) ? '#800000' : theme.pageBackgroundColor"></Image>
+                            <!-- Count -->
+                            <Label 
+                                text="60"
+                                horizontalAlignment="center"
+                                verticalAlignment="top"
+                                [backgroundColor]="(debug.backgroundColor) ? '#008080' : theme.pageBackgroundColor"                        
+                                [color]="theme.inactiveColor"></Label>
+                        </FlexboxLayout>
+                        <!-- Right Column -->
+                        <FlexboxLayout flexDirection="column" alignItems="center" padding="0 0 0 4">
+                            <Image src="res://thumb_down"
+                                width="30"
+                                height="30"
+                                stretch="aspectFill"
+                                [backgroundColor]="(debug.backgroundColor) ? '#000099' : theme.pageBackgroundColor"></Image>
+                            <!-- Count -->
+                            <Label 
+                                text="16"
+                                [backgroundColor]="(debug.backgroundColor) ? '#cc0000' : theme.pageBackgroundColor"                        
+                                [color]="theme.inactiveColor"></Label>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
+                    <FlexboxLayout flexDirection="row" alignItems="center">
+                        <!-- Minutes Label -->
+                        <Label 
+                            text="20"
+                            horizontalAlignment="center"
+                            verticalAlignment="top"
+                            [backgroundColor]="(debug.backgroundColor) ? '#ffd11a' : theme.pageBackgroundColor"
+                            [color]="theme.accentColor"
+                            fontSize="30"></Label>
+                            <!-- Minutes Text -->
+                        <FlexboxLayout flexDirection="column" alignItems="flex-start">
+                            <Label 
+                                text="min."
+                                padding="0 0 -4 4"
+                                textWrap="true"
+                                fontSize="12"
+                                [backgroundColor]="(debug.backgroundColor) ? '#993399' : theme.pageBackgroundColor"
+                                [color]="theme.inactiveColor"></Label>
+                            <Label 
+                                text="away"
+                                padding="0 0 0 4"
+                                textWrap="true"
+                                fontSize="12"
+                                [backgroundColor]="(debug.backgroundColor) ? '#993399' : theme.pageBackgroundColor"
+                                [color]="theme.inactiveColor"></Label>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
+                    <!-- Distance -->
+                    <Label
+                        horizontalAlignment="center"
+                        verticalAlignment="top"
+                        text="(12.4 miles)"
+                        [backgroundColor]="(debug.backgroundColor) ? '#ffccff' : theme.pageBackgroundColor"
+                        [color]="theme.darkGrey"
+                        fontSize="10"></Label>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
+
+
 <ScrollView>
     <WrapLayout>
         <GridLayout *ngFor="let item of items" 
