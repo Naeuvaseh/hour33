@@ -31,6 +31,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {  
     this.items = new ObservableArray([{
+      id: 1,
       vendorName: "Geckos",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -75,6 +76,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 2,
       vendorName: "Happy hours at Anodyne Pool Hall & Cocktails",
       description: "Local brewery for the 505!",
       phone: "505-375-3073",
@@ -116,6 +118,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 3,
       vendorName: "High Noon Restaurant & Saloon",
       description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
       phone: "505-235-2833",
@@ -160,6 +163,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 4,
       vendorName: "Gardunio's",
       description: "Albuquerque's most trusted New Mexican restaurant for 20 years.",
       phone: "505-235-2833",
@@ -204,6 +208,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 5,
       vendorName: "El Pinto",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -248,6 +253,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 6,
       vendorName: "Geckos",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -292,6 +298,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 7,
       vendorName: "Marble",
       description: "Local brewery for the 505!",
       phone: "505-335-3973",
@@ -336,6 +343,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 8,
       vendorName: "The Library",
       description: "Not yo' momma's normal library.",
       phone: "505-235-2833",
@@ -380,6 +388,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 9,
       vendorName: "Gardunio's",
       description: "Albuquerque's most trusted New Mexican restaurant for 20 years.",
       phone: "505-235-2833",
@@ -424,6 +433,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 10,
       vendorName: "El Pinto",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
