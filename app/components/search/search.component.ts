@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Theme, Debug } from '../../settings';
+import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from 'nativescript-pro-ui/listview';
+import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 
 // Interfaces
 import { SearchResult } from '../../interfaces/search-result.interface';
@@ -16,7 +18,10 @@ export class SearchComponent implements OnInit {
 
   private theme;
   private debug;
-  private items: SearchResult[];
+  private _numberOfAddedItems;
+  // private items: SearchResult[];
+  private items: ObservableArray<SearchResult>;
+  
   public listViewVisible: boolean = true;
 
   constructor() {
@@ -25,7 +30,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {  
-    this.items = [{
+    this.items = new ObservableArray([{
       vendorName: "Geckos",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -462,7 +467,7 @@ export class SearchComponent implements OnInit {
         close: "2:00 AM",
         holiday: false
       },]
-     }]
+     }])
   }
 
   onFilter(){
@@ -474,16 +479,37 @@ export class SearchComponent implements OnInit {
     this.listViewVisible = !this.listViewVisible;
   }
 
-  todaysHappyHours(hours: HoursOfOperation[]): string {
-    if(hours !== null){
-      var filteredHours = hours.filter(result => result.day === new Date().getDay())
-                               .map(result => Object.assign({}, result));
-      return filteredHours[0].open + ' - ' + filteredHours[0].close;
-    }
-    return 'Unavailable';
+  refresh(args: ListViewEventData){
+    console.log(args.object);
+    console.log(this.items);
+    setTimeout(function () {
+      // API Data Request goes here.
+      console.log("Pull down initiated.");
+      args.object.notifyPullToRefreshFinished();
+    }, 1000);
   }
 
   onVendorTap(args: Event){
     console.log("Row tapped.");
+  }
+
+  onLoadMoreItemsRequested(args: ListViewEventData){
+    var that = new WeakRef(this);
+    setTimeout(function () {
+      var listView: RadListView = args.object;
+      var initialNumberOfItems = that.get()._numberOfAddedItems;
+      for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
+          // Check if there are any more pages
+          if (i > this.items.names.length - 1) {
+              listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
+              break;
+          }
+          //Get next page and push onto array.
+          //that.get()._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
+          //that.get()._numberOfAddedItems++;
+      }
+      listView.notifyLoadOnDemandFinished();
+    }, 1000);
+    args.returnValue = true;
   }
 }
