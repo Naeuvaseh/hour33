@@ -17,16 +17,14 @@ export class SearchComponent implements OnInit {
   private theme;
   private debug;
   private items: SearchResult[];
-  private
   public listViewVisible: boolean = true;
-
 
   constructor() {
     this.theme = Theme;
     this.debug = Debug;
   }
 
-  ngOnInit() {
+  ngOnInit() {  
     this.items = [{
       vendorName: "Geckos",
       description: "Family venue for dogs and their moms.",
@@ -478,9 +476,9 @@ export class SearchComponent implements OnInit {
 
   todaysHappyHours(hours: HoursOfOperation[]): string {
     if(hours !== null){
-    var filteredHours = hours.filter(result => result.day === new Date().getDay())
-                             .map(result => Object.assign({}, result));
-    return filteredHours[0].open + ' - ' + filteredHours[0].close;
+      var filteredHours = hours.filter(result => result.day === new Date().getDay())
+                               .map(result => Object.assign({}, result));
+      return filteredHours[0].open + ' - ' + filteredHours[0].close;
     }
     return 'Unavailable';
   }
