@@ -10,6 +10,7 @@
     "nativescript-angular": true,
     "nativescript-bottombar": true,
     "nativescript-performance-monitor": true,
+    "nativescript-pro-ui": true,
     "nativescript-theme-core": true,
     "reflect-metadata": true,
     "rxjs": true,
