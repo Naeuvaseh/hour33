@@ -8,12 +8,12 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.8.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\shade_bottom.xml",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\List-2017.1.1030-dev-release\\res\\drawable\\shade_bottom.xml"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\abc_ic_ab_back_material.xml",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\shade_bottom.xml",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\List-2017.1.1030-dev-release\\res\\drawable\\shade_bottom.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",

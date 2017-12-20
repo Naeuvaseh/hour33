@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d2af2ef4d987d753f2e8ee2d1480ab964d5c7273">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-tasks-11.8.0_aaa23f77434d91cb8c3362f2354fb538c8be05d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1030-dev-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -54,6 +63,15 @@
         revision="26.0.2"
         sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
         <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Common-2017.1.1030-dev-release_ced55a3d90c22b8304018fa3ffafc748e9a50a31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="233d88c6f961d2a84758dfe27b7af61318190c7b">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-base-11.8.0_367a91b34a4d5d4691e1d08d26803e7485fc88c0.jar" />
     </item>
     <item
         is-multidex="false"
@@ -216,6 +234,24 @@
         revision="26.0.2"
         sha1="746274223beb11b1cda7854d7eec3038695c2c93">
         <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-nativescript-optimized_bc91a097161f724356bf15adcdf0b526b474d6e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5ad3911825107d8dd4b017fdecebfd23c08048dd">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-basement-11.8.0_cbacf6bb06809c8188afbf11345b11546b59d376.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\11.8.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="601ebd8fa027a3dad924ffa1cb14689ced5aa436">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-maps-11.8.0_c09e5d92d28ed4ea3f6aa5a66eda45e522af1cf1.jar" />
     </item>
     <item
         is-multidex="false"

@@ -25,6 +25,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\home\home.mod
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\hours-of-operation.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\rating.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\interfaces\search-result.interface.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\services\vendor.service.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-angular\element-registry.js

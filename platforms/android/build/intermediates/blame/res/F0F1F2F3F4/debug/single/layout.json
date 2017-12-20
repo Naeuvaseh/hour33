@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\layout\\activity_edit_details.xml",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\Feedback-2017.1.1030-dev-release\\res\\layout\\activity_edit_details.xml"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\layout\\on_demand_automatic.xml",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\List-2017.1.1030-dev-release\\res\\layout\\on_demand_automatic.xml"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\layout\\activity_edit_details.xml",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\Feedback-2017.1.1030-dev-release\\res\\layout\\activity_edit_details.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\layout\\data_form_linear_layout.xml",
