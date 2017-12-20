@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Theme, Debug } from '../../settings';
+import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from 'nativescript-pro-ui/listview';
+import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
+import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 
 // Interfaces
 import { SearchResult } from '../../interfaces/search-result.interface';
@@ -16,16 +19,20 @@ export class SearchComponent implements OnInit {
 
   private theme;
   private debug;
-  private items: SearchResult[];
+  private _numberOfAddedItems;
+  // private items: SearchResult[];
+  private items: ObservableArray<SearchResult>;
+  
   public listViewVisible: boolean = true;
 
-  constructor() {
+  constructor(private router: Router) {
     this.theme = Theme;
     this.debug = Debug;
   }
 
   ngOnInit() {  
-    this.items = [{
+    this.items = new ObservableArray([{
+      id: 1,
       vendorName: "Geckos",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -70,6 +77,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 2,
       vendorName: "Happy hours at Anodyne Pool Hall & Cocktails",
       description: "Local brewery for the 505!",
       phone: "505-375-3073",
@@ -111,6 +119,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 3,
       vendorName: "High Noon Restaurant & Saloon",
       description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
       phone: "505-235-2833",
@@ -155,6 +164,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 4,
       vendorName: "Gardunio's",
       description: "Albuquerque's most trusted New Mexican restaurant for 20 years.",
       phone: "505-235-2833",
@@ -199,6 +209,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 5,
       vendorName: "El Pinto",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -243,6 +254,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 6,
       vendorName: "Geckos",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -287,6 +299,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 7,
       vendorName: "Marble",
       description: "Local brewery for the 505!",
       phone: "505-335-3973",
@@ -331,6 +344,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 8,
       vendorName: "The Library",
       description: "Not yo' momma's normal library.",
       phone: "505-235-2833",
@@ -375,6 +389,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 9,
       vendorName: "Gardunio's",
       description: "Albuquerque's most trusted New Mexican restaurant for 20 years.",
       phone: "505-235-2833",
@@ -419,6 +434,7 @@ export class SearchComponent implements OnInit {
         holiday: false
       },]
     }, {
+      id: 10,
       vendorName: "El Pinto",
       description: "Family venue for dogs and their moms.",
       phone: "505-235-2833",
@@ -462,7 +478,7 @@ export class SearchComponent implements OnInit {
         close: "2:00 AM",
         holiday: false
       },]
-     }]
+     }])
   }
 
   onFilter(){
@@ -474,16 +490,37 @@ export class SearchComponent implements OnInit {
     this.listViewVisible = !this.listViewVisible;
   }
 
-  todaysHappyHours(hours: HoursOfOperation[]): string {
-    if(hours !== null){
-      var filteredHours = hours.filter(result => result.day === new Date().getDay())
-                               .map(result => Object.assign({}, result));
-      return filteredHours[0].open + ' - ' + filteredHours[0].close;
-    }
-    return 'Unavailable';
+  refresh(args: ListViewEventData){
+    setTimeout(function () {
+      // API Data Request goes here.
+      console.log("Pull down initiated.");
+      args.object.notifyPullToRefreshFinished();
+    }, 500);
   }
 
-  onVendorTap(args: Event){
-    console.log("Row tapped.");
+  onVendorTap(args: ListViewEventData){
+    let vendor: SearchResult = this.items.getItem(args.index);
+    console.log("Vendor ID:", vendor.id);
+    this.router.navigate(["search/vendor", vendor.id], );
+  }
+
+  onLoadMoreItemsRequested(args: ListViewEventData){
+    var that = new WeakRef(this);
+    setTimeout(function () {
+      var listView: RadListView = args.object;
+      var initialNumberOfItems = that.get()._numberOfAddedItems;
+      for (var i = that.get()._numberOfAddedItems; i < initialNumberOfItems + 2; i++) {
+          // Check if there are any more pages
+          if (i > this.items.names.length - 1) {
+              listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
+              break;
+          }
+          //Get next page and push onto array.
+          //that.get()._dataItems.push(new DataItem(i, posts.names[i], "This is item description", posts.titles[i], posts.text[i], "res://" + imageUri));
+          //that.get()._numberOfAddedItems++;
+      }
+      listView.notifyLoadOnDemandFinished();
+    }, 500);
+    args.returnValue = true;
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Theme, Debug } from '../../settings';
 import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from 'nativescript-pro-ui/listview';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
-// import { Router } from ''
+import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 
 // Interfaces
 import { SearchResult } from '../../interfaces/search-result.interface';
@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
   
   public listViewVisible: boolean = true;
 
-  constructor() {
+  constructor(private router: Router) {
     this.theme = Theme;
     this.debug = Debug;
   }
@@ -500,8 +500,8 @@ export class SearchComponent implements OnInit {
 
   onVendorTap(args: ListViewEventData){
     let vendor: SearchResult = this.items.getItem(args.index);
-    console.log("Item tap:", vendor.id);
-    
+    console.log("Vendor ID:", vendor.id);
+    this.router.navigate(["search/vendor", vendor.id], );
   }
 
   onLoadMoreItemsRequested(args: ListViewEventData){

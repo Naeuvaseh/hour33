@@ -5,6 +5,8 @@ import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angul
 import { SearchRoutingModule } from "./search-routing.module";
 import { SearchComponent } from "./search.component";
 import { VendorListingComponent } from "./vendor-listing/vendor-listing.component";
+import { VendorDetailComponent } from "./vendor-detail/vendor-detail.component";
+
 
 @NgModule({
     imports: [
@@ -14,7 +16,8 @@ import { VendorListingComponent } from "./vendor-listing/vendor-listing.componen
     ],
     declarations: [
         SearchComponent,
-        VendorListingComponent
+        VendorListingComponent,
+        VendorDetailComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

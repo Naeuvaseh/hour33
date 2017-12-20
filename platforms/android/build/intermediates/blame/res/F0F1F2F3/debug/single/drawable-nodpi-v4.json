@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-nodpi-v4\\splash_screen.xml",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-nodpi\\splash_screen.xml"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-nodpi-v4\\splash_screen.xml",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\src\\main\\res\\drawable-nodpi\\splash_screen.xml"
     }

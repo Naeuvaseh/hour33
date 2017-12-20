@@ -20,6 +20,7 @@
     <RadListView [items]="items" 
                   pullToRefresh="true" 
                  (pullToRefreshInitiated)="refresh($event)" 
+                  selectionBehavior="Press"
                  (itemTap)="onVendorTap($event)"
                   loadOnDemandMode="Auto"
                  (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">

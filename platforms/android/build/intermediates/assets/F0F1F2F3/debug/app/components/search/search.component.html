@@ -17,11 +17,17 @@
 </ActionBar>
 
 <GridLayout rows="*" borderWidth="0 0 .5 0" borderColor="#8D8B8B">
-    <ListView [items]="items" (itemTap)="onVendorTap($event)" separatorColor="transparent">
+    <RadListView [items]="items" 
+                  pullToRefresh="true" 
+                 (pullToRefreshInitiated)="refresh($event)" 
+                  selectionBehavior="Press"
+                 (itemTap)="onVendorTap($event)"
+                  loadOnDemandMode="Auto"
+                 (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
         <ng-template let-vendor="item" let-i="index">
             <vendor-listing [vendor]="vendor" [index]="index"></vendor-listing>
         </ng-template>
-    </ListView>
+    </RadListView>
 </GridLayout>
 
 
