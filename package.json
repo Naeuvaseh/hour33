@@ -4,7 +4,7 @@
   "readme": "NativeScript Application",
   "repository": "<fill-your-repository-here>",
   "nativescript": {
-    "id": "org.nativescript.Hour33",
+    "id": "org.voxlore.hour33",
     "tns-android": {
       "version": "3.3.1"
     }
@@ -20,6 +20,7 @@
     "@angular/router": "4.4.6",
     "nativescript-angular": "4.4.1",
     "nativescript-bottombar": "3.0.7",
+    "nativescript-google-maps-sdk": "2.4.3",
     "nativescript-performance-monitor": "1.0.0",
     "nativescript-pro-ui": "3.2.0",
     "nativescript-theme-core": "1.0.4",

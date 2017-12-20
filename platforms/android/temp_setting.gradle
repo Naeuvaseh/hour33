@@ -1,6 +1,6 @@
 android {
             defaultConfig {
-                applicationId = "org.nativescript.Hour33"
+                applicationId = "org.voxlore.hour33"
 
                 if (false) {
                     minSdkVersion = false

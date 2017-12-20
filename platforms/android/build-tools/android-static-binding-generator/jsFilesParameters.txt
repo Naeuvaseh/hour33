@@ -104,6 +104,8 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\n
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-bottombar\src\android\bottombar.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar-item.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-google-maps-sdk\map-view-common.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-google-maps-sdk\map-view.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\index.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js

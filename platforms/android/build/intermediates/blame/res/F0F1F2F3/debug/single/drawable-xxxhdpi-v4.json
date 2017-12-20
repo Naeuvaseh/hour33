@@ -8,12 +8,12 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable-xxxhdpi-v4\\ic_expand_dataform_group.png"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xxxhdpi-v4\\ic_token_remove_pressed.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable-xxxhdpi-v4\\ic_token_remove_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xxxhdpi-v4\\ic_token_remove_pressed.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable-xxxhdpi-v4\\ic_token_remove_pressed.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",

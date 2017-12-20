@@ -32,12 +32,12 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\location.png"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xhdpi\\error.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\error.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xhdpi\\logo.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xhdpi\\error.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\error.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-xhdpi\\share.png",

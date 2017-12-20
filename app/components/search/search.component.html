@@ -6,12 +6,12 @@
                 icon="res://filter"
                 height="50%"
                 width="50%"></ActionItem>
-    <ActionItem *ngIf="listViewVisible"
-                tap="onListMapToggle()"
+    <ActionItem [visibility]="listViewVisible ? 'visible' : 'collapsed'"
+                (tap)="onListMapToggle()"
                 icon="res://location"
                 android.position="actionBar"></ActionItem>
-    <ActionItem *ngIf="!listViewVisible"
-                tap="onListMapToggle()"
+    <ActionItem [visibility]="!listViewVisible ? 'visible' : 'collapsed'"
+                (tap)="onListMapToggle()"
                 icon="res://beenhere"
                 android.position="actionBar"></ActionItem>
 </ActionBar>

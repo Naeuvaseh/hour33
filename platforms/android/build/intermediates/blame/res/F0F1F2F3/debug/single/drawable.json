@@ -92,12 +92,12 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable\\data_form_segment_item.xml"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_seekbar_track_material.xml"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable\\token_selected.xml",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\build\\intermediates\\exploded-aar\\Input-2017.1.1030-dev-release\\res\\drawable\\token_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable\\autocomplete_default_background.xml",
