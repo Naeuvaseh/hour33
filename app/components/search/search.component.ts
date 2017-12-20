@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Theme, Debug } from '../../settings';
 import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from 'nativescript-pro-ui/listview';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
+// import { Router } from ''
 
 // Interfaces
 import { SearchResult } from '../../interfaces/search-result.interface';
@@ -490,17 +491,17 @@ export class SearchComponent implements OnInit {
   }
 
   refresh(args: ListViewEventData){
-    console.log(args.object);
-    console.log(this.items);
     setTimeout(function () {
       // API Data Request goes here.
       console.log("Pull down initiated.");
       args.object.notifyPullToRefreshFinished();
-    }, 1000);
+    }, 500);
   }
 
-  onVendorTap(args: Event){
-    console.log("Row tapped.");
+  onVendorTap(args: ListViewEventData){
+    let vendor: SearchResult = this.items.getItem(args.index);
+    console.log("Item tap:", vendor.id);
+    
   }
 
   onLoadMoreItemsRequested(args: ListViewEventData){
@@ -519,7 +520,7 @@ export class SearchComponent implements OnInit {
           //that.get()._numberOfAddedItems++;
       }
       listView.notifyLoadOnDemandFinished();
-    }, 1000);
+    }, 500);
     args.returnValue = true;
   }
 }
