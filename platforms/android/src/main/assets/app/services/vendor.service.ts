@@ -6,9 +6,8 @@ import { Day } from '../enums/day.enum';
 
 @Injectable()
 export class VendorService {
-    public vendorList: ObservableArray<Vendor>;
-    public selectedVendor: Vendor;
-
+    private vendorList: ObservableArray<Vendor>;
+    private selectedVendor: Vendor;
 
     public constructor(){
         this.vendorList = new ObservableArray([{
@@ -464,5 +463,13 @@ export class VendorService {
      getSetVendors(): ObservableArray<Vendor> {
         console.log('Requesting Vendor List.');
         return this.vendorList;
+     }
+
+     getSelectedVendor(){
+        return this.selectedVendor;
+     }
+
+     setSelectedVendor(vendor: Vendor){
+        this.selectedVendor = vendor;
      }
 }

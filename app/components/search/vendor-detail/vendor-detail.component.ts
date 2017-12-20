@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
+import { VendorService } from '../../../services/vendor.service';
 
 
 @Component({
@@ -8,15 +9,14 @@ import { Location } from '@angular/common';
 })
 export class VendorDetailComponent {
 
-  constructor(private location: Location) {
-
-  }
+  constructor(private location: Location, private selectedVendor: VendorService) { }
 
   goBack(){
     this.location.back();
   }
   
   onShare(){
-    console.log("Shared button tapped.");  
+    console.log("Shared button tapped."); 
+    console.log('Current Vendor:', JSON.stringify(this.selectedVendor.getSelectedVendor()));
   }
 }

@@ -53,6 +53,7 @@ export class SearchComponent implements OnInit {
   onVendorTap(args: ListViewEventData){
     let vendor: Vendor = this.items.getItem(args.index);
     console.log("Vendor ID:", vendor.id);
+    this.vendorService.setSelectedVendor(vendor);
     this.router.navigate(["search/vendor", vendor.id], );
   }
 
