@@ -13,6 +13,14 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\component
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\search.component.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\search.module.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-detail.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-description\vendor-.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-description\vendor-description.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-happy-hours\vendor-.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-happy-hours\vendor-happy-hours.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-regular-hours\vendor-.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-regular-hours\vendor-regular-hours.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-score\vendor-.component.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-detail\vendor-score\vendor-score.component.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\vendor-listing\vendor-listing.component.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\specials\specials-routing.module.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\specials\specials.component.js
@@ -25,6 +33,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\home\home
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\hours-of-operation.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\rating.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result.interface.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\vendor.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\vendor.service.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js

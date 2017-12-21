@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { VendorService } from '../../../services/vendor.service';
+import { Vendor } from '../../../interfaces/vendor.interface';
+import { Theme } from '../../../settings';
 
 @Component({
   selector: 'vendor-detail',
@@ -8,7 +10,13 @@ import { VendorService } from '../../../services/vendor.service';
 })
 export class VendorDetailComponent {
 
-  constructor(private location: Location, private selectedVendor: VendorService) { }
+  private theme;
+  public vendor: Vendor;
+
+  constructor(private location: Location, private vendorService: VendorService) {
+    this.theme = Theme;
+    this.vendor = this.vendorService.getSelectedVendor();
+  }
 
   goBack(){
     this.location.back();

@@ -532,10 +532,10 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_material = 0x7f020051;
-        public static final int hamburger = 0x7f02008f;
-        public static final int hmb = 0x7f020090;
-        public static final int notification_template_icon_bg = 0x7f0200c3;
-        public static final int tab_view_popup_background = 0x7f0200bb;
+        public static final int hamburger = 0x7f020091;
+        public static final int hmb = 0x7f020092;
+        public static final int notification_template_icon_bg = 0x7f0200c6;
+        public static final int tab_view_popup_background = 0x7f0200bd;
     }
     public static final class id {
         public static final int BetweenTicks = 0x7f0d0010;
