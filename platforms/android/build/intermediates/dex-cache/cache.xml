@@ -3,255 +3,183 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-core-utils-26.0.0-alpha1_75f52ce9107ae8a5980160dd38f0f4cd1c433baa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-core-ui-26.0.0-alpha1_91cd9c782492346dc18010313508515c4c9cb9a0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\26.0.0-alpha1\jars\classes.jar"
+        jar="C:\Users\TJ\.android\build-cache\8eee0272b7baa75cd90736062368dcbbf324fce3\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="952944218ecedea1554a513dec0c14d570642843">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-vector-drawable-26.0.0-alpha1_f6ab11d0490c8d66e1abcc79e15e5278708d5605.jar" />
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_ee5e4447290278165326747e397d52e252cc867a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-compat-26.0.0-alpha1_37fef84111b762cb012992fa3e08ec57ce3d9171.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="d2af2ef4d987d753f2e8ee2d1480ab964d5c7273">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-tasks-11.8.0_aaa23f77434d91cb8c3362f2354fb538c8be05d8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="bb5e99e8a8b94d66179ccbf5f2fbe41ba084fbe9">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Gauges-2017.1.1030-dev-release_29ee5cd31756cf97ef3b547b1e26d1e567b32ff6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Common-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Common-2017.1.1030-dev-release_ced55a3d90c22b8304018fa3ffafc748e9a50a31.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.8.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="233d88c6f961d2a84758dfe27b7af61318190c7b">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-base-11.8.0_367a91b34a4d5d4691e1d08d26803e7485fc88c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-media-compat-26.0.0-alpha1_39456af8f89ca7eab1ac4faa9cd3859dce19dac2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-appcompat-v7-26.0.0-alpha1_b8f589954008def8cd2ed6d917452e00fc728e14.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-transition-26.0.0-alpha1_957f7ac7e9028db434c4d5f75ee7300ae28665ec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-v4-26.0.0-alpha1_fa73cdff298d0a871a6d1162c055e460a6e4c55a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Data-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Data-2017.1.1030-dev-release_759cc9a802dcbd90a6e6f26ee059ca116862d3f5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Input-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="a973d2e002f236d63e4b0b3bb95454b2ed4dc790">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Input-2017.1.1030-dev-release_8a268f99648962d8954f09b5b443c45ac03d3a63.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-support-fragment-26.0.0-alpha1_d475d6ace3bc190d14797f7751aafc7ef4ae586d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="67070b6d74d76c40032b857e9fcf25b196fd07f5">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Chart-2017.1.1030-dev-release_9a79419e9507c4857d4f35e52658af9b5c643424.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.aurelhubert\ahbottomnavigation\2.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="757d7e742ee90d50242abdc8616bfcfd04ad0575">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.aurelhubert-ahbottomnavigation-2.1.0_809c783f2e2133b32e68c6457c6cea5e1be771a1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Primitives-2017.1.1030-dev-release_a129f79facdc2fd40b75762c50c0a2a6c3743579.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-widgets-release_fcea8297eb1d8096c8e6a39c9c844950134ea9f7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\List-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-List-2017.1.1030-dev-release_29f08f1d8ba3e75ba6a5a7f074663c439ba95a0d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-animated-vector-drawable-26.0.0-alpha1_6686ced2ad7f64da0c8a699c0e8a11730daa490a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\jp.wasabeef\takt\1.0.3\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="e5c5780610b7d28438edf6dd2c1bec4a6c599262">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\jp.wasabeef-takt-1.0.3_509d8a2b7b001d6808f22e8475fbc94a8ca9dcef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\Feedback-2017.1.1030-dev-release\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-Feedback-2017.1.1030-dev-release_9b08613a071fcfdabe16d01c1ab0a72b10409dbf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\design\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-design-26.0.0-alpha1_789c997ec7fa27a85cebfce12a43551b5511021b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\26.0.0-alpha1\jars\classes.jar"
+        jar="C:\Users\TJ\.android\build-cache\d980692189a481f6f39e44c7fb7bdfad811a8b22\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\com.android.support-recyclerview-v7-26.0.0-alpha1_acce288d977b431fa594d2d3a7e84b4bdee6c11c.jar" />
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_f0c4417d3aff243ecc732318b7be3f3c6cdc83ed.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\nativescript-optimized\jars\classes.jar"
+        jar="C:\Users\TJ\.android\build-cache\0d6b34095b3e0fdf507756de96f4308a4e129aee\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\intermediates-exploded-aar-nativescript-optimized_bc91a097161f724356bf15adcdf0b526b474d6e8.jar" />
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_fb4b329b2f74b38c7e2a20b22de66f9de16fc868.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.8.0\jars\classes.jar"
+        jar="C:\Users\TJ\.android\build-cache\60b33f34ea82da0a8fd46745d5c4b00c109e8577\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_35da57998bade36f1b59c9c4d3bee24b9cbdf9eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\565b639467f5b6b56ee152d3f35ffacefd086186\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_76fe2220236377358586345d3a06f087148b9455.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\a038e7cf074b731fae7966bdfc551c33a8847084\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="757d7e742ee90d50242abdc8616bfcfd04ad0575">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_a24af00510a00273b4b298153f0ec77646d54534.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\d3fb7a5f5c03198a51bf5c078d5939d0d0ba6226\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_f0a4690c6113308dc31cca320c06bc25a4b486ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\1044482ef421276cf189d8c837b72dec70f0cac2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_c5cb86ed263d8958b83ef97607a3e85e8cb46bc3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a973d2e002f236d63e4b0b3bb95454b2ed4dc790">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_0d4b423ba19a859027880d3d4c4fe49af9e170bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\9794bce5dd637957652fefbd1614c6370ac0d3a5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_2569518271a9998541555db472c53f7e93af44e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\ea1740d7b38275ce76b48d958fbd377003c543cc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_904591ec076e7b90da04449a51d9ce68cff01cde.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\bb57e73fa87d0c082881587291366647e87cb851\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_b23f52376c048402f3b9fb276463f3944aca32da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\b820f9c5c82b7a6079a1593e30def2839c379500\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_d482b8a2e83551fa2c1fb109cc1ef79a43bbb638.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\23ea8f3dec69a37052fafe7fc3d3d728ff111078\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_7fe50250c34067fe80f07d4cefab7d37000b167b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\0b1a1e51ed03bb0be2b10a42bd6d9ffdf9a208f4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_67489c4305f4185259298296be516bdc2f6cc784.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\5d395a97b5d48c87533ff8948a68db6c370887ec\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_c9ff09fa697e1bf3fdd52dad6d2f8711c09b5428.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\bc4f8570b56b6603719eab07a7950bba2726a4c9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="67070b6d74d76c40032b857e9fcf25b196fd07f5">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_68ec578b57f3d004affc3de11a55f14ad33e30b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\a5e607b35cb43ba34291459611ea84e1d7b5bb3a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e5c5780610b7d28438edf6dd2c1bec4a6c599262">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_430eacdbf571f286a52b18a6a16ae4735e45316f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\e3673f5d63c1ad6058c5223215ce277cf071412c\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="5ad3911825107d8dd4b017fdecebfd23c08048dd">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-basement-11.8.0_cbacf6bb06809c8188afbf11345b11546b59d376.jar" />
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_28cb35da1cfc0408c9914aec9c249c535698a0e7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\11.8.0\jars\classes.jar"
+        jar="C:\Users\TJ\.android\build-cache\86698ef2836bb9c8ba76230e2f82467a60d333ce\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="601ebd8fa027a3dad924ffa1cb14689ced5aa436">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3F4\debug\com.google.android.gms-play-services-maps-11.8.0_c09e5d92d28ed4ea3f6aa5a66eda45e522af1cf1.jar" />
+        sha1="bb5e99e8a8b94d66179ccbf5f2fbe41ba084fbe9">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_b98832712a8f75b00274ad2e9b2e95773ec1b974.jar" />
     </item>
     <item
         is-multidex="false"
@@ -260,7 +188,79 @@
         optimize="true"
         revision="26.0.2"
         sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\build\intermediates\pre-dexed\F0F1F2F3\debug\support-annotations-26.0.0-alpha1_7c88aee63584960575018a7d0454b660043aaeb4.jar" />
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\support-annotations-26.0.0-alpha1_7c88aee63584960575018a7d0454b660043aaeb4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\02fe1f843fcd28d4a6354ae0ff56a8f609eb9b82\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d2af2ef4d987d753f2e8ee2d1480ab964d5c7273">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_adbfcb17e5377b6f611f16f48d54f7ce4ee1f11d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\714fcccc29b4dddf25077cfa6f4772d080d54421\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_cedd3c4386e339272653ddd94082f9b510cb1b96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\32776eb9063023fec2d79135e13ba0a5c20d4e9d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_a0623c9cc453d3e50e071e9565f85c7a8fdc4502.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\2cfab9fa360aaf5edb5c3375e1adcdcafcbe8c41\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="601ebd8fa027a3dad924ffa1cb14689ced5aa436">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_7955f76d21be03b7cb0bcce6bdbea13f6c4b611c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\83367cbca9deddc3f3e5171b2330c56028981f40\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_04dfb31a0c79acc96264ebb8a5e1cbd7277ced72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\452b58d4bf7983f57582f4a4b5c3ae83acb7d332\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="233d88c6f961d2a84758dfe27b7af61318190c7b">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_5c0159fc169c10d5aa458e4d1beaed6886f10ed9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\f3ae0c295b0c6a31af515c0a0d8f3916f1f11660\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_06836658e7ee933b99e9765a5ad21136167c8442.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\TJ\.android\build-cache\6c2ef8300db62e55a64755ef4551788d916b1b48\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\pre-dexed\F0F1F2F3\debug\classes_5225febb8c7cfb6058b6249e375e34dbd4fa1a28.jar" />
     </item>
 
 </items>
