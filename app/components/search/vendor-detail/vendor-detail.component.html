@@ -1,5 +1,5 @@
 <ActionBar class="action-bar">
     <NavigationButton icon="res://back_arrow" (tap)="goBack()" ></NavigationButton>
-    <Label class="action-bar-title" text="VendorComponent"></Label>
+    <Label class="action-bar-title"[text]="vendor.name"></Label>
     <ActionItem icon="res://share" (tap)="onShare()"></ActionItem>
 </ActionBar>

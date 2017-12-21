@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Vendor } from '../interfaces/search-result.interface';
+import { Vendor } from '../interfaces/vendor.interface';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import { Day } from '../enums/day.enum';
 
@@ -12,7 +12,7 @@ export class VendorService {
     public constructor(){
         this.vendorList = new ObservableArray([{
             id: 1,
-            vendorName: "Geckos",
+            name: "Geckos",
             description: "Family venue for dogs and their moms.",
             phone: "505-235-2833",
             rating: { 
@@ -57,7 +57,7 @@ export class VendorService {
             },]
           }, {
             id: 2,
-            vendorName: "Happy hours at Anodyne Pool Hall & Cocktails",
+            name: "Happy hours at Anodyne Pool Hall & Cocktails",
             description: "Local brewery for the 505!",
             phone: "505-375-3073",
             rating: { likes: 28, dislikes: 8 }, 
@@ -99,7 +99,7 @@ export class VendorService {
             },]
           }, {
             id: 3,
-            vendorName: "High Noon Restaurant & Saloon",
+            name: "High Noon Restaurant & Saloon",
             description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
             phone: "505-235-2833",
             rating: { 
@@ -144,7 +144,7 @@ export class VendorService {
             },]
           }, {
             id: 4,
-            vendorName: "Gardunio's",
+            name: "Gardunio's",
             description: "Albuquerque's most trusted New Mexican restaurant for 20 years.",
             phone: "505-235-2833",
             rating: { 
@@ -189,7 +189,7 @@ export class VendorService {
             },]
           }, {
             id: 5,
-            vendorName: "El Pinto",
+            name: "El Pinto",
             description: "Family venue for dogs and their moms.",
             phone: "505-235-2833",
             rating: { 
@@ -234,7 +234,7 @@ export class VendorService {
             },]
           }, {
             id: 6,
-            vendorName: "Geckos",
+            name: "Geckos",
             description: "Family venue for dogs and their moms.",
             phone: "505-235-2833",
             rating: { 
@@ -279,7 +279,7 @@ export class VendorService {
             },]
           }, {
             id: 7,
-            vendorName: "Marble",
+            name: "Marble",
             description: "Local brewery for the 505!",
             phone: "505-335-3973",
             rating: { 
@@ -324,7 +324,7 @@ export class VendorService {
             },]
           }, {
             id: 8,
-            vendorName: "The Library",
+            name: "The Library",
             description: "Not yo' momma's normal library.",
             phone: "505-235-2833",
             rating: { 
@@ -369,7 +369,7 @@ export class VendorService {
             },]
           }, {
             id: 9,
-            vendorName: "Gardunio's",
+            name: "Gardunio's",
             description: "Albuquerque's most trusted New Mexican restaurant for 20 years.",
             phone: "505-235-2833",
             rating: { 
@@ -414,7 +414,7 @@ export class VendorService {
             },]
           }, {
             id: 10,
-            vendorName: "El Pinto",
+            name: "El Pinto",
             description: "Family venue for dogs and their moms.",
             phone: "505-235-2833",
             rating: { 
@@ -465,7 +465,7 @@ export class VendorService {
         return this.vendorList;
      }
 
-     getSelectedVendor(){
+     getSelectedVendor(): Vendor{
         return this.selectedVendor;
      }
 

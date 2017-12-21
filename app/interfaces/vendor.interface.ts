@@ -3,7 +3,7 @@ import { Rating } from './rating.interface';
 
 export interface Vendor {
     id: number,
-    vendorName: string,
+    name: string,
     description: string,
     phone: string,
     hoursOfOperation: HoursOfOperation[],
