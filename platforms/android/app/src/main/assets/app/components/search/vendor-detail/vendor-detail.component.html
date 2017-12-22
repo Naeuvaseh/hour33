@@ -1,15 +1,13 @@
 <ActionBar class="action-bar">
-    <NavigationButton icon="res://back_arrow" (tap)="goBack()" ></NavigationButton>
-    <Label class="action-bar-title"[text]="vendor.name" [color]="theme.accentColor"></Label>
+    <NavigationButton icon="res://back_arrow" (tap)="goBack()"></NavigationButton>
+    <Label class="action-bar-title" [text]="vendor.name" [color]="theme.accentColor"></Label>
     <ActionItem icon="res://share" (tap)="onShare()"></ActionItem>
 </ActionBar>
-<GridLayout rows="*" backgroundColor="#262324">
-    <ListView [items]="vendor"> 
-        <ng-template let-vendor="vendor" let-i="index">
-            <vendor-score [vendor]="vendor" [index]="index"></vendor-score>
-            <vendor-description [vendor]="vendor" [index]="index"></vendor-description>
-            <vendor-happy-hours [vendor]="vendor" [index]="index"></vendor-happy-hours>
-            <vendor-regular-hours [vendor]="vendor" [index]="index"></vendor-regular-hours>
-        </ng-template>
-    </ListView>
-</GridLayout>
+<ScrollView orientation="vertical" height="100%">
+    <FlexboxLayout flexDirection="column" [backgroundColor]="theme.pageBackgroundColor">
+        <vendor-score [vendor]="vendor" [index]="index"></vendor-score>
+        <vendor-description [vendor]="vendor" [index]="index"></vendor-description>
+        <vendor-happy-hours [hours]="vendor.hoursOfOperation" [index]="index"></vendor-happy-hours>
+        <vendor-regular-hours [hours]="vendor.hoursOfOperation" [index]="index"></vendor-regular-hours>
+    </FlexboxLayout>
+</ScrollView>

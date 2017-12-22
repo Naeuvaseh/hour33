@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Vendor } from '../../../../interfaces/vendor.interface';
+import { Theme } from '../../../../settings';
 
 @Component({
   selector: 'vendor-description',
@@ -9,7 +10,9 @@ export class VendorDescriptionComponent {
   @Input() vendor: Vendor;
   @Input() index: number;
 
-  constructor() {
+  public theme;
 
+  constructor() {
+    this.theme = Theme;
   }
 }
