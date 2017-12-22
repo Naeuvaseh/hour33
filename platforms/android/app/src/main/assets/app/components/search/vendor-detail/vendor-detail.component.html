@@ -17,7 +17,12 @@
         </FlexboxLayout>
     </ScrollView>
     <StackLayout *tabItem="{title: 'Map'}">
-
+        <MapView [height]="height" 
+                 (markerSelect)="onMarkerSelect($event)" 
+                 [latitude]="lat" 
+                 [longitude]="long" 
+                  zoom="18" 
+                 (mapReady)="onMapReady($event)"></MapView>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Menu'}">
 
