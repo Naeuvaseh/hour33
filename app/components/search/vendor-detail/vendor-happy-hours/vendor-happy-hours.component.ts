@@ -20,4 +20,9 @@ export class VendorHappyHoursComponent {
   formatHours(hour: HoursOfOperation): string {
     return Weekdays[hour.day] + ":  " + hour.open + " - " + hour.close;
   }
+
+  formatCurrentDay(hour: HoursOfOperation): boolean{
+    var currentDay = new Date();
+    return (hour.day.toString() === new Date().getDay().toString()) ? true : false;
+  }
 }
