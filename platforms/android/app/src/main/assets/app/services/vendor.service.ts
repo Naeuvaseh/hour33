@@ -8,6 +8,7 @@ import { Day } from '../enums/day.enum';
 export class VendorService {
     private vendorList: ObservableArray<Vendor>;
     private selectedVendor: Vendor;
+    private selectedTab: number;
 
     public constructor(){
         this.vendorList = new ObservableArray([{
@@ -471,5 +472,13 @@ export class VendorService {
 
      setSelectedVendor(vendor: Vendor){
         this.selectedVendor = vendor;
+     }
+
+     getSelectedTab(): number {
+       return this.selectedTab;
+     }
+
+     setSelectedTab(index: number){
+       this.selectedTab = index;
      }
 }
