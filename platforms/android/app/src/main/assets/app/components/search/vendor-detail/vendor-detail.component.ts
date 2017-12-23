@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { registerElement } from "nativescript-angular/element-registry";
 import { Location } from '@angular/common';
 import { VendorService } from '../../../services/vendor.service';
@@ -11,15 +11,23 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
   selector: 'vendor-detail',
   templateUrl: './components/search/vendor-detail/vendor-detail.component.html'
 })
-export class VendorDetailComponent {
+export class VendorDetailComponent implements OnInit {
   @ViewChild("MapView") mapView: ElementRef;
 
   private theme;
   public vendor: Vendor;
+  private lat: number;
+  private long: number;
+
 
   constructor(private location: Location, private vendorService: VendorService) {
     this.theme = Theme;
     this.vendor = this.vendorService.getSelectedVendor();
+  }
+
+  ngOnInit(){
+    this.lat = 32.1234;
+    this.long = 32.12345;
   }
 
   goBack(){
@@ -28,6 +36,10 @@ export class VendorDetailComponent {
   
   onShare(){
     console.log("Shared button tapped."); 
+  }
+
+  formatAddress(vendor: Vendor): string {
+    return "11700 Marquette Ave. NE,\n Albuquerque NM 87123";
   }
 
   onMapReady = (event) => {

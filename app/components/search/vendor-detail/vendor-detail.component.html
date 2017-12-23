@@ -17,12 +17,40 @@
         </FlexboxLayout>
     </ScrollView>
     <StackLayout *tabItem="{title: 'Map'}">
-        <MapView [height]="height" 
-                 (markerSelect)="onMarkerSelect($event)" 
-                 [latitude]="lat" 
-                 [longitude]="long" 
-                  zoom="18" 
-                 (mapReady)="onMapReady($event)"></MapView>
+        <StackLayout height="80%"
+                     width="100%"
+                     padding="10">
+            <MapView 
+                (markerSelect)="onMarkerSelect($event)" 
+                [latitude]="lat" 
+                [longitude]="long" 
+                zoom="18" 
+                (mapReady)="onMapReady($event)"></MapView>
+        </StackLayout>
+        <StackLayout>
+            <FlexboxLayout class="card" alignItems="center">
+                <FlexboxLayout flexDirection="column" width="75%">
+                    <Label text="Address:"
+                           [color]="theme.accentColor"
+                           class="h3"
+                           padding="10 0 0 10">
+                    </Label>
+                    <Label [text]="formatAddress(vendor)"
+                           [color]="theme.inactiveColor"
+                            textWrap="true"
+                            padding="0 0 10 20">
+                    </Label>
+                </FlexboxLayout>
+                <FlexboxLayout width="25%">
+                    <Image src="res://navigate"
+                        width="70"
+                        height="70"
+                        horizontalAlignment="center"
+                        verticalAlignment="center"
+                        stretch="aspectFill"></Image>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </StackLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Menu'}">
 
