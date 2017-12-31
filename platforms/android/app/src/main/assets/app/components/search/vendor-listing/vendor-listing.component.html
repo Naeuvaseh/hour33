@@ -13,52 +13,38 @@
             width="100%"
             fontWeight="500"
             [color]="theme.accentColor"></Label>
+        <WrapLayout orientation="horizontal" 
+                    padding="0 0 5 10">
+            <Image *ngFor="let icon of tempIcons"
+                [src]="icon.src"
+                width="25"
+                height="25"
+                margin="2"
+                stretch="aspectFill"></Image>
+        </WrapLayout>
         <FlexboxLayout flexDirection="row">
             <FlexboxLayout flexDirection="column">
-            <!-- Happy Hour Label -->
-            <Label
-                text="Today's Happy Hours:"
-                width="100%"
-                padding="0 0 0 10"
-                fontSize="14"
-                fontWeight="500"
-                [color]="theme.inactiveColor"></Label>
-            <!-- Happy Hour Hours -->
-            <Label
-                [text]="todaysHappyHours(vendor?.hoursOfOperation)"
-                width="100%"
-                padding="0 0 0 10"
-                fontSize="14"
-                fontWeight="300"                    
-                [color]="theme.inactiveColor"></Label>
-            </FlexboxLayout>
-            <FlexboxLayout flexDirection="column">
-                <!-- Phone Label -->
+                <!-- Happy Hour Label -->
                 <Label
-                    text="Phone:"
+                    text="Today's Happy Hours:"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="14"
-                    fontWeight="500"
+                    fontWeight="700"
                     [color]="theme.inactiveColor"></Label>
-                <!-- Phone Number -->
-                <Label
-                    [text]="vendor?.phone"
-                    width="100%"
-                    padding="0 0 0 10"
-                    fontSize="14"
-                    fontWeight="300"                    
-                    [color]="theme.inactiveColor"></Label>
+                <!-- Happy Hour Hours -->
+                <FlexboxLayout flexDirection="column" 
+                    *ngFor="let timePeriod of vendor?.happyHours">
+                    <Label *ngIf="timePeriod.day === currentDay"
+                        [text]="todaysHappyHours(timePeriod)"
+                        width="100%"
+                        padding="0 0 0 20"
+                        fontSize="14"
+                        fontWeight="300"                    
+                        [color]="theme.inactiveColor"></Label>
+                </FlexboxLayout>
             </FlexboxLayout>
         </FlexboxLayout>
-        <!-- Description -->
-        <Label
-            textWrap="true"
-            [text]="vendor?.description"
-            width="100%"
-            padding="5 0 10 10"
-            fontSize="14"
-            [color]="theme.inactiveColor"></Label>
      </FlexboxLayout>
     <!-- Likes/Dislikes -->
     <FlexboxLayout width="25%" 

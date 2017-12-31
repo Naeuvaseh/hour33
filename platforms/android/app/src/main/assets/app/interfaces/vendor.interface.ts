@@ -1,4 +1,5 @@
 import { HoursOfOperation } from './hours-of-operation.interface'
+import { TimePeriod } from './time-period.interface';
 import { Rating } from './rating.interface';
 
 export interface Vendor {
@@ -6,6 +7,7 @@ export interface Vendor {
     name: string,
     description: string,
     phone: string,
-    hoursOfOperation: HoursOfOperation[],
+    hoursOfOperation?: TimePeriod[],
+    happyHours?: TimePeriod[],
     rating: Rating
 }

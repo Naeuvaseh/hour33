@@ -20,12 +20,17 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
               holiday: false
-            }, {
+            },{
+              day: Day.Sunday,
+              open: "8:00 AM",
+              close: "7:00 PM",
+              holiday: false
+            },{
               day: Day.Monday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -62,7 +67,7 @@ export class VendorService {
             description: "Local brewery for the 505!",
             phone: "505-375-3073",
             rating: { likes: 28, dislikes: 8 }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "12:00 AM",
@@ -107,7 +112,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "4:00 PM",
               close: "2:00 AM",
@@ -152,7 +157,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -197,7 +202,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -242,7 +247,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -287,7 +292,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -332,7 +337,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -377,7 +382,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -422,7 +427,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
