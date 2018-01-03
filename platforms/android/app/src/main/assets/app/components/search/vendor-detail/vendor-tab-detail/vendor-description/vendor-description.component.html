@@ -14,10 +14,10 @@
                        fontSize="18"></Span>
             </FormattedString>
         </Label>
-        <FlexboxLayout alignSelf="flex-end">
+        <FlexboxLayout alignSelf="flex-end"
+                      (tap)="openVendorWebsite()">
             <Label text="Website"
                    fontSize="18"
-                   (tap)="openVendorWebsite()"
                    [color]="theme.inactiveColor"
                    padding="10 5 10 10">
                 <FormattedString>
