@@ -1,4 +1,3 @@
-import { HoursOfOperation } from './hours-of-operation.interface'
 import { TimePeriod } from './time-period.interface';
 import { Rating } from './rating.interface';
 

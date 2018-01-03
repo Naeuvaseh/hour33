@@ -7,7 +7,6 @@ import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 import { VendorService } from '../../services/vendor.service';
 // Interfaces
 import { Vendor } from '../../interfaces/vendor.interface';
-import { HoursOfOperation } from '../../interfaces/hours-of-operation.interface';
 // Enums
 import { Day } from '../../enums/day.enum';
 
