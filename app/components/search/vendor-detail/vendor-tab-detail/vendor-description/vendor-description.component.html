@@ -2,8 +2,11 @@
     <FlexboxLayout flexDirection="row" justifyContent="space-between">
         <Label padding="10">
             <FormattedString>
-                <Span text="Phone: " 
-                      underline="true"
+                <Span text="Phone" 
+                      textDecoration="underline"
+                     [color]="theme.inactiveColor"
+                      fontSize="18"></Span>
+                <Span text=": "
                      [color]="theme.inactiveColor"
                       fontSize="18"></Span>
                 <Span [text]="vendor.phone"
@@ -16,7 +19,13 @@
                    fontSize="18"
                    (tap)="openVendorWebsite()"
                    [color]="theme.inactiveColor"
-                   padding="10 5 10 10"></Label>
+                   padding="10 5 10 10">
+                <FormattedString>
+                    <Span text="Website"
+                          fontSize="18"
+                          [color]="theme.inactiveColor"></Span>
+                </FormattedString>
+            </Label>
             <Image src="res://launch"
                    width="30"
                    height="30"
