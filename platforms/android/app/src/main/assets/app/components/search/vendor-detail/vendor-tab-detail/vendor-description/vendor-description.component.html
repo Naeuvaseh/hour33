@@ -1,4 +1,15 @@
-<FlexboxLayout class="card">
+<FlexboxLayout class="card" flexDirection="column">
+    <FlexboxLayout flexDirection="row" alignItems="flex-start">
+        <Label text="{{'Phone: ' + vendor.phone}}"
+               [color]="theme.inactiveColor"
+               padding="10"
+               alignSelf="flex-start"></Label>
+        <Label text="Website Placeholder"
+               [color]="theme.inactiveColor"
+               padding="10"
+               alignSelf="flex-end"></Label>
+    </FlexboxLayout>
+    
     <Label [text]="vendor.description" 
            [color]="theme.inactiveColor"
             textWrap="true"

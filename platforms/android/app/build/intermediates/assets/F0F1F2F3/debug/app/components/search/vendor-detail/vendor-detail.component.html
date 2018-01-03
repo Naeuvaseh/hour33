@@ -1,15 +1,29 @@
 <ActionBar class="action-bar">
-    <NavigationButton icon="res://back_arrow" (tap)="goBack()" ></NavigationButton>
-    <Label class="action-bar-title"[text]="vendor.name" [color]="theme.accentColor"></Label>
+    <NavigationButton icon="res://back_arrow" (tap)="goBack()"></NavigationButton>
+    <Label class="action-bar-title" [text]="vendor.name" [color]="theme.accentColor"></Label>
     <ActionItem icon="res://share" (tap)="onShare()"></ActionItem>
 </ActionBar>
-<GridLayout rows="*" backgroundColor="#262324">
-    <ListView [items]="vendor"> 
-        <ng-template let-vendor="vendor" let-i="index">
-            <vendor-score [vendor]="vendor" [index]="index"></vendor-score>
-            <vendor-description [vendor]="vendor" [index]="index"></vendor-description>
-            <vendor-happy-hours [vendor]="vendor" [index]="index"></vendor-happy-hours>
-            <vendor-regular-hours [vendor]="vendor" [index]="index"></vendor-regular-hours>
-        </ng-template>
-    </ListView>
-</GridLayout>
+<TabView [tabBackgroundColor]="theme.actionBarColor" 
+         [selectedTabTextColor]="theme.accentColor"
+         [tabTextColor]="theme.inactiveColor" 
+         [androidSelectedTabHighlightColor]="theme.accentColor"
+         [backgroundColor]="theme.pageBackgroundColor">
+    <ScrollView *tabItem="{title: 'Details'}" orientation="vertical" height="100%">
+        <FlexboxLayout flexDirection="column">
+            <vendor-score [vendor]="vendor"></vendor-score>
+            <vendor-description [vendor]="vendor"></vendor-description>
+            <vendor-happy-hours [hours]="vendor.hoursOfOperation"></vendor-happy-hours>
+            <vendor-regular-hours [hours]="vendor.hoursOfOperation"></vendor-regular-hours>
+        </FlexboxLayout>
+    </ScrollView>
+    <StackLayout *tabItem="{title: 'Map'}">
+        <vendor-map [vendor]="vendor"></vendor-map>
+        <vendor-navigation [vendor]="vendor"></vendor-navigation>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Menu'}">
+        <!-- TODO -->
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Reviews'}">
+        <!-- TODO -->
+    </StackLayout>
+</TabView>

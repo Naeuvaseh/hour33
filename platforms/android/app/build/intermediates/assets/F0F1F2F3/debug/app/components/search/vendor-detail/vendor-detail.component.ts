@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { VendorService } from '../../../services/vendor.service';
 import { Vendor } from '../../../interfaces/vendor.interface';
@@ -8,8 +8,7 @@ import { Theme } from '../../../settings';
   selector: 'vendor-detail',
   templateUrl: './components/search/vendor-detail/vendor-detail.component.html'
 })
-export class VendorDetailComponent {
-
+export class VendorDetailComponent implements OnInit {
   private theme;
   public vendor: Vendor;
 
@@ -17,6 +16,8 @@ export class VendorDetailComponent {
     this.theme = Theme;
     this.vendor = this.vendorService.getSelectedVendor();
   }
+
+  ngOnInit(){ }
 
   goBack(){
     this.location.back();

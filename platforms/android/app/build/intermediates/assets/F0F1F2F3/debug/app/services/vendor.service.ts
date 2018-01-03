@@ -8,6 +8,7 @@ import { Day } from '../enums/day.enum';
 export class VendorService {
     private vendorList: ObservableArray<Vendor>;
     private selectedVendor: Vendor;
+    private selectedTab: number;
 
     public constructor(){
         this.vendorList = new ObservableArray([{
@@ -19,49 +20,85 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
               holiday: false
-            }, {
+            },{
+              day: Day.Sunday,
+              open: "8:00 AM",
+              close: "7:00 PM",
+              holiday: false
+            },{
               day: Day.Monday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
               holiday: false
-            }, {
+            },{
+              day: Day.Monday,
+              open: "9:00 PM",
+              close: "12:00 AM",
+              holiday: false
+            },
+            {
+              day: Day.Tuesday,
+              open: "9:00 PM",
+              close: "12:00 AM",
+              holiday: false
+            },{
               day: Day.Tuesday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
               holiday: false
             }, {
               day: Day.Wednesday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
+              holiday: false
+            }, {
+              day: Day.Wednesday,
+              open: "9:00 PM",
+              close: "12:00 AM",
               holiday: false
             }, {
               day: Day.Thursday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
+              holiday: false
+            },{
+              day: Day.Thursday,
+              open: "9:00 PM",
+              close: "12:00 AM",
               holiday: false
             }, {
               day: Day.Friday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
+              holiday: false
+            },{
+              day: Day.Friday,
+              open: "9:00 PM",
+              close: "12:00 AM",
               holiday: false
             }, {
               day: Day.Saturday,
               open: "3:00 PM",
-              close: "2:00 AM",
+              close: "5:00 PM",
               holiday: false
-            },]
+            },{
+              day: Day.Saturday,
+              open: "9:00 PM",
+              close: "12:00 AM",
+              holiday: false
+            }]
           }, {
             id: 2,
             name: "Happy hours at Anodyne Pool Hall & Cocktails",
             description: "Local brewery for the 505!",
             phone: "505-375-3073",
             rating: { likes: 28, dislikes: 8 }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "12:00 AM",
@@ -100,13 +137,13 @@ export class VendorService {
           }, {
             id: 3,
             name: "High Noon Restaurant & Saloon",
-            description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
+            description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
             phone: "505-235-2833",
             rating: { 
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "4:00 PM",
               close: "2:00 AM",
@@ -151,7 +188,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -196,7 +233,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -241,7 +278,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -286,7 +323,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -331,7 +368,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -376,7 +413,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -421,7 +458,7 @@ export class VendorService {
               likes: 60, 
               dislikes: 18 
             }, 
-            hoursOfOperation: [{
+            happyHours: [{
               day: Day.Sunday,
               open: "3:00 PM",
               close: "2:00 AM",
@@ -471,5 +508,13 @@ export class VendorService {
 
      setSelectedVendor(vendor: Vendor){
         this.selectedVendor = vendor;
+     }
+
+     getSelectedTab(): number {
+       return this.selectedTab;
+     }
+
+     setSelectedTab(index: number){
+       this.selectedTab = index;
      }
 }

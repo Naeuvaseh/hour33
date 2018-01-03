@@ -1,0 +1,10 @@
+<StackLayout height="80%"
+             width="100%"
+             padding="10">
+    <MapView 
+        (markerSelect)="onMarkerSelect($event)" 
+        [latitude]="lat" 
+        [longitude]="long" 
+        zoom="18" 
+        (mapReady)="onMapReady($event)"></MapView>
+</StackLayout>

@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Theme } from '../../../settings';
 import { TimePeriod } from '../../../interfaces/time-period.interface';
 import { Vendor } from '../../../interfaces/vendor.interface';
+import { DefaultDay } from '../../../const/default-day.enum';
+import * as moment from 'moment';
 
 @Component({
   selector: 'vendor-listing',
@@ -13,7 +15,6 @@ export class VendorListingComponent implements OnInit {
   @Input() index: number;
 
   private currentDay: number;
-
   private theme;
   public tempIcons: Object[] = [
     {
@@ -96,17 +97,21 @@ export class VendorListingComponent implements OnInit {
   todaysHappyHours(timePeriod: TimePeriod): string {
     var result: string = '';
     var currentDate: Date = new Date();
+    // var start = moment(DefaultDay + 'T' + timePeriod.open);
+    // var end = moment(DefaultDay + 'T' + timePeriod.close);
+    // console.log(start);
+    // console.log(end);    
     if (timePeriod !== null && timePeriod.day === new Date().getDay()){
       // var filteredTimePeriod = timePeriod.filter(result => result.day === new Date().getDay())
       //                                    .map(result => Object.assign({}, result));
-      result = timePeriod.open + ' - ' + timePeriod.close;
+      result = moment(timePeriod.open).format("h:mm A") + ' - ' + moment(timePeriod.close).format("h:mm A");
       
       // TODO
       // implement check (below)
       // Check if current time period is active
-      if (currentDate.toTimeString() >= timePeriod.open && currentDate.toTimeString() <= timePeriod.close){
-        result += " In Progress!";
-      }
+      // if (currentDate.toTimeString() >= timePeriod.open && currentDate.toTimeString() <= timePeriod.close){
+      //   result += " In Progress!";
+      // }
       
       return result;
     }
