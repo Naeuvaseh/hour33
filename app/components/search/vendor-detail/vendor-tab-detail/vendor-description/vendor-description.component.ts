@@ -14,4 +14,8 @@ export class VendorDescriptionComponent {
   constructor() {
     this.theme = Theme;
   }
+
+  openVendorWebsite(){
+    console.log('Vendor website link tapped.');
+  }
 }
