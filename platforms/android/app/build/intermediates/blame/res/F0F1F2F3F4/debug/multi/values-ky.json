@@ -729,8 +729,141 @@
                     "startLine": 40,
                     "startColumn": 4,
                     "startOffset": 4861,
+                    "endColumn": 74,
+                    "endOffset": 4931
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 235,
+                        "endColumn": 70,
+                        "endOffset": 305
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4936,
+                    "endColumn": 108,
+                    "endOffset": 5040
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 306,
+                        "endColumn": 104,
+                        "endOffset": 410
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 5045,
+                    "endColumn": 71,
+                    "endOffset": 5112
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 411,
+                        "endColumn": 67,
+                        "endOffset": 478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 5117,
+                    "endColumn": 71,
+                    "endOffset": 5184
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 479,
+                        "endColumn": 67,
+                        "endOffset": 546
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 5189,
+                    "endColumn": 83,
+                    "endOffset": 5268
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 547,
+                        "endColumn": 79,
+                        "endOffset": 626
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 5273,
+                    "endColumn": 98,
+                    "endOffset": 5367
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 627,
+                        "endColumn": 94,
+                        "endOffset": 721
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 5372,
+                    "endColumn": 84,
+                    "endOffset": 5452
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-ky\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 722,
+                        "endColumn": 80,
+                        "endOffset": 802
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 5457,
                     "endColumn": 80,
-                    "endOffset": 4937
+                    "endOffset": 5533
                 },
                 "from": {
                     "file": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\values-ky\\values-ky.xml",
@@ -745,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 4942,
+                    "startOffset": 5538,
                     "endColumn": 100,
-                    "endOffset": 5038
+                    "endOffset": 5634
                 },
                 "from": {
                     "file": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\values-ky\\values-ky.xml",

@@ -729,8 +729,141 @@
                     "startLine": 40,
                     "startColumn": 4,
                     "startOffset": 4885,
+                    "endColumn": 72,
+                    "endOffset": 4953
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 235,
+                        "endColumn": 68,
+                        "endOffset": 303
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4958,
+                    "endColumn": 124,
+                    "endOffset": 5078
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 304,
+                        "endColumn": 120,
+                        "endOffset": 424
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 5083,
+                    "endColumn": 69,
+                    "endOffset": 5148
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 425,
+                        "endColumn": 65,
+                        "endOffset": 490
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 5153,
+                    "endColumn": 67,
+                    "endOffset": 5216
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 491,
+                        "endColumn": 63,
+                        "endOffset": 554
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 5221,
+                    "endColumn": 85,
+                    "endOffset": 5302
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 555,
+                        "endColumn": 81,
+                        "endOffset": 636
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 5307,
+                    "endColumn": 119,
+                    "endOffset": 5422
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 637,
+                        "endColumn": 115,
+                        "endOffset": 752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 5427,
+                    "endColumn": 73,
+                    "endOffset": 5496
+                },
+                "from": {
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\50ae4795d724662edc5bc5b7ad1c764428dec53d\\output\\res\\values-tr\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 753,
+                        "endColumn": 69,
+                        "endOffset": 822
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 5501,
                     "endColumn": 78,
-                    "endOffset": 4959
+                    "endOffset": 5575
                 },
                 "from": {
                     "file": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\values-tr\\values-tr.xml",
@@ -745,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 4964,
+                    "startOffset": 5580,
                     "endColumn": 100,
-                    "endOffset": 5060
+                    "endOffset": 5676
                 },
                 "from": {
                     "file": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\values-tr\\values-tr.xml",

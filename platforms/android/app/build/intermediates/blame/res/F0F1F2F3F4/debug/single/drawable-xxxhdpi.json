@@ -40,12 +40,12 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\back_arrow.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxxhdpi\\star.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\star.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxxhdpi\\launch.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\launch.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxxhdpi\\star.png",
+        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\star.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xxxhdpi\\attachment.png",

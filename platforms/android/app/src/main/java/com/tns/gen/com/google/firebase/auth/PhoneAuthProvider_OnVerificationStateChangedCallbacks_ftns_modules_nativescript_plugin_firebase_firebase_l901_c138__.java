@@ -1,7 +1,7 @@
 package com.tns.gen.com.google.firebase.auth;
 
-public class PhoneAuthProvider_OnVerificationStateChangedCallbacks_ftns_modules_nativescript_plugin_firebase_firebase_l868_c138__ extends com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks implements com.tns.NativeScriptHashCodeProvider {
-	public PhoneAuthProvider_OnVerificationStateChangedCallbacks_ftns_modules_nativescript_plugin_firebase_firebase_l868_c138__(){
+public class PhoneAuthProvider_OnVerificationStateChangedCallbacks_ftns_modules_nativescript_plugin_firebase_firebase_l901_c138__ extends com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks implements com.tns.NativeScriptHashCodeProvider {
+	public PhoneAuthProvider_OnVerificationStateChangedCallbacks_ftns_modules_nativescript_plugin_firebase_firebase_l901_c138__(){
 		super();
 		com.tns.Runtime.initInstance(this);
 	}

@@ -9,6 +9,6 @@
     "storage": true,
     "facebook_auth": false,
     "google_auth": false,
-    "admob": false,
+    "admob": true,
     "invites": false
 }

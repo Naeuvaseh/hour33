@@ -56,7 +56,7 @@ dependencies {
      compile "com.google.firebase:firebase-storage:$firebaseVersion"
 
     // Uncomment if you want AdMob
-    // compile "com.google.firebase:firebase-ads:$firebaseVersion"
+     compile "com.google.firebase:firebase-ads:$firebaseVersion"
 
     // Uncomment if you need Facebook Authentication
     // compile "com.facebook.android:facebook-android-sdk:4.+"

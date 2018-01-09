@@ -85,31 +85,52 @@ firebase_common_1.firebase.toHashMap = function (obj) {
                 node.put(property, null);
             }
             else {
-                switch (typeof obj[property]) {
-                    case 'object':
-                        node.put(property, firebase_common_1.firebase.toHashMap(obj[property], node));
-                        break;
-                    case 'boolean':
-                        node.put(property, java.lang.Boolean.valueOf(String(obj[property])));
-                        break;
-                    case 'number':
-                        if (Number(obj[property]) === obj[property] && obj[property] % 1 === 0)
-                            node.put(property, java.lang.Long.valueOf(String(obj[property])));
-                        else
-                            node.put(property, java.lang.Double.valueOf(String(obj[property])));
-                        break;
-                    case 'string':
-                        node.put(property, String(obj[property]));
-                        break;
+                if (obj[property] instanceof Date) {
+                    node.put(property, new java.util.Date(obj[property].getTime()));
+                }
+                else if (Array.isArray(obj[property])) {
+                    node.put(property, firebase_common_1.firebase.toJavaArray(obj[property]));
+                }
+                else {
+                    switch (typeof obj[property]) {
+                        case 'object':
+                            node.put(property, firebase_common_1.firebase.toHashMap(obj[property], node));
+                            break;
+                        case 'boolean':
+                            node.put(property, java.lang.Boolean.valueOf(String(obj[property])));
+                            break;
+                        case 'number':
+                            if (Number(obj[property]) === obj[property] && obj[property] % 1 === 0)
+                                node.put(property, java.lang.Long.valueOf(String(obj[property])));
+                            else
+                                node.put(property, java.lang.Double.valueOf(String(obj[property])));
+                            break;
+                        case 'string':
+                            node.put(property, String(obj[property]));
+                            break;
+                    }
                 }
             }
         }
     }
     return node;
 };
+firebase_common_1.firebase.toJavaArray = function (val) {
+    var javaArray = new java.util.ArrayList();
+    for (var i = 0; i < val.length; i++) {
+        javaArray.add(firebase_common_1.firebase.toValue(val[i]));
+    }
+    return javaArray;
+};
 firebase_common_1.firebase.toValue = function (val) {
     var returnVal = null;
     if (val !== null) {
+        if (val instanceof Date) {
+            return new java.util.Date(val.getTime());
+        }
+        if (Array.isArray(val)) {
+            return firebase_common_1.firebase.toJavaArray(val);
+        }
         switch (typeof val) {
             case 'object':
                 returnVal = firebase_common_1.firebase.toHashMap(val);
@@ -178,6 +199,10 @@ firebase_common_1.firebase.getCallbackData = function (type, snapshot) {
 firebase_common_1.firebase.authStateListener = null;
 firebase_common_1.firebase.init = function (arg) {
     return new Promise(function (resolve, reject) {
+        if (firebase_common_1.firebase.initialized) {
+            reject("Firebase already initialized");
+        }
+        firebase_common_1.firebase.initialized = true;
         var runInit = function () {
             arg = arg || {};
             if (typeof (com.google.firebase.database) !== "undefined") {
@@ -186,15 +211,23 @@ firebase_common_1.firebase.init = function (arg) {
                 };
                 var fDatabase = com.google.firebase.database.FirebaseDatabase;
                 if (arg.persist) {
-                    fDatabase.getInstance().setPersistenceEnabled(true);
+                    try {
+                        fDatabase.getInstance().setPersistenceEnabled(true);
+                    }
+                    catch (ignore) {
+                    }
                 }
                 firebase_common_1.firebase.instance = fDatabase.getInstance().getReference();
             }
             if (typeof (com.google.firebase.firestore) !== "undefined") {
                 if (!arg.persist) {
-                    com.google.firebase.firestore.FirebaseFirestore.getInstance().setFirestoreSettings(new com.google.firebase.firestore.FirebaseFirestoreSettings.Builder()
-                        .setPersistenceEnabled(false)
-                        .build());
+                    try {
+                        com.google.firebase.firestore.FirebaseFirestore.getInstance().setFirestoreSettings(new com.google.firebase.firestore.FirebaseFirestoreSettings.Builder()
+                            .setPersistenceEnabled(false)
+                            .build());
+                    }
+                    catch (ignore) {
+                    }
                 }
             }
             var firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
@@ -1941,7 +1974,8 @@ firebase_common_1.firebase.firestore.collection = function (collectionPath) {
             get: function () { return firebase_common_1.firebase.firestore.get(collectionPath); },
             where: function (fieldPath, opStr, value) { return firebase_common_1.firebase.firestore.where(collectionPath, fieldPath, opStr, value); },
             orderBy: function (fieldPath, directionStr) { return firebase_common_1.firebase.firestore.orderBy(collectionPath, fieldPath, directionStr, collectionRef_1); },
-            limit: function (limit) { return firebase_common_1.firebase.firestore.limit(collectionPath, limit, collectionRef_1); }
+            limit: function (limit) { return firebase_common_1.firebase.firestore.limit(collectionPath, limit, collectionRef_1); },
+            onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onCollectionSnapshot(collectionRef_1, callback); }
         };
     }
     catch (ex) {
@@ -1949,13 +1983,34 @@ firebase_common_1.firebase.firestore.collection = function (collectionPath) {
         return null;
     }
 };
-firebase_common_1.firebase.firestore.onSnapshot = function (docRef, callback) {
+firebase_common_1.firebase.firestore.onDocumentSnapshot = function (docRef, callback) {
     var listener = docRef.addSnapshotListener(new com.google.firebase.firestore.EventListener({
         onEvent: (function (snapshot, exception) {
             if (exception !== null) {
                 return;
             }
             callback(new firebase_common_1.DocumentSnapshot(snapshot ? snapshot.getId() : null, snapshot.exists(), snapshot ? function () { return firebase_common_1.firebase.toJsObject(snapshot.getData()); } : null));
+        })
+    }));
+    return function () { return listener.remove(); };
+};
+firebase_common_1.firebase.firestore.onCollectionSnapshot = function (colRef, callback) {
+    var listener = colRef.addSnapshotListener(new com.google.firebase.firestore.EventListener({
+        onEvent: (function (snapshot, exception) {
+            if (exception !== null) {
+                return;
+            }
+            var docSnapshots = [];
+            var _loop_1 = function (i) {
+                var documentSnapshot = snapshot.getDocuments().get(i);
+                docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, function () { return firebase_common_1.firebase.toJsObject(documentSnapshot.getData()); }));
+            };
+            for (var i = 0; i < snapshot.size(); i++) {
+                _loop_1(i);
+            }
+            var snap = new firebase_common_1.QuerySnapshot();
+            snap.docSnapshots = docSnapshots;
+            callback(snap);
         })
     }));
     return function () { return listener.remove(); };
@@ -1976,7 +2031,7 @@ firebase_common_1.firebase.firestore.doc = function (collectionPath, documentPat
             get: function () { return firebase_common_1.firebase.firestore.getDocument(collectionPath, docRef_1.getId()); },
             update: function (data) { return firebase_common_1.firebase.firestore.update(collectionPath, docRef_1.getId(), data); },
             delete: function () { return firebase_common_1.firebase.firestore.delete(collectionPath, docRef_1.getId()); },
-            onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onSnapshot(docRef_1, callback); }
+            onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onDocumentSnapshot(docRef_1, callback); }
         };
     }
     catch (ex) {
@@ -2001,7 +2056,7 @@ firebase_common_1.firebase.firestore.add = function (collectionPath, document) {
                         get: function () { return firebase_common_1.firebase.firestore.getDocument(collectionPath, docRef.getId()); },
                         update: function (data) { return firebase_common_1.firebase.firestore.update(collectionPath, docRef.getId(), data); },
                         delete: function () { return firebase_common_1.firebase.firestore.delete(collectionPath, docRef.getId()); },
-                        onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onSnapshot(docRef, callback); }
+                        onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onDocumentSnapshot(docRef, callback); }
                     });
                 }
             });
@@ -2122,12 +2177,12 @@ firebase_common_1.firebase.firestore.getCollection = function (collectionPath) {
                     else {
                         var result = task.getResult();
                         var docSnapshots = [];
-                        var _loop_1 = function (i) {
+                        var _loop_2 = function (i) {
                             var documentSnapshot = result.getDocuments().get(i);
                             docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, function () { return firebase_common_1.firebase.toJsObject(documentSnapshot.getData()); }));
                         };
                         for (var i = 0; i < result.size(); i++) {
-                            _loop_1(i);
+                            _loop_2(i);
                         }
                         var snap = new firebase_common_1.QuerySnapshot();
                         snap.docSnapshots = docSnapshots;
@@ -2204,12 +2259,12 @@ firebase_common_1.firebase.firestore._getQuery = function (collectionPath, query
                     else {
                         var result = task.getResult();
                         var docSnapshots = [];
-                        var _loop_2 = function (i) {
+                        var _loop_3 = function (i) {
                             var documentSnapshot = result.getDocuments().get(i);
                             docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, function () { return firebase_common_1.firebase.toJsObject(documentSnapshot.getData()); }));
                         };
                         for (var i = 0; i < result.size(); i++) {
-                            _loop_2(i);
+                            _loop_3(i);
                         }
                         var snap = new firebase_common_1.QuerySnapshot();
                         snap.docSnapshots = docSnapshots;
@@ -2221,7 +2276,8 @@ firebase_common_1.firebase.firestore._getQuery = function (collectionPath, query
         }); },
         where: function (fp, os, v) { return firebase_common_1.firebase.firestore.where(collectionPath, fp, os, v, query); },
         orderBy: function (fp, directionStr) { return firebase_common_1.firebase.firestore.orderBy(collectionPath, fp, directionStr, query); },
-        limit: function (limit) { return firebase_common_1.firebase.firestore.limit(collectionPath, limit, query); }
+        limit: function (limit) { return firebase_common_1.firebase.firestore.limit(collectionPath, limit, query); },
+        onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onCollectionSnapshot(query, callback); }
     };
 };
 firebase_common_1.firebase.firestore.where = function (collectionPath, fieldPath, opStr, value, query) {

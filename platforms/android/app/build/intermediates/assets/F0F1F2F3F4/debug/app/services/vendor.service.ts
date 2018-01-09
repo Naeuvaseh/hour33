@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Vendor } from '../interfaces/vendor.interface';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import { Day } from '../enums/day.enum';
+const firebase = require("nativescript-plugin-firebase");
 
 
 @Injectable()
@@ -495,10 +496,10 @@ export class VendorService {
         holiday: false
       },]
     }]);
+    
   }
 
   getSetVendors(): ObservableArray<Vendor> {
-    console.log('Requesting Vendor List.');
     return this.vendorList;
   }
 

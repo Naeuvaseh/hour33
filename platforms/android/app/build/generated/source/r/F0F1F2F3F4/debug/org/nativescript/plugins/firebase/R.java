@@ -8,9 +8,9 @@ package org.nativescript.plugins.firebase;
 
 public final class R {
     public static final class attr {
-        public static final int circleCrop = 0x7f010151;
-        public static final int imageAspectRatio = 0x7f010150;
-        public static final int imageAspectRatioAdjust = 0x7f01014f;
+        public static final int circleCrop = 0x7f010154;
+        public static final int imageAspectRatio = 0x7f010153;
+        public static final int imageAspectRatioAdjust = 0x7f010152;
     }
     public static final class id {
         public static final int adjust_height = 0x7f0d005d;
@@ -21,11 +21,11 @@ public final class R {
         public static final int google_play_services_version = 0x7f0b0006;
     }
     public static final class string {
-        public static final int app_name = 0x7f070039;
+        public static final int app_name = 0x7f070040;
         public static final int common_google_play_services_unknown_issue = 0x7f07001b;
     }
     public static final class styleable {
-        public static final int[] LoadingImageView = { 0x7f01014f, 0x7f010150, 0x7f010151 };
+        public static final int[] LoadingImageView = { 0x7f010152, 0x7f010153, 0x7f010154 };
         public static final int LoadingImageView_circleCrop = 2;
         public static final int LoadingImageView_imageAspectRatio = 1;
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;

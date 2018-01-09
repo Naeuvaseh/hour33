@@ -16,10 +16,10 @@
             <vendor-regular-hours [hours]="vendor.hoursOfOperation"></vendor-regular-hours>
         </FlexboxLayout>
     </ScrollView>
-    <StackLayout *tabItem="{title: 'Map'}">
+    <FlexboxLayout *tabItem="{title: 'Map'}" flexDirection="column">
         <vendor-map [vendor]="vendor"></vendor-map>
         <vendor-navigation [vendor]="vendor"></vendor-navigation>
-    </StackLayout>
+    </FlexboxLayout>
     <StackLayout *tabItem="{title: 'Menu'}">
         <!-- TODO -->
     </StackLayout>

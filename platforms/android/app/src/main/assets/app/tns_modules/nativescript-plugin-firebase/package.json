@@ -14,19 +14,19 @@
     ]
   ],
   "_from": "nativescript-plugin-firebase@latest",
-  "_id": "nativescript-plugin-firebase@5.1.1",
+  "_id": "nativescript-plugin-firebase@5.1.2",
   "_inCache": true,
   "_location": "/nativescript-plugin-firebase",
-  "_nodeVersion": "8.9.3",
+  "_nodeVersion": "6.12.3",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-plugin-firebase-5.1.1.tgz_1514644490570_0.23703637719154358"
+    "tmp": "tmp/nativescript-plugin-firebase-5.1.2.tgz_1515437935947_0.8283872702158988"
   },
   "_npmUser": {
     "name": "eddyverbruggen",
     "email": "eddyverbruggen@gmail.com"
   },
-  "_npmVersion": "5.5.1",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
     "raw": "nativescript-plugin-firebase",
@@ -41,8 +41,8 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.1.tgz",
-  "_shasum": "852b2cbd1662b6ce55e1e9a3a4fc313e90b0ba5c",
+  "_resolved": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.2.tgz",
+  "_shasum": "4e42dbfc54e792c1c2dc5b64f224bf992b8f1f35",
   "_shrinkwrap": null,
   "_spec": "nativescript-plugin-firebase",
   "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
@@ -62,16 +62,15 @@
   },
   "description": "Fire. Base. Firebase!",
   "devDependencies": {
-    "tns-core-modules": "~3.3.0",
-    "tns-platform-declarations": "~3.3.0",
+    "tns-core-modules": "~3.4.0",
+    "tns-platform-declarations": "~3.4.0",
     "tslint": "^5.1.0",
     "typescript": "~2.4.0"
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-en9uCrVGh3N28TuNWn2embLD6XiYMEqG/UiWaiTwoHTP7fJ1sSyNMBfE9o3bq4KI2C0cznEFNnu8XQfpKY9a9A==",
-    "shasum": "852b2cbd1662b6ce55e1e9a3a4fc313e90b0ba5c",
-    "tarball": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.1.tgz"
+    "shasum": "4e42dbfc54e792c1c2dc5b64f224bf992b8f1f35",
+    "tarball": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.2.tgz"
   },
   "homepage": "https://github.com/eddyverbruggen/nativescript-plugin-firebase",
   "keywords": [
@@ -136,7 +135,7 @@
   "scripts": {
     "ci.tslint": "npm run tslint && npm run tslint.demo",
     "config": "node scripts/postinstall.js config",
-    "demo-ng.android": "npm run preparedemo-ng && cd ../demo-ng && tns platform remove android && tns run android --justlaunch",
+    "demo-ng.android": "npm run preparedemo-ng && cd ../demo-ng && tns run android --justlaunch",
     "demo-ng.ios": "npm run preparedemo-ng && cd ../demo-ng && tns run ios --emulator",
     "demo-ng.ios.device": "npm run preparedemo-ng && cd ../demo-ng && tns platform remove ios && tns run ios",
     "demo.android": "npm run preparedemo && cd ../demo && tns platform remove android && tns run android --justlaunch",
@@ -169,5 +168,5 @@
     "tslint.demo": "tslint --config '../tslint.json' '../demo/app/*.ts' --exclude '**/node_modules/**'"
   },
   "typings": "index.d.ts",
-  "version": "5.1.1"
+  "version": "5.1.2"
 }

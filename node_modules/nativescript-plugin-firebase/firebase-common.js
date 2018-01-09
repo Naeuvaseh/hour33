@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var dialogs_1 = require("tns-core-modules/ui/dialogs");
 exports.firebase = {
+    initialized: false,
     instance: null,
     storage: null,
     firebaseRemoteConfig: null,
