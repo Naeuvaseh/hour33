@@ -1,9 +1,9 @@
 {
-	"time": "Tue Dec 19 2017 14:30:44 GMT-0500 (Eastern Standard Time)",
+	"time": "Tue Jan 09 2018 11:57:56 GMT-0500 (Eastern Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
-	"projectFileHash": "a2b6e50a6055abe1905eaa71ef38fae0c90ba7f3e60e597ce751830b385783c2",
-	"changesRequireBuildTime": "Tue Dec 19 2017 12:17:05 GMT-0500 (Eastern Standard Time)"
+	"projectFileHash": "1ef277b373bd207775303cb485ea130ec99b7d402b1ca637bab1d9aa35a62609",
+	"changesRequireBuildTime": "Tue Jan 09 2018 11:42:47 GMT-0500 (Eastern Standard Time)"
 }

@@ -1,0 +1,56 @@
+<FlexboxLayout class="card">
+    <FlexboxLayout width="50%" padding="10 0 10 10">
+        <WrapLayout orientation="horizontal">
+            <Image *ngFor="let icon of tempIcons"
+                [src]="icon.src"
+                width="30"
+                height="30"
+                margin="2"
+                stretch="aspectFill"></Image>
+        </WrapLayout>
+    </FlexboxLayout>
+    <FlexBoxLayout width="10%">
+        <!-- Empty Container -->
+    </FlexBoxLayout>
+    <FlexboxLayout width="40%" padding="10 0 10 0">
+        <FlexboxLayout width="50%" alignItems="center" (tap)="navToReviews()">
+            <Label text="9.5"
+                   [color]="theme.accentColor"
+                   fontWeight="700"
+                   fontSize="36"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout width="50%" alignItems="center">
+            <FlexboxLayout flexDirection="row">
+                <!-- Left Column -->
+                <FlexboxLayout flexDirection="column" alignItems="center" padding="0 4 0 0" >
+                    <!-- Thumbs Up Icon -->
+                    <Image src="res://thumb_up"
+                        width="30"
+                        height="30"
+                        horizontalAlignment="center"
+                        verticalAlignment="bottom"
+                        (tap)="navToReviews()"
+                        stretch="aspectFill"></Image>
+                    <!-- Count -->
+                    <Label 
+                        text="60"
+                        horizontalAlignment="center"
+                        verticalAlignment="top"
+                        [color]="theme.inactiveColor"></Label>
+                </FlexboxLayout>
+                <!-- Right Column -->
+                <FlexboxLayout flexDirection="column" alignItems="center" padding="0 0 0 4">
+                    <Image src="res://thumb_down"
+                        width="30"
+                        height="30"
+                        (tap)="navToReviews()"
+                        stretch="aspectFill"></Image>
+                    <!-- Count -->
+                    <Label 
+                        text="16"
+                        [color]="theme.inactiveColor"></Label>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </FlexboxLayout>
+    </FlexboxLayout>
+</FlexboxLayout>

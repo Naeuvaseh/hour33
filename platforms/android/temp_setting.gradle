@@ -1,13 +1,13 @@
 android {
             defaultConfig {
-                applicationId = "org.nativescript.Hour33"
+                applicationId = "org.voxlore.hour33"
 
-                if (false) {
-                    minSdkVersion = false
+                if (17) {
+                    minSdkVersion = 17
                 }
 
-                if (false) {
-                    targetSdkVersion = false
+                if (26) {
+                    targetSdkVersion = 26
                 }
             }
         }

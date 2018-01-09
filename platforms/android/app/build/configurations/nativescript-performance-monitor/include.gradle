@@ -1,0 +1,11 @@
+android {
+    productFlavors {
+        "F2" {
+            dimension "nativescriptperformancemonitor"
+        }
+    }
+}
+
+dependencies {
+    compile 'jp.wasabeef:takt:1.0.3'
+}
