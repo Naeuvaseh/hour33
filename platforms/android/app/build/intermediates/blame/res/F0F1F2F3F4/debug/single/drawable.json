@@ -32,12 +32,12 @@
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\data_form_segment_item.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable\\data_form_segment_item.xml"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\notification_tile_bg.xml",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\data_form_segment_item.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable\\data_form_segment_item.xml"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable\\abc_ic_go_search_api_material.xml",

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi-v4\\ic_clear.png",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable-hdpi-v4\\ic_clear.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi-v4\\ic_clear.png",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable-hdpi-v4\\ic_clear.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-hdpi-v4\\hmb.png",

@@ -8,12 +8,12 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\beenhere.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\favorite.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\favorite.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\search.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\search.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\favorite.png",
+        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\favorite.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\download.png",
@@ -24,12 +24,12 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\back_arrow.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\icon.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\filter.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\filter.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\icon.png",
+        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\icon.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-xhdpi\\thumbs_up_down.png",

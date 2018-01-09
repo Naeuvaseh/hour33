@@ -84,8 +84,8 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\naeuv\
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\e55e0b9d533167f2e00924b4da547be4b26743dd\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\5e51635721497f8a857825462b65b4e1bdd7bb10\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\b3f5bbb07f8b99b378ca0033581208ec5ec8a0c7\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\naeuv\.android\build-cache\99f3e6d5b74113efd6319e08c8498a7921b2ada9\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\bcfd07807bc360dad906045a5872c09d026d3857\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\naeuv\.android\build-cache\4fea0d9d200d01c1b9b816e4afc3c20df6c3ddec\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\94911cb93669489a3369eea2cd21e4f66b92c48c\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Chart-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\3a9e0310fe3fd0fd571ab66d56c1e90546b83701\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Common-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\c4f2f1e321fb79948147a73760855a36461b4aba\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Data-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\b4a2f9caac0288ce2a8e2fba44255c009c9e16b9\output\AndroidManifest.xml:7:5-9:41
@@ -94,7 +94,7 @@ MERGED from [:Gauges-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cac
 MERGED from [:Input-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\e8d8152c916588027cdd025448ab03fc18ffc77e\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:List-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\620f3a222d840830db8f204aaa6afee115a17c41\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Primitives-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\237c12fbc1c5aa93c986cd8d769e9233e1ea3835\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:widgets-release:] C:\Users\naeuv\.android\build-cache\78b06939aecad0381bba09a9b38a4e7ed8c2fb40\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:widgets-release:] C:\Users\naeuv\.android\build-cache\448ea610ec97d27bc0165b5541f9bd7cc036a46e\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\665a6fd6274b582a8ceb94c9b0178f8695cb3431\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
@@ -181,7 +181,7 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\naeuv\
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\e55e0b9d533167f2e00924b4da547be4b26743dd\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\5e51635721497f8a857825462b65b4e1bdd7bb10\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\b3f5bbb07f8b99b378ca0033581208ec5ec8a0c7\output\AndroidManifest.xml:29:5-20
-MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\bcfd07807bc360dad906045a5872c09d026d3857\output\AndroidManifest.xml:11:5-22:19
+MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\94911cb93669489a3369eea2cd21e4f66b92c48c\output\AndroidManifest.xml:11:5-22:19
 MERGED from [:Chart-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\3a9e0310fe3fd0fd571ab66d56c1e90546b83701\output\AndroidManifest.xml:11:5-12:19
 MERGED from [:Common-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\c4f2f1e321fb79948147a73760855a36461b4aba\output\AndroidManifest.xml:11:5-12:19
 MERGED from [:Data-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\b4a2f9caac0288ce2a8e2fba44255c009c9e16b9\output\AndroidManifest.xml:11:5-12:19
@@ -190,7 +190,7 @@ MERGED from [:Gauges-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cac
 MERGED from [:Input-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\e8d8152c916588027cdd025448ab03fc18ffc77e\output\AndroidManifest.xml:11:5-12:19
 MERGED from [:List-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\620f3a222d840830db8f204aaa6afee115a17c41\output\AndroidManifest.xml:11:5-12:19
 MERGED from [:Primitives-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\237c12fbc1c5aa93c986cd8d769e9233e1ea3835\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:widgets-release:] C:\Users\naeuv\.android\build-cache\78b06939aecad0381bba09a9b38a4e7ed8c2fb40\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:widgets-release:] C:\Users\naeuv\.android\build-cache\448ea610ec97d27bc0165b5541f9bd7cc036a46e\output\AndroidManifest.xml:11:5-12:19
 	android:label
 		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:11:122-138
 		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:11:122-138
@@ -431,13 +431,13 @@ ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv\.android\build-cache\565ce92359d5ba9982c4912f8e39a59bd943296f\output\AndroidManifest.xml:24:13-58
 service#org.nativescript.plugins.firebase.MyFirebaseMessagingService
-ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\bcfd07807bc360dad906045a5872c09d026d3857\output\AndroidManifest.xml:12:9-16:19
+ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\94911cb93669489a3369eea2cd21e4f66b92c48c\output\AndroidManifest.xml:12:9-16:19
 	android:name
-		ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\bcfd07807bc360dad906045a5872c09d026d3857\output\AndroidManifest.xml:12:18-93
+		ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\94911cb93669489a3369eea2cd21e4f66b92c48c\output\AndroidManifest.xml:12:18-93
 service#org.nativescript.plugins.firebase.MyFirebaseInstanceIDService
-ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\bcfd07807bc360dad906045a5872c09d026d3857\output\AndroidManifest.xml:17:9-21:19
+ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\94911cb93669489a3369eea2cd21e4f66b92c48c\output\AndroidManifest.xml:17:9-21:19
 	android:name
-		ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\bcfd07807bc360dad906045a5872c09d026d3857\output\AndroidManifest.xml:17:18-94
+		ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\94911cb93669489a3369eea2cd21e4f66b92c48c\output\AndroidManifest.xml:17:18-94
 activity#com.telerik.widget.feedback.SendFeedbackActivity
 ADDED from [:Feedback-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\5ed60b3e4f415147b4515d9db5a4917046f9fa69\output\AndroidManifest.xml:12:9-16:20
 	android:label

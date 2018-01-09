@@ -81,19 +81,15 @@ export class AppComponent implements OnInit {
          
          switch (args.newIndex){
              case 0: 
-                 console.log('Navigating to search');
                  this.routerExt.navigate(["/search"], { transition: this.transition });
                  break;
              case 1:
-                 console.log('Navigating to specials');
                  this.routerExt.navigate(["/specials"], { transition: this.transition });
                  break;
              case 2:
-                 console.log('Navigating to favorites');
                  this.routerExt.navigate(["/favorites"], { transition: this.transition });
                  break;
              case 3:
-                 console.log('Navigating to account');
                  this.routerExt.navigate(["/account"], { transition: this.transition });
                  break;
              default:

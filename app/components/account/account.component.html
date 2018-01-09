@@ -3,4 +3,20 @@
            [color]="theme.actionBarTextColor">
         <Label class="action-bar-title" text="Account"></Label>
     </ActionBar>
-<Label text="account page"></Label>
+<TextField autocorrect="false" 
+           hint="Email address" 
+           autocapitalizationType="none"
+           [(ngModel)]="user.email"></TextField>
+<TextField autocorrect="false" 
+           hint="Password" 
+           secure="true"
+           autocapitalizationType="none"
+           [(ngModel)]="user.password"></TextField>
+
+<Label [text]="ngModel"></Label>
+<Button text="Login"
+        class="btn btn-primary"
+        (tap)="onLogin()"></Button>
+<Button text="Logout"
+        class="btn btn-primary"
+        (tap)="onLogout()"></Button>
