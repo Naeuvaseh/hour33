@@ -19,7 +19,7 @@ export class HourListingComponent {
   }
 
   formatHours(hour: TimePeriod): string {
-    return moment(hour.open).format("h:mm A").toString() + " - " + moment(hour.close).format("h:mm A").toString();
+    return moment(hour.open).format("h:mma").toString() + " - " + moment(hour.close).format("h:mma").toString();
   }
 
   formatCurrentDay(day: number): boolean{

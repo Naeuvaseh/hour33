@@ -6,7 +6,9 @@ export const Theme ={
     darkGrey: '#3D3638',
     pageBackgroundColor: '#1b1819',
     actionBarTextColor: '#FFF',
-    inactiveColor: '#FFF'  
+    inactiveColor: '#FFF',
+    greenColor: '#3cba54',
+    yellowColor: '#f4c20d'
 }
 
 export const Debug = {

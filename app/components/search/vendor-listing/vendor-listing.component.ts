@@ -94,25 +94,44 @@ export class VendorListingComponent implements OnInit {
     //Implement function to order vendor object array by time.
   }
 
+  happyHourStatus(timePeriod: TimePeriod): string {
+    var currentDate = new Date();
+    var currentMinutes = currentDate.getMinutes() + (currentDate.getHours() * 60);
+    var startMinutes = timePeriod.open.getMinutes() + (timePeriod.open.getHours() * 60);
+    var endMinutes = timePeriod.close.getMinutes() + (timePeriod.close.getHours() * 60);
+    // Not null && current day && start >= now && end <= now
+    if (timePeriod !== null && timePeriod.day === new Date().getDay()){
+      // Active
+      if (startMinutes <= currentMinutes && endMinutes >= currentMinutes) {
+        return Theme.greenColor;
+      }
+      // Ending Soon
+      else if (startMinutes <= currentMinutes && ((endMinutes - currentMinutes) <= 60)){
+        return Theme.yellowColor;
+      }
+      // Coming Up
+      else {
+        return Theme.inactiveColor;
+      }
+    } 
+  }
+
   todaysHappyHours(timePeriod: TimePeriod): string {
     var result: string = '';
-    var currentDate: Date = new Date();
-    // var start = moment(DefaultDay + 'T' + timePeriod.open);
-    // var end = moment(DefaultDay + 'T' + timePeriod.close);
-    // console.log(start);
-    // console.log(end);    
+    var currentDate = new Date();
+    var currentMinutes = currentDate.getMinutes() + (currentDate.getHours() * 60);
+    var startMinutes = timePeriod.open.getMinutes() + (timePeriod.open.getHours() * 60);
+    var endMinutes = timePeriod.close.getMinutes() + (timePeriod.close.getHours() * 60);
+    
     if (timePeriod !== null && timePeriod.day === new Date().getDay()){
-      // var filteredTimePeriod = timePeriod.filter(result => result.day === new Date().getDay())
-      //                                    .map(result => Object.assign({}, result));
-      result = moment(timePeriod.open).format("h:mm A") + ' - ' + moment(timePeriod.close).format("h:mm A");
+      result = moment(timePeriod.open).format("h:mma") + ' - ' + moment(timePeriod.close).format("h:mma");
       
-      // TODO
-      // implement check (below)
-      // Check if current time period is active
-      // if (currentDate.toTimeString() >= timePeriod.open && currentDate.toTimeString() <= timePeriod.close){
-      //   result += " In Progress!";
-      // }
-      
+      if (this.happyHourStatus(timePeriod) === Theme.greenColor){
+        result += " - In Progress!";
+      }
+      else if (this.happyHourStatus(timePeriod) === Theme.yellowColor){
+        result += " - Ending Soon!";
+      }
       return result;
     }
     return 'Unavailable';
