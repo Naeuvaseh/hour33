@@ -1,11 +1,12 @@
 export const Theme ={
-    accentColor: '#BA262E',
-    actionBarColor: '#3D3638',
+    //accentColor: '#BA262E',
+    accentColor: '#d50000',
+    primaryColor: '#212121',
+    lightGrey: '#6d6d6d',
+    darkGrey: '#3D3638',
+    pageBackgroundColor: '#1b1819',
     actionBarTextColor: '#FFF',
-    bottombarColor: '#3D3638',
-    inactiveColor: '#FFF',
-    pageBackgroundColor: '#262324',
-    darkGrey: '#8D8B8B'
+    inactiveColor: '#FFF'  
 }
 
 export const Debug = {

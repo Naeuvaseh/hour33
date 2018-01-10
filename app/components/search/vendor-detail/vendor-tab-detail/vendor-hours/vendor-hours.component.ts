@@ -5,12 +5,13 @@ import { Weekdays } from '../../../../../const/weekdays.const';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'vendor-happy-hours',
-  templateUrl: './components/search/vendor-detail/vendor-tab-detail/vendor-happy-hours/vendor-happy-hours.component.html'
+  selector: 'vendor-hours',
+  templateUrl: './components/search/vendor-detail/vendor-tab-detail/vendor-hours/vendor-hours.component.html'
 })
-export class VendorHappyHoursComponent {
-  @Input() hours: TimePeriod;
-
+export class VendorHoursComponent {
+  @Input() happyHours: TimePeriod[];
+  @Input() regularHours: TimePeriod[];
+  
   public theme;
 
   constructor() {
@@ -21,8 +22,12 @@ export class VendorHappyHoursComponent {
     return Weekdays[hour.day] + ":  " + moment(hour.open).format("h:mm A").toString() + " - " + moment(hour.close).format("h:mm A").toString();
   }
 
-  formatCurrentDay(hour: TimePeriod): boolean{
+  getDay(day: number): string {
+    return Weekdays[day] + ":";
+  }
+
+  formatCurrentDay(hour: number): boolean{
     var currentDay = new Date();
-    return (hour.day.toString() === new Date().getDay().toString()) ? true : false;
+    return (hour === new Date().getDay()) ? true : false;
   }
 }

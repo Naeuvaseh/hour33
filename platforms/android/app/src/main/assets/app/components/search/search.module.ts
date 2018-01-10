@@ -7,12 +7,13 @@ import { VendorListingComponent } from "./vendor-listing/vendor-listing.componen
 import { VendorDetailComponent } from "./vendor-detail/vendor-detail.component";
 import { VendorService } from '../../services/vendor.service';
 import { VendorDescriptionComponent } from './vendor-detail/vendor-tab-detail/vendor-description/vendor-description.component';
-import { VendorHappyHoursComponent } from './vendor-detail/vendor-tab-detail/vendor-happy-hours/vendor-happy-hours.component';
-import { VendorRegularHoursComponent } from './vendor-detail/vendor-tab-detail/vendor-regular-hours/vendor-regular-hours.component';
+import { VendorHoursComponent } from './vendor-detail/vendor-tab-detail/vendor-hours/vendor-hours.component';
 import { VendorScoreComponent } from './vendor-detail/vendor-tab-detail/vendor-score/vendor-score.component';
 import { VendorMapComponent } from './vendor-detail/vendor-tab-map/vendor-map/vendor-map.component';
 import { VendorNavigationComponent } from './vendor-detail/vendor-tab-map/vendor-navigation/vendor-navigation.component';
 import { VendorReviewComponent } from './vendor-detail/vendor-tab-reviews/vendor-review.component';
+import { HourListingComponent } from "./vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-listing.component";
+import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
 
 
 @NgModule({
@@ -31,9 +32,10 @@ import { VendorReviewComponent } from './vendor-detail/vendor-tab-reviews/vendor
         VendorDetailComponent,
         // Vendor Detail - Detail Tab
         VendorDescriptionComponent,
-        VendorHappyHoursComponent,
-        VendorRegularHoursComponent,
+        VendorHoursComponent,
         VendorScoreComponent,
+        HourListingComponent,
+        HourFilterPipe,
         // Vendor Detail - Map Tab
         VendorMapComponent,
         VendorNavigationComponent,
