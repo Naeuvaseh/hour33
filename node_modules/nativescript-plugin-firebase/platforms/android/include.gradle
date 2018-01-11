@@ -38,10 +38,10 @@ dependencies {
     compile "com.google.android.gms:play-services-base:$googlePlayServicesVersion"
 
     // Uncomment if you want to use the regular Database
-    // compile "com.google.firebase:firebase-database:$firebaseVersion"
+     compile "com.google.firebase:firebase-database:$firebaseVersion"
 
     // Uncomment if you want to use 'Cloud Firestore'
-     compile "com.google.firebase:firebase-firestore:$firebaseVersion"
+    // compile "com.google.firebase:firebase-firestore:$firebaseVersion"
 
     // Uncomment if you want to use 'Remote Config'
      compile "com.google.firebase:firebase-config:$firebaseVersion"
@@ -65,7 +65,7 @@ dependencies {
     // compile "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
 
     // Uncomment if you need Firebase Invites or Dynamic Links
-    // compile "com.google.firebase:firebase-invites:$firebaseVersion"
+     compile "com.google.firebase:firebase-invites:$firebaseVersion"
 }
 
 apply plugin: "com.google.gms.google-services"

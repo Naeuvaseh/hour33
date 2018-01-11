@@ -1,9 +1,11 @@
-<ActionBar class="action-bar">
+<ActionBar 
+    class="action-bar"
+    [backgroundColor]="theme.darkGrey">
     <NavigationButton icon="res://back_arrow" (tap)="goBack()"></NavigationButton>
     <Label class="action-bar-title" [text]="vendor.name" [color]="theme.accentColor"></Label>
     <ActionItem icon="res://share" (tap)="onShare()"></ActionItem>
 </ActionBar>
-<TabView [tabBackgroundColor]="theme.actionBarColor" 
+<TabView [tabBackgroundColor]="theme.darkGrey" 
          [selectedTabTextColor]="theme.accentColor"
          [tabTextColor]="theme.inactiveColor" 
          [androidSelectedTabHighlightColor]="theme.accentColor"
@@ -12,8 +14,7 @@
         <FlexboxLayout flexDirection="column">
             <vendor-score [vendor]="vendor"></vendor-score>
             <vendor-description [vendor]="vendor"></vendor-description>
-            <vendor-happy-hours [hours]="vendor.happyHours"></vendor-happy-hours>
-            <vendor-regular-hours [hours]="vendor.hoursOfOperation"></vendor-regular-hours>
+            <vendor-hours [happyHours]="vendor.happyHours" [regularHours]="vendor.hoursOfOperation"></vendor-hours>
         </FlexboxLayout>
     </ScrollView>
     <FlexboxLayout *tabItem="{title: 'Map'}" flexDirection="column">

@@ -2340,6 +2340,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="Theme.AppInvite.Preview" parent="Theme.AppInvite.Preview.Base">
+<item name="android:colorBackground">@android:color/white</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowIsTranslucent">true</item>
+</style>
+    <style name="Theme.AppInvite.Preview.Base" parent="@android:style/Theme.Light.NoTitleBar">
+</style>
     <style name="Theme.ChartTheme" parent="android:Theme.Light">
         <item name="AxisStyle">@style/AxisStyle</item>
         <item name="LineAxisStyle">@style/AxisStyle.LineAxisStyle</item>

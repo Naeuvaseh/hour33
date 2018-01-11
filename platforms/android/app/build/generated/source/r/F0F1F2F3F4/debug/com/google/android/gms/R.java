@@ -133,7 +133,9 @@ public final class R {
         public static final int s7 = 0x7f07002c;
     }
     public static final class style {
-        public static final int Theme_IAPTheme = 0x7f090146;
+        public static final int Theme_AppInvite_Preview = 0x7f090140;
+        public static final int Theme_AppInvite_Preview_Base = 0x7f090024;
+        public static final int Theme_IAPTheme = 0x7f090148;
     }
     public static final class styleable {
         public static final int[] AdsAttrs = { 0x7f01003f, 0x7f010040, 0x7f010041 };

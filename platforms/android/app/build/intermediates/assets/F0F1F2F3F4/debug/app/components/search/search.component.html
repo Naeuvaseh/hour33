@@ -1,5 +1,5 @@
 <ActionBar class="action-bar" 
-           [backgroundColor]="theme.actionBarColor"
+           [backgroundColor]="theme.darkGrey"
            [color]="theme.actionBarTextColor">
     <Label class="action-bar-title" text="Today's Happy Hours"></Label>
     <ActionItem tap="onFilter()"
@@ -15,7 +15,7 @@
                 icon="res://beenhere"
                 android.position="actionBar"></ActionItem>
 </ActionBar>
-<GridLayout rows="*" backgroundColor="#262324">
+<GridLayout rows="*" [backgroundColor]="theme.primaryColor">
     <RadListView [items]="items" 
                   pullToRefresh="true" 
                  (pullToRefreshInitiated)="refresh($event)" 
