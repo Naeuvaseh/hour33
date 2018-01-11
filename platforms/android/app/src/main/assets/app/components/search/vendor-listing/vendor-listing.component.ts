@@ -126,10 +126,11 @@ export class VendorListingComponent implements OnInit {
     var currentMinutes = currentDate.getMinutes() + (currentDate.getHours() * 60);
     var startMinutes = timePeriod.open.getMinutes() + (timePeriod.open.getHours() * 60);
     var endMinutes = timePeriod.close.getMinutes() + (timePeriod.close.getHours() * 60);
+    console.log('Start: ' + startMinutes + ', Current: ' + currentMinutes + ', End: ' + endMinutes);
     
     // Current and valid happy hour time period
     if (timePeriod !== null && timePeriod.day === new Date().getDay()){
-      result = moment(timePeriod.open).format("h:mma") + ' - ' + moment(timePeriod.close).format("h:mma");
+      result = moment.utc(timePeriod.open).format("h:mma") + ' - ' + moment.utc(timePeriod.close).format("h:mma");
       
       // Append verbiage to times
       switch(this.happyHourStatus(timePeriod)){
