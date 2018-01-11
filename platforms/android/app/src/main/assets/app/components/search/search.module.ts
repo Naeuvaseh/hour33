@@ -14,7 +14,7 @@ import { VendorNavigationComponent } from './vendor-detail/vendor-tab-map/vendor
 import { VendorReviewComponent } from './vendor-detail/vendor-tab-reviews/vendor-review.component';
 import { HourListingComponent } from "./vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-listing.component";
 import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
-
+import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
 
 @NgModule({
     imports: [
@@ -30,6 +30,7 @@ import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/h
         // Search Page
         VendorListingComponent,
         VendorDetailComponent,
+        CurrentDayPipe,
         // Vendor Detail - Detail Tab
         VendorDescriptionComponent,
         VendorHoursComponent,

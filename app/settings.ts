@@ -12,6 +12,12 @@ export const Theme ={
 }
 
 export const Debug = {
+    console: {
+        // Components
+        
+        // Pipes
+        CurrentDayPipe: false
+    },
     fps: false,
     backgroundColor: false
 }

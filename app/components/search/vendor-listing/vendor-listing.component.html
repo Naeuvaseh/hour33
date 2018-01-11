@@ -34,13 +34,11 @@
                     [color]="theme.inactiveColor"></Label>
                 <!-- Happy Hour Hours -->
                 <FlexboxLayout flexDirection="column" 
-                    *ngFor="let timePeriod of vendor?.happyHours">
-                    <Span 
-                        
-                        class="in-progress">
+                    *ngFor="let timePeriod of vendor?.happyHours | currentDay">
+                    <Span class="in-progress">
 
                     </Span>
-                    <Label *ngIf="timePeriod.day === currentDay"
+                    <Label
                         [text]="todaysHappyHours(timePeriod)"
                         [color]="happyHourStatus(timePeriod)"
                         width="100%"

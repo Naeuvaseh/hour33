@@ -3,6 +3,7 @@ import { Theme } from '../../../settings';
 import { TimePeriod } from '../../../interfaces/time-period.interface';
 import { Vendor } from '../../../interfaces/vendor.interface';
 import { DefaultDay } from '../../../const/default-day.enum';
+import { TimePeriodThreshold } from '../../../const/time-period-threshold.const';
 import * as moment from 'moment';
 
 @Component({
@@ -16,6 +17,8 @@ export class VendorListingComponent implements OnInit {
 
   private currentDay: number;
   private theme;
+  public currentDate = moment.utc();
+
   public tempIcons: Object[] = [
     {
       id: 1,
@@ -86,7 +89,7 @@ export class VendorListingComponent implements OnInit {
   ngOnInit(){
     //Set current date
     this.currentDay = new Date().getDay();
-    //orderByTime(this.vendor);
+   // console.log('Current Date: ' + this.currentDate);
   }
 
   orderByTime(vendor: Vendor){
@@ -95,22 +98,25 @@ export class VendorListingComponent implements OnInit {
   }
 
   happyHourStatus(timePeriod: TimePeriod): string {
-    var currentDate = new Date();
-    var currentMinutes = currentDate.getMinutes() + (currentDate.getHours() * 60);
-    var startMinutes = timePeriod.open.getMinutes() + (timePeriod.open.getHours() * 60);
-    var endMinutes = timePeriod.close.getMinutes() + (timePeriod.close.getHours() * 60);
     // Not null && current day && start >= now && end <= now
-    if (timePeriod !== null && timePeriod.day === new Date().getDay()){
+    if (timePeriod !== null && moment.utc(timePeriod).day() === moment.utc().day()) {
+      //console.log('Current: ' + this.getCurrentMinutes());
+      // console.log('Time Range: ' + this.getStartMinutes(timePeriod) + ' - ' + this.getEndMinutes(timePeriod));
+      // console.log('Start <= Current: ' + (this.getStartMinutes(timePeriod) <= this.getCurrentMinutes()));
+      // console.log('Current <= End: ' + (this.getCurrentMinutes() <= this.getEndMinutes(timePeriod)));
+      // console.log('Remaining: ' + this.getRemainingMinutes(timePeriod));
+      // console.log('');
       // Active
-      if (startMinutes <= currentMinutes && endMinutes >= currentMinutes) {
+      if (this.getStartMinutes(timePeriod) <= this.getCurrentMinutes() && 
+          this.getCurrentMinutes() <= this.getEndMinutes(timePeriod)) {
         return Theme.greenColor;
       }
-      // Ending Soon
-      else if (startMinutes <= currentMinutes && ((endMinutes - currentMinutes) <= 60)){
+      // Ending Soon (less than 60 minutes left)
+      else if (this.getRemainingMinutes(timePeriod) > 0 && this.getRemainingMinutes(timePeriod) <= 60) {
         return Theme.yellowColor;
       }
       // Over
-      else if (endMinutes <= currentMinutes){
+      else if (this.getRemainingMinutes(timePeriod) <= 0) {
         return Theme.accentColor;
       }
       // Coming Up
@@ -122,16 +128,12 @@ export class VendorListingComponent implements OnInit {
 
   todaysHappyHours(timePeriod: TimePeriod): string {
     var result: string = '';
-    var currentDate = new Date();
-    var currentMinutes = currentDate.getMinutes() + (currentDate.getHours() * 60);
-    var startMinutes = timePeriod.open.getMinutes() + (timePeriod.open.getHours() * 60);
-    var endMinutes = timePeriod.close.getMinutes() + (timePeriod.close.getHours() * 60);
-    console.log('Start: ' + startMinutes + ', Current: ' + currentMinutes + ', End: ' + endMinutes);
+   //console.log('Start: ' + this.getStartMinutes(timePeriod) + ', Current: ' + this.getCurrentMinutes() + ', End: ' + this.getEndMinutes(timePeriod) + ', Remaining: ' + this.getRemainingMinutes(timePeriod));
     
-    // Current and valid happy hour time period
-    if (timePeriod !== null && timePeriod.day === new Date().getDay()){
-      result = moment.utc(timePeriod.open).format("h:mma") + ' - ' + moment.utc(timePeriod.close).format("h:mma");
-      
+    // Valid happy hour time period
+    if (timePeriod !== null){
+      // Format time period
+      result = this.formatTimePeriod(timePeriod);
       // Append verbiage to times
       switch(this.happyHourStatus(timePeriod)){
         case Theme.greenColor:
@@ -145,5 +147,30 @@ export class VendorListingComponent implements OnInit {
       }
     }
     return 'Unavailable';
+  }
+
+  getCurrentMinutes(): number {
+    return this.afterMidnightOffset(this.currentDate);
+  }
+
+  getStartMinutes(timePeriod: TimePeriod): number {
+    return this.afterMidnightOffset(timePeriod.open);
+  }
+
+  getEndMinutes(timePeriod: TimePeriod): number {
+    return this.afterMidnightOffset(timePeriod.close);
+  }
+
+  getRemainingMinutes(timePeriod: TimePeriod): number {
+    return this.getEndMinutes(timePeriod) - this.getCurrentMinutes();
+  }
+
+  afterMidnightOffset(date: any): number {
+    var minutes = (moment.utc(date).minutes() + (moment.utc(date).hours() * 60));
+    return (minutes <= TimePeriodThreshold.end.minutes) ? (minutes += 1440) : minutes;
+  }
+
+  formatTimePeriod(timePeriod: TimePeriod): string {
+    return moment.utc(timePeriod.open).format("h:mma") + ' - ' + moment.utc(timePeriod.close).format("h:mma");
   }
 }

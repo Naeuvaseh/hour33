@@ -26,4 +26,4 @@ export class HourListingComponent {
     var currentDay = new Date();
     return (day === new Date().getDay()) ? true : false;
   }
-}
+} 

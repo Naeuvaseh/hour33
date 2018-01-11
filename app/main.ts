@@ -5,7 +5,6 @@ import { AppModule } from "./app.module";
 const firebase = require("nativescript-plugin-firebase");
  
 firebase.init({
-  persist: false,
   onAuthStateChanged: function(data) { // optional but useful to immediately re-logon the user when he re-visits your app
     console.log(data.loggedIn ? "Logged in to firebase" : "Logged out from firebase");
     if (data.loggedIn) {

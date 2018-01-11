@@ -55,11 +55,16 @@ export class VendorService {
       }, {
         day: Day.Thursday,
         open: new Date("0001-01-01T08:00"),
-        close: new Date("0001-01-01T17:00"),
+        close: new Date("0001-01-01T08:45"),
         holiday: false
       }, {
         day: Day.Thursday,
-        open: new Date("0001-01-01T21:00"),
+        open: new Date("0001-01-01T11:30"),
+        close: new Date("0001-01-01T14:00"),
+        holiday: false
+      }, {
+        day: Day.Thursday,
+        open: new Date("0001-01-01T14:30"),
         close: new Date("0001-01-01T02:00"),
         holiday: false
       }, {
@@ -517,12 +522,15 @@ export class VendorService {
         holiday: false
       },]
     }]);
-    const vendorCol = firestore.collection("Vendors");
+    
+    const vendorCol = firestore.collection("vendors");
 
     vendorCol.get().then(querySnapshot => {
       querySnapshot.forEach(doc => {
-        console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+        console.log(`VendorService(): ${doc.id} => ${JSON.stringify(doc.data())}`);
       });
+    }, (error) =>{
+      console.log('VendorService() ERROR: ' + JSON.stringify(error));
     });
 
   }
