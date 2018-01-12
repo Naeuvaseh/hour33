@@ -15,7 +15,7 @@
             [color]="theme.accentColor"></Label>
         <WrapLayout orientation="horizontal" 
                     padding="0 0 5 10">
-            <Image *ngFor="let icon of tempIcons"
+            <Image *ngFor="let icon of tempIcons | slice:0:8"
                 [src]="icon.src"
                 width="25"
                 height="25"

@@ -14,7 +14,7 @@ export class VendorService {
     this.vendorList = new ObservableArray([{
       id: 1,
       name: "Geckos",
-      description: "Family venue for dogs and their moms.",
+      description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
       phone: "505-235-2833",
       rating: {
         likes: 60,

@@ -1,11 +1,12 @@
 <StackLayout    
     [row]="row"
     [col]="col"
-    padding="2">
+    padding="0 0 5 0">
     <Label 
         *ngFor="let hour of hours"
         [text]="formatHours(hour)"
         style="text-align: center"
+        textWrap="true"
         [color]="formatCurrentDay(day) ? theme.accentColor : theme.inactiveColor"
-        [fontWeight]="formatCurrentDay(0) ? '500' : '300'"></Label>
+        [fontWeight]="formatCurrentDay(0) ? '700' : '500'"></Label>
 </StackLayout>

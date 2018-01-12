@@ -4,6 +4,7 @@ import { TimePeriod } from '../../../interfaces/time-period.interface';
 import { Vendor } from '../../../interfaces/vendor.interface';
 import { DefaultDay } from '../../../const/default-day.enum';
 import { TimePeriodThreshold } from '../../../const/time-period-threshold.const';
+import { TempIcons } from '../../../const/temp-icons.const';
 import * as moment from 'moment';
 
 @Component({
@@ -19,68 +20,7 @@ export class VendorListingComponent implements OnInit {
   private theme;
   public currentDate = moment.utc();
 
-  public tempIcons: Object[] = [
-    {
-      id: 1,
-      src: 'res://account'
-    },
-    {
-      id: 2,
-      src: 'res://attachment'
-    },
-    {
-      id: 3,
-      src: 'res://back_arrow'
-    },
-    {
-      id: 4,
-      src: 'res://beenhere'
-    },
-    {
-      id: 5,
-      src: 'res://call'
-    },
-    {
-      id: 6,
-      src: 'res://download'
-    },
-    {
-      id: 7,
-      src: 'res://edit'
-    },
-    {
-      id: 8,
-      src: 'res://error'
-    },
-    {
-      id: 9,
-      src: 'res://favorite_empty'
-    },
-    {
-      id: 10,
-      src: 'res://favorite'
-    },
-    {
-      id: 11,
-      src: 'res://feedback'
-    },
-    {
-      id: 12,
-      src: 'res://filter'
-    },
-    {
-      id: 13,
-      src: 'res://info'
-    },
-    {
-      id: 14,
-      src: 'res://launch'
-    },
-    {
-      id: 15,
-      src: 'res://location'
-    }
-  ];
+  public tempIcons: Object[] = TempIcons;
 
   constructor() {
     this.theme = Theme;

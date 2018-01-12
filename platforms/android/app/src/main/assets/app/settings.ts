@@ -1,5 +1,4 @@
 export const Theme ={
-    //accentColor: '#BA262E',
     accentColor: '#d50000',
     primaryColor: '#212121',
     lightGrey: '#6d6d6d',
