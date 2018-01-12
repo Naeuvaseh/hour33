@@ -22,7 +22,7 @@
                 margin="2"
                 stretch="aspectFill"></Image>
         </WrapLayout>
-        <FlexboxLayout flexDirection="row">
+        <FlexboxLayout flexDirection="row" padding="0 0 5 0">
             <FlexboxLayout flexDirection="column">
                 <!-- Happy Hour Label -->
                 <Label
@@ -33,11 +33,9 @@
                     fontWeight="700"
                     [color]="theme.inactiveColor"></Label>
                 <!-- Happy Hour Hours -->
-                <FlexboxLayout flexDirection="column" 
+                <FlexboxLayout 
+                    flexDirection="column" 
                     *ngFor="let timePeriod of vendor?.happyHours | currentDay">
-                    <Span class="in-progress">
-
-                    </Span>
                     <Label
                         [text]="todaysHappyHours(timePeriod)"
                         [color]="happyHourStatus(timePeriod)"

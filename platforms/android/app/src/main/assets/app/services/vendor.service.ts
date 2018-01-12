@@ -69,12 +69,17 @@ export class VendorService {
         holiday: false
       }, {
         day: Day.Friday,
-        open: new Date("0001-01-01T15:00"),
-        close: new Date("0001-01-01T17:00"),
+        open: new Date("0001-01-01T08:00"),
+        close: new Date("0001-01-01T10:00"),
         holiday: false
       }, {
         day: Day.Friday,
-        open: new Date("0001-01-01T21:00"),
+        open: new Date("0001-01-01T10:15"),
+        close: new Date("0001-01-01T17:00"),
+        holiday: false
+      },{
+        day: Day.Friday,
+        open: new Date("0001-01-01T18:00"),
         close: new Date("0001-01-01T02:00"),
         holiday: false
       }, {
