@@ -26,6 +26,10 @@ refer to http://docs.nativescript.org/ui/theme.
     background-color: #363032;
 }
 
+.font-awesome{
+    font-family: 'FontAwesome', fontawesome-webfont;
+}
+
 .text-shadow{
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }

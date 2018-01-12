@@ -14,7 +14,7 @@ export class VendorDescriptionComponent {
 
   constructor() {
     this.theme = Theme;
-    this.websiteText = 'Website ' + String.fromCharCode(0xf35d);
+    this.websiteText = 'Website ' + String.fromCharCode(0xf08e);
   }
 
   openVendorWebsite(){
