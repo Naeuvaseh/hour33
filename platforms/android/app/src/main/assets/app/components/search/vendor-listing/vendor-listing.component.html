@@ -37,12 +37,18 @@
                     flexDirection="column" 
                     *ngFor="let timePeriod of vendor?.happyHours | currentDay">
                     <Label
-                        [text]="todaysHappyHours(timePeriod)"
-                        [color]="happyHourStatus(timePeriod)"
-                        width="100%"
-                        padding="0 0 0 20"
-                        fontSize="14"
-                        fontWeight="500"></Label>
+                        [padding]="isActive(timePeriod)">
+                        <FormattedString>
+                            <Span
+                                width="100%"
+                                fontSize="14"
+                                fontWeight="500"
+                                class="font-awesome"
+                                [style]="isOver(timePeriod)"
+                                [text]="todaysHappyHours(timePeriod)"
+                                [color]="happyHourStatus(timePeriod)"></Span>
+                        </FormattedString>
+                    </Label>
                 </FlexboxLayout>
             </FlexboxLayout>
         </FlexboxLayout>
