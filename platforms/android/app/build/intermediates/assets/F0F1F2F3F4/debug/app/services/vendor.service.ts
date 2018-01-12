@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Vendor } from '../interfaces/vendor.interface';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import { Day } from '../enums/day.enum';
-import { firestore } from 'nativescript-plugin-firebase/firebase';
+const firebase = require('nativescript-plugin-firebase');
 
 @Injectable()
 export class VendorService {
@@ -522,17 +522,10 @@ export class VendorService {
         holiday: false
       },]
     }]);
-    
-    // const vendorCol = firestore.collection("vendors");
 
-    // vendorCol.get().then(querySnapshot => {
-    //   querySnapshot.forEach(doc => {
-    //     console.log(`VendorService(): ${doc.id} => ${JSON.stringify(doc.data())}`);
-    //   });
-    // }, (error) =>{
-    //   console.log('VendorService() ERROR: ' + JSON.stringify(error));
+    // firebase.getValue('/vendors').then(function(result) {
+    //   console.log(JSON.stringify(result.value));
     // });
-
   }
 
   getSetVendors(): ObservableArray<Vendor> {
