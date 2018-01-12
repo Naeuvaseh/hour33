@@ -46,10 +46,57 @@ export class VendorService {
         open: new Date("0001-01-01T21:00"),
         close: new Date("0001-01-01T02:00"),
         holiday: false
+      },
+      {
+        day: Day.Wednesday,
+        open: new Date("0001-01-01T15:00"),
+        close: new Date("0001-01-01T17:00"),
+        holiday: false
+      }, {
+        day: Day.Thursday,
+        open: new Date("0001-01-01T08:00"),
+        close: new Date("0001-01-01T08:45"),
+        holiday: false
+      }, {
+        day: Day.Thursday,
+        open: new Date("0001-01-01T11:30"),
+        close: new Date("0001-01-01T14:00"),
+        holiday: false
+      }, {
+        day: Day.Thursday,
+        open: new Date("0001-01-01T14:30"),
+        close: new Date("0001-01-01T02:00"),
+        holiday: false
+      }, {
+        day: Day.Friday,
+        open: new Date("0001-01-01T15:00"),
+        close: new Date("0001-01-01T17:00"),
+        holiday: false
+      }, {
+        day: Day.Friday,
+        open: new Date("0001-01-01T21:00"),
+        close: new Date("0001-01-01T02:00"),
+        holiday: false
+      }, {
+        day: Day.Saturday,
+        open: new Date("0001-01-01T21:00"),
+        close: new Date("0001-01-01T02:00"),
+        holiday: false
+      }],
+      hoursOfOperation: [{
+        day: Day.Sunday,
+        open: new Date("0001-01-01T15:00"),
+        close: new Date("0001-01-01T17:00"),
+        holiday: false
+      }, {
+        day: Day.Monday,
+        open: new Date("0001-01-01T21:00"),
+        close: new Date("0001-01-01T02:00"),
+        holiday: false
       }, {
         day: Day.Tuesday,
-        open: new Date("0001-01-01T15:00"),
-        close: new Date("0001-01-01T17:00"),
+        open: new Date("0001-01-01T21:00"),
+        close: new Date("0001-01-01T02:00"),
         holiday: false
       }, {
         day: Day.Wednesday,
@@ -57,19 +104,9 @@ export class VendorService {
         close: new Date("0001-01-01T17:00"),
         holiday: false
       }, {
-        day: Day.Wednesday,
-        open: new Date("0001-01-01T21:00"),
-        close: new Date("0001-01-01T02:00"),
-        holiday: false
-      }, {
         day: Day.Thursday,
         open: new Date("0001-01-01T15:00"),
         close: new Date("0001-01-01T17:00"),
-        holiday: false
-      }, {
-        day: Day.Thursday,
-        open: new Date("0001-01-01T21:00"),
-        close: new Date("0001-01-01T02:00"),
         holiday: false
       }, {
         day: Day.Friday,
@@ -77,19 +114,9 @@ export class VendorService {
         close: new Date("0001-01-01T17:00"),
         holiday: false
       }, {
-        day: Day.Friday,
-        open: new Date("0001-01-01T21:00"),
-        close: new Date("0001-01-01T02:00"),
-        holiday: false
-      }, {
         day: Day.Saturday,
         open: new Date("0001-01-01T15:00"),
         close: new Date("0001-01-01T17:00"),
-        holiday: false
-      }, {
-        day: Day.Saturday,
-        open: new Date("0001-01-01T21:00"),
-        close: new Date("0001-01-01T02:00"),
         holiday: false
       }]
     }, {
@@ -495,14 +522,17 @@ export class VendorService {
         holiday: false
       },]
     }]);
-    const vendorCol = firestore.collection("Vendors");
-
-    vendorCol.get().then(querySnapshot => {
-      querySnapshot.forEach(doc =>{
-        console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
-      });
-    });
     
+    // const vendorCol = firestore.collection("vendors");
+
+    // vendorCol.get().then(querySnapshot => {
+    //   querySnapshot.forEach(doc => {
+    //     console.log(`VendorService(): ${doc.id} => ${JSON.stringify(doc.data())}`);
+    //   });
+    // }, (error) =>{
+    //   console.log('VendorService() ERROR: ' + JSON.stringify(error));
+    // });
+
   }
 
   getSetVendors(): ObservableArray<Vendor> {

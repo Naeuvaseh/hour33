@@ -59,10 +59,10 @@ export class AppComponent implements OnInit {
     
     public items: Array<BottomBarItem> = [
         // new BottomBarItem(0, "Search", "search", "black", new Notification("blue", "white", "1")),
-        new BottomBarItem(0, "Search", "search", Theme.bottombarColor),
-        new BottomBarItem(1, "Specials", "star", Theme.bottombarColor),
-        new BottomBarItem(2, "Favorites", "favorite", Theme.bottombarColor),
-        new BottomBarItem(3, "Account", "account", Theme.bottombarColor)
+        new BottomBarItem(0, "Search", "search", Theme.darkGrey),
+        new BottomBarItem(1, "Specials", "star", Theme.darkGrey),
+        new BottomBarItem(2, "Favorites", "favorite", Theme.darkGrey),
+        new BottomBarItem(3, "Account", "account", Theme.darkGrey)
     ];
  
     tabLoaded(event) {
@@ -73,33 +73,29 @@ export class AppComponent implements OnInit {
         this.accentColor = Theme.accentColor;
     }
     
-     tabSelected(args: SelectedIndexChangedEventData) {
-         console.log(args.newIndex);
+    tabSelected(args: SelectedIndexChangedEventData) {
+        console.log(args.newIndex);
          
-         // Adjust transition direction
-         this.transition.name = (args.newIndex > this.selectedTab.index) ? 'slideLeft' : 'slideRight';
-         
-         switch (args.newIndex){
-             case 0: 
-                 console.log('Navigating to search');
-                 this.routerExt.navigate(["/search"], { transition: this.transition });
-                 break;
-             case 1:
-                 console.log('Navigating to specials');
-                 this.routerExt.navigate(["/specials"], { transition: this.transition });
-                 break;
-             case 2:
-                 console.log('Navigating to favorites');
-                 this.routerExt.navigate(["/favorites"], { transition: this.transition });
-                 break;
-             case 3:
-                 console.log('Navigating to account');
-                 this.routerExt.navigate(["/account"], { transition: this.transition });
-                 break;
-             default:
-                 alert('Invalid route.');
-                 break;
-         }
+        // Adjust transition direction
+        this.transition.name = (args.newIndex > this.selectedTab.index) ? 'slideLeft' : 'slideRight';
+        
+        switch (args.newIndex) {
+            case 0: 
+                this.routerExt.navigate(["/search"], { transition: this.transition });
+                break;
+            case 1:
+                this.routerExt.navigate(["/specials"], { transition: this.transition });
+                break;
+            case 2:
+                this.routerExt.navigate(["/favorites"], { transition: this.transition });
+                break;
+            case 3:
+                this.routerExt.navigate(["/account"], { transition: this.transition });
+                break;
+            default:
+                alert('Invalid route.');
+                break;
+        }
          
      }
 }
