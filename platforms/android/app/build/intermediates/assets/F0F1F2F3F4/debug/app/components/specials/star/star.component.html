@@ -1,1 +1,4 @@
 <Label text="Star Component"></Label>
+<Label *ngFor="let num of myNums"
+       [text]="num"
+       (tap)="onTap(num)"></Label>

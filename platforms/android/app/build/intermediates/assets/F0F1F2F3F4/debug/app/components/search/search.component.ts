@@ -29,7 +29,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {  
-    this.items = this.vendorService.getSetVendors();
+    this.items = this.vendorService.getVendors();
   }
 
   onFilter(){

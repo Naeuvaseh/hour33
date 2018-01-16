@@ -1,5 +1,4 @@
 export const Theme ={
-    //accentColor: '#BA262E',
     accentColor: '#d50000',
     primaryColor: '#212121',
     lightGrey: '#6d6d6d',
@@ -7,8 +6,10 @@ export const Theme ={
     pageBackgroundColor: '#1b1819',
     actionBarTextColor: '#FFF',
     inactiveColor: '#FFF',
-    greenColor: '#3cba54',
-    yellowColor: '#f4c20d'
+   // greenColor: '#3cba54',
+    greenColor: '#00C800',
+   // yellowColor: '#f4c20d',    
+    yellowColor: '#FAE300'
 }
 
 export const Debug = {

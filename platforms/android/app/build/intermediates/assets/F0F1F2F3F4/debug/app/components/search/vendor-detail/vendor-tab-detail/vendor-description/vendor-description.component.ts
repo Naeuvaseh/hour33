@@ -10,9 +10,11 @@ export class VendorDescriptionComponent {
   @Input() vendor: Vendor;
 
   public theme;
+  public websiteText: string;
 
   constructor() {
     this.theme = Theme;
+    this.websiteText = 'Website ' + String.fromCharCode(0xf08e);
   }
 
   openVendorWebsite(){

@@ -19,7 +19,7 @@ export class VendorListingComponent implements OnInit {
   private currentDay: number;
   public theme;
   public currentDate = moment();
-  public tempIcons: Object[] = TempIcons;
+  public tempIcons: Object[] = this.shuffleIcons(TempIcons);
 
   constructor() {
     this.theme = Theme;
@@ -33,6 +33,15 @@ export class VendorListingComponent implements OnInit {
   orderByTime(vendor: Vendor){
     //TODO 
     //Implement function to order vendor object array by time.
+  }
+
+  shuffleIcons(array: Object[]): Object[] {
+    if (array.length <= 1) return array;
+    for (let i = 0; i < array.length; i++) {
+      const randomChoiceIndex = Math.floor(array.length - 1);
+      [array[i], array[randomChoiceIndex]] = [array[randomChoiceIndex], array[i]];
+    }
+    return array;
   }
 
   happyHourStatus(timePeriod: TimePeriod): string {

@@ -467,15 +467,15 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_material = 0x7f020051;
-        public static final int gingerbread_background = 0x7f02008d;
-        public static final int ic_collapse = 0x7f020094;
-        public static final int ic_expand = 0x7f020097;
-        public static final int notification_template_icon_bg = 0x7f0200c6;
-        public static final int pressable_item_background = 0x7f0200b2;
-        public static final int selectable_item_background = 0x7f0200b4;
-        public static final int shade_bottom = 0x7f0200b7;
-        public static final int shade_corner = 0x7f0200b8;
-        public static final int shade_right = 0x7f0200b9;
+        public static final int gingerbread_background = 0x7f02009e;
+        public static final int ic_collapse = 0x7f0200a5;
+        public static final int ic_expand = 0x7f0200a8;
+        public static final int notification_template_icon_bg = 0x7f0200e7;
+        public static final int pressable_item_background = 0x7f0200cc;
+        public static final int selectable_item_background = 0x7f0200ce;
+        public static final int shade_bottom = 0x7f0200d1;
+        public static final int shade_corner = 0x7f0200d2;
+        public static final int shade_right = 0x7f0200d3;
     }
     public static final class id {
         public static final int action0 = 0x7f0d0118;

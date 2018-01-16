@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Vendor } from '../interfaces/vendor.interface';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import { Day } from '../enums/day.enum';
+import { TimePeriod } from '../interfaces/time-period.interface';
 const firebase = require('nativescript-plugin-firebase');
 
 @Injectable()
@@ -39,6 +40,12 @@ export class VendorService {
         day: Day.Monday,
         open: new Date("0001-01-01T21:00Z"),
         close: new Date("0001-01-01T02:00Z"),
+        holiday: false
+      },
+      {
+        day: Day.Tuesday,
+        open: new Date("0001-01-01T10:05Z"),
+        close: new Date("0001-01-01T20:00Z"),
         holiday: false
       },
       {
@@ -538,7 +545,7 @@ export class VendorService {
     // });
   }
 
-  getSetVendors(): ObservableArray<Vendor> {
+  getVendors(): ObservableArray<Vendor> {
     return this.vendorList;
   }
 
@@ -557,4 +564,5 @@ export class VendorService {
   setSelectedTab(index: number) {
     this.selectedTab = index;
   }
+
 }

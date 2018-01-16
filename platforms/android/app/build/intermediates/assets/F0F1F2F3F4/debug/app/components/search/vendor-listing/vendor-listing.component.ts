@@ -4,6 +4,7 @@ import { TimePeriod } from '../../../interfaces/time-period.interface';
 import { Vendor } from '../../../interfaces/vendor.interface';
 import { DefaultDay } from '../../../const/default-day.enum';
 import { TimePeriodThreshold } from '../../../const/time-period-threshold.const';
+import { TempIcons } from '../../../const/temp-icons.const';
 import * as moment from 'moment';
 
 @Component({
@@ -16,71 +17,9 @@ export class VendorListingComponent implements OnInit {
   @Input() index: number;
 
   private currentDay: number;
-  private theme;
-  public currentDate = moment.utc();
-
-  public tempIcons: Object[] = [
-    {
-      id: 1,
-      src: 'res://account'
-    },
-    {
-      id: 2,
-      src: 'res://attachment'
-    },
-    {
-      id: 3,
-      src: 'res://back_arrow'
-    },
-    {
-      id: 4,
-      src: 'res://beenhere'
-    },
-    {
-      id: 5,
-      src: 'res://call'
-    },
-    {
-      id: 6,
-      src: 'res://download'
-    },
-    {
-      id: 7,
-      src: 'res://edit'
-    },
-    {
-      id: 8,
-      src: 'res://error'
-    },
-    {
-      id: 9,
-      src: 'res://favorite_empty'
-    },
-    {
-      id: 10,
-      src: 'res://favorite'
-    },
-    {
-      id: 11,
-      src: 'res://feedback'
-    },
-    {
-      id: 12,
-      src: 'res://filter'
-    },
-    {
-      id: 13,
-      src: 'res://info'
-    },
-    {
-      id: 14,
-      src: 'res://launch'
-    },
-    {
-      id: 15,
-      src: 'res://location'
-    }
-  ];
+  public theme;
+  public currentDate = moment();
+  public tempIcons: Object[] = TempIcons;
 
   constructor() {
     this.theme = Theme;
@@ -89,7 +28,6 @@ export class VendorListingComponent implements OnInit {
   ngOnInit(){
     //Set current date
     this.currentDay = new Date().getDay();
-   // console.log('Current Date: ' + this.currentDate);
   }
 
   orderByTime(vendor: Vendor){
@@ -98,17 +36,14 @@ export class VendorListingComponent implements OnInit {
   }
 
   happyHourStatus(timePeriod: TimePeriod): string {
+    //console.log('Start: ' + this.getStartMinutes(timePeriod) + ', Current: ' + this.getCurrentMinutes() + ', End: ' + this.getEndMinutes(timePeriod) + ', Remaining: ' + this.getRemainingMinutes(timePeriod));
+    
     // Not null && current day && start >= now && end <= now
     if (timePeriod !== null && moment.utc(timePeriod).day() === moment.utc().day()) {
-      //console.log('Current: ' + this.getCurrentMinutes());
-      // console.log('Time Range: ' + this.getStartMinutes(timePeriod) + ' - ' + this.getEndMinutes(timePeriod));
-      // console.log('Start <= Current: ' + (this.getStartMinutes(timePeriod) <= this.getCurrentMinutes()));
-      // console.log('Current <= End: ' + (this.getCurrentMinutes() <= this.getEndMinutes(timePeriod)));
-      // console.log('Remaining: ' + this.getRemainingMinutes(timePeriod));
-      // console.log('');
       // Active
       if (this.getStartMinutes(timePeriod) <= this.getCurrentMinutes() && 
-          this.getCurrentMinutes() <= this.getEndMinutes(timePeriod)) {
+          this.getCurrentMinutes() <= this.getEndMinutes(timePeriod) &&
+          this.getRemainingMinutes(timePeriod) > 60) {
         return Theme.greenColor;
       }
       // Ending Soon (less than 60 minutes left)
@@ -117,7 +52,7 @@ export class VendorListingComponent implements OnInit {
       }
       // Over
       else if (this.getRemainingMinutes(timePeriod) <= 0) {
-        return Theme.accentColor;
+        return Theme.lightGrey;
       }
       // Coming Up
       else {
@@ -128,7 +63,6 @@ export class VendorListingComponent implements OnInit {
 
   todaysHappyHours(timePeriod: TimePeriod): string {
     var result: string = '';
-   //console.log('Start: ' + this.getStartMinutes(timePeriod) + ', Current: ' + this.getCurrentMinutes() + ', End: ' + this.getEndMinutes(timePeriod) + ', Remaining: ' + this.getRemainingMinutes(timePeriod));
     
     // Valid happy hour time period
     if (timePeriod !== null){
@@ -137,11 +71,9 @@ export class VendorListingComponent implements OnInit {
       // Append verbiage to times
       switch(this.happyHourStatus(timePeriod)){
         case Theme.greenColor:
-          return result += " - In Progress!";
+          return result = String.fromCharCode(0xf111) + " " + result + " - In Progress!";
         case Theme.yellowColor:
-          return result += " - Ending Soon!";
-        case Theme.accentColor:
-          return result += " - Over!";
+          return result = String.fromCharCode(0xf111) + " " + result + " - Ending Soon!";
         default: 
           return result;
       }
@@ -149,25 +81,45 @@ export class VendorListingComponent implements OnInit {
     return 'Unavailable';
   }
 
+  isOver(timePeriod: TimePeriod): string {
+    switch(this.happyHourStatus(timePeriod)){
+      case Theme.lightGrey:
+        return 'text-decoration: line-through;';
+      default:
+        return '';
+    } 
+  }
+
+  isActive(timePeriod: TimePeriod): string {
+    switch(this.happyHourStatus(timePeriod)){
+      case Theme.greenColor:
+        return '0 0 2 10';
+      case Theme.yellowColor:
+        return '0 0 2 10';
+      default:
+        return '0 0 2 26';
+    } 
+  }
+
   getCurrentMinutes(): number {
-    return this.afterMidnightOffset(this.currentDate);
+    return this.currentDate.minutes() + (this.currentDate.hours() * 60);
   }
 
   getStartMinutes(timePeriod: TimePeriod): number {
-    return this.afterMidnightOffset(timePeriod.open);
+    return this.getMinutes(timePeriod.open);
   }
 
   getEndMinutes(timePeriod: TimePeriod): number {
-    return this.afterMidnightOffset(timePeriod.close);
+    return this.getMinutes(timePeriod.close);
   }
 
   getRemainingMinutes(timePeriod: TimePeriod): number {
     return this.getEndMinutes(timePeriod) - this.getCurrentMinutes();
   }
 
-  afterMidnightOffset(date: any): number {
+  getMinutes(date: Date): number {
     var minutes = (moment.utc(date).minutes() + (moment.utc(date).hours() * 60));
-    return (minutes <= TimePeriodThreshold.end.minutes) ? (minutes += 1440) : minutes;
+    return (minutes <= TimePeriodThreshold.end.minutes) ? (minutes += 1440) : minutes; // Offset 24 hours if past midnight
   }
 
   formatTimePeriod(timePeriod: TimePeriod): string {
