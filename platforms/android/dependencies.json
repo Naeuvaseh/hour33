@@ -8,12 +8,16 @@
         "directory": "..\\..\\node_modules\\nativescript-bottombar"
     },
     {
-        "name": "nativescript-google-maps-sdk",
-        "directory": "..\\..\\node_modules\\nativescript-google-maps-sdk"
-    },
-    {
         "name": "nativescript-performance-monitor",
         "directory": "..\\..\\node_modules\\nativescript-performance-monitor"
+    },
+    {
+        "name": "nativescript-plugin-firebase",
+        "directory": "..\\..\\node_modules\\nativescript-plugin-firebase"
+    },
+    {
+        "name": "nativescript-plugin-google-places",
+        "directory": "..\\..\\node_modules\\nativescript-plugin-google-places"
     },
     {
         "name": "nativescript-pro-ui",

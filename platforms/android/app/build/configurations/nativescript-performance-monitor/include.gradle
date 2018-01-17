@@ -1,6 +1,6 @@
 android {
     productFlavors {
-        "F2" {
+        "F1" {
             dimension "nativescriptperformancemonitor"
         }
     }

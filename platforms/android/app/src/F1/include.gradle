@@ -1,12 +1,11 @@
-android { 
-	productFlavors {
-		"nativescript-google-maps-sdk" {
-			dimension "nativescriptgooglemapssdk"
-		}
-	}
+android {
+    productFlavors {
+        "perfview" {
+            dimension "perfview"
+        }
+    }
 }
 
 dependencies {
-	def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '+'
-	compile "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
+    compile 'jp.wasabeef:takt:1.0.3'
 }
