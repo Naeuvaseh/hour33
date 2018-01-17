@@ -126,8 +126,6 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modul
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\android\bottombar.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar-item.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar.js
-C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-google-maps-sdk\map-view-common.js
-C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-google-maps-sdk\map-view.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\index.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js
@@ -144,6 +142,13 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modul
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\scripts\entitlements-after-prepare.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\scripts\entitlements-before-prepare.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\scripts\postinstall.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\plugin-google-places.common.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\plugin-google-places.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\scripts\installer.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\scripts\postinstall.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\scripts\reset.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\scripts\resetter.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-google-places\scripts\webpack.config.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-pro-ui\scripts\eula-prompt.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js

@@ -11,8 +11,8 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 10000;
   public static final String VERSION_NAME = "1.0";
   public static final String FLAVOR_nativescriptbottombar = "F0";
-  public static final String FLAVOR_nativescriptgooglemapssdk = "F1";
-  public static final String FLAVOR_nativescriptperformancemonitor = "F2";
-  public static final String FLAVOR_nativescriptpluginfirebase = "F3";
+  public static final String FLAVOR_nativescriptperformancemonitor = "F1";
+  public static final String FLAVOR_nativescriptpluginfirebase = "F2";
+  public static final String FLAVOR_nativescriptplugingoogleplaces = "F3";
   public static final String FLAVOR_nativescriptproui = "F4";
 }

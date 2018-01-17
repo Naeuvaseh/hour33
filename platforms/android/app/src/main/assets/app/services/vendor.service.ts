@@ -4,6 +4,9 @@ import { ObservableArray } from 'tns-core-modules/data/observable-array/observab
 import { Day } from '../enums/day.enum';
 import { TimePeriod } from '../interfaces/time-period.interface';
 const firebase = require('nativescript-plugin-firebase');
+import * as GooglePlaces from 'nativescript-plugin-google-places';
+import { Location } from 'nativescript-plugin-google-places';
+import { viewClassName } from '@angular/compiler';
 
 @Injectable()
 export class VendorService {
@@ -12,7 +15,7 @@ export class VendorService {
   private selectedTab: number;
 
   public constructor() {
-    this.vendorList = new ObservableArray([{
+  this.vendorList = new ObservableArray([{
       id: 1,
       name: "Geckos",
       description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
@@ -55,6 +58,16 @@ export class VendorService {
         holiday: false
       },
       {
+        day: Day.Wednesday,
+        open: new Date("0001-01-01T08:00Z"),
+        close: new Date("0001-01-01T11:00Z"),
+        holiday: false
+      },{
+        day: Day.Wednesday,
+        open: new Date("0001-01-01T11:30Z"),
+        close: new Date("0001-01-01T14:30Z"),
+        holiday: false
+      },{
         day: Day.Wednesday,
         open: new Date("0001-01-01T15:00Z"),
         close: new Date("0001-01-01T17:00Z"),
@@ -543,6 +556,28 @@ export class VendorService {
     // firebase.getValue('/vendors').then(function(result) {
     //   console.log(JSON.stringify(result.value));
     // });
+  }
+
+  public onGooglePlaces(){
+    let center: Location = {
+      latitude: -33.865143,
+      longitude: 151.2099
+    }
+
+    let viewport = {
+      northEast: {
+        latitude: center.latitude + 0.001,
+        longitude: center.longitude + 0.001
+      },
+      southWest: {
+        latitude: center.latitude - 0.001,
+        longitude: center.longitude - 0.001
+      }
+    }
+    console.log('Viewport: ' + JSON.stringify(viewport));
+    GooglePlaces.pickPlace(viewport)
+    .then(place => console.log(JSON.stringify(place)))
+    .catch(error => console.log(error));
   }
 
   getVendors(): ObservableArray<Vendor> {

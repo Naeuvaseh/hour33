@@ -1,5 +1,8 @@
 export const Theme ={
-    accentColor: '#d50000',
+    // Red
+    //accentColor: '#d50000',
+    // Teal
+    accentColor: '#4CCAFF',
     primaryColor: '#212121',
     lightGrey: '#6d6d6d',
     darkGrey: '#3D3638',

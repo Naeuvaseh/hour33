@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
         "source": "C:\\Users\\TJ\\.android\\build-cache\\32776eb9063023fec2d79135e13ba0a5c20d4e9d\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
@@ -16,8 +12,8 @@
         "source": "C:\\Users\\TJ\\.android\\build-cache\\5d395a97b5d48c87533ff8948a68db6c370887ec\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\pressable_item_background.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\620f3a222d840830db8f204aaa6afee115a17c41\\output\\res\\drawable-v21\\pressable_item_background.xml"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_active.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_focusable_bg.xml",
@@ -32,75 +28,27 @@
         "source": "C:\\Users\\TJ\\.android\\build-cache\\a038e7cf074b731fae7966bdfc551c33a8847084\\output\\res\\drawable-v21\\item_background.xml"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\pressable_item_background.xml",
         "source": "C:\\Users\\TJ\\.android\\build-cache\\d3fb7a5f5c03198a51bf5c078d5939d0d0ba6226\\output\\res\\drawable-v21\\pressable_item_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_focusable_bg.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable-v21\\autocomplete_focusable_bg.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\avd_show_password.xml",
         "source": "C:\\Users\\TJ\\.android\\build-cache\\5d395a97b5d48c87533ff8948a68db6c370887ec\\output\\res\\drawable-v21\\avd_show_password.xml"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\item_background.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\500b3c09243afef68124364d62d0fbc98ce26d81\\output\\res\\drawable-v21\\item_background.xml"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\TJ\\.android\\build-cache\\32776eb9063023fec2d79135e13ba0a5c20d4e9d\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\32776eb9063023fec2d79135e13ba0a5c20d4e9d\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_active.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\drawable-v21\\avd_hide_password.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_active.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\drawable-v21\\avd_show_password.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\design_password_eye.xml",
         "source": "C:\\Users\\TJ\\.android\\build-cache\\5d395a97b5d48c87533ff8948a68db6c370887ec\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\e8d8152c916588027cdd025448ab03fc18ffc77e\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\32776eb9063023fec2d79135e13ba0a5c20d4e9d\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
     }
 ]
