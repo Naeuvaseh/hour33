@@ -1,6 +1,7 @@
 // this import should be first in order to load some required settings (like globals and reflect-metadata)
 import { platformNativeScriptDynamic } from "nativescript-angular/platform";
 import { AppModule } from "./app.module";
+import { Debug } from './settings';
 // Firebase
 const firebase = require("nativescript-plugin-firebase");
 // Geolocation
@@ -11,10 +12,10 @@ import * as GooglePlaces from 'nativescript-plugin-google-places';
 
 // Init Firebase API
 firebase.init({
-  onAuthStateChanged: function(user) { // optional but useful to immediately re-logon the user when he re-visits your app
-    console.log(user.loggedIn ? "Logged in to firebase" : "Logged out from firebase");
-    if (user.loggedIn) {
-      console.log("User Data: " + (JSON.stringify(user)));
+  onAuthStateChanged: function(data) { 
+    if(Debug.console.Firebase.email) console.log(data.loggedIn ? "Logged in to firebase: " + data.user.email : "Logged out from firebase");
+    if (data.loggedIn && Debug.console.Firebase.fullUser) {
+      console.log("User Data: " + (JSON.stringify(data)));
     }
   }
 }).then(

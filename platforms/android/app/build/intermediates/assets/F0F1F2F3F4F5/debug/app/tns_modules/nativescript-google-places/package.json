@@ -1,0 +1,38 @@
+{
+  "_from": "nativescript-google-places",
+  "_id": "nativescript-google-places@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-aQOJZuu9aPZqjwlkhZf7vcusgfQ=",
+  "_location": "/nativescript-google-places",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "nativescript-google-places",
+    "name": "nativescript-google-places",
+    "escapedName": "nativescript-google-places",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-google-places/-/nativescript-google-places-0.0.3.tgz",
+  "_shasum": "69038966ebbd68f66a8f09648597fbbdcbac81f4",
+  "_spec": "nativescript-google-places",
+  "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Read Google Places API Documentation at https://developers.google.com/places/android-api/?hl=pt-br",
+  "main": "google-places.js",
+  "name": "nativescript-google-places",
+  "nativescript": {
+    "platforms": {
+      "ios": "1.4.0",
+      "android": "1.4.0"
+    }
+  },
+  "version": "0.0.3"
+}

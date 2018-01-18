@@ -564,30 +564,6 @@ export class VendorService {
     // });
   }
 
-  public onGooglePlaces(){
-    console.log('VendorService.OnGooglePlaces()');
-    // Get Current Location
-    geolocation
-      .getCurrentLocation({ 
-        desiredAccuracy: Accuracy.high, 
-        maximumAge: 5000, 
-        timeout: 20000 })
-      .then((result)=>{
-        console.log(JSON.stringify(result));
-    })
-    
-    // GetPlacesById()
-    GooglePlaces.getPlacesById([
-      "ChIJ4zPXqIiAhYAR31X3S64T6Uw",
-      "ChIJ6zMe3oWAhYARaZ33Z1BAMRo",
-      "ChIJAUWoGIaAhYARQ6zvky_f10Q"
-  ])
-      .then((places: GooglePlaces.Place[]) => {
-          places.forEach(place => console.log(place.name));
-      })
-      .catch(error => console.log(error));
-  }
-
   getVendors(): ObservableArray<Vendor> {
     return this.vendorList;
   }

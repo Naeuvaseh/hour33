@@ -46,6 +46,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interface
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\time-period.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\vendor.interface.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\google-location.service.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\vendor.service.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js
@@ -128,6 +129,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modul
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-geolocation\geolocation.common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-geolocation\geolocation.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-google-places\google-places.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\index.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js

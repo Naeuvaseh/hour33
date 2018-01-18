@@ -11,6 +11,7 @@
     "nativescript-angular": true,
     "nativescript-bottombar": true,
     "nativescript-geolocation": true,
+    "nativescript-google-places": true,
     "nativescript-performance-monitor": true,
     "nativescript-plugin-firebase": true,
     "nativescript-plugin-google-places": true,

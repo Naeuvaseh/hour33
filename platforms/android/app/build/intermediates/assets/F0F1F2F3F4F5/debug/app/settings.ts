@@ -17,6 +17,14 @@ export const Theme ={
 
 export const Debug = {
     console: {
+        // APIs
+        Firebase: {
+            fullUser: false,
+            email: true
+        },
+        // Services
+        GoogleLocation: true,
+        Vendor: true,
         // Components
         
         // Pipes
