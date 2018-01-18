@@ -21,6 +21,7 @@
     "moment": "2.20.1",
     "nativescript-angular": "4.4.1",
     "nativescript-bottombar": "3.0.7",
+    "nativescript-geolocation": "^4.2.2",
     "nativescript-performance-monitor": "1.0.0",
     "nativescript-plugin-firebase": "^5.1.2",
     "nativescript-plugin-google-places": "^1.4.1",
@@ -29,6 +30,7 @@
     "reflect-metadata": "0.1.10",
     "rxjs": "5.5.2",
     "tns-core-modules": "^3.4.0",
+    "tns-platform-declarations": "^3.4.0",
     "zone.js": "0.8.18"
   },
   "devDependencies": {

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_light_selected.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\bc4f8570b56b6603719eab07a7950bba2726a4c9\\output\\res\\xml\\chart_palettes_light_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_dark_selected.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\bc4f8570b56b6603719eab07a7950bba2726a4c9\\output\\res\\xml\\chart_palettes_dark_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_default_light.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\bc4f8570b56b6603719eab07a7950bba2726a4c9\\output\\res\\xml\\chart_palettes_default_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5\\debug\\xml\\chart_palettes_default_dark.xml",
+        "source": "C:\\Users\\TJ\\.android\\build-cache\\bc4f8570b56b6603719eab07a7950bba2726a4c9\\output\\res\\xml\\chart_palettes_default_dark.xml"
+    }
+]

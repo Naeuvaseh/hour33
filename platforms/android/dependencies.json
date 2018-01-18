@@ -8,6 +8,10 @@
         "directory": "..\\..\\node_modules\\nativescript-bottombar"
     },
     {
+        "name": "nativescript-geolocation",
+        "directory": "..\\..\\node_modules\\nativescript-geolocation"
+    },
+    {
         "name": "nativescript-performance-monitor",
         "directory": "..\\..\\node_modules\\nativescript-performance-monitor"
     },
@@ -34,6 +38,10 @@
     {
         "name": "nativescript-intl",
         "directory": "..\\..\\node_modules\\nativescript-intl"
+    },
+    {
+        "name": "nativescript-permissions",
+        "directory": "..\\..\\node_modules\\nativescript-permissions"
     },
     {
         "name": "tns-core-modules-widgets",

@@ -1,1 +1,0 @@
-export const DefaultDay: string = '0001-01-01';

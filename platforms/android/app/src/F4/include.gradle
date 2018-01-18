@@ -1,12 +1,27 @@
 android {
-	productFlavors {
-		"nativescript-pro-ui" {
-			dimension "nativescript-pro-ui"
-		}
-	}
+    productFlavors {
+        "places" {
+            dimension "places"
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "https://maven.google.com" // Google's Maven repository
+    }
+}
+
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
 }
 
 dependencies {
-	compile "com.android.support:appcompat-v7:23.1.0"
-	compile "com.android.support:recyclerview-v7:23.1.0"
+	def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion: "11.2.2"
+    compile "com.google.android.gms:play-services:$googlePlayServicesVersion"
+	compile 'com.android.support:multidex:1.0.1'
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { registerElement } from 'nativescript-angular';
 import { BottomBar, BottomBarItem, TITLE_STATE, SelectedIndexChangedEventData, Notification } from 'nativescript-bottombar';
 import { Theme, Debug } from './settings';
+import { GoogleLocationService } from './services/google-location.service';
 import { NativeScriptRouterModule, RouterExtensions } from "nativescript-angular/router";
 import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 import { PerformanceMonitor, PerformanceMonitorSample } from 'nativescript-performance-monitor';
@@ -33,7 +34,9 @@ export class AppComponent implements OnInit {
         curve: 'linear'
     };
  
-    constructor(private router: Router, private routerExt: RouterExtensions){
+    constructor(private router: Router, 
+                private routerExt: RouterExtensions,
+                private googleLocationService: GoogleLocationService){
         this.theme = Theme;
         this.debug = Debug;
         this.selectedTab.index = 0;
@@ -41,20 +44,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(){
-        if (this.debug.fps){
-        performanceMonitor.start({
-            textColor: new Color("white"),
-            backgroundColor: new Color("black"),
-            borderColor: new Color("black"),
-            hide: false,
-            onSample: (sample: PerformanceMonitorSample) => {
-              console.log("FPS: " + sample.fps);
-              if (sample.cpu) { // iOS only 
-                console.log("CPU %: " + sample.cpu);
-              }
-            }
-          });
-        }
+        this.googleLocationService.setCurrentLocation();
     }
     
     public items: Array<BottomBarItem> = [

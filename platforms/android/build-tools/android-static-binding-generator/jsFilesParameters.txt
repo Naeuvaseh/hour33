@@ -126,11 +126,14 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modul
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\android\bottombar.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar-item.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-geolocation\geolocation.common.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-geolocation\geolocation.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\index.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-intl\nativescript-intl.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-performance-monitor\performance-monitor.common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-performance-monitor\performance-monitor.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-permissions\permissions.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\firebase-common.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\firebase.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-plugin-firebase\postinstall-hooks.js

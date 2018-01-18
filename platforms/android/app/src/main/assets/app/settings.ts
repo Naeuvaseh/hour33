@@ -1,8 +1,8 @@
 export const Theme ={
     // Red
-    //accentColor: '#d50000',
+    accentColor: '#d50000',
     // Teal
-    accentColor: '#4CCAFF',
+    // accentColor: '#4CCAFF',
     primaryColor: '#212121',
     lightGrey: '#6d6d6d',
     darkGrey: '#3D3638',
@@ -17,6 +17,14 @@ export const Theme ={
 
 export const Debug = {
     console: {
+        // APIs
+        Firebase: {
+            fullUser: false,
+            email: true
+        },
+        // Services
+        GoogleLocation: true,
+        Vendor: true,
         // Components
         
         // Pipes
