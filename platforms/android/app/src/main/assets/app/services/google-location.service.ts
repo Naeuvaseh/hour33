@@ -13,9 +13,24 @@ export class GoogleLocationService {
 
     private _debug;
     private userLocation: Location;
+    // Google Places API
+    private _googleServerApiKey = 'AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM';
+    private _placesApiUrl = 'https://maps.googleapis.com/maps/api/place/autocomplete/json';
+    private _placesDetailsApiUrl = 'https://maps.googleapis.com/maps/api/place/details/json';
+    private _placesImagesApiUrl = 'https://maps.googleapis.com/maps/api/place/photo';
+
 
     public constructor() {
         this._debug = Debug;
+    }
+
+    public search(text: string, types: string){
+        var searchBy = this.capitalize(text).replace(new RegExp(" ", 'g'), "");
+        var url = this._placesApiUrl + "?input=" + searchBy + "&types=" + types + "&language=pt_BR&key=" + this._googleServerApiKey;
+        console.log("###############################");
+        console.log("################### searchBy=" + types + ", value=" + searchBy);
+        console.log("################### url=" + url);
+        console.log("###############################");
     }
 
     public getCurrentLocation(): Location {
@@ -60,11 +75,12 @@ export class GoogleLocationService {
                 timeout: 20000
             })
             .then((result) => {
-
+                console.log('GoogleLocationService.onPickPlace(): ' + JSON.stringify(result));
                 let center: Location = {
                     latitude: result.latitude,
                     longitude: result.longitude
                 }
+                console.log('center: ' + JSON.stringify(center));
                  
                 let viewport = {
                     northEast: {
@@ -76,10 +92,11 @@ export class GoogleLocationService {
                         longitude: center.longitude - 0.001
                     }
                 }
+                console.log('viewport: ' + JSON.stringify(viewport));
                  
-                GooglePlaces.pickPlace(viewport)
-                    .then(place => console.log(JSON.stringify(place)))
-                    .catch(error => console.log(error));
+                // GooglePlaces.pickPlace(viewport)
+                //     .then(place => console.log(JSON.stringify(place)))
+                //     .catch(error => console.log(error));
 
             })
             .catch((error) =>{
@@ -88,5 +105,9 @@ export class GoogleLocationService {
         // Set location based on update
         
     }
+
+    private capitalize(text: string) {
+        return text.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+    };
 
 }

@@ -42,7 +42,8 @@ export class SearchComponent implements OnInit {
   onListMapToggle(){
     console.log("ListMap toggle tapped.");
     //this.googleLocationService.onGooglePlaces();
-    this.googleLocationService.onPickPlace();
+    //this.googleLocationService.onPickPlace();
+    this.googleLocationService.search('test1', 'testtttt2');
     this.listViewVisible = !this.listViewVisible;
   }
 
