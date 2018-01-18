@@ -6,10 +6,10 @@ const firebase = require("nativescript-plugin-firebase");
  
 // Init Firebase API
 firebase.init({
-  onAuthStateChanged: function(data) { // optional but useful to immediately re-logon the user when he re-visits your app
-    console.log(data.loggedIn ? "Logged in to firebase" : "Logged out from firebase");
-    if (data.loggedIn) {
-      console.log("User's email address: " + (data.user.email ? data.user.email : "N/A"));
+  onAuthStateChanged: function(user) { // optional but useful to immediately re-logon the user when he re-visits your app
+    console.log(user.loggedIn ? "Logged in to firebase" : "Logged out from firebase");
+    if (user.loggedIn) {
+      console.log("User Data: " + (JSON.stringify(user)));
     }
   }
 }).then(

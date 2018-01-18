@@ -578,7 +578,7 @@ export class VendorService {
     // GooglePlaces.pickPlace(viewport)
     // .then(place => console.log(JSON.stringify(place)))
     // .catch(error => console.log(error));
-
+    console.log('VendorService.OnGooglePlaces()');
     GooglePlaces.getPlacesById([
       "ChIJ4zPXqIiAhYAR31X3S64T6Uw",
       "ChIJ6zMe3oWAhYARaZ33Z1BAMRo",

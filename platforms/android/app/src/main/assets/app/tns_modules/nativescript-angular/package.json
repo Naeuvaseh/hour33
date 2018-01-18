@@ -1,50 +1,32 @@
 {
   "_args": [
     [
-      {
-        "raw": "nativescript-angular@4.4.1",
-        "scope": null,
-        "escapedName": "nativescript-angular",
-        "name": "nativescript-angular",
-        "rawSpec": "4.4.1",
-        "spec": "4.4.1",
-        "type": "version"
-      },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "nativescript-angular@4.4.1",
+      "C:\\Users\\TJ\\Projects\\Hour 33"
     ]
   ],
   "_from": "nativescript-angular@4.4.1",
   "_id": "nativescript-angular@4.4.1",
-  "_inCache": true,
+  "_inBundle": false,
+  "_integrity": "sha1-eCRonQwtxoKL+xclmBqh9tlCCas=",
   "_location": "/nativescript-angular",
-  "_nodeVersion": "6.11.3",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-angular-4.4.1.tgz_1507889380948_0.8645345326513052"
-  },
-  "_npmUser": {
-    "name": "tns-bot",
-    "email": "nativescript@telerik.com"
-  },
-  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
+    "type": "version",
+    "registry": true,
     "raw": "nativescript-angular@4.4.1",
-    "scope": null,
-    "escapedName": "nativescript-angular",
     "name": "nativescript-angular",
+    "escapedName": "nativescript-angular",
     "rawSpec": "4.4.1",
-    "spec": "4.4.1",
-    "type": "version"
+    "saveSpec": null,
+    "fetchSpec": "4.4.1"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-angular/-/nativescript-angular-4.4.1.tgz",
-  "_shasum": "7824689d0c2dc6828bfb1725981aa1f6d94209ab",
-  "_shrinkwrap": null,
-  "_spec": "nativescript-angular@4.4.1",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "4.4.1",
+  "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
   "author": {
     "name": "NativeScript Team"
   },
@@ -90,27 +72,12 @@
     "typescript": "^2.5.1",
     "zone.js": "^0.8.12"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "7824689d0c2dc6828bfb1725981aa1f6d94209ab",
-    "tarball": "https://registry.npmjs.org/nativescript-angular/-/nativescript-angular-4.4.1.tgz"
-  },
   "homepage": "https://www.nativescript.org/",
   "keywords": [
     "NativeScript",
     "Angular"
   ],
   "license": "Apache-2.0",
-  "maintainers": [
-    {
-      "name": "tns-bot",
-      "email": "nativescript@telerik.com"
-    },
-    {
-      "name": "vakrilov",
-      "email": "alexander.vakrilov@gmail.com"
-    }
-  ],
   "name": "nativescript-angular",
   "nativescript": {
     "platforms": {
@@ -118,7 +85,6 @@
       "ios": "3.0.0"
     }
   },
-  "optionalDependencies": {},
   "peerDependencies": {
     "@angular/common": "~4.4.1",
     "@angular/compiler": "~4.4.1",
@@ -131,7 +97,6 @@
     "tns-core-modules": "^3.1.0 || >3.3.0-",
     "zone.js": "^0.8.4"
   },
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NativeScript/nativescript-angular.git"

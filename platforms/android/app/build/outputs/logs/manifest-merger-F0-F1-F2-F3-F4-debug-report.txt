@@ -154,7 +154,7 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\TJ\.an
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\6c2ef8300db62e55a64755ef4551788d916b1b48\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\b820f9c5c82b7a6079a1593e30def2839c379500\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\bb57e73fa87d0c082881587291366647e87cb851\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\TJ\.android\build-cache\e85769c5396ca6e4c2434d9d5426d0c4b44d84f1\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\TJ\.android\build-cache\5b36972f85bb4148ee3b0d9a65bdc7aa82b14e61\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:firebase-release:] C:\Users\TJ\.android\build-cache\a8430b113c761b4751982b7697c6f139157df9e6\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Chart-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\bc4f8570b56b6603719eab07a7950bba2726a4c9\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Common-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\0b1a1e51ed03bb0be2b10a42bd6d9ffdf9a208f4\output\AndroidManifest.xml:7:5-9:41
@@ -164,7 +164,7 @@ MERGED from [:Gauges-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\
 MERGED from [:Input-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:List-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\d3fb7a5f5c03198a51bf5c078d5939d0d0ba6226\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Primitives-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\9794bce5dd637957652fefbd1614c6370ac0d3a5\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:widgets-release:] C:\Users\TJ\.android\build-cache\08684b4b054ee529e162590399f750c1de765db4\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:widgets-release:] C:\Users\TJ\.android\build-cache\0d6b34095b3e0fdf507756de96f4308a4e129aee\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\5d395a97b5d48c87533ff8948a68db6c370887ec\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
@@ -331,7 +331,7 @@ MERGED from [:Gauges-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\
 MERGED from [:Input-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\output\AndroidManifest.xml:11:5-12:19
 MERGED from [:List-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\d3fb7a5f5c03198a51bf5c078d5939d0d0ba6226\output\AndroidManifest.xml:11:5-12:19
 MERGED from [:Primitives-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\9794bce5dd637957652fefbd1614c6370ac0d3a5\output\AndroidManifest.xml:11:5-12:19
-MERGED from [:widgets-release:] C:\Users\TJ\.android\build-cache\08684b4b054ee529e162590399f750c1de765db4\output\AndroidManifest.xml:11:5-12:19
+MERGED from [:widgets-release:] C:\Users\TJ\.android\build-cache\0d6b34095b3e0fdf507756de96f4308a4e129aee\output\AndroidManifest.xml:11:5-12:19
 	android:label
 		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml:11:122-138
 		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml:11:122-138
