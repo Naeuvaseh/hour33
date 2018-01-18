@@ -559,24 +559,34 @@ export class VendorService {
   }
 
   public onGooglePlaces(){
-    let center: Location = {
-      latitude: -33.865143,
-      longitude: 151.2099
-    }
+    // let center: Location = {
+    //   latitude: -33.865143,
+    //   longitude: 151.2099
+    // }
 
-    let viewport = {
-      northEast: {
-        latitude: center.latitude + 0.001,
-        longitude: center.longitude + 0.001
-      },
-      southWest: {
-        latitude: center.latitude - 0.001,
-        longitude: center.longitude - 0.001
-      }
-    }
-    console.log('Viewport: ' + JSON.stringify(viewport));
-    GooglePlaces.pickPlace(viewport)
-    .then(place => console.log(JSON.stringify(place)))
+    // let viewport = {
+    //   northEast: {
+    //     latitude: center.latitude + 0.001,
+    //     longitude: center.longitude + 0.001
+    //   },
+    //   southWest: {
+    //     latitude: center.latitude - 0.001,
+    //     longitude: center.longitude - 0.001
+    //   }
+    // }
+    // console.log('Viewport: ' + JSON.stringify(viewport));
+    // GooglePlaces.pickPlace(viewport)
+    // .then(place => console.log(JSON.stringify(place)))
+    // .catch(error => console.log(error));
+
+    GooglePlaces.getPlacesById([
+      "ChIJ4zPXqIiAhYAR31X3S64T6Uw",
+      "ChIJ6zMe3oWAhYARaZ33Z1BAMRo",
+      "ChIJAUWoGIaAhYARQ6zvky_f10Q"
+    ])
+    .then((places: GooglePlaces.Place[]) => {
+        places.forEach(place => console.log(place.name));
+    })
     .catch(error => console.log(error));
   }
 
