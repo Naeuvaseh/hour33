@@ -53,28 +53,40 @@ export class GoogleLocationService {
 
     public onPickPlace(){
         if (this._debug.console.GoogleLocation) console.log('GooglePlacesService.onPickPlace()');
-        // Get/Update location
-        this.getCurrentLocation();
+        geolocation
+            .getCurrentLocation({
+                desiredAccuracy: Accuracy.high,
+                maximumAge: 5000,
+                timeout: 20000
+            })
+            .then((result) => {
+
+                let center: Location = {
+                    latitude: result.latitude,
+                    longitude: result.longitude
+                }
+                 
+                let viewport = {
+                    northEast: {
+                        latitude: center.latitude + 0.001,
+                        longitude: center.longitude + 0.001
+                    },
+                    southWest: {
+                        latitude: center.latitude - 0.001,
+                        longitude: center.longitude - 0.001
+                    }
+                }
+                 
+                GooglePlaces.pickPlace(viewport)
+                    .then(place => console.log(JSON.stringify(place)))
+                    .catch(error => console.log(error));
+
+            })
+            .catch((error) =>{
+                console.log('GoogleLocationService.onPickPlace() ERROR: ' + error);
+            })
         // Set location based on update
-        let center: Location = {
-            latitude: this.userLocation.latitude,
-            longitude: this.userLocation.longitude
-        }
-         
-        let viewport = {
-            northEast: {
-                latitude: center.latitude + 0.001,
-                longitude: center.longitude + 0.001
-            },
-            southWest: {
-                latitude: center.latitude - 0.001,
-                longitude: center.longitude - 0.001
-            }
-        }
-         
-        GooglePlaces.pickPlace(viewport)
-            .then(place => console.log(JSON.stringify(place)))
-            .catch(error => console.log(error));
+        
     }
 
 }
