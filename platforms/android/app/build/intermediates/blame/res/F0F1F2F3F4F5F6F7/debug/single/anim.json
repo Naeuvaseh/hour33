@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\drawer_slide_in_top.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\237c12fbc1c5aa93c986cd8d769e9233e1ea3835\\output\\res\\anim\\drawer_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\drawer_slide_out_top.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\237c12fbc1c5aa93c986cd8d769e9233e1ea3835\\output\\res\\anim\\drawer_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\665a6fd6274b582a8ceb94c9b0178f8695cb3431\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    }
+]

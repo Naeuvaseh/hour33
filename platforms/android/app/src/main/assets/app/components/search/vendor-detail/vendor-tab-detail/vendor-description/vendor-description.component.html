@@ -1,42 +1,6 @@
 <FlexboxLayout class="card"
                [backgroundColor]="theme.darkGrey" 
                flexDirection="column">
-    <FlexboxLayout flexDirection="row" justifyContent="space-between">
-        <Label padding="10">
-            <FormattedString>
-                <Span text="Phone" 
-                      textDecoration="underline"
-                     [color]="theme.inactiveColor"
-                      fontSize="18"></Span>
-                <Span text=": "
-                     [color]="theme.inactiveColor"
-                      fontSize="18"></Span>
-                <Span [text]="vendor.phone"
-                      [color]="theme.accentColor"
-                       fontSize="18"></Span>
-            </FormattedString>
-        </Label>
-        <FlexboxLayout alignSelf="flex-end"
-                      (tap)="openVendorWebsite()"
-                      alignItems="center">
-            <Label text="Website"
-                   fontSize="18"
-                   [color]="theme.inactiveColor"
-                   padding="10 5 10 10">
-                <FormattedString>
-                    <Span text="Website "
-                          fontSize="18"
-                          class="font-awesome"
-                          [color]="theme.inactiveColor"></Span>
-                    <Span 
-                        text="&#xf08e;" 
-                        fontSize="24" 
-                        class="font-awesome"></Span>
-                </FormattedString>
-            </Label>
-        </FlexboxLayout>
-    </FlexboxLayout>
-    
     <Label [text]="vendor.description" 
            [color]="theme.inactiveColor"
             textWrap="true"

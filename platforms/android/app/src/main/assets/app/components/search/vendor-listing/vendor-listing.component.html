@@ -36,19 +36,25 @@
                 <FlexboxLayout 
                     flexDirection="column" 
                     *ngFor="let timePeriod of vendor?.happyHours | currentDay">
-                    <Label
-                        [padding]="isActive(timePeriod)">
-                        <FormattedString>
-                            <Span
-                                width="100%"
-                                fontSize="14"
-                                fontWeight="500"
-                                class="font-awesome"
-                                [style]="isOver(timePeriod)"
-                                [text]="todaysHappyHours(timePeriod)"
-                                [color]="happyHourStatus(timePeriod)"></Span>
-                        </FormattedString>
-                    </Label>
+                    <FlexboxLayout flexDirection="row">
+                        <Label
+                            [visibility]="isActive(timePeriod) ? 'visible' : 'collapsed'"
+                            fontSize="14"
+                            fontWeight="500"
+                            class="font-awesome"
+                            text="&#xf111; "
+                            padding="0 0 0 10"
+                            [color]="happyHourStatus(timePeriod)"></Label>
+                        <Label
+                            [padding]="isActivePadding(timePeriod)"
+                            fontSize="14"
+                            fontWeight="500"
+                            class="font-awesome"
+                            [style]="isOver(timePeriod)"
+                            [text]="todaysHappyHours(timePeriod)"
+                            [color]="isActiveText(timePeriod)">
+                        </Label>
+                    </FlexboxLayout>
                 </FlexboxLayout>
             </FlexboxLayout>
         </FlexboxLayout>

@@ -12,12 +12,20 @@
         "directory": "..\\..\\node_modules\\nativescript-geolocation"
     },
     {
+        "name": "nativescript-google-maps-sdk",
+        "directory": "..\\..\\node_modules\\nativescript-google-maps-sdk"
+    },
+    {
         "name": "nativescript-google-places",
         "directory": "..\\..\\node_modules\\nativescript-google-places"
     },
     {
         "name": "nativescript-performance-monitor",
         "directory": "..\\..\\node_modules\\nativescript-performance-monitor"
+    },
+    {
+        "name": "nativescript-phone",
+        "directory": "..\\..\\node_modules\\nativescript-phone"
     },
     {
         "name": "nativescript-plugin-firebase",

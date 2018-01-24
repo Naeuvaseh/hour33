@@ -3,14 +3,14 @@ import { registerElement } from "nativescript-angular/element-registry";
 import { Vendor } from '../../../../../interfaces/vendor.interface';
 import { Theme } from '../../../../../settings';
 
-// registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
+registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
 @Component({
   selector: 'vendor-map',
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
-  // @ViewChild("MapView") mapView: ElementRef;
+  @ViewChild("MapView") mapView: ElementRef;
   @Input() vendor: Vendor;
 
   public theme;
@@ -26,9 +26,9 @@ export class VendorMapComponent implements OnInit {
     this.long = 32.12345;
   }
 
-  // onMapReady = (event) => {
-  //   console.log("Map Ready");
-  // };
+  onMapReady = (event) => {
+    console.log("Map Ready");
+  };
 
 // ****** Maps Demo Code ****** //
 

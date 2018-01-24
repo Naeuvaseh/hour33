@@ -16,7 +16,21 @@
                 android.position="actionBar"></ActionItem>
 </ActionBar>
 <GridLayout rows="*" [backgroundColor]="theme.primaryColor">
-    <RadListView [items]="items" 
+    <RadListView [items]="vendors" 
+                  pullToRefresh="true" 
+                 (pullToRefreshInitiated)="refresh($event)" 
+                  selectionBehavior="Press"
+                 (itemTap)="onVendorTap($event)"
+                  loadOnDemandMode="Auto"
+                 (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
+        <ng-template let-vendor="item" let-i="index">
+            <!-- <vendor-listing [vendor]="vendor" [index]="index"></vendor-listing> -->
+            <Label 
+                [text]="vendor?.name"
+                color="#fff"></Label>
+        </ng-template>
+    </RadListView>
+    <!-- <RadListView [items]="items" 
                   pullToRefresh="true" 
                  (pullToRefreshInitiated)="refresh($event)" 
                   selectionBehavior="Press"
@@ -26,7 +40,7 @@
         <ng-template let-vendor="item" let-i="index">
             <vendor-listing [vendor]="vendor" [index]="index"></vendor-listing>
         </ng-template>
-    </RadListView>
+    </RadListView> -->
 </GridLayout>
 
 

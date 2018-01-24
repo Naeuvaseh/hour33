@@ -28,10 +28,8 @@ firebase.init({
 );
 
 // Init Location
-geolocation.enableLocationRequest();
-
+if (!geolocation.isEnabled) geolocation.enableLocationRequest();
 // Init Google Places API
-// API Key: AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM
 GooglePlaces.init();
 
 platformNativeScriptDynamic().bootstrapModule(AppModule);

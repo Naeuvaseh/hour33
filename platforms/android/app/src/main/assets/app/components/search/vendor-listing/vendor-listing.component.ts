@@ -72,7 +72,6 @@ export class VendorListingComponent implements OnInit {
 
   todaysHappyHours(timePeriod: TimePeriod): string {
     var result: string = '';
-    
     // Valid happy hour time period
     if (timePeriod !== null){
       // Format time period
@@ -80,14 +79,25 @@ export class VendorListingComponent implements OnInit {
       // Append verbiage to times
       switch(this.happyHourStatus(timePeriod)){
         case Theme.greenColor:
-          return result = String.fromCharCode(0xf111) + " " + result + " - In Progress!";
+          return result += " (In Progress)";
         case Theme.yellowColor:
-          return result = String.fromCharCode(0xf111) + " " + result + " - Ending Soon!";
+          return result += " (Ending Soon)";
         default: 
           return result;
       }
     }
     return 'Unavailable';
+  }
+
+  isActiveText(timePeriod: TimePeriod): string {
+    switch(this.happyHourStatus(timePeriod)){
+      case Theme.greenColor:
+      case Theme.yellowColor:
+      case Theme.inactiveColor:
+        return Theme.inactiveColor;
+      default:
+        return Theme.lightGrey;
+    }
   }
 
   isOver(timePeriod: TimePeriod): string {
@@ -99,14 +109,25 @@ export class VendorListingComponent implements OnInit {
     } 
   }
 
-  isActive(timePeriod: TimePeriod): string {
+  isActivePadding(timePeriod: TimePeriod): string {
     switch(this.happyHourStatus(timePeriod)){
       case Theme.greenColor:
-        return '0 0 2 10';
+        return '0 0 2 0';
       case Theme.yellowColor:
-        return '0 0 2 10';
+        return '0 0 2 0';
       default:
         return '0 0 2 26';
+    } 
+  }
+
+  isActive(timePeriod: TimePeriod): boolean {
+    switch(this.happyHourStatus(timePeriod)){
+      case Theme.greenColor:
+        return true;
+      case Theme.yellowColor:
+        return true;
+      default:
+        return false;
     } 
   }
 
