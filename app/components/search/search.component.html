@@ -29,7 +29,8 @@
     pullToRefresh="true" 
     (pullToRefreshInitiated)="refresh($event)" 
     selectionBehavior="Press"
-    (itemTap)="onVendorTap($event)"
+    (itemSelected)="onVendorTap($event)"
+    multileSelection="false"
     loadOnDemandMode="Auto"
     (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
     <ng-template let-vendor="item" let-i="index">

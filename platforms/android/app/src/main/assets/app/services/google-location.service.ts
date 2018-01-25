@@ -185,6 +185,7 @@ export class GoogleLocationService {
         let radiusParam: string;
         let minPriceParam: string;
         let maxPriceParam: string;
+        let typeParam: string;
 
         if (nextPageToken) {
             let nextPageParam = "?pagetoken=" + nextPageToken;
@@ -192,14 +193,15 @@ export class GoogleLocationService {
         }
         else {
             // Required params
-            searchTextParam = "?query=BAR";
+            searchTextParam = "?query=";
             // Optional params
             locationParam = "&location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
             radiusParam = "&radius=" + Radius.mi1;
             minPriceParam = "&minprice=" + Price.zero; // Default is lowest
             maxPriceParam = "&maxprice=" + Price.four; // Default is highest
+            typeParam = "&type=bar";
             // Build URL
-            url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + apiKeyParam;
+            url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + typeParam + apiKeyParam;
         }
         return url;
     }
