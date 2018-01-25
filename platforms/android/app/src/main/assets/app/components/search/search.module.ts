@@ -6,7 +6,6 @@ import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angul
 import { GoogleLocationService } from '../../services/google-location.service';
 import { SearchRoutingModule } from "./search-routing.module";
 import { SearchComponent } from "./search.component";
-import { DefaultSearchResolver } from './default-search.resolve';
 import { VendorListingComponent } from "./vendor-listing/vendor-listing.component";
 import { VendorDetailComponent } from "./vendor-detail/vendor-detail.component";
 import { VendorService } from '../../services/vendor.service';

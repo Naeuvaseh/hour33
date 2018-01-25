@@ -17,7 +17,7 @@ import { TextSearchVendor } from '../../interfaces/search-result/text-search/tex
 import { Day } from '../../enums/day.enum';
 import { Observable } from 'rxjs/Observable';
 import { Radius } from '../../enums/radius.enum';
-
+import { SearchMode } from '../../enums/search-mode.enum';
 @Component({
   selector: 'search',
   templateUrl: './components/search/search.component.html'
@@ -44,48 +44,12 @@ export class SearchComponent implements OnInit {
     this.items = this.vendorService.getVendors();
     // Get location
     let tempLocation: Location;
-    geolocation
-      .getCurrentLocation({
-          desiredAccuracy: Accuracy.high,
-          updateTime: 500,
-          maximumAge: 5000,
-          timeout: 20000
-      })
-      .then((result: Location) => {
-        if (result){
-          console.log('SearchComponent.NgOnInit(): Location: ' + JSON.stringify(result));
-          // Update user location
-          this.googleLocationService.userLocation = result;
-          // Pull default search data
-          this.googleLocationService
-              .defaultSearch(result)
-              .then((results) => {
-                console.log(JSON.stringify(results));
-                this.searchResults = results;
-                this.vendors = <TextSearchVendor[]> results.results;
-              });
-        }
-      }, 
-      (error) => {
-        console.log('CurrentLocationResolver() ERROR: ' + error);
-      });   
-    // this.googleLocationService
-    //     .textSearch()
-    //     .subscribe(
-    //       (data: SearchResult) => {
-    //         console.log('Results: ' + data);
-    //         this.searchResults = data;
-    //       },
-    //       (error) =>{
-    //         console.log('SearchComponent.ngOnInit() ERROR: ' + error);
-    //     });
-
-    // this.googleLocationService
-    //     .nearbySearch()
-    //     .subscribe((data: any) => {
-    //       console.log('Data', JSON.stringify(data));
-    //       this.results = data;
-    //     });
+    this.googleLocationService
+        .search(SearchMode.Default, false)
+        .then((response: SearchResult) => {
+          this.searchResults = response;
+          this.vendors = <TextSearchVendor[]> response.results;
+        });
   }
 
   onFilter(){
@@ -94,26 +58,20 @@ export class SearchComponent implements OnInit {
 
   onListMapToggle(){
     console.log("ListMap toggle tapped.");
-    // console.log('Results: ' + JSON.stringify(this.results));
-    //this.searchResults = this.googleLocationService.nearbySearch();
-    // this.googleLocationService
-    //     .textSearch("bars", Radius.mi5)
-    //     .subscribe(
-    //       (data: SearchResult) => {
-    //         this.searchResults = data;
-    //       },
-    //       (error) => {
-    //         console.log("SearchComponent.OnListMapToggle() ERROR: " + error);
-    //       });
     this.listViewVisible = !this.listViewVisible;
   }
 
   refresh(args: ListViewEventData){
-    setTimeout(function () {
-      // API Data Request goes here.
-      console.log("Pull down initiated.");
-      args.object.notifyPullToRefreshFinished();
-    }, 500);
+    this.googleLocationService
+        .search(SearchMode.Default, false)
+        .then((response: SearchResult) => {
+          this.searchResults = response;
+          this.vendors = <TextSearchVendor[]> response.results;
+          args.object.notifyPullToRefreshFinished();
+        }, 
+        (error) => {
+          console.log('SearchComponent.refresh() ERROR: ' + error);
+        });
   }
 
   onVendorTap(args: ListViewEventData){

@@ -28,12 +28,19 @@ export const Debug = {
             init: true
         },
         // Services
-        GoogleLocation: true,
+        GoogleLocation: {
+            url: true,
+            data: true,
+            error: true
+        },
         Vendor: true,
         // Components
         AppComponent: true,
         // Pipes
         CurrentDayPipe: false
+    },
+    display: {
+        SearchComponent: false
     },
     fps: false,
     backgroundColor: false

@@ -7,6 +7,8 @@ import { Debug } from '../settings';
 import { Radius } from '../enums/radius.enum';
 import { Observable } from 'rxjs/Observable';
 import { GooglePlacesAPIKey } from '../settings';
+// Constants
+import { GooglePlacesApiUrls } from '../const/google-places-api-urls.const';
 // Geolcation
 import * as geolocation from "nativescript-geolocation";
 import { Accuracy } from "ui/enums";
@@ -18,9 +20,12 @@ import { locale } from 'moment';
 import { SearchResult } from '../interfaces/search-result/search-result.interface';
 import { NearbySearchVendor } from '../interfaces/search-result/nearby-search/nearby-search-vendor.interface';
 import { TextSearchVendor } from '../interfaces/search-result/text-search/text-search-vendor.interface';
+import { TextSearchOptions } from '../interfaces/search-result/text-search/text-search-options.interface';
+import { NearbySearchOptions } from '../interfaces/search-result/nearby-search/nearby-search-options.interface';
 // Enums
 import { Price } from '../enums/price.enum';
 import { VendorType } from '../enums/vendor-type.enum';
+import { SearchMode } from '../enums/search-mode.enum';
 
 
 @Injectable()
@@ -29,11 +34,7 @@ export class GoogleLocationService {
     private _debug;
     public userLocation: Location;
     // Google Places API
-    private _placesNearbyApiUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json';
-    private _placesAutoCompleteApiUrl = 'https://maps.googleapis.com/maps/api/place/autocomplete/json';
-    private _placesTextSearchApiUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json';
-    private _placesDetailsApiUrl = 'https://maps.googleapis.com/maps/api/place/details/json';
-    private _placesImagesApiUrl = 'https://maps.googleapis.com/maps/api/place/photo';
+    private api = GooglePlacesApiUrls;
     // private _errorCallback;
 
     public results: SearchResult;
@@ -41,6 +42,80 @@ export class GoogleLocationService {
 
     public constructor(private http: HttpClient) {
         this._debug = Debug;
+    }
+
+    public search(mode: SearchMode, nextPage: boolean, results?: SearchResult, options?: TextSearchOptions|NearbySearchOptions): Promise<SearchResult|null> {
+        return new Promise<SearchResult|null>((resolve, reject ) => {
+            // Update location
+            geolocation
+            .getCurrentLocation({
+                desiredAccuracy: Accuracy.high,
+                updateTime: 500,
+                maximumAge: 5000,
+                timeout: 20000
+            })
+            .then((location: Location) => {
+                // Location available
+                if (location) {
+                    var url: string;
+                    // Switch to specific search mode
+                    switch(mode){
+                        case SearchMode.Default:
+                        {   
+                            // Build API URL
+                            url = (nextPage) ? this.defaultSearch(location, results.next_page_token) : this.defaultSearch(location);
+                            // Print URL
+                            if (this._debug.console.GoogleLocation.url) this.printUrl(url, SearchMode.Default, nextPage);
+                            // API Call
+                            this.http
+                                .get(url)
+                                .toPromise()
+                                    .then((response: SearchResult) => {
+                                        if(response){
+                                            if (this._debug.console.GoogleLocation.data) console.log('GoogleLocationService.Search(mode:Default) DATA: ' + JSON.stringify(response));                                            
+                                            resolve(response);
+                                        }
+                                    },
+                                    (error) => {
+                                        if (Debug.console.GoogleLocation.error) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
+                                    });
+                            break;
+                        }
+                        case SearchMode.Text:
+                        {
+                            if (nextPage){
+
+                            }
+                            else{
+
+                            }
+                            break;
+                        }
+                        case SearchMode.Nearby:
+                        {
+                            if (nextPage){
+
+                            }
+                            else{
+
+                            }
+                            break;
+                        }
+                        default:
+                            alert('Please select a search mode.');
+                            return null;
+                    }
+                }
+                else {
+                    alert('Your location is currently not available. Please try again.');
+                    reject();
+                }
+            }, 
+            (error) => {
+                if (this._debug.console.GoogleLocation.error) console.log('CurrentLocationResolver() ERROR: ' + error);
+                reject(error);
+            });
+        });
     }
 
     public nearbySearch(text?: string, types?: string): Object {
@@ -54,7 +129,7 @@ export class GoogleLocationService {
         var language = "&language=en";
         var rankBy = "&rankBy=distance";
         // Build URL
-        var url = this._placesNearbyApiUrl + location + radius + keyword + apiKey;
+        var url = this.api.nearbyApi + location + radius + keyword + apiKey;
         // Log URL
         console.log("############################### Nearby Search ###############################");
         console.log("URL=" + url);
@@ -69,69 +144,98 @@ export class GoogleLocationService {
             .catch(this.handleErrorPromise);
     }
 
-    public textSearch(text?: string, radius?: Radius, language?: boolean, minPrice?: Price, maxPrice?: Price, type?: VendorType): Observable<SearchResult> {
-        // Required params
-        var searchTextParam = "?query=" + ((text !== undefined) ? this.capitalize(text).replace(new RegExp(" ", 'g'), "") : "BAR");
-        var apiKeyParam = "&key=" + GooglePlacesAPIKey;
-        // Optional params
-        var locationParam = "&location=" + this.userLocation.latitude.toString() + ',' + this.userLocation.longitude.toString(); // lat,long 
-        var radiusParam = "&radius=" + Radius.mi1;
-        var minPriceParam = "&minprice=" + ((minPrice !== undefined) ? minPrice : Price.zero); // Default is lowest
-        var maxPriceParam = "&maxprice=" + ((maxPrice !== undefined) ? maxPrice : Price.four); // Default is highest
-        var typeParam = ((type !== undefined) ? "&type=" + type : "");
-        // Build URL
-        var url = this._placesTextSearchApiUrl + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + typeParam + apiKeyParam;
-        // Log URL
-        console.log("############################### Text Search ###############################");
-        console.log("URL=" + url);
-        console.log("#############################################################################");
-        // API Call
-        return this.http
-            .get<SearchResult>(url)
-            .map(
-            (response: SearchResult) => {
-                if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch(): ' + JSON.stringify(response));
-                this.results = response;
-                this.vendorResults = response['results'];
-                return response;
-            },
-            (error) => {
-                if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
-            });
-          
-    }
-
-    public defaultSearch(location?: Location): Promise<SearchResult> {
+    public textSearch(text?: string, radius?: Radius, language?: boolean, minPrice?: Price, maxPrice?: Price, type?: VendorType): Promise<SearchResult> {
         return new Promise<SearchResult>((resolve, reject) => {
+
             // Required params
-            var searchTextParam = "?query=BAR";
+            var searchTextParam = "?query=" + ((text !== undefined) ? this.capitalize(text).replace(new RegExp(" ", 'g'), "") : "BAR");
             var apiKeyParam = "&key=" + GooglePlacesAPIKey;
+            var locationParam = "&location=" + this.userLocation.latitude.toString() + ',' + this.userLocation.longitude.toString(); // lat,long 
             // Optional params
-            var locationParam = "&location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
             var radiusParam = "&radius=" + Radius.mi1;
-            var minPriceParam = "&minprice=" +  Price.zero; // Default is lowest
-            var maxPriceParam = "&maxprice=" + Price.four; // Default is highest
+            var minPriceParam = "&minprice=" + ((minPrice !== undefined) ? minPrice : Price.zero); // Default is lowest
+            var maxPriceParam = "&maxprice=" + ((maxPrice !== undefined) ? maxPrice : Price.four); // Default is highest
+            var typeParam = ((type !== undefined) ? "&type=" + type : "");
             // Build URL
-            var url = this._placesTextSearchApiUrl + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + apiKeyParam;
+            var url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + typeParam + apiKeyParam;
             // Log URL
-            console.log("############################### Default Search ###############################");
+            console.log("############################### Text Search ###############################");
             console.log("URL=" + url);
             console.log("#############################################################################");
             // API Call
             this.http
-            .get(url)
-            .toPromise()
+            .get<SearchResult>(url)
+                .toPromise()
                 .then((response: SearchResult) => {
-                    if(response){
-                        console.log('Valid Response Recieved.');
-                        resolve(response);
-                    }
+                    if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch(): ' + JSON.stringify(response));
+                    this.results = response;
+                    this.vendorResults = response['results'];
+                    resolve(response);
                 },
                 (error) => {
                     if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
                 });
-        });
+            });
     }
+
+    public defaultSearch(location: Location, nextPageToken?: string): string {
+        let url: string;
+        let apiKeyParam = "&key=" + GooglePlacesAPIKey;
+        let searchTextParam: string;
+        let locationParam: string;
+        let radiusParam: string;
+        let minPriceParam: string;
+        let maxPriceParam: string;
+
+        if (nextPageToken) {
+            let nextPageParam = "?pagetoken=" + nextPageToken;
+            url = this.api.textSearchApi + nextPageParam + apiKeyParam;
+        }
+        else {
+            // Required params
+            searchTextParam = "?query=BAR";
+            // Optional params
+            locationParam = "&location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
+            radiusParam = "&radius=" + Radius.mi1;
+            minPriceParam = "&minprice=" + Price.zero; // Default is lowest
+            maxPriceParam = "&maxprice=" + Price.four; // Default is highest
+            // Build URL
+            url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + apiKeyParam;
+        }
+        return url;
+    }
+
+    // public defaultSearch(location?: Location): Promise<SearchResult> {
+    //     return new Promise<SearchResult>((resolve, reject) => {
+    //         // Required params
+    //         var searchTextParam = "?query=BAR";
+    //         var apiKeyParam = "&key=" + GooglePlacesAPIKey;
+    //         // Optional params
+    //         var locationParam = "&location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
+    //         var radiusParam = "&radius=" + Radius.mi1;
+    //         var minPriceParam = "&minprice=" +  Price.zero; // Default is lowest
+    //         var maxPriceParam = "&maxprice=" + Price.four; // Default is highest
+    //         // Build URL
+    //         var url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + apiKeyParam;
+    //         // Log URL
+    //         console.log("############################### Default Search ###############################");
+    //         console.log("URL=" + url);
+    //         console.log("#############################################################################");
+    //         // API Call
+    //         this.http
+    //         .get(url)
+    //         .toPromise()
+    //             .then((response: SearchResult) => {
+    //                 if(response){
+    //                     console.log('Valid Response Recieved.');
+    //                     resolve(response);
+    //                 }
+    //             },
+    //             (error) => {
+    //                 if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
+    //             });
+    //     });
+    // }
 
     private handleErrorPromise (error: Response | any) {
         console.error(error.message || error);
@@ -144,23 +248,10 @@ export class GoogleLocationService {
     }
 
     public getCurrentLocation(): Location {
-        if (this._debug.console.GoogleLocation) console.log('GoogleLocationService.getCurrentLocation()');
         return this.userLocation;
     }
 
     public setCurrentLocation(location: Location) {
-        if (this._debug.console.GoogleLocation) console.log('GoogleLocationService.setCurrentLocation()');
-        // geolocation
-        //     .getCurrentLocation({
-        //         desiredAccuracy: Accuracy.high,
-        //         updateTime: 500,
-        //         maximumAge: 5000,
-        //         timeout: 20000
-        //     })
-        //     .then((result) => {
-        //         if (this._debug.console.GoogleLocation) console.log('GoogleLocationService.setCurrentLocation() Result: ' + JSON.stringify(result));
-        //         this.userLocation = result;
-        //     });   
         this.userLocation = location;
     }
     
@@ -221,5 +312,46 @@ export class GoogleLocationService {
     private capitalize(text: string) {
         return text.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
     };
+
+    private printUrl(url: string, mode: SearchMode, nextpage: boolean){
+        switch(mode){
+            case SearchMode.Default: 
+                if (nextpage) {
+                    console.log("############################### Default Search (Next Page) ###############################");
+                    console.log("URL=" + url);
+                    console.log("#############################################################################");
+                } else {
+                    console.log("############################### Default Search ###############################");
+                    console.log("URL=" + url);
+                    console.log("#############################################################################");
+                }
+                break;
+            case SearchMode.Nearby:
+                if (nextpage) {
+                    console.log("############################### Nearby Search (Next Page) ###############################");
+                    console.log("URL=" + url);
+                    console.log("#############################################################################");
+                } else {
+                    console.log("############################### Nearby Search ###############################");
+                    console.log("URL=" + url);
+                    console.log("#############################################################################");
+                }
+                break;
+            case SearchMode.Text:
+                if (nextpage) {
+                    console.log("############################### Text Search (Next Page) ###############################");
+                    console.log("URL=" + url);
+                    console.log("#############################################################################");
+                } else {
+                    console.log("############################### Text Search ###############################");
+                    console.log("URL=" + url);
+                    console.log("#############################################################################");
+                }
+                break;
+            default:
+                console.log('GoogleLocationService.printUrl(): A mode must be selected');
+                break;
+        }        
+    }
 
 }
