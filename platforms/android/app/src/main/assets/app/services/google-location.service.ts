@@ -18,8 +18,7 @@ import { Location } from 'nativescript-plugin-google-places';
 import { locale } from 'moment';
 // Interfaces
 import { SearchResult } from '../interfaces/search-result/search-result.interface';
-import { NearbySearchVendor } from '../interfaces/search-result/nearby-search/nearby-search-vendor.interface';
-import { TextSearchVendor } from '../interfaces/search-result/text-search/text-search-vendor.interface';
+import { Vendor } from '../interfaces/search-result/vendor.interface';
 import { TextSearchOptions } from '../interfaces/search-result/text-search/text-search-options.interface';
 import { NearbySearchOptions } from '../interfaces/search-result/nearby-search/nearby-search-options.interface';
 // Enums
@@ -38,13 +37,13 @@ export class GoogleLocationService {
     // private _errorCallback;
 
     public results: SearchResult;
-    public vendorResults: Array<NearbySearchVendor|TextSearchVendor>;
+    public vendorResults: Array<Vendor>;
 
     public constructor(private http: HttpClient) {
         this._debug = Debug;
     }
 
-    public search(mode: SearchMode, nextPage: boolean, results?: SearchResult, options?: TextSearchOptions|NearbySearchOptions): Promise<SearchResult|null> {
+    public search(mode: SearchMode, nextPage: boolean, results?: SearchResult, options?: Vendor): Promise<SearchResult|null> {
         return new Promise<SearchResult|null>((resolve, reject ) => {
             // Update location
             geolocation

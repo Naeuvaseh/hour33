@@ -1,4 +1,5 @@
-export interface NearbySearchVendor {  
+export interface Vendor {  
+    // Common attributes
     geometry: {  
        location: {  
           lat: number,
@@ -32,8 +33,12 @@ export interface NearbySearchVendor {
     ],
     place_id: string,
     rating: number,
-    referen: string
-    scope: string,
+    reference: string
     types: string[],
-    vicinity: string
+    vicinity: string,
+    //Text Search-specific
+    formatted_address?: string,
+    price_level?: number
+    // Nearby-specific
+    scope?: string,
  }
