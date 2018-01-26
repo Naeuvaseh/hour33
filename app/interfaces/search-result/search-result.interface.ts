@@ -4,5 +4,6 @@ export interface SearchResult {
     html_attributions: string[],
     next_page_token: string | null,
     results: Array<Vendor>,
-    status: string
+    status: string,
+    error_message?: string
 }

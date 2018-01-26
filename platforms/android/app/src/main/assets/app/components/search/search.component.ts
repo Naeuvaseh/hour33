@@ -17,7 +17,9 @@ import { Day } from '../../enums/day.enum';
 import { Observable } from 'rxjs/Observable';
 import { Radius } from '../../enums/radius.enum';
 import { SearchMode } from '../../enums/search-mode.enum';
+import { SearchStatusCode } from '../../enums/search-status.enum';
 import { forEach } from '@angular/router/src/utils/collection';
+
 @Component({
   selector: 'search',
   templateUrl: './components/search/search.component.html'
@@ -26,70 +28,115 @@ export class SearchComponent implements OnInit {
 
   private theme;
   private debug;
+  private searchStatusCode: SearchStatusCode;
   private nextPageFlag: boolean;
+  private loadingFlag: boolean;
   private items: ObservableArray<Vendor>;
-  
+
   public listViewVisible: boolean = true;
   public searchResults: SearchResult;
   public vendors: Vendor[];
 
-  constructor(private router: Router, 
-              private vendorService: VendorService,
-              private googleLocationService: GoogleLocationService) {
+  constructor(private router: Router,
+    private vendorService: VendorService,
+    private googleLocationService: GoogleLocationService) {
     this.theme = Theme;
     this.debug = Debug;
   }
 
-  ngOnInit() {  
+  ngOnInit() {
     // Check if data exists
     if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
       this.searchResults = this.googleLocationService.searchResults;
       this.vendors = this.googleLocationService.vendors;
     }
     else {
+      this.loadingFlag = true;
       // Get location
       this.googleLocationService
-          .search(SearchMode.Default, false)
-          .then((response: SearchResult) => {
-            // Set data at both service level and component level
-            this.setNextPageFlag(response);
-            this.searchResults = this.googleLocationService.searchResults = response;
-            this.vendors = this.googleLocationService.vendors = <Vendor[]> response.results;
-          });
+        .search(SearchMode.Default, false)
+        .then((response: SearchResult) => {
+          this.loadingFlag = false;
+          switch (response.status) {
+            case SearchStatusCode.OK:
+              // Set data at both service level and component level
+              this.setNextPageFlag(response);
+              this.searchResults = this.googleLocationService.searchResults = response;
+              this.vendors = this.googleLocationService.vendors = <Vendor[]>response.results;
+              this.searchStatusCode = SearchStatusCode.OK;
+              break;
+            case SearchStatusCode.ZERO_RESULTS:
+              this.searchStatusCode = SearchStatusCode.ZERO_RESULTS;
+              break;
+            case SearchStatusCode.INVALID_REQUEST:
+              console.log('SearchComponent.ngOnInit(SearchStatusCode.INVALID_REQUEST) Message: ' + response.error_message);
+              alert('Something went wrong. Please try again.');
+              break;
+            case SearchStatusCode.UNKNOWN_ERROR:
+              console.log('SearchComponent.ngOnInit(SearchStatusCode.UNKNOWN_ERROR) Message: ' + response.error_message);
+              alert('Something went wrong. Please try again.');
+              break;
+            default:
+              console.log('SearchComponent.ngOnInit(DEFAULT)');
+              alert('The default search had an error. Please try again.');
+              break;
+          }
+        });
     }
   }
 
-  onFilter(){
+  onFilter() {
     console.log("Filter button tapped.");
   }
 
-  onListMapToggle(){
+  onListMapToggle() {
     console.log("ListMap toggle tapped.");
     this.listViewVisible = !this.listViewVisible;
   }
 
-  refresh(args: ListViewEventData){
+  refresh(args: ListViewEventData, insideRadListView: boolean) {
     // Clear curent data
     this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
     // API Call
     this.googleLocationService
-        .search(SearchMode.Default, false)
-        .then((response: SearchResult) => {
-          this.setNextPageFlag(response);
-          this.searchResults = this.googleLocationService.searchResults = response;
-          this.vendors = this.googleLocationService.vendors = <Vendor[]> response.results;
-          args.object.notifyPullToRefreshFinished();
-        }, 
-        (error) => {
-          console.log('SearchComponent.refresh() ERROR: ' + error);
-        });
+      .search(SearchMode.Default, false)
+      .then((response: SearchResult) => {
+        switch (response.status) {
+          case SearchStatusCode.OK:
+            // Set data at both service level and component level
+            this.setNextPageFlag(response);
+            this.searchResults = this.googleLocationService.searchResults = response;
+            this.vendors = this.googleLocationService.vendors = <Vendor[]>response.results;
+            this.searchStatusCode = SearchStatusCode.OK;            
+            break;
+          case SearchStatusCode.ZERO_RESULTS:
+            this.searchStatusCode = SearchStatusCode.ZERO_RESULTS;
+            break;
+          case SearchStatusCode.INVALID_REQUEST:
+            console.log('SearchComponent.refresh(SearchStatusCode.INVALID_REQUEST) Message: ' + response.error_message);
+            alert('Something went wrong. Please try again.');
+            break;
+          case SearchStatusCode.UNKNOWN_ERROR:
+            console.log('SearchComponent.refresh(SearchStatusCode.UNKNOWN_ERROR) Message: ' + response.error_message);
+            alert('Something went wrong. Please try again.');
+            break;
+          default:
+            console.log('SearchComponent.refresh(DEFAULT)');
+            alert('The default search had an error. Please try again.');
+            break;
+        }
+       if (insideRadListView) args.object.notifyPullToRefreshFinished();
+      },
+      (error) => {
+        console.log('SearchComponent.refresh() ERROR: ' + error);
+      });
   }
 
-  onVendorTap(args: ListViewEventData){
+  onVendorTap(args: ListViewEventData) {
     let view = args.object as RadListView;
     let data = view.getSelectedItems() as Vendor[];
 
-    
+
     console.log(JSON.stringify(data[0]));
     // let vendor: Vendor = this.vendors.find(vendor => vendor.place_id === args.data.place_id);
     // console.log("Vendor ID:", vendor.place_id);
@@ -102,13 +149,32 @@ export class SearchComponent implements OnInit {
       this.googleLocationService
         .search(SearchMode.Default, true, this.searchResults)
         .then((response) => {
-          this.setNextPageFlag(response);
-          // Update service results object
-          this.searchResults = this.googleLocationService.searchResults = response;
-          // Add new vendors to service and local component variables
-          for (let vendor of response.results) {
-            this.googleLocationService.vendors.push(<Vendor>vendor);
-            this.vendors.push(<Vendor>vendor);
+          switch (response.status) {
+            case SearchStatusCode.OK:
+              // Set data at both service level and component level
+              this.setNextPageFlag(response);
+              this.searchResults = this.googleLocationService.searchResults = response;
+              for (let vendor of response.results) {
+                this.googleLocationService.vendors.push(<Vendor>vendor);
+                this.vendors.push(<Vendor>vendor);
+              }
+              this.searchStatusCode = SearchStatusCode.OK;              
+              break;
+            case SearchStatusCode.ZERO_RESULTS:
+              this.searchStatusCode = SearchStatusCode.ZERO_RESULTS;
+              break;
+            case SearchStatusCode.INVALID_REQUEST:
+              console.log('SearchComponent.onLoadMoreItemsRequested(SearchStatusCode.INVALID_REQUEST) Message: ' + response.error_message);
+              alert('Something went wrong. Please try again.');
+              break;
+            case SearchStatusCode.UNKNOWN_ERROR:
+              console.log('SearchComponent.onLoadMoreItemsRequested(SearchStatusCode.UNKNOWN_ERROR) Message: ' + response.error_message);
+              alert('Something went wrong. Please try again.');
+              break;
+            default:
+              console.log('SearchComponent.onLoadMoreItemsRequested(DEFAULT)');
+              alert('The default search had an error. Please try again.');
+              break;
           }
           args.object.notifyLoadOnDemandFinished();
         },
@@ -119,7 +185,7 @@ export class SearchComponent implements OnInit {
     args.object.notifyLoadOnDemandFinished();
   }
 
-  setNextPageFlag(response: SearchResult){
+  setNextPageFlag(response: SearchResult) {
     this.nextPageFlag = (response.next_page_token) ? true : false;
   }
 }
