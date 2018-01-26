@@ -17,8 +17,8 @@ import * as GooglePlaces from 'nativescript-plugin-google-places';
 import { Location } from 'nativescript-plugin-google-places';
 import { locale } from 'moment';
 // Interfaces
-import { SearchResult } from '../interfaces/search-result/search-result.interface';
 import { Vendor } from '../interfaces/search-result/vendor.interface';
+import { SearchResult } from '../interfaces/search-result/search-result.interface';
 import { TextSearchOptions } from '../interfaces/search-result/text-search/text-search-options.interface';
 import { NearbySearchOptions } from '../interfaces/search-result/nearby-search/nearby-search-options.interface';
 // Enums
@@ -32,6 +32,8 @@ export class GoogleLocationService {
 
     private _debug;
     public userLocation: Location;
+    public searchResults: SearchResult;
+    public vendors: Vendor[];
     // Google Places API
     private api = GooglePlacesApiUrls;
     // private _errorCallback;

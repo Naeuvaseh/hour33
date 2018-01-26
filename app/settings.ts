@@ -30,7 +30,7 @@ export const Debug = {
         // Services
         GoogleLocation: {
             url: true,
-            data: true,
+            data: false,
             error: true
         },
         Vendor: true,

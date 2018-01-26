@@ -41,15 +41,22 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {  
-    // Get location
-    let tempLocation: Location;
-    this.googleLocationService
-        .search(SearchMode.Default, false)
-        .then((response: SearchResult) => {
-          this.setNextPageFlag(response);
-          this.searchResults = response;
-          this.vendors = <Vendor[]> response.results;
-        });
+    // Check if data exists
+    if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
+      this.searchResults = this.googleLocationService.searchResults;
+      this.vendors = this.googleLocationService.vendors;
+    }
+    else {
+      // Get location
+      this.googleLocationService
+          .search(SearchMode.Default, false)
+          .then((response: SearchResult) => {
+            // Set data at both service level and component level
+            this.setNextPageFlag(response);
+            this.searchResults = this.googleLocationService.searchResults = response;
+            this.vendors = this.googleLocationService.vendors = <Vendor[]> response.results;
+          });
+    }
   }
 
   onFilter(){
@@ -62,12 +69,15 @@ export class SearchComponent implements OnInit {
   }
 
   refresh(args: ListViewEventData){
+    // Clear curent data
+    this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
+    // API Call
     this.googleLocationService
         .search(SearchMode.Default, false)
         .then((response: SearchResult) => {
           this.setNextPageFlag(response);
-          this.searchResults = response;
-          this.vendors = <Vendor[]> response.results;
+          this.searchResults = this.googleLocationService.searchResults = response;
+          this.vendors = this.googleLocationService.vendors = <Vendor[]> response.results;
           args.object.notifyPullToRefreshFinished();
         }, 
         (error) => {
@@ -93,8 +103,11 @@ export class SearchComponent implements OnInit {
         .search(SearchMode.Default, true, this.searchResults)
         .then((response) => {
           this.setNextPageFlag(response);
-          this.searchResults = response;
+          // Update service results object
+          this.searchResults = this.googleLocationService.searchResults = response;
+          // Add new vendors to service and local component variables
           for (let vendor of response.results) {
+            this.googleLocationService.vendors.push(<Vendor>vendor);
             this.vendors.push(<Vendor>vendor);
           }
           args.object.notifyLoadOnDemandFinished();
@@ -103,6 +116,7 @@ export class SearchComponent implements OnInit {
           console.log('SearchComponent.onLoadMoreItemsRequested() ERROR: ' + error);
         });
     }
+    args.object.notifyLoadOnDemandFinished();
   }
 
   setNextPageFlag(response: SearchResult){
