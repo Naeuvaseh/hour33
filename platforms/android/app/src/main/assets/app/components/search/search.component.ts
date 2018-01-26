@@ -49,8 +49,10 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     // Check if data exists
     if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
+      console.log("Data exists already");
       this.searchResults = this.googleLocationService.searchResults;
       this.vendors = this.googleLocationService.vendors;
+      this.searchStatusCode = SearchStatusCode.OK;
     }
     else {
       this.loadingFlag = true;
