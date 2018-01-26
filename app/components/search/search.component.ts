@@ -19,6 +19,7 @@ import { Radius } from '../../enums/radius.enum';
 import { SearchMode } from '../../enums/search-mode.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
 import { forEach } from '@angular/router/src/utils/collection';
+import { generate } from 'rxjs/observable/generate';
 
 @Component({
   selector: 'search',
@@ -32,6 +33,7 @@ export class SearchComponent implements OnInit {
   private nextPageFlag: boolean;
   private loadingFlag: boolean;
   private items: ObservableArray<Vendor>;
+  private userLocation: Location;
 
   public listViewVisible: boolean = true;
   public searchResults: SearchResult;
@@ -175,7 +177,7 @@ export class SearchComponent implements OnInit {
               console.log('SearchComponent.onLoadMoreItemsRequested(DEFAULT)');
               alert('The default search had an error. Please try again.');
               break;
-          }
+           }
           args.object.notifyLoadOnDemandFinished();
         },
         (error) => {
@@ -187,5 +189,9 @@ export class SearchComponent implements OnInit {
 
   setNextPageFlag(response: SearchResult) {
     this.nextPageFlag = (response.next_page_token) ? true : false;
+  }
+
+  calcDistance(loc1: Location, loc2: Location){
+    return geolocation.distance(loc1, loc2) / 1609.34; // convert to miles.
   }
 }
