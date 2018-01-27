@@ -198,11 +198,11 @@ export class GoogleLocationService {
         else {
             // Optional params
             locationParam = "?location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
-            radiusParam = "&radius=" + Radius.mi5;
+            radiusParam = "&radius=" + Radius.mi25;
             typeParam = "&type=bar";
             rankbyParam = "&rankby=distance"
             // Build URL
-            url = this.api.nearbyApi + locationParam + rankbyParam + typeParam + apiKeyParam;
+            url = this.api.nearbyApi + locationParam + radiusParam + typeParam + apiKeyParam;
         }
         return url;
     }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Theme, Debug } from '../../settings';
-import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from 'nativescript-pro-ui/listview';
+import { ListViewEventData, RadListView, ListViewLoadOnDemandMode, ListViewItemSnapMode } from 'nativescript-pro-ui/listview';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 import { Location } from 'nativescript-geolocation';
@@ -20,12 +20,15 @@ import { SearchMode } from '../../enums/search-mode.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
 import { forEach } from '@angular/router/src/utils/collection';
 import { generate } from 'rxjs/observable/generate';
+import { RadListViewComponent } from 'nativescript-pro-ui/listview/angular';
 
 @Component({
   selector: 'search',
   templateUrl: './components/search/search.component.html'
 })
 export class SearchComponent implements OnInit {
+
+  @ViewChild('vendorList') listViewComponent: RadListViewComponent;
 
   private theme;
   private debug;
@@ -158,10 +161,16 @@ export class SearchComponent implements OnInit {
               // Set data at both service level and component level
               this.setNextPageFlag(response);
               this.searchResults = this.googleLocationService.searchResults = response;
+              let tempIndex = this.vendors.length-1;
               for (let vendor of response.results) {
-                this.googleLocationService.vendors.push(<Vendor>vendor);
                 this.vendors.push(<Vendor>vendor);
               }
+              if (!this.nextPageFlag) args.object.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
+              // Set data of new data page
+              this.googleLocationService.vendors = this.vendors;
+              // Scroll to new data
+              this.listViewComponent.listView.scrollToIndex(tempIndex, false, ListViewItemSnapMode.End);
+              // Display results
               this.searchStatusCode = SearchStatusCode.OK;              
               break;
             case SearchStatusCode.ZERO_RESULTS:
@@ -187,6 +196,7 @@ export class SearchComponent implements OnInit {
         });
     }
     args.object.notifyLoadOnDemandFinished();
+    args.returnValue = true;
   }
 
   setNextPageFlag(response: SearchResult) {
