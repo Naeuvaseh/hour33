@@ -1,28 +1,50 @@
 {
-  "_from": "nativescript-geolocation",
-  "_id": "nativescript-geolocation@4.2.2",
-  "_inBundle": false,
-  "_integrity": "sha512-mcYpRMG1vHB2fNguvQCYwR20iC+RVjVHQeEjMwyk6+J2TvMJaThc78Kk4C7N7Rwyye+FpGhDFZ1NobvaEeX5eA==",
+  "_args": [
+    [
+      {
+        "raw": "nativescript-geolocation@^4.2.2",
+        "scope": null,
+        "escapedName": "nativescript-geolocation",
+        "name": "nativescript-geolocation",
+        "rawSpec": "^4.2.2",
+        "spec": ">=4.2.2 <5.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour33"
+    ]
+  ],
+  "_from": "nativescript-geolocation@>=4.2.2 <5.0.0",
+  "_id": "nativescript-geolocation@4.2.3",
+  "_inCache": true,
   "_location": "/nativescript-geolocation",
+  "_nodeVersion": "8.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/nativescript-geolocation-4.2.3.tgz_1516709975419_0.7418279380071908"
+  },
+  "_npmUser": {
+    "name": "lini",
+    "email": "bit@gbg.bg"
+  },
+  "_npmVersion": "5.6.0",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "nativescript-geolocation",
-    "name": "nativescript-geolocation",
+    "raw": "nativescript-geolocation@^4.2.2",
+    "scope": null,
     "escapedName": "nativescript-geolocation",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "name": "nativescript-geolocation",
+    "rawSpec": "^4.2.2",
+    "spec": ">=4.2.2 <5.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.2.tgz",
-  "_shasum": "930edaec8903546028bc84f7e8f0281b91c65281",
-  "_spec": "nativescript-geolocation",
-  "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
+  "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.3.tgz",
+  "_shasum": "5973c16c718caedc310e6e56d7f59102ac264293",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-geolocation@^4.2.2",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
   "author": {
     "name": "NativeScript Team"
   },
@@ -30,11 +52,9 @@
   "bugs": {
     "url": "https://github.com/NativeScript/nativescript-geolocation/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "nativescript-permissions": "~1.2.3"
   },
-  "deprecated": false,
   "description": "Provides API for getting and monitoring location for NativeScript app.",
   "devDependencies": {
     "prompt": "^1.0.0",
@@ -43,6 +63,12 @@
     "tns-platform-declarations": "^3.0.0",
     "tslint": "~5.4.3",
     "typescript": "2.3.4"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-fJHvDrFnAYkkrJc+gSWF4zBnIjjbJcF+9DpWcby/M6MzKkhjXIWjQXYIIcaU4Mwu4ZyxuBkVSzONZw8WOTX7dQ==",
+    "shasum": "5973c16c718caedc310e6e56d7f59102ac264293",
+    "tarball": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.3.tgz"
   },
   "homepage": "https://github.com/NativeScript/nativescript-geolocation",
   "keywords": [
@@ -53,6 +79,44 @@
   ],
   "license": "Apache-2.0",
   "main": "geolocation",
+  "maintainers": [
+    {
+      "name": "tns-bot",
+      "email": "nativescript@telerik.com"
+    },
+    {
+      "name": "hdeshev",
+      "email": "hristo@deshev.com"
+    },
+    {
+      "name": "dtodorov",
+      "email": "dimitar.todorov@progress.com"
+    },
+    {
+      "name": "lini",
+      "email": "bit@gbg.bg"
+    },
+    {
+      "name": "tbozhikov",
+      "email": "t_bozhikov@yahoo.com"
+    },
+    {
+      "name": "tachev",
+      "email": "nevermindd7@gmail.com"
+    },
+    {
+      "name": "toddanglin",
+      "email": "toddanglin@gmail.com"
+    },
+    {
+      "name": "veselina.radeva",
+      "email": "veselina.radeva@progress.com"
+    },
+    {
+      "name": "zbranzov",
+      "email": "branzov.z@gmail.com"
+    }
+  ],
   "name": "nativescript-geolocation",
   "nativescript": {
     "platforms": {
@@ -60,6 +124,8 @@
       "ios": "3.0.0"
     }
   },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NativeScript/nativescript-geolocation.git"
@@ -77,5 +143,5 @@
     "tsc": "tsc -skipLibCheck",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\""
   },
-  "version": "4.2.2"
+  "version": "4.2.3"
 }

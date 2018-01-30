@@ -153,8 +153,8 @@ function enableLocationRequest(always) {
                 _isLocationServiceEnabled().then(function () {
                     resolve();
                 }, function (ex) {
-                    var statusCode = ex.getStatusCode();
-                    if (statusCode === com.google.android.gms.common.api.CommonStatusCodes.RESOLUTION_REQUIRED) {
+                    if (typeof ex.getStatusCode === "function" &&
+                        ex.getStatusCode() === com.google.android.gms.common.api.CommonStatusCodes.RESOLUTION_REQUIRED) {
                         try {
                             _onEnableLocationSuccess = resolve;
                             _onEnableLocationFail = reject;

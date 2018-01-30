@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Theme, Debug } from '../../settings';
-import { ListViewEventData, RadListView, ListViewLoadOnDemandMode } from 'nativescript-pro-ui/listview';
+import { ListViewEventData, RadListView, ListViewLoadOnDemandMode, ListViewItemSnapMode } from 'nativescript-pro-ui/listview';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 import { Location } from 'nativescript-geolocation';
@@ -20,12 +20,15 @@ import { SearchMode } from '../../enums/search-mode.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
 import { forEach } from '@angular/router/src/utils/collection';
 import { generate } from 'rxjs/observable/generate';
+import { RadListViewComponent } from 'nativescript-pro-ui/listview/angular';
 
 @Component({
   selector: 'search',
   templateUrl: './components/search/search.component.html'
 })
 export class SearchComponent implements OnInit {
+
+  @ViewChild('vendorList') listViewComponent: RadListViewComponent;
 
   private theme;
   private debug;
@@ -49,8 +52,10 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     // Check if data exists
     if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
+      console.log("Data exists already");
       this.searchResults = this.googleLocationService.searchResults;
       this.vendors = this.googleLocationService.vendors;
+      this.searchStatusCode = SearchStatusCode.OK;
     }
     else {
       this.loadingFlag = true;
@@ -63,6 +68,7 @@ export class SearchComponent implements OnInit {
             case SearchStatusCode.OK:
               // Set data at both service level and component level
               this.setNextPageFlag(response);
+              if (!this.nextPageFlag) this.listViewComponent.listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
               this.searchResults = this.googleLocationService.searchResults = response;
               this.vendors = this.googleLocationService.vendors = <Vendor[]>response.results;
               this.searchStatusCode = SearchStatusCode.OK;
@@ -97,6 +103,7 @@ export class SearchComponent implements OnInit {
   }
 
   refresh(args: ListViewEventData, insideRadListView: boolean) {
+    args.object.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.Manual];
     // Clear curent data
     this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
     // API Call
@@ -107,6 +114,7 @@ export class SearchComponent implements OnInit {
           case SearchStatusCode.OK:
             // Set data at both service level and component level
             this.setNextPageFlag(response);
+            if (!this.nextPageFlag) this.listViewComponent.listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
             this.searchResults = this.googleLocationService.searchResults = response;
             this.vendors = this.googleLocationService.vendors = <Vendor[]>response.results;
             this.searchStatusCode = SearchStatusCode.OK;            
@@ -155,11 +163,17 @@ export class SearchComponent implements OnInit {
             case SearchStatusCode.OK:
               // Set data at both service level and component level
               this.setNextPageFlag(response);
+              if (!this.nextPageFlag) args.object.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
               this.searchResults = this.googleLocationService.searchResults = response;
+              let tempIndex = this.vendors.length-1;
               for (let vendor of response.results) {
-                this.googleLocationService.vendors.push(<Vendor>vendor);
                 this.vendors.push(<Vendor>vendor);
               }
+              // Set data of new data page
+              this.googleLocationService.vendors = this.vendors;
+              // Scroll to new data
+              this.listViewComponent.listView.scrollToIndex(tempIndex, false, ListViewItemSnapMode.End);
+              // Display results
               this.searchStatusCode = SearchStatusCode.OK;              
               break;
             case SearchStatusCode.ZERO_RESULTS:
@@ -178,17 +192,20 @@ export class SearchComponent implements OnInit {
               alert('The default search had an error. Please try again.');
               break;
            }
-          args.object.notifyLoadOnDemandFinished();
+          //args.object.notifyLoadOnDemandFinished();
         },
         (error) => {
           console.log('SearchComponent.onLoadMoreItemsRequested() ERROR: ' + error);
         });
     }
+    if (!this.nextPageFlag) args.object.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
     args.object.notifyLoadOnDemandFinished();
+    args.returnValue = true;
   }
 
   setNextPageFlag(response: SearchResult) {
     this.nextPageFlag = (response.next_page_token) ? true : false;
+    console.log("Next Page Flag: " + this.nextPageFlag);
   }
 
   calcDistance(loc1: Location, loc2: Location){

@@ -13,7 +13,6 @@ firebase_common_1.firebase._facebookAccessToken = null;
 var fbCallbackManager = null;
 var GOOGLE_SIGNIN_INTENT_ID = 123;
 var REQUEST_INVITE_INTENT_ID = 48;
-var gson = lazy_1.default(function () { return typeof (com.google.gson) === "undefined" ? null : new com.google.gson.Gson(); });
 var messagingEnabled = lazy_1.default(function () { return typeof (com.google.firebase.messaging) !== "undefined"; });
 var dynamicLinksEnabled = lazy_1.default(function () { return typeof (com.google.android.gms.appinvite) !== "undefined"; });
 (function () {
@@ -152,12 +151,7 @@ firebase_common_1.firebase.toValue = function (val) {
     return returnVal;
 };
 firebase_common_1.firebase.toJsObject = function (javaObj) {
-    if (gson() !== null) {
-        return JSON.parse(gson().toJson(javaObj));
-    }
-    else {
-        return firebase_common_1.firebase.toJsObjectLegacy(javaObj);
-    }
+    return firebase_common_1.firebase.toJsObjectLegacy(javaObj);
 };
 firebase_common_1.firebase.toJsObjectLegacy = function (javaObj) {
     if (javaObj === null || typeof javaObj !== "object") {
@@ -173,6 +167,17 @@ firebase_common_1.firebase.toJsObjectLegacy = function (javaObj) {
         case 'java.lang.Long':
         case 'java.lang.Double':
             return Number(String(javaObj));
+        case 'java.util.Date':
+            return new Date(javaObj);
+        case 'com.google.firebase.firestore.GeoPoint':
+            return {
+                "latitude": javaObj.getLatitude(),
+                "longitude": javaObj.getLongitude()
+            };
+        case 'com.google.firebase.firestore.DocumentReference':
+            var path = javaObj.getPath();
+            var lastSlashIndex = path.lastIndexOf("/");
+            return firebase_common_1.firebase.firestore._getDocumentReference(javaObj, path.substring(0, lastSlashIndex), path.substring(lastSlashIndex + 1));
         case 'java.util.ArrayList':
             node = [];
             for (var i = 0; i < javaObj.size(); i++) {
@@ -180,11 +185,16 @@ firebase_common_1.firebase.toJsObjectLegacy = function (javaObj) {
             }
             break;
         default:
-            node = {};
-            var iterator = javaObj.entrySet().iterator();
-            while (iterator.hasNext()) {
-                var item = iterator.next();
-                node[item.getKey()] = firebase_common_1.firebase.toJsObjectLegacy(item.getValue());
+            try {
+                node = {};
+                var iterator = javaObj.entrySet().iterator();
+                while (iterator.hasNext()) {
+                    var item = iterator.next();
+                    node[item.getKey()] = firebase_common_1.firebase.toJsObjectLegacy(item.getValue());
+                }
+            }
+            catch (e) {
+                console.log("PLEASE REPORT THIS AT https://github.com/NativeScript/NativeScript/issues: Tried to serialize an unsupported type: javaObj.getClass().getName(), error: " + e);
             }
     }
     return node;
@@ -288,7 +298,7 @@ firebase_common_1.firebase.init = function (arg) {
             resolve(firebase_common_1.firebase.instance);
         };
         try {
-            if (appModule.android.foregroundActivity) {
+            if (appModule.android.startActivity) {
                 runInit();
             }
             else {
@@ -410,6 +420,9 @@ firebase_common_1.firebase.addOnPushTokenReceivedCallback = function (callback) 
         }
     });
 };
+firebase_common_1.firebase.unregisterForPushNotifications = function () {
+    return Promise.reject("Not supported on Android");
+};
 firebase_common_1.firebase.getRemoteConfigDefaults = function (properties) {
     var defaults = {};
     for (var p in properties) {
@@ -421,10 +434,19 @@ firebase_common_1.firebase.getRemoteConfigDefaults = function (properties) {
     return defaults;
 };
 firebase_common_1.firebase._isGooglePlayServicesAvailable = function () {
-    var context = com.tns.NativeScriptApplication.getInstance();
+    var activity = appModule.android.foregroundActivity || appModule.android.startActivity;
+    var googleApiAvailability = com.google.android.gms.common.GoogleApiAvailability.getInstance();
     var playServiceStatusSuccess = com.google.android.gms.common.ConnectionResult.SUCCESS;
-    var playServicesStatus = com.google.android.gms.common.GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context);
-    return playServicesStatus === playServiceStatusSuccess;
+    var playServicesStatus = googleApiAvailability.isGooglePlayServicesAvailable(activity);
+    var available = playServicesStatus === playServiceStatusSuccess;
+    if (!available && googleApiAvailability.isUserResolvableError(playServicesStatus)) {
+        googleApiAvailability.showErrorDialogFragment(activity, playServicesStatus, 1, new android.content.DialogInterface.OnCancelListener({
+            onCancel: function (dialogInterface) {
+                console.log("Canceled");
+            }
+        }));
+    }
+    return available;
 };
 firebase_common_1.firebase.analytics.logEvent = function (arg) {
     return new Promise(function (resolve, reject) {
@@ -541,7 +563,8 @@ firebase_common_1.firebase.admob.showInterstitial = function (arg) {
     return new Promise(function (resolve, reject) {
         try {
             var settings = firebase_common_1.firebase.merge(arg, firebase_common_1.firebase.admob.defaults);
-            firebase_common_1.firebase.admob.interstitialView = new com.google.android.gms.ads.InterstitialAd(appModule.android.foregroundActivity);
+            var activity = appModule.android.foregroundActivity || appModule.android.startActivity;
+            firebase_common_1.firebase.admob.interstitialView = new com.google.android.gms.ads.InterstitialAd(activity);
             firebase_common_1.firebase.admob.interstitialView.setAdUnitId(settings.androidInterstitialId);
             var InterstitialAdListener = com.google.android.gms.ads.AdListener.extend({
                 onAdLoaded: function () {
@@ -611,7 +634,8 @@ firebase_common_1.firebase.admob._buildAdRequest = function (settings) {
     var builder = new com.google.android.gms.ads.AdRequest.Builder();
     if (settings.testing) {
         builder.addTestDevice(com.google.android.gms.ads.AdRequest.DEVICE_ID_EMULATOR);
-        var ANDROID_ID = android.provider.Settings.Secure.getString(appModule.android.foregroundActivity.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+        var activity = appModule.android.foregroundActivity || appModule.android.startActivity;
+        var ANDROID_ID = android.provider.Settings.Secure.getString(activity.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
         var deviceId = firebase_common_1.firebase.admob._md5(ANDROID_ID);
         if (deviceId !== null) {
             deviceId = deviceId.toUpperCase();
@@ -2015,6 +2039,18 @@ firebase_common_1.firebase.firestore.onCollectionSnapshot = function (colRef, ca
     }));
     return function () { return listener.remove(); };
 };
+firebase_common_1.firebase.firestore._getDocumentReference = function (javaObj, collectionPath, documentPath) {
+    return {
+        id: javaObj.getId(),
+        collection: function (cp) { return firebase_common_1.firebase.firestore.collection(collectionPath + "/" + documentPath + "/" + cp); },
+        set: function (data, options) { return firebase_common_1.firebase.firestore.set(collectionPath, javaObj.getId(), data, options); },
+        get: function () { return firebase_common_1.firebase.firestore.getDocument(collectionPath, javaObj.getId()); },
+        update: function (data) { return firebase_common_1.firebase.firestore.update(collectionPath, javaObj.getId(), data); },
+        delete: function () { return firebase_common_1.firebase.firestore.delete(collectionPath, javaObj.getId()); },
+        onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onDocumentSnapshot(javaObj, callback); },
+        android: javaObj
+    };
+};
 firebase_common_1.firebase.firestore.doc = function (collectionPath, documentPath) {
     try {
         if (typeof (com.google.firebase.firestore) === "undefined") {
@@ -2023,16 +2059,8 @@ firebase_common_1.firebase.firestore.doc = function (collectionPath, documentPat
         }
         var db = com.google.firebase.firestore.FirebaseFirestore.getInstance();
         var colRef = db.collection(collectionPath);
-        var docRef_1 = documentPath ? colRef.document(documentPath) : colRef.document();
-        return {
-            id: docRef_1.getId(),
-            collection: function (cp) { return firebase_common_1.firebase.firestore.collection(collectionPath + "/" + documentPath + "/" + cp); },
-            set: function (data, options) { return firebase_common_1.firebase.firestore.set(collectionPath, docRef_1.getId(), data, options); },
-            get: function () { return firebase_common_1.firebase.firestore.getDocument(collectionPath, docRef_1.getId()); },
-            update: function (data) { return firebase_common_1.firebase.firestore.update(collectionPath, docRef_1.getId(), data); },
-            delete: function () { return firebase_common_1.firebase.firestore.delete(collectionPath, docRef_1.getId()); },
-            onSnapshot: function (callback) { return firebase_common_1.firebase.firestore.onDocumentSnapshot(docRef_1, callback); }
-        };
+        var docRef = documentPath ? colRef.document(documentPath) : colRef.document();
+        return firebase_common_1.firebase.firestore._getDocumentReference(docRef, collectionPath, documentPath);
     }
     catch (ex) {
         console.log("Error in firebase.firestore.doc: " + ex);

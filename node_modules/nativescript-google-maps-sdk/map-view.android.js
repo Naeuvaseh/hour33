@@ -70,6 +70,7 @@ var MapView = (function (_super) {
             onMapReady: function (gMap) {
                 var owner = that.get();
                 owner._gMap = gMap;
+                owner.setMinZoomMaxZoom();
                 owner.updatePadding();
                 if (owner._pendingCameraUpdate) {
                     owner.updateCamera();
@@ -310,6 +311,12 @@ var MapView = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    MapView.prototype.setMinZoomMaxZoom = function () {
+        if (this.gMap) {
+            this.gMap.setMinZoomPreference(this.minZoom);
+            this.gMap.setMaxZoomPreference(this.maxZoom);
+        }
+    };
     MapView.prototype.addMarker = function () {
         var _this = this;
         var markers = [];

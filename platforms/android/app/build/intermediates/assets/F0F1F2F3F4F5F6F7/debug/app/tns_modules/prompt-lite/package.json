@@ -1,32 +1,45 @@
 {
   "_args": [
     [
-      "prompt-lite@0.1.1",
-      "C:\\Users\\TJ\\Projects\\Hour 33"
+      {
+        "raw": "prompt-lite@~0.1.0",
+        "scope": null,
+        "escapedName": "prompt-lite",
+        "name": "prompt-lite",
+        "rawSpec": "~0.1.0",
+        "spec": ">=0.1.0 <0.2.0",
+        "type": "range"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\nativescript-plugin-firebase"
     ]
   ],
-  "_from": "prompt-lite@0.1.1",
+  "_from": "prompt-lite@>=0.1.0 <0.2.0",
   "_id": "prompt-lite@0.1.1",
-  "_inBundle": false,
-  "_integrity": "sha1-+oSPgboTnn0/Mhdz3a/JPTKFfHU=",
+  "_inCache": true,
   "_location": "/prompt-lite",
+  "_npmUser": {
+    "name": "jesusabdullah",
+    "email": "josh.holbrook@gmail.com"
+  },
+  "_npmVersion": "1.2.11",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "prompt-lite@0.1.1",
-    "name": "prompt-lite",
+    "raw": "prompt-lite@~0.1.0",
+    "scope": null,
     "escapedName": "prompt-lite",
-    "rawSpec": "0.1.1",
-    "saveSpec": null,
-    "fetchSpec": "0.1.1"
+    "name": "prompt-lite",
+    "rawSpec": "~0.1.0",
+    "spec": ">=0.1.0 <0.2.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/nativescript-plugin-firebase"
   ],
   "_resolved": "https://registry.npmjs.org/prompt-lite/-/prompt-lite-0.1.1.tgz",
-  "_spec": "0.1.1",
-  "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
+  "_shasum": "fa848f81ba139e7d3f321773ddafc93d32857c75",
+  "_shrinkwrap": null,
+  "_spec": "prompt-lite@~0.1.0",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\nativescript-plugin-firebase",
   "author": {
     "name": "Joshua Holbrook"
   },
@@ -43,6 +56,11 @@
   "devDependencies": {
     "vows": "0.7.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "fa848f81ba139e7d3f321773ddafc93d32857c75",
+    "tarball": "https://registry.npmjs.org/prompt-lite/-/prompt-lite-0.1.1.tgz"
+  },
   "engines": {
     "node": ">= 0.6.6"
   },
@@ -50,11 +68,13 @@
   "main": "./lib/prompt",
   "maintainers": [
     {
-      "name": "joshua Holbrook",
+      "name": "jesusabdullah",
       "email": "josh.holbrook@gmail.com"
     }
   ],
   "name": "prompt-lite",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jesusabdullah/prompt-lite.git"

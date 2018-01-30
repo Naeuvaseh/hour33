@@ -1,28 +1,46 @@
 {
-  "_from": "google-distance",
+  "_args": [
+    [
+      {
+        "raw": "google-distance@^1.0.1",
+        "scope": null,
+        "escapedName": "google-distance",
+        "name": "google-distance",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour33"
+    ]
+  ],
+  "_from": "google-distance@>=1.0.1 <2.0.0",
   "_id": "google-distance@1.0.1",
-  "_inBundle": false,
-  "_integrity": "sha1-iDaDRr/Yef5lo/1BzFSs6cAx6FU=",
+  "_inCache": true,
   "_location": "/google-distance",
+  "_nodeVersion": "0.10.36",
+  "_npmUser": {
+    "name": "edwlook",
+    "email": "edwlook@gmail.com"
+  },
+  "_npmVersion": "2.4.1",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "google-distance",
-    "name": "google-distance",
+    "raw": "google-distance@^1.0.1",
+    "scope": null,
     "escapedName": "google-distance",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "name": "google-distance",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/google-distance/-/google-distance-1.0.1.tgz",
   "_shasum": "88368346bfd879fe65a3fd41cc54ace9c031e855",
-  "_spec": "google-distance",
-  "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
+  "_shrinkwrap": null,
+  "_spec": "google-distance@^1.0.1",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
   "author": {
     "name": "Edward Look",
     "email": "edwlook@gmail.com",
@@ -31,17 +49,21 @@
   "bugs": {
     "url": "https://github.com/edwlook/node-google-distance/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "request": "~2.34.0"
   },
-  "deprecated": false,
   "description": "A simple node.js wrapper for Google's Distance Matrix API",
   "devDependencies": {
     "chai": "~1.9.1",
     "mocha": "~1.18.2"
   },
-  "homepage": "https://github.com/edwlook/node-google-distance#readme",
+  "directories": {},
+  "dist": {
+    "shasum": "88368346bfd879fe65a3fd41cc54ace9c031e855",
+    "tarball": "https://registry.npmjs.org/google-distance/-/google-distance-1.0.1.tgz"
+  },
+  "gitHead": "62d826f1907c5ae93e71ef79214b73b7bdadff1a",
+  "homepage": "https://github.com/edwlook/node-google-distance",
   "keywords": [
     "google",
     "maps",
@@ -51,7 +73,15 @@
   ],
   "license": "MIT",
   "main": "index",
+  "maintainers": [
+    {
+      "name": "edwlook",
+      "email": "edwlook@gmail.com"
+    }
+  ],
   "name": "google-distance",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edwlook/node-google-distance.git"

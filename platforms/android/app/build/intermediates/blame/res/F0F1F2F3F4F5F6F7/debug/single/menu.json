@@ -1,26 +1,14 @@
 [
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\view_feedback_items_activity_menu.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\5ed60b3e4f415147b4515d9db5a4917046f9fa69\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\edit_details.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\714fcccc29b4dddf25077cfa6f4772d080d54421\\output\\res\\menu\\edit_details.xml"
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\d415334b005e493b06a3ee0186ad9b40ef44f283\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\edit_details.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\5ed60b3e4f415147b4515d9db5a4917046f9fa69\\output\\res\\menu\\edit_details.xml"
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\d415334b005e493b06a3ee0186ad9b40ef44f283\\output\\res\\menu\\edit_details.xml"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\send_feedback_activity_menu.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\5ed60b3e4f415147b4515d9db5a4917046f9fa69\\output\\res\\menu\\send_feedback_activity_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\view_feedback_items_activity_menu.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\714fcccc29b4dddf25077cfa6f4772d080d54421\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\send_feedback_activity_menu.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\714fcccc29b4dddf25077cfa6f4772d080d54421\\output\\res\\menu\\send_feedback_activity_menu.xml"
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\d415334b005e493b06a3ee0186ad9b40ef44f283\\output\\res\\menu\\send_feedback_activity_menu.xml"
     }
 ]

@@ -2,27 +2,19 @@
            [backgroundColor]="theme.darkGrey"
            [color]="theme.actionBarTextColor">
     <Label class="action-bar-title" text="Today's Happy Hours"></Label>
-    <ActionItem tap="onFilter()"
+    <ActionItem (tap)="onFilter()"
                 icon="res://filter"
                 height="50%"
                 width="50%"></ActionItem>
-    <ActionItem [visibility]="listViewVisible ? 'visible' : 'collapsed'"
+    <!-- <ActionItem [visibility]="listViewVisible ? 'visible' : 'collapsed'"
                 (tap)="onListMapToggle()"
                 icon="res://location"
                 android.position="actionBar"></ActionItem>
     <ActionItem [visibility]="!listViewVisible ? 'visible' : 'collapsed'"
                 (tap)="onListMapToggle()"
                 icon="res://beenhere"
-                android.position="actionBar"></ActionItem>
+                android.position="actionBar"></ActionItem> -->
 </ActionBar>
-<Label
-    [visibility]="debug.display.SearchComponent ? 'visible' : 'collapsed'"
-    [text]="'Lat: ' + googleLocationService.userLocation?.latitude"
-    color="#000"></Label>
-<Label
-    [visibility]="debug.display.SearchComponent ? 'visible' : 'collapsed'"
-    [text]="'Lng: ' + googleLocationService.userLocation?.longitude"
-    color="#000"></Label>
 <!-- Loading Inidicator -->
 <FlexboxLayout 
     [visibility]="(loadingFlag) ? 'visible' : 'collapsed'"
@@ -129,6 +121,14 @@
         </FlexboxLayout>
     </FlexboxLayout>
 </FlexboxLayout>
+<FlexboxLayout
+    #filterMenu
+    [visibility]="filterMenuVisible ? 'visible' : 'collapsed'"
+    width="100%"
+    height="90%"
+    color="#adfadf">
+    <Label text="text"></Label>
+</FlexboxLayout>
 <!-- OK Display -->
 <RadListView 
     #vendorList
@@ -147,6 +147,9 @@
         <vendor-listing [vendor]="vendor" [index]="index"></vendor-listing>
     </ng-template>
 </RadListView>
+
+
+
 
 
 

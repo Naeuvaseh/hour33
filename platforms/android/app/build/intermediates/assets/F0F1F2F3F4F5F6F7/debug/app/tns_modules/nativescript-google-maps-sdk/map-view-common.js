@@ -25,6 +25,9 @@ function onMapPropertyChanged(mapView) {
     if (!mapView.processingCameraEvent)
         mapView.updateCamera();
 }
+function onSetMinZoomMaxZoom(mapView) {
+    mapView.setMinZoomMaxZoom();
+}
 function onPaddingPropertyChanged(mapView) {
     mapView.updatePadding();
 }
@@ -283,6 +286,10 @@ exports.bearingProperty = new properties_1.Property({ name: 'bearing', defaultVa
 exports.bearingProperty.register(MapViewBase);
 exports.zoomProperty = new properties_1.Property({ name: 'zoom', defaultValue: 0, valueChanged: onMapPropertyChanged });
 exports.zoomProperty.register(MapViewBase);
+exports.minZoomProperty = new properties_1.Property({ name: 'minZoom', defaultValue: 0, valueChanged: onSetMinZoomMaxZoom });
+exports.minZoomProperty.register(MapViewBase);
+exports.maxZoomProperty = new properties_1.Property({ name: 'maxZoom', defaultValue: 22, valueChanged: onSetMinZoomMaxZoom });
+exports.maxZoomProperty.register(MapViewBase);
 exports.tiltProperty = new properties_1.Property({ name: 'tilt', defaultValue: 0, valueChanged: onMapPropertyChanged });
 exports.tiltProperty.register(MapViewBase);
 exports.paddingProperty = new properties_1.Property({ name: 'padding', valueChanged: onPaddingPropertyChanged, valueConverter: paddingValueConverter });

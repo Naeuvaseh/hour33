@@ -1,27 +1,50 @@
 {
-  "_from": "tns-platform-declarations@^3.4.0",
+  "_args": [
+    [
+      {
+        "raw": "tns-platform-declarations@^3.4.0",
+        "scope": null,
+        "escapedName": "tns-platform-declarations",
+        "name": "tns-platform-declarations",
+        "rawSpec": "^3.4.0",
+        "spec": ">=3.4.0 <4.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour33"
+    ]
+  ],
+  "_from": "tns-platform-declarations@>=3.4.0 <4.0.0",
   "_id": "tns-platform-declarations@3.4.0",
-  "_inBundle": false,
-  "_integrity": "sha1-JK/qs94J63O5mP2qSKKVx8Xyjns=",
+  "_inCache": true,
   "_location": "/tns-platform-declarations",
+  "_nodeVersion": "6.12.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/tns-platform-declarations-3.4.0.tgz_1513782583055_0.3728418010286987"
+  },
+  "_npmUser": {
+    "name": "tns-bot",
+    "email": "nativescript@telerik.com"
+  },
+  "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
-    "registry": true,
     "raw": "tns-platform-declarations@^3.4.0",
-    "name": "tns-platform-declarations",
+    "scope": null,
     "escapedName": "tns-platform-declarations",
+    "name": "tns-platform-declarations",
     "rawSpec": "^3.4.0",
-    "saveSpec": null,
-    "fetchSpec": "^3.4.0"
+    "spec": ">=3.4.0 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/tns-platform-declarations/-/tns-platform-declarations-3.4.0.tgz",
   "_shasum": "24afeab3de09eb73b998fdaa48a295c7c5f28e7b",
+  "_shrinkwrap": null,
   "_spec": "tns-platform-declarations@^3.4.0",
-  "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
   "author": {
     "name": "Telerik",
     "email": "support@telerik.com",
@@ -30,11 +53,15 @@
   "bugs": {
     "url": "https://github.com/NativeScript/NativeScript/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "dependencies": {},
   "description": "Platform-specific TypeScript declarations for NativeScript for accessing native objects",
   "devDependencies": {
     "typescript": "^2.6.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "24afeab3de09eb73b998fdaa48a295c7c5f28e7b",
+    "tarball": "https://registry.npmjs.org/tns-platform-declarations/-/tns-platform-declarations-3.4.0.tgz"
   },
   "homepage": "https://github.com/NativeScript/NativeScript#readme",
   "keywords": [
@@ -49,7 +76,23 @@
   ],
   "license": "Apache-2.0",
   "main": "",
+  "maintainers": [
+    {
+      "name": "hdeshev",
+      "email": "hristo@deshev.com"
+    },
+    {
+      "name": "panayot.cankov",
+      "email": "panayot.cankov@telerik.com"
+    },
+    {
+      "name": "tns-bot",
+      "email": "nativescript@telerik.com"
+    }
+  ],
   "name": "tns-platform-declarations",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/NativeScript/NativeScript.git"

@@ -82,7 +82,7 @@ export class GoogleLocationService {
                                         }
                                     },
                                     (error) => {
-                                        if (Debug.console.GoogleLocation.error) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
+                                        if (Debug.console.GoogleLocation.error) console.log('GoogleLocationService.textSearch() ERROR: ' + JSON.stringify(error));
                                     });
                             break;
                         }
@@ -197,12 +197,12 @@ export class GoogleLocationService {
         }
         else {
             // Optional params
-            locationParam = "&location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
-            radiusParam = "&radius=" + Radius.mi5;
+            locationParam = "?location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
+            radiusParam = "&radius=" + Radius.mi25;
             typeParam = "&type=bar";
             rankbyParam = "&rankby=distance"
             // Build URL
-            url = this.api.nearbyApi + locationParam + radiusParam + rankbyParam + typeParam + apiKeyParam;
+            url = this.api.nearbyApi + locationParam + rankbyParam + typeParam + apiKeyParam;
         }
         return url;
     }

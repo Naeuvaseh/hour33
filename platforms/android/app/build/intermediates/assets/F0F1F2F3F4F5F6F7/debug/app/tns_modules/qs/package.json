@@ -1,27 +1,45 @@
 {
-  "_from": "qs@~0.6.0",
+  "_args": [
+    [
+      {
+        "raw": "qs@~0.6.0",
+        "scope": null,
+        "escapedName": "qs",
+        "name": "qs",
+        "rawSpec": "~0.6.0",
+        "spec": ">=0.6.0 <0.7.0",
+        "type": "range"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\request"
+    ]
+  ],
+  "_from": "qs@>=0.6.0 <0.7.0",
   "_id": "qs@0.6.6",
-  "_inBundle": false,
-  "_integrity": "sha1-bgFQmP9RlouKPIGQAdXyyJvEsQc=",
+  "_inCache": true,
   "_location": "/qs",
+  "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "_npmVersion": "1.2.30",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
-    "registry": true,
     "raw": "qs@~0.6.0",
-    "name": "qs",
+    "scope": null,
     "escapedName": "qs",
+    "name": "qs",
     "rawSpec": "~0.6.0",
-    "saveSpec": null,
-    "fetchSpec": "~0.6.0"
+    "spec": ">=0.6.0 <0.7.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/request"
   ],
   "_resolved": "https://registry.npmjs.org/qs/-/qs-0.6.6.tgz",
   "_shasum": "6e015098ff51968b8a3c819001d5f2c89bc4b107",
+  "_shrinkwrap": null,
   "_spec": "qs@~0.6.0",
-  "_where": "C:\\Users\\TJ\\Projects\\Hour 33\\node_modules\\request",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\request",
   "author": {
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca",
@@ -30,12 +48,16 @@
   "bugs": {
     "url": "https://github.com/visionmedia/node-querystring/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "dependencies": {},
   "description": "querystring parser",
   "devDependencies": {
     "expect.js": "*",
     "mocha": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "6e015098ff51968b8a3c819001d5f2c89bc4b107",
+    "tarball": "https://registry.npmjs.org/qs/-/qs-0.6.6.tgz"
   },
   "engines": {
     "node": "*"
@@ -47,7 +69,15 @@
     "component"
   ],
   "main": "index",
+  "maintainers": [
+    {
+      "name": "tjholowaychuk",
+      "email": "tj@vision-media.ca"
+    }
+  ],
   "name": "qs",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git://github.com/visionmedia/node-querystring.git"

@@ -131,15 +131,17 @@
 </FlexboxLayout>
 <!-- OK Display -->
 <RadListView 
+    #vendorList
     [visibility]="(searchStatusCode == 'OK') ? 'visible' : 'collapsed'"
     [backgroundColor]="theme.primaryColor"
     [items]="vendors" 
     pullToRefresh="true" 
+    [color]="theme.accentColor"
     (pullToRefreshInitiated)="refresh($event, 1)" 
     selectionBehavior="Press"
     (itemSelected)="onVendorTap($event)"
     multileSelection="false"
-    loadOnDemandMode="Auto"
+    loadOnDemandMode="Manual"
     (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
     <ng-template let-vendor="item" let-i="index">
         <vendor-listing [vendor]="vendor" [index]="index"></vendor-listing>
