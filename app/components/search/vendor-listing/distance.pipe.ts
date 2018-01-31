@@ -13,8 +13,6 @@ export class DistancePipe implements PipeTransform{
     }
     
     transform(vendorLocation){
-        console.log('VendorLocation: ' + JSON.stringify(vendorLocation));
-        console.log('UserLocation: ' + JSON.stringify(this.userLocation));
         let lat1 = vendorLocation.lat;
         let lon1 = vendorLocation.lng;
         let lat2 = this.userLocation.latitude;

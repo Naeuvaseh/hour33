@@ -22,6 +22,7 @@ import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/h
 import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
 import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
 import { DistancePipe } from './vendor-listing/distance.pipe';
+import { VendorDetailResolve } from './resolves/vendor-detail.resolve';
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { DistancePipe } from './vendor-listing/distance.pipe';
         NativeScriptHttpClientModule
     ],
     providers: [
-        VendorService
+        VendorService,
+        VendorDetailResolve
     ],
     declarations: [
         SearchComponent,

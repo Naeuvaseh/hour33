@@ -152,15 +152,12 @@ export class SearchComponent implements OnInit {
   }
 
   onVendorTap(args: ListViewEventData) {
-    let view = args.object as RadListView;
-    let data = view.getSelectedItems() as Vendor[];
+    let data = ((args.object as RadListView).getSelectedItems() as Vendor[])[0];
 
 
-    console.log(JSON.stringify(data[0]));
-    // let vendor: Vendor = this.vendors.find(vendor => vendor.place_id === args.data.place_id);
-    // console.log("Vendor ID:", vendor.place_id);
-    // //this.vendorService.setSelectedVendor(vendor);
-    // this.router.navigate(["search/vendor", vendor.place_id], );
+    console.log(JSON.stringify(data));
+    let vendor: Vendor = this.vendors.find(vendor => vendor.place_id === data.place_id);
+    this.router.navigate(["search/vendor", vendor.place_id]);
   }
 
   onLoadMoreItemsRequested(args: ListViewEventData) {

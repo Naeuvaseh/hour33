@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { VendorService } from '../../../services/vendor.service';
 import { Vendor } from '../../../interfaces/vendor.interface';
 import { Theme } from '../../../settings';
@@ -12,12 +13,16 @@ export class VendorDetailComponent implements OnInit {
   private theme;
   public vendor: Vendor;
 
-  constructor(private location: Location, private vendorService: VendorService) {
+  constructor(
+    private location: Location, 
+    private vendorService: VendorService,
+    private route: ActivatedRoute) {
     this.theme = Theme;
-    this.vendor = this.vendorService.getSelectedVendor();
   }
 
-  ngOnInit(){ }
+  ngOnInit(){ 
+    this.vendor = this.route.snapshot.data['vendor'];
+  }
 
   goBack(){
     this.location.back();

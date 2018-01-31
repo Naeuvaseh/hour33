@@ -6,6 +6,7 @@ import { DefaultDay } from '../../../const/default-day.enum';
 import { TimePeriodThreshold } from '../../../const/time-period-threshold.const';
 import { TempIcons } from '../../../const/temp-icons.const';
 import * as moment from 'moment';
+import { Location } from 'nativescript-plugin-google-places';
 
 @Component({
   selector: 'vendor-listing',
@@ -20,6 +21,7 @@ export class VendorListingComponent implements OnInit {
   public theme;
   public currentDate = moment();
   public tempIcons: Object[] = this.shuffleIcons(TempIcons);
+  public userLocation: Location;
 
   constructor() {
     this.theme = Theme;
