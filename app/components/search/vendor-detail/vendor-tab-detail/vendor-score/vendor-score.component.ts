@@ -27,5 +27,4 @@ export class VendorScoreComponent {
     let result: string;
     return result = (rating) ? (rating * 2).toFixed(1).toString() : '??';
   }
-  }
 }
