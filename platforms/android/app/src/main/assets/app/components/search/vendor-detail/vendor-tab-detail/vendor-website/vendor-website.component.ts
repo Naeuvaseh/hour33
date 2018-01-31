@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Theme } from '../../../../../settings';
-import  { Vendor } from '../../../../../interfaces/vendor.interface';
+import  { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 var utilityModule = require("utils/utils");
 
 @Component({
@@ -9,7 +9,7 @@ var utilityModule = require("utils/utils");
 })
 export class VendorWebsiteComponent implements OnInit {
 
-  @Input() vendor: Vendor;
+  @Input() vendor: VendorDetail;
 
   public theme;
 
@@ -20,8 +20,8 @@ export class VendorWebsiteComponent implements OnInit {
   }
   
   openWebsite(){
-    if(this.vendor.website){
-      utilityModule.openUrl(this.vendor.website);
+    if(this.vendor.result.website){
+      utilityModule.openUrl(this.vendor.result.website);
     }
     else {
       alert("This establishment does not have a website listed.");

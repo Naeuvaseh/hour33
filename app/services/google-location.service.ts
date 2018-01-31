@@ -231,7 +231,7 @@ export class GoogleLocationService {
                 .toPromise()
                 .then(
                     (response: VendorDetail) => {
-                        console.log(JSON.stringify(response));
+                        //console.log(JSON.stringify(response));
                         resolve(response);
                     },
                     (error) => {

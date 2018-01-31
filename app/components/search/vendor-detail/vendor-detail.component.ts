@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { VendorService } from '../../../services/vendor.service';
 import { Vendor } from '../../../interfaces/vendor.interface';
 import { Theme } from '../../../settings';
+import { VendorDetail } from '../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 
 @Component({
   selector: 'vendor-detail',
@@ -11,17 +12,17 @@ import { Theme } from '../../../settings';
 })
 export class VendorDetailComponent implements OnInit {
   private theme;
-  public vendor: Vendor;
+  public vendor: VendorDetail;
 
   constructor(
     private location: Location, 
-    private vendorService: VendorService,
     private route: ActivatedRoute) {
     this.theme = Theme;
   }
 
   ngOnInit(){ 
-    this.vendor = this.route.snapshot.data['vendor'];
+    this.vendor = this.route.snapshot.data['vendor'] as VendorDetail;
+    console.log(JSON.stringify(this.vendor));
   }
 
   goBack(){

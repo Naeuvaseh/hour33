@@ -21,7 +21,9 @@ export class VendorScoreComponent {
 
   navToReviews(){
     console.log('VendorScoreComponent.navToReview() invoked.');
-    
   }
 
+  formatScore(rating: number){
+    return (rating * 2).toFixed(1).toString();
+  }
 }

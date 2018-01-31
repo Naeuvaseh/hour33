@@ -1,12 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { Vendor } from '../../../../../interfaces/vendor.interface';
+import { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 import { Theme } from '../../../../../settings';
+var utilityModule = require("utils/utils");
+
 @Component({
   selector: 'vendor-navigation',
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-navigation/vendor-navigation.component.html'
 })
 export class VendorNavigationComponent {
-  @Input() vendor: Vendor;
+  @Input() vendor: VendorDetail;
 
   public theme;
 
@@ -14,11 +16,12 @@ export class VendorNavigationComponent {
     this.theme = Theme;
   }
 
-  formatAddress(vendor: Vendor): string {
-    return "11700 Marquette Ave. NE,\n Albuquerque NM 87123";
-  }
-
-  navigate(vendor: Vendor){
-    console.log('Navigation button tapped.');
+   navigate(){
+     console.log(this.vendor.result.url);
+     utilityModule
+      .openUrl(this.vendor.result.url)
+      .catch((error) => {
+        console.log('VendorNavigationComponent.navigate() ERROR: ' + JSON.stringify(error));
+      });
   }
 }
