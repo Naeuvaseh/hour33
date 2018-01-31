@@ -6,6 +6,8 @@ import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 import { Location } from 'nativescript-geolocation';
 import * as geolocation from 'nativescript-geolocation';
 import { Accuracy } from 'ui/enums';
+import { AbsoluteLayout } from 'tns-core-modules/ui/layouts/absolute-layout'
+import { AnimationCurve } from "ui/enums";
 // Services
 import { VendorService } from '../../services/vendor.service';
 import { GoogleLocationService } from '../../services/google-location.service';
@@ -29,6 +31,7 @@ import { RadListViewComponent } from 'nativescript-pro-ui/listview/angular';
 export class SearchComponent implements OnInit {
 
   @ViewChild('vendorList') listViewComponent: RadListViewComponent;
+  @ViewChild('filterMenu') filterMenu: AbsoluteLayout;
 
   private theme;
   private debug;
@@ -37,6 +40,7 @@ export class SearchComponent implements OnInit {
   private loadingFlag: boolean;
   private items: ObservableArray<Vendor>;
   private userLocation: Location;
+  private filterMenuVisible: boolean = false;
 
   public listViewVisible: boolean = true;
   public searchResults: SearchResult;
@@ -95,6 +99,11 @@ export class SearchComponent implements OnInit {
 
   onFilter() {
     console.log("Filter button tapped.");
+    this.filterMenuVisible = !this.filterMenuVisible;
+    // this.filterMenu.animate({
+    //   translate: { x: 100, y: 100 },
+    //   duration: 3000
+    // });
   }
 
   onListMapToggle() {

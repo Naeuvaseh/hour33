@@ -30,12 +30,7 @@ export class VendorListingComponent implements OnInit {
     this.currentDay = new Date().getDay();
   }
 
-  orderByTime(vendor: Vendor){
-    //TODO 
-    //Implement function to order vendor object array by time.
-  }
-
-  shuffleIcons(array: Object[]): Object[] {
+   shuffleIcons(array: Object[]): Object[] {
     if (array.length <= 1) return array;
     for (let i = 0; i < array.length; i++) {
       const randomChoiceIndex = Math.floor(array.length - 1);

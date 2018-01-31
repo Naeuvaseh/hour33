@@ -20,6 +20,7 @@ import { VendorPhoneComponent } from './vendor-detail/vendor-tab-detail/vendor-p
 import { VendorWebsiteComponent } from './vendor-detail/vendor-tab-detail/vendor-website/vendor-website.component';
 import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
 import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
+import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
 
 @NgModule({
     imports: [
@@ -37,6 +38,7 @@ import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
         // Search Page
         VendorListingComponent,
         VendorDetailComponent,
+        LikeDislikePipe,
         CurrentDayPipe,
         // Vendor Detail - Detail Tab
         VendorDescriptionComponent,

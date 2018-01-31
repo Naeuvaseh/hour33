@@ -78,7 +78,7 @@
                     stretch="aspectFill"></Image>
                 <!-- Count -->
                 <Label 
-                    text="60"
+                    [text]="vendor?.rating | likeDislike:true"
                     horizontalAlignment="center"
                     verticalAlignment="top"
                     [color]="theme.inactiveColor"></Label>
@@ -91,7 +91,7 @@
                     stretch="aspectFill"></Image>
                 <!-- Count -->
                 <Label 
-                    text="16"
+                    [text]="vendor?.rating | likeDislike:false"
                     [color]="theme.inactiveColor"></Label>
             </FlexboxLayout>
         </FlexboxLayout>
