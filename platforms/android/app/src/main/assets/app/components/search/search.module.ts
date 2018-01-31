@@ -21,6 +21,7 @@ import { VendorWebsiteComponent } from './vendor-detail/vendor-tab-detail/vendor
 import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
 import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
 import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
+import { DistancePipe } from './vendor-listing/distance.pipe';
 
 @NgModule({
     imports: [
@@ -39,6 +40,7 @@ import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
         VendorListingComponent,
         VendorDetailComponent,
         LikeDislikePipe,
+        DistancePipe,
         CurrentDayPipe,
         // Vendor Detail - Detail Tab
         VendorDescriptionComponent,
