@@ -11,48 +11,53 @@ registerElement('MapView', () => MapView);
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
-  @ViewChild("mapView") mapView: ElementRef;
+  @ViewChild("mapView") mapView: MapView;
   
   @Input() vendor: VendorDetail;
 
   public theme;
-    latitude =  -33.86;
-    longitude = 151.20;
-    zoom = 8;
-    minZoom = 0;
-    maxZoom = 22;
-    bearing = 0;
-    tilt = 0;
-    padding = [40, 40, 40, 40];
-  private lastCamera: string;
+  public latitude: number;
+  public longitude: number;
+  public zoom: number = 16;
+  public minZoom: number = 0;
+  public maxZoom: number = 22;
+  public bearing: number = 0;
+  public tilt: number = 0;
+  public lastCamera: string;
 
   constructor() {
     this.theme = Theme;
   }
 
   ngOnInit(){
+    console.log('VendorMapComonent.ngOnInit() Vendor Location: ' + JSON.stringify(this.vendor.result.geometry));
+    
     
   }
 
   onMapReady = (event) => {
     console.log("Map Ready");
-    this.mapView = event.object;
+    this.mapView = <MapView> event.object;
+    this.mapView.settings.tiltGesturesEnabled = false;
+    this.mapView.settings.myLocationButtonEnabled = true;
+    this.mapView.settings.compassEnabled = true;
 
-    // let marker = new Marker();
-    // this.setMapMarker(this.mapView, 
-    //                   marker, 
-    //                   Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng), 
-    //                   this.vendor.result.name,
-    //                   "TEST");
+    this.mapView.latitude = this.vendor.result.geometry.location.lat;
+    this.mapView.longitude = this.vendor.result.geometry.location.lng;
+    this.mapView.zoom = this.zoom;
+
+    console.log('MapView Location: Lat: ' + this.mapView.latitude + ' Lng: ' + this.mapView.longitude);
+    let marker = new Marker();
+    marker.position = Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng);
+    marker.title = "Title Test"
+    marker.snippet = "Snippet Test";
+  //marker.userData = {index: 1};
+    this.mapView.addMarker(marker);
+    
+
   };
 
-  setMapMarker(mapView: MapView, marker: Marker, position: Position, title: string, snippet?: string) {
-    marker.position = Position.positionFromLatLng(-33.86, 151.20);
-    marker.title = title
-    marker.snippet = snippet;
-  //marker.userData = {index: 1};
-    mapView.addMarker(marker);
-  }
+ 
 
   onMarkerEvent(args) {
     console.log("Marker Event: '" + args.eventName
