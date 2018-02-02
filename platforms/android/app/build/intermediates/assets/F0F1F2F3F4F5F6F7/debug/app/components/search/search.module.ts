@@ -19,7 +19,11 @@ import { HourListingComponent } from "./vendor-detail/vendor-tab-detail/vendor-h
 import { VendorPhoneComponent } from './vendor-detail/vendor-tab-detail/vendor-phone/vendor-phone.component';
 import { VendorWebsiteComponent } from './vendor-detail/vendor-tab-detail/vendor-website/vendor-website.component';
 import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
+import { PeriodFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/period-filter.pipe';
 import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
+import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
+import { DistancePipe } from './vendor-listing/distance.pipe';
+import { VendorDetailResolve } from './resolves/vendor-detail.resolve';
 
 @NgModule({
     imports: [
@@ -30,13 +34,16 @@ import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
         NativeScriptHttpClientModule
     ],
     providers: [
-        VendorService
+        VendorService,
+        VendorDetailResolve
     ],
     declarations: [
         SearchComponent,
         // Search Page
         VendorListingComponent,
         VendorDetailComponent,
+        LikeDislikePipe,
+        DistancePipe,
         CurrentDayPipe,
         // Vendor Detail - Detail Tab
         VendorDescriptionComponent,
@@ -46,6 +53,7 @@ import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
         VendorPhoneComponent,
         VendorWebsiteComponent,
         HourFilterPipe,
+        PeriodFilterPipe,
         // Vendor Detail - Map Tab
         VendorMapComponent,
         VendorNavigationComponent,

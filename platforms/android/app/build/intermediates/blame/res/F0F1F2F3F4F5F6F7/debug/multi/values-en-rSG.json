@@ -22,29 +22,5 @@
                 }
             }
         ]
-    },
-    {
-        "outputFile": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-en-rSG\\values-en-rSG.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 103,
-                    "endOffset": 154
-                },
-                "from": {
-                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\8650c4a68d7bd1067786af3fc7397b9e30fd578a\\output\\res\\values-en-rSG\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 0,
-                        "startOffset": 242,
-                        "endColumn": 99,
-                        "endOffset": 341
-                    }
-                }
-            }
-        ]
     }
 ]

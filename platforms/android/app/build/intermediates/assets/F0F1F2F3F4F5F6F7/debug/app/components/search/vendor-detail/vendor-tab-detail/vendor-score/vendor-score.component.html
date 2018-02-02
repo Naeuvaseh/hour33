@@ -14,7 +14,7 @@
    
     <FlexboxLayout width="50%" padding="10 0 10 0" alignItems="center">
         <FlexboxLayout width="50%" (tap)="navToReviews()">
-            <Label text="9.5"
+            <Label [text]="formatScore(vendor?.result.rating)"
                    [color]="theme.accentColor"
                    style="text-align: center"
                    fontWeight="700"
@@ -35,7 +35,7 @@
                         stretch="aspectFill"></Image>
                     <!-- Count -->
                     <Label 
-                        text="60"
+                        [text]="vendor?.result.rating | likeDislike:true"
                         horizontalAlignment="center"
                         verticalAlignment="top"
                         [color]="theme.inactiveColor"></Label>
@@ -49,7 +49,7 @@
                         stretch="aspectFill"></Image>
                     <!-- Count -->
                     <Label 
-                        text="16"
+                        [text]="vendor?.result.rating | likeDislike:false"
                         [color]="theme.inactiveColor"></Label>
                 </FlexboxLayout>
             </FlexboxLayout>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Theme } from '../../../../../settings';
-import  { Vendor } from '../../../../../interfaces/vendor.interface';
+import  { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 import * as permissions from "nativescript-permissions";
 import * as TNSPhone from 'nativescript-phone';
 declare var android;
@@ -11,7 +11,7 @@ declare var android;
 })
 export class VendorPhoneComponent implements OnInit {
 
-  @Input() vendor: Vendor;
+  @Input() vendor: VendorDetail;
 
   public theme;
 
@@ -22,13 +22,13 @@ export class VendorPhoneComponent implements OnInit {
   }
 
   dialNumber(){
-    if (this.vendor.phone){
+    if (this.vendor.result.formatted_phone_number){
       permissions
         .requestPermission(android.Manifest.permission.CALL_PHONE, "App Needs This Permission To Make Phone Calls")
         .then(()=>{
           console.log("Got Permission!");
-          console.log("Vendor Phone: " + this.vendor.phone);
-          TNSPhone.dial(String(this.vendor.phone), false);
+          console.log("Vendor Phone: " + this.vendor.result.formatted_phone_number);
+          TNSPhone.dial(String(this.vendor.result.formatted_phone_number), false);
         })
         .catch(()=>{
           console.log("Permission Denied!");

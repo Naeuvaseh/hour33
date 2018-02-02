@@ -1175,7 +1175,7 @@
     <string name="mr_controller_volume_slider">Volume slider</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
-    <string name="nativescript_google_maps_api_key">AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM</string>
+    <string name="nativescript_google_maps_api_key">AIzaSyAYH6CcEihpQxV6uwWxTgY3npS00QT4xO4</string>
     <string name="no_feedback_items_text">There are currently no items in this category. Try sending us feedback via the \'Send feedback\' button.</string>
     <string name="on_demand_manual_button_busy">LOADING…</string>
     <string name="on_demand_manual_button_idle">LOAD MORE</string>

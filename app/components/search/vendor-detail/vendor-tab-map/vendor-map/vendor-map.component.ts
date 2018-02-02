@@ -1,34 +1,73 @@
 import { Component, ElementRef, ViewChild, OnInit, Input } from '@angular/core';
 import { registerElement } from "nativescript-angular/element-registry";
-import { Vendor } from '../../../../../interfaces/vendor.interface';
+import { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 import { Theme } from '../../../../../settings';
+import { MapView, Marker, Position } from 'nativescript-google-maps-sdk';
 
-registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
+registerElement('MapView', () => MapView);
 
 @Component({
   selector: 'vendor-map',
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
-  @ViewChild("MapView") mapView: ElementRef;
-  @Input() vendor: Vendor;
+  @ViewChild("mapView") mapView: ElementRef;
+  
+  @Input() vendor: VendorDetail;
 
   public theme;
-  private lat: number;
-  private long: number;
+    latitude =  -33.86;
+    longitude = 151.20;
+    zoom = 8;
+    minZoom = 0;
+    maxZoom = 22;
+    bearing = 0;
+    tilt = 0;
+    padding = [40, 40, 40, 40];
+  private lastCamera: string;
 
   constructor() {
     this.theme = Theme;
   }
 
   ngOnInit(){
-    this.lat = 32.1234;
-    this.long = 32.12345;
+    
   }
 
   onMapReady = (event) => {
     console.log("Map Ready");
+    this.mapView = event.object;
+
+    // let marker = new Marker();
+    // this.setMapMarker(this.mapView, 
+    //                   marker, 
+    //                   Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng), 
+    //                   this.vendor.result.name,
+    //                   "TEST");
   };
+
+  setMapMarker(mapView: MapView, marker: Marker, position: Position, title: string, snippet?: string) {
+    marker.position = Position.positionFromLatLng(-33.86, 151.20);
+    marker.title = title
+    marker.snippet = snippet;
+  //marker.userData = {index: 1};
+    mapView.addMarker(marker);
+  }
+
+  onMarkerEvent(args) {
+    console.log("Marker Event: '" + args.eventName
+        + "' triggered on: " + args.marker.title
+        + ", Lat: " + args.marker.position.latitude + ", Lon: " + args.marker.position.longitude, args);
+  }
+
+  onCoordinateTapped(args) {
+    console.log("Coordinate Tapped, Lat: " + args.position.latitude + ", Lon: " + args.position.longitude, args);
+  }
+
+  onCameraChanged(args) {
+    console.log("Camera changed: " + JSON.stringify(args.camera), JSON.stringify(args.camera) === this.lastCamera);
+    this.lastCamera = JSON.stringify(args.camera);
+}
 
 // ****** Maps Demo Code ****** //
 

@@ -23,6 +23,7 @@ import { Vendor } from '../interfaces/search-result/vendor.interface';
 import { SearchResult } from '../interfaces/search-result/search-result.interface';
 import { TextSearchOptions } from '../interfaces/search-result/text-search/text-search-options.interface';
 import { NearbySearchOptions } from '../interfaces/search-result/nearby-search/nearby-search-options.interface';
+import { VendorDetail } from '../interfaces/search-result/vendor-detail/vendor-detail.interface';
 // Enums
 import { Price } from '../enums/price.enum';
 import { VendorType } from '../enums/vendor-type.enum';
@@ -215,6 +216,29 @@ export class GoogleLocationService {
     private extractData(res: Response) {
         let body = res.json();
         return body;
+    }
+
+    getVendorDetails(place_id: string): Promise<VendorDetail>{
+        return new Promise<VendorDetail>((resolve, reject) => {
+            let url = this.api.detailsApi;
+            let apiKeyParam = "&key=" + GooglePlacesAPIKey;
+            let placeIdParam = "?placeid=" + place_id;
+
+            url = url + placeIdParam + apiKeyParam;
+
+            this.http
+                .get(url)
+                .toPromise()
+                .then(
+                    (response: VendorDetail) => {
+                        //console.log(JSON.stringify(response));
+                        resolve(response);
+                    },
+                    (error) => {
+                        console.log('GoogleLocationService.getVendorDetails() ERROR: ' + JSON.stringify(error));
+                    }
+                );
+        })
     }
 
     public getCurrentLocation(): Location {
