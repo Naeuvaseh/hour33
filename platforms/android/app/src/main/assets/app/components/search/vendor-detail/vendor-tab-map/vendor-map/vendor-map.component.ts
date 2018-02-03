@@ -1,35 +1,105 @@
 import { Component, ElementRef, ViewChild, OnInit, Input } from '@angular/core';
 import { registerElement } from "nativescript-angular/element-registry";
+<<<<<<< HEAD
 import { Vendor } from '../../../../../interfaces/vendor.interface';
 import { Theme } from '../../../../../settings';
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
+=======
+import { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
+import { Theme } from '../../../../../settings';
+import { MapView, Marker, Position } from 'nativescript-google-maps-sdk';
+
+registerElement('MapView', () => MapView);
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 
 @Component({
   selector: 'vendor-map',
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
+<<<<<<< HEAD
   @ViewChild("MapView") mapView: ElementRef;
   @Input() vendor: Vendor;
 
   public theme;
   private lat: number;
   private long: number;
+=======
+  @ViewChild("mapView") mapView: MapView;
+  
+  @Input() vendor: VendorDetail;
+
+  public theme;
+  public latitude: number;
+  public longitude: number;
+  public zoom: number = 16;
+  public minZoom: number = 0;
+  public maxZoom: number = 22;
+  public bearing: number = 0;
+  public tilt: number = 0;
+  public lastCamera: string;
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 
   constructor() {
     this.theme = Theme;
   }
 
   ngOnInit(){
+<<<<<<< HEAD
     this.lat = 32.1234;
     this.long = 32.12345;
+=======
+    console.log('VendorMapComonent.ngOnInit() Vendor Location: ' + JSON.stringify(this.vendor.result.geometry));
+    
+    
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
   }
 
   onMapReady = (event) => {
     console.log("Map Ready");
+<<<<<<< HEAD
   };
 
+=======
+    this.mapView = <MapView> event.object;
+    this.mapView.settings.tiltGesturesEnabled = false;
+    this.mapView.settings.myLocationButtonEnabled = true;
+    this.mapView.settings.compassEnabled = true;
+
+    this.mapView.latitude = this.vendor.result.geometry.location.lat;
+    this.mapView.longitude = this.vendor.result.geometry.location.lng;
+    this.mapView.zoom = this.zoom;
+
+    console.log('MapView Location: Lat: ' + this.mapView.latitude + ' Lng: ' + this.mapView.longitude);
+    let marker = new Marker();
+    marker.position = Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng);
+    marker.title = "Title Test"
+    marker.snippet = "Snippet Test";
+  //marker.userData = {index: 1};
+    this.mapView.addMarker(marker);
+    
+
+  };
+
+ 
+
+  onMarkerEvent(args) {
+    console.log("Marker Event: '" + args.eventName
+        + "' triggered on: " + args.marker.title
+        + ", Lat: " + args.marker.position.latitude + ", Lon: " + args.marker.position.longitude, args);
+  }
+
+  onCoordinateTapped(args) {
+    console.log("Coordinate Tapped, Lat: " + args.position.latitude + ", Lon: " + args.position.longitude, args);
+  }
+
+  onCameraChanged(args) {
+    console.log("Camera changed: " + JSON.stringify(args.camera), JSON.stringify(args.camera) === this.lastCamera);
+    this.lastCamera = JSON.stringify(args.camera);
+}
+
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 // ****** Maps Demo Code ****** //
 
 //   public onMapReady = (event) => {

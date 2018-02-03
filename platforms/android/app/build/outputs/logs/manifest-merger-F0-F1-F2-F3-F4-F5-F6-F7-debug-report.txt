@@ -10,6 +10,8 @@ ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidMa
 		INJECTED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml:3:121-146
 		INJECTED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F1\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:3:11-57
 	android:versionCode
 		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml:3:93-120
 		INJECTED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml
@@ -153,7 +155,7 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\TJ\.an
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\6c2ef8300db62e55a64755ef4551788d916b1b48\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\b820f9c5c82b7a6079a1593e30def2839c379500\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\bb57e73fa87d0c082881587291366647e87cb851\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\TJ\.android\build-cache\739bdf12ac2bad5dd21bca809d6e4308ebf6255c\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\TJ\.android\build-cache\4ab7825091a9920687efad59c79b74af5d56da0c\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:firebase-release:] C:\Users\TJ\.android\build-cache\a8430b113c761b4751982b7697c6f139157df9e6\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Chart-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\bc4f8570b56b6603719eab07a7950bba2726a4c9\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Common-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\0b1a1e51ed03bb0be2b10a42bd6d9ffdf9a208f4\output\AndroidManifest.xml:7:5-9:41
@@ -388,7 +390,7 @@ ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml:20:19-61
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:3:5-78
+ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:4:5-78
 MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\TJ\.android\build-cache\b5671374195b31371ae44bd46088e13215c17b07\output\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-analytics:11.8.0] C:\Users\TJ\.android\build-cache\f105b694332bca928c06ed1a03c4848ea3af0135\output\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-nearby:11.8.0] C:\Users\TJ\.android\build-cache\ff47cd549eabe910d6ccd8ece59ad81e531ea89a\output\AndroidManifest.xml:7:5-79
@@ -399,13 +401,15 @@ MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\TJ\.android\build
 MERGED from [com.google.android.gms:play-services-analytics-impl:11.8.0] C:\Users\TJ\.android\build-cache\3007343e637fbd97124439c24bbb51ee1edd3768\output\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-maps:11.8.0] C:\Users\TJ\.android\build-cache\2cfab9fa360aaf5edb5c3375e1adcdcafcbe8c41\output\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:3:22-76
+		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:4:22-76
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:4:5-97
+ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:5:5-97
 	android:name
-		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:4:22-95
+		ADDED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F2\AndroidManifest.xml:5:22-95
 meta-data#com.google.android.geo.API_KEY
 MERGED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F6\AndroidManifest.xml:7:9-9:70
+	android:value
+		REJECTED from C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\F6\AndroidManifest.xml:9:13-68
 meta-data#android.support.VERSION
 ADDED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\bfb06a4016765bb0de5fb35ba840b3a6e5cefec1\output\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:customtabs:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\6b953cec82796203be9eec5a8ac8b0946c59a8fd\output\AndroidManifest.xml:22:5-24:41

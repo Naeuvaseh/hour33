@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { VendorService } from '../../../services/vendor.service';
 import { Vendor } from '../../../interfaces/vendor.interface';
 import { Theme } from '../../../settings';
+import { VendorDetail } from '../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 
 @Component({
   selector: 'vendor-detail',
@@ -10,14 +12,20 @@ import { Theme } from '../../../settings';
 })
 export class VendorDetailComponent implements OnInit {
   private theme;
-  public vendor: Vendor;
+  public vendor: VendorDetail;
 
-  constructor(private location: Location, private vendorService: VendorService) {
+  constructor(
+    private location: Location, 
+    private route: ActivatedRoute) {
     this.theme = Theme;
-    this.vendor = this.vendorService.getSelectedVendor();
   }
 
-  ngOnInit(){ }
+  ngOnInit(){ 
+    this.vendor = this.route.snapshot.data['vendor'] as VendorDetail;
+    //console.log(JSON.stringify(this.vendor));
+    console.log('Period: ' + JSON.stringify(this.vendor.result.opening_hours.periods));
+    
+  }
 
   goBack(){
     this.location.back();

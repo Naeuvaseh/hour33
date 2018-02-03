@@ -19,6 +19,10 @@ import { HourListingComponent } from "./vendor-detail/vendor-tab-detail/vendor-h
 import { VendorPhoneComponent } from './vendor-detail/vendor-tab-detail/vendor-phone/vendor-phone.component';
 import { VendorWebsiteComponent } from './vendor-detail/vendor-tab-detail/vendor-website/vendor-website.component';
 import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
+<<<<<<< HEAD
+=======
+import { PeriodFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/period-filter.pipe';
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
 import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
 import { DistancePipe } from './vendor-listing/distance.pipe';
@@ -52,6 +56,10 @@ import { VendorDetailResolve } from './resolves/vendor-detail.resolve';
         VendorPhoneComponent,
         VendorWebsiteComponent,
         HourFilterPipe,
+<<<<<<< HEAD
+=======
+        PeriodFilterPipe,
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
         // Vendor Detail - Map Tab
         VendorMapComponent,
         VendorNavigationComponent,

@@ -2,7 +2,7 @@
     class="action-bar"
     [backgroundColor]="theme.darkGrey">
     <NavigationButton icon="res://back_arrow" (tap)="goBack()"></NavigationButton>
-    <Label class="action-bar-title" [text]="vendor.name" [color]="theme.accentColor"></Label>
+    <Label class="action-bar-title" [text]="vendor.result.name" [color]="theme.accentColor"></Label>
     <ActionItem icon="res://share" (tap)="onShare()"></ActionItem>
 </ActionBar>
 <TabView [tabBackgroundColor]="theme.darkGrey" 
@@ -18,7 +18,7 @@
                 <vendor-website [vendor]="vendor"></vendor-website>                
             </FlexboxLayout>
             <vendor-description [vendor]="vendor"></vendor-description>
-            <vendor-hours [happyHours]="vendor.happyHours" [regularHours]="vendor.hoursOfOperation"></vendor-hours>
+            <vendor-hours [happyHours]="vendor?.happyHours" [regularHours]="vendor?.result?.opening_hours?.periods"></vendor-hours>
         </FlexboxLayout>
     </ScrollView>
     <FlexboxLayout *tabItem="{title: 'Map'}" flexDirection="column">

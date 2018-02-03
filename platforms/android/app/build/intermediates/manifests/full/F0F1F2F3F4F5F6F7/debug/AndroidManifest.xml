@@ -49,7 +49,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM" />
+            android:value="@string/nativescript_google_maps_api_key" />
 
         <activity
             android:name="com.tns.NativeScriptActivity"

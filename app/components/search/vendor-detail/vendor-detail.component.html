@@ -18,7 +18,7 @@
                 <vendor-website [vendor]="vendor"></vendor-website>                
             </FlexboxLayout>
             <vendor-description [vendor]="vendor"></vendor-description>
-            <vendor-hours [happyHours]="vendor.happyHours" [regularHours]="vendor.hoursOfOperation"></vendor-hours>
+            <vendor-hours [happyHours]="vendor?.happyHours" [regularHours]="vendor?.result?.opening_hours?.periods"></vendor-hours>
         </FlexboxLayout>
     </ScrollView>
     <FlexboxLayout *tabItem="{title: 'Map'}" flexDirection="column">

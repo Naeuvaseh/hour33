@@ -2,9 +2,28 @@
              width="100%"
              padding="10 10 5 10">
     <MapView 
+<<<<<<< HEAD
         (markerSelect)="onMarkerSelect($event)" 
         [latitude]="lat" 
         [longitude]="long" 
         zoom="18" 
         (mapReady)="onMapReady($event)"></MapView>
+=======
+        #mapView 
+        [latitude]="latitude" 
+        [longitude]="longitude"
+        [zoom]="zoom" 
+        [minZoom]="minZoom" 
+        [maxZoom]="maxZoom" 
+        [bearing]="bearing"
+        [tilt]="tilt" 
+        (mapReady)="onMapReady($event)"
+        (markerSelect)="onMarkerEvent($event)" 
+        (markerBeginDragging)="onMarkerEvent($event)"
+        (markerEndDragging)="onMarkerEvent($event)" 
+        (markerDrag)="onMarkerEvent($event)"
+        (markerInfoWindowTapped)="onMarkerEvent($event)" 
+        (coordinateTapped)="onCoordinateTapped($event)"
+        (cameraChanged)="onCameraChanged($event)"></MapView>
+>>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 </FlexboxLayout>
