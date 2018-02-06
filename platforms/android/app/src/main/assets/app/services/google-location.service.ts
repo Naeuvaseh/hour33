@@ -39,13 +39,21 @@ export class GoogleLocationService {
     public vendors: Vendor[];
     // Google Places API
     private api = GooglePlacesApiUrls;
-    // private _errorCallback;
-
+    public searchFilter: {
+        search: SearchMode,
+        searchText: string,
+        distance: number
+      };
     public results: SearchResult;
     public vendorResults: Array<Vendor>;
 
     public constructor(private http: HttpClient) {
         this._debug = Debug;
+        this.searchFilter = {
+            search: SearchMode.Default,
+            searchText: null,
+            distance: Radius.mi5
+        }
     }
 
     public search(mode: SearchMode, nextPage: boolean, results?: SearchResult, options?: Vendor): Promise<SearchResult|null> {

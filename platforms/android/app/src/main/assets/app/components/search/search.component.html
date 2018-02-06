@@ -1,7 +1,7 @@
 <ActionBar class="action-bar" 
            [backgroundColor]="theme.darkGrey"
            [color]="theme.actionBarTextColor">
-    <Label class="action-bar-title" text="Today's Happy Hours"></Label>
+    <Label class="action-bar-title" [text]="title"></Label>
     <ActionItem (tap)="onFilter()"
                 icon="res://filter"
                 height="50%"
@@ -121,14 +121,115 @@
         </FlexboxLayout>
     </FlexboxLayout>
 </FlexboxLayout>
-<FlexboxLayout
+<!-- Filter Menu -->
+<GridLayout
     #filterMenu
+    rows="9*, 1*"
+    columns="*, *, *"
     [visibility]="filterMenuVisible ? 'visible' : 'collapsed'"
     width="100%"
-    height="90%"
-    color="#adfadf">
-    <Label text="text"></Label>
-</FlexboxLayout>
+    height="100%"
+    [backgroundColor]="theme.primaryColor">
+    <ScrollView 
+        row="0"
+        col="0"
+        colSpan="3"
+        width="100%" 
+        padding="10"
+        orientation="vertical" 
+        [backgroundColor]="theme.primaryColor">
+        <GridLayout 
+            rows="auto, auto, auto" 
+            columns="auto, *, *, *, *"
+            padding="10">
+            <!-- Row 0 - Search Text -->
+            <Label
+                row="0"
+                col="0"
+                colSpan="1"
+                text="Search: " 
+                fontSize="20"
+                [color]="theme.inactiveColor"></Label>
+            <TextField 
+                #search
+                row="0"
+                col="1"
+                colSpan="4"
+                [color]="theme.accentColor"></TextField>
+            <!-- Row 1-2 -->
+            <Label 
+                row="1"
+                col="0"
+                fontSize="20"
+                [color]="theme.inactiveColor"
+                text="Distance: "></Label>
+            <Label 
+                row="1"
+                col="1"
+                colSpan="2"
+                alignSelf="center">
+                <FormattedString>
+                    <Span
+                        [text]="distance"
+                        [color]="theme.accentColor"
+                        fontSize="20"
+                        fontWeight="700"></Span>
+                    <Span
+                        text=" miles"
+                        textWrap="true"
+                        fontSize="16"
+                        [color]="theme.inactiveColor"></Span>
+                </FormattedString>
+            </Label>
+            <!-- Distance -->
+            <Slider 
+                #distanceSlider
+                row="3"
+                col="0"
+                colSpan="5"
+                minValue="1"
+                maxValue="50000"
+                margin="20 0 20 0"
+                [backgroundColor]="theme.lightGrey"
+                (valueChange)="onDistanceSliderChange($event)"></Slider>
+        </GridLayout>
+    </ScrollView>
+    <FlexboxLayout
+        row="1"
+        col="0"
+        colSpan="3"
+        width="100%"
+        height="100%"
+        flexDirection="row"
+        alignItems="center">
+        <Button  
+            row="1"
+            col="0"
+            width="50%"
+            text="Cancel"
+            alignSelf="center"
+            [color]="theme.inactiveColor"
+            [backgroundColor]="theme.darkGrey"
+            (tap)="cancel()"
+            class="btn btn-secondary"></Button>
+        <Button
+            row="1"
+            col="1"
+            width="50%"
+            text="Reset"
+            alignSelf="center"
+            class="btn btn-outline"
+            (tap)="onReset()"></Button>
+        <Button
+            row="1"
+            col="2"
+            width="50%"
+            text="&#xf002; Search"
+            alignSelf="center"        
+            [color]="theme.inactiveColor"                      
+            class="btn btn-primary font-awesome"></Button>
+    </FlexboxLayout>
+</GridLayout>
 <!-- OK Display -->
 <RadListView 
     #vendorList

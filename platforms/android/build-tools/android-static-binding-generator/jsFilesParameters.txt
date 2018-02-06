@@ -77,6 +77,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interface
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\text-search\text-search-result.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\text-search\text-search-vendor.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\address-components.interface.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\photo.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\reviews.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\vendor-detail.interface.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\resolves\current-location.resolve.js

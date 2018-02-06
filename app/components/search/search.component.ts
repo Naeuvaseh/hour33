@@ -32,6 +32,7 @@ export class SearchComponent implements OnInit {
 
   @ViewChild('vendorList') listViewComponent: RadListViewComponent;
   @ViewChild('filterMenu') filterMenu: AbsoluteLayout;
+  @ViewChild('distanceSlider') distanceSlider;
 
   private theme;
   private debug;
@@ -42,9 +43,11 @@ export class SearchComponent implements OnInit {
   private userLocation: Location;
   private filterMenuVisible: boolean = false;
 
-  public listViewVisible: boolean = true;
   public searchResults: SearchResult;
   public vendors: Vendor[];
+  public title: string;
+  public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
+  public listViewVisible: boolean = true;
 
   constructor(private router: Router,
     private vendorService: VendorService,
@@ -54,6 +57,8 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.setTitle();
+    this.setDistanceSliderValue();
     // Check if data exists
     if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
       console.log("Data exists already");
@@ -98,8 +103,8 @@ export class SearchComponent implements OnInit {
   }
 
   onFilter() {
-    console.log("Filter button tapped.");
     this.filterMenuVisible = !this.filterMenuVisible;
+    this.setTitle();    
     // this.filterMenu.animate({
     //   translate: { x: 100, y: 100 },
     //   duration: 3000
@@ -213,5 +218,36 @@ export class SearchComponent implements OnInit {
 
   calcDistance(loc1: Location, loc2: Location){
     return geolocation.distance(loc1, loc2) / 1609.34; // convert to miles.
+  }
+
+  setTitle(){
+    switch(this.filterMenuVisible){
+      case true:
+        this.title = 'Filtered Search';
+        break;
+      case false:
+        this.title = 'Today\'s Happy Hours';
+        break;
+      default:
+        this.title = 'Today\'s Happy Hours';
+        break;
+    }
+  }
+
+  onDistanceSliderChange(event){
+    this.distance = this.convertToMiles(event.value).toFixed(2);
+    this.googleLocationService.searchFilter.distance = event.value;
+  }
+  setDistanceSliderValue(){
+    this.distanceSlider.value = this.googleLocationService.searchFilter.distance;
+  }
+
+  cancel(){
+    this.filterMenuVisible = false;
+    this.setTitle();
+  }
+
+  convertToMiles(meters: number): number {
+    return meters / 1609.34;
   }
 }

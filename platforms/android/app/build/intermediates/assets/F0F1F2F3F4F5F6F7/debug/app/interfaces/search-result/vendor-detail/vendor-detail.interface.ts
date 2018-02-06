@@ -1,6 +1,7 @@
 import { AddressComponents } from './address-components.interface';
 import { Reviews } from './reviews.interface';
 import { Period } from '../../period.interface';
+import { Photo } from './photo.interface'
 
 export interface VendorDetail {
     html_attributions: string[],
@@ -29,6 +30,7 @@ export interface VendorDetail {
        id: string,
        international_phone_number: string,
        name: string,
+       photos?: Array<Photo>,
        place_id: string,
        rating: number,
        reference: string,
