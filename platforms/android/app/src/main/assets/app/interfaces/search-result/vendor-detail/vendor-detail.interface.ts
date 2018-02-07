@@ -3,7 +3,11 @@ import { Reviews } from './reviews.interface';
 <<<<<<< HEAD
 =======
 import { Period } from '../../period.interface';
+<<<<<<< HEAD
 >>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
+=======
+import { Photo } from './photo.interface'
+>>>>>>> d3db476e867ad4cfcc0c40b23cd629e925b5673a
 
 export interface VendorDetail {
     html_attributions: string[],
@@ -32,6 +36,7 @@ export interface VendorDetail {
        id: string,
        international_phone_number: string,
        name: string,
+       photos?: Array<Photo>,
        place_id: string,
        rating: number,
        reference: string,

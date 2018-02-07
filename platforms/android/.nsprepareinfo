@@ -1,13 +1,17 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"time": "Thu Feb 01 2018 19:01:13 GMT-0500 (Eastern Standard Time)",
 =======
 	"time": "Fri Feb 02 2018 11:43:29 GMT-0500 (Eastern Standard Time)",
 >>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
+=======
+	"time": "Tue Feb 06 2018 13:41:59 GMT-0500 (Eastern Standard Time)",
+>>>>>>> d3db476e867ad4cfcc0c40b23cd629e925b5673a
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": false,
 	"projectFileHash": "680d59576491106c452494b0c8ac4cd49b456d86f14d0809c89eb0d9af704483",
-	"changesRequireBuildTime": "Fri Feb 02 2018 10:59:28 GMT-0500 (Eastern Standard Time)"
+	"changesRequireBuildTime": "Tue Feb 06 2018 09:04:29 GMT-0500 (Eastern Standard Time)"
 }
