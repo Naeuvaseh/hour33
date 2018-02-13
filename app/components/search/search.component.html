@@ -155,6 +155,7 @@
                 row="0"
                 col="1"
                 colSpan="4"
+                (textChange)="onSearchTextChange($event)"
                 [color]="theme.accentColor"></TextField>
             <!-- Row 1-2 -->
             <Label 
@@ -188,8 +189,9 @@
                 col="0"
                 colSpan="5"
                 minValue="1"
-                maxValue="50000"
+                maxValue="48280.3"
                 margin="20 0 20 0"
+                [value]="setDistanceSliderValue()"
                 [backgroundColor]="theme.lightGrey"
                 (valueChange)="onDistanceSliderChange($event)"></Slider>
         </GridLayout>
@@ -210,7 +212,7 @@
             alignSelf="center"
             [color]="theme.inactiveColor"
             [backgroundColor]="theme.darkGrey"
-            (tap)="cancel()"
+            (tap)="onCancelTap()"
             class="btn btn-secondary"></Button>
         <Button
             row="1"
@@ -219,7 +221,7 @@
             text="Reset"
             alignSelf="center"
             class="btn btn-outline"
-            (tap)="onReset()"></Button>
+            (tap)="onResetTap()"></Button>
         <Button
             row="1"
             col="2"
@@ -227,7 +229,8 @@
             text="&#xf002; Search"
             alignSelf="center"        
             [color]="theme.inactiveColor"                      
-            class="btn btn-primary font-awesome"></Button>
+            class="btn btn-primary font-awesome"
+            (tap)="onSearchTap()"></Button>
     </FlexboxLayout>
 </GridLayout>
 <!-- OK Display -->

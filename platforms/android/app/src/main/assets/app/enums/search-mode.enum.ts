@@ -1,5 +1,4 @@
 export enum SearchMode {
-    Default,
-    Text,
-    Nearby
+    Nearby = 'NEARBY',
+    Text = 'TEXT'
 }

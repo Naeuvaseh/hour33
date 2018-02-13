@@ -24,6 +24,7 @@ import { SearchResult } from '../interfaces/search-result/search-result.interfac
 import { TextSearchOptions } from '../interfaces/search-result/text-search/text-search-options.interface';
 import { NearbySearchOptions } from '../interfaces/search-result/nearby-search/nearby-search-options.interface';
 import { VendorDetail } from '../interfaces/search-result/vendor-detail/vendor-detail.interface';
+import { Filter } from '../interfaces/filter.interface';
 // Enums
 import { Price } from '../enums/price.enum';
 import { VendorType } from '../enums/vendor-type.enum';
@@ -39,24 +40,20 @@ export class GoogleLocationService {
     public vendors: Vendor[];
     // Google Places API
     private api = GooglePlacesApiUrls;
-    public searchFilter: {
-        search: SearchMode,
-        searchText: string,
-        distance: number
-      };
+    public searchFilter: Filter;
     public results: SearchResult;
     public vendorResults: Array<Vendor>;
 
     public constructor(private http: HttpClient) {
         this._debug = Debug;
         this.searchFilter = {
-            search: SearchMode.Default,
+            mode: SearchMode.Nearby,
             searchText: null,
             distance: Radius.mi5
         }
     }
 
-    public search(mode: SearchMode, nextPage: boolean, results?: SearchResult, options?: Vendor): Promise<SearchResult|null> {
+    public search(mode: SearchMode, nextPage: boolean, filter?: Filter, results?: SearchResult): Promise<SearchResult|null> {
         return new Promise<SearchResult|null>((resolve, reject ) => {
             // Update location
             geolocation
@@ -74,12 +71,12 @@ export class GoogleLocationService {
                     var url: string;
                     // Switch to specific search mode
                     switch(mode){
-                        case SearchMode.Default:
+                        case SearchMode.Nearby:
                         {   
                             // Build API URL
                             url = (nextPage) ? this.defaultSearch(location, results.next_page_token) : this.defaultSearch(location);
                             // Print URL
-                            if (this._debug.console.GoogleLocation.url) this.printUrl(url, SearchMode.Default, nextPage);
+                            if (this._debug.console.GoogleLocation.url) this.printUrl(url, SearchMode.Nearby, nextPage);
                             // API Call
                             this.http
                                 .get(url)
@@ -96,16 +93,6 @@ export class GoogleLocationService {
                             break;
                         }
                         case SearchMode.Text:
-                        {
-                            if (nextPage){
-
-                            }
-                            else{
-
-                            }
-                            break;
-                        }
-                        case SearchMode.Nearby:
                         {
                             if (nextPage){
 
@@ -192,11 +179,12 @@ export class GoogleLocationService {
             });
     }
 
+    // Default == Nearby Search 
     public defaultSearch(location: Location, nextPageToken?: string): string {
         let url: string;
         let apiKeyParam = "&key=" + GooglePlacesAPIKey;
         let locationParam: string;
-        let radiusParam: string;
+        let radiusParam: string = this.searchFilter.distance.toString();
         let typeParam: string;
         let rankbyParam: string;
 
@@ -207,7 +195,7 @@ export class GoogleLocationService {
         else {
             // Optional params
             locationParam = "?location=" + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long 
-            radiusParam = "&radius=" + Radius.mi25;
+            radiusParam = "&radius=";
             typeParam = "&type=bar";
             rankbyParam = "&rankby=distance"
             // Build URL
@@ -317,7 +305,7 @@ export class GoogleLocationService {
 
     private printUrl(url: string, mode: SearchMode, nextpage: boolean){
         switch(mode){
-            case SearchMode.Default: 
+            case SearchMode.Nearby: 
                 if (nextpage) {
                     console.log("############################### Default (Nearby) Search (Next Page) ###############################");
                     console.log("URL=" + url);
