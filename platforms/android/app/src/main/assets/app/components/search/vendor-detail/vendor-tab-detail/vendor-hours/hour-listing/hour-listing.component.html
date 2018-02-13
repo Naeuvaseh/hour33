@@ -3,10 +3,7 @@
     [col]="col"
     padding="0 0 5 0">
     <Label 
-<<<<<<< HEAD
-=======
         [visibility]="hours ? 'visible' : 'collapsed'"
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
         *ngFor="let hour of hours"
         [text]="formatHours(hour)"
         style="text-align: center"
@@ -14,8 +11,6 @@
         fontSize="16"
         [color]="formatCurrentDay(day) ? theme.accentColor : theme.inactiveColor"
         [fontWeight]="formatCurrentDay(day) ? '500' : '300'"></Label>
-<<<<<<< HEAD
-=======
     <!-- <Label 
         [visibility]="period ? 'visible' : 'collapsed'"
         [text]="formatPeriod(period)"
@@ -24,5 +19,4 @@
         fontSize="16"
         [color]="formatCurrentDay(day) ? theme.accentColor : theme.inactiveColor"
         [fontWeight]="formatCurrentDay(day) ? '500' : '300'"></Label> -->
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 </StackLayout>

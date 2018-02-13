@@ -151,15 +151,9 @@ color: #ffffff;
 }
 
 .btn-outline {
-border-color: #ba262e;
-}
-
-.btn-outline {
 background-color: transparent;
-}
-
-.btn-outline {
-border-width: 1;
+border-width: 1pt;
+border-color: #ba262e;
 }
 
 .btn-outline {

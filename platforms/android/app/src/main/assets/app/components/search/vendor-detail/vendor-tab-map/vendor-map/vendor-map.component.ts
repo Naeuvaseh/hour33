@@ -1,31 +1,16 @@
 import { Component, ElementRef, ViewChild, OnInit, Input } from '@angular/core';
 import { registerElement } from "nativescript-angular/element-registry";
-<<<<<<< HEAD
-import { Vendor } from '../../../../../interfaces/vendor.interface';
-import { Theme } from '../../../../../settings';
-
-registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
-=======
 import { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 import { Theme } from '../../../../../settings';
 import { MapView, Marker, Position } from 'nativescript-google-maps-sdk';
 
 registerElement('MapView', () => MapView);
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 
 @Component({
   selector: 'vendor-map',
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
-<<<<<<< HEAD
-  @ViewChild("MapView") mapView: ElementRef;
-  @Input() vendor: Vendor;
-
-  public theme;
-  private lat: number;
-  private long: number;
-=======
   @ViewChild("mapView") mapView: MapView;
   
   @Input() vendor: VendorDetail;
@@ -39,29 +24,19 @@ export class VendorMapComponent implements OnInit {
   public bearing: number = 0;
   public tilt: number = 0;
   public lastCamera: string;
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 
   constructor() {
     this.theme = Theme;
   }
 
   ngOnInit(){
-<<<<<<< HEAD
-    this.lat = 32.1234;
-    this.long = 32.12345;
-=======
     console.log('VendorMapComonent.ngOnInit() Vendor Location: ' + JSON.stringify(this.vendor.result.geometry));
     
     
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
   }
 
   onMapReady = (event) => {
     console.log("Map Ready");
-<<<<<<< HEAD
-  };
-
-=======
     this.mapView = <MapView> event.object;
     this.mapView.settings.tiltGesturesEnabled = false;
     this.mapView.settings.myLocationButtonEnabled = true;
@@ -99,7 +74,6 @@ export class VendorMapComponent implements OnInit {
     this.lastCamera = JSON.stringify(args.camera);
 }
 
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 // ****** Maps Demo Code ****** //
 
 //   public onMapReady = (event) => {

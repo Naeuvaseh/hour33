@@ -1,13 +1,7 @@
 import { AddressComponents } from './address-components.interface';
 import { Reviews } from './reviews.interface';
-<<<<<<< HEAD
-=======
 import { Period } from '../../period.interface';
-<<<<<<< HEAD
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
-=======
 import { Photo } from './photo.interface'
->>>>>>> d3db476e867ad4cfcc0c40b23cd629e925b5673a
 
 export interface VendorDetail {
     html_attributions: string[],
@@ -46,15 +40,11 @@ export interface VendorDetail {
        url: string,
        utc_offset: number,
        vicinity: string,
-<<<<<<< HEAD
-       website: string
-=======
        website: string,
        opening_hours?:{
            open_now?: boolean,
            periods?: Array<Period>
        }
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
     },
     status: string
  }

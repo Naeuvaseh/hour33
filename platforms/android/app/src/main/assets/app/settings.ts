@@ -16,10 +16,7 @@ export const Theme ={
 }
 
 export const GooglePlacesAPIKey = "AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM";
-<<<<<<< HEAD
-=======
 export const GoogleMapsAPIKey = "AIzaSyAYH6CcEihpQxV6uwWxTgY3npS00QT4xO4";
->>>>>>> ee0648c0654d85533f2dc27ac4f49ec1b6f60a4f
 
 export const Debug = {
     console: {
