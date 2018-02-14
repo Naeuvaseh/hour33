@@ -38,6 +38,7 @@ export class SearchComponent implements OnInit {
 
   @ViewChild('vendorList') listViewComponent: RadListViewComponent;
   @ViewChild('filterMenu') filterMenu: AbsoluteLayout;
+  @ViewChild('search') searchTxt: TextField;
   @ViewChild('distanceSlider') distanceSlider: Slider;
 
   private theme;
@@ -51,6 +52,7 @@ export class SearchComponent implements OnInit {
 
   public searchResults: SearchResult;
   public vendors: Vendor[];
+  public filterSearchBtnProgress: boolean = false;
   public title: string;
   public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
   public listViewVisible: boolean = true;
@@ -113,6 +115,7 @@ export class SearchComponent implements OnInit {
           alert('The default search had an error. Please try again.');
           break;
       }
+      this.filterSearchBtnProgress = false;
       // Close filter menu visibility if open
       this.filterMenuVisible = false;
     });
@@ -247,15 +250,21 @@ export class SearchComponent implements OnInit {
   }
   
   onResetTap(){
+    console.log('SearchComponent.onReset() TAPPED');
+    // Reset service filter
     this.googleLocationService.searchFilter = {
       mode: SearchMode.Nearby,
       distance: Radius.mi5,
       searchText: null      
     }
-
+    // Reset filter menu controls
+    this.filterSearchBtnProgress = false;
+    this.searchTxt.text = '';
+    this.distance = this.convertToMiles(this.googleLocationService.searchFilter.distance).toFixed(2);
   }
   
   onSearchTap(){
+    this.filterSearchBtnProgress = true;
     console.log('Current Search Filters: ' + JSON.stringify(this.googleLocationService.searchFilter));
     switch(this.googleLocationService.searchFilter.mode){
       case SearchMode.Nearby: {
@@ -277,8 +286,6 @@ export class SearchComponent implements OnInit {
   
   onSearchTextChange(event){
     let field = <TextField> event.object;
-    console.log(JSON.stringify(field.text));
-    
     // Update SearchMode
     switch(field.text){
       case null || undefined || '': {
@@ -292,6 +299,8 @@ export class SearchComponent implements OnInit {
       }
       break;
     }
+    // Update search text in service
+    this.googleLocationService.searchFilter.searchText = field.text;
   }
   
   convertToMiles(meters: number): number {
