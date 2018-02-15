@@ -143,7 +143,7 @@ export class SearchComponent implements OnInit {
     this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
     // API Call
     this.googleLocationService
-      .search(false)
+      .search(false, this.googleLocationService.searchFilter)
       .then((response: SearchResult) => {
         switch (response.status) {
           case SearchStatusCode.OK:

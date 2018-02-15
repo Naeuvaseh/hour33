@@ -143,7 +143,7 @@ export class SearchComponent implements OnInit {
     this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
     // API Call
     this.googleLocationService
-      .search(false)
+      .search(false, this.googleLocationService.searchFilter)
       .then((response: SearchResult) => {
         switch (response.status) {
           case SearchStatusCode.OK:
@@ -194,7 +194,8 @@ export class SearchComponent implements OnInit {
               this.setNextPageFlag(response);
               if (!this.nextPageFlag) args.object.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
               this.searchResults = this.googleLocationService.searchResults = response;
-              let tempIndex = this.vendors.length-1;
+              let tempIndex = this.vendors.length - 1;
+              // Add vendors to UI
               for (let vendor of response.results) {
                 this.vendors.push(<Vendor>vendor);
               }

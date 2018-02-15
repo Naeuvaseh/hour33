@@ -97,67 +97,6 @@ export class GoogleLocationService {
         });
     }
 
-    // public nearbySearch(text?: string, types?: string): Object {
-    //     //var searchBy = this.capitalize(text).replace(new RegExp(" ", 'g'), "");
-    //     // Required params
-    //     var location = "?location=" + this.userLocation.latitude.toString() + ',' + this.userLocation.longitude.toString(); // lat,long
-    //     var apiKey = "&key=" + GooglePlacesAPIKey;
-    //     var radius = "&radius=" + Radius.mi5;
-    //     // Optinal params
-    //     var keyword = "&keyword=bar"; //,brewery,restaurant,club,vineyard"; 
-    //     var language = "&language=en";
-    //     var rankBy = "&rankBy=distance";
-    //     // Build URL
-    //     var url = this.api.nearbyApi + location + radius + keyword + apiKey;
-    //     // Log URL
-    //     console.log("############################### Nearby Search ###############################");
-    //     console.log("URL=" + url);
-    //     console.log("#############################################################################");
-    //     // API Call
-    //     return this.http
-    //         .get(url)
-    //         .toPromise()
-    //         .then((response) =>{
-    //             console.log(JSON.stringify(response));
-    //         })
-    //         .catch(this.handleErrorPromise);
-    // }
-
-    // public textSearch(text?: string, radius?: Radius, language?: boolean, minPrice?: Price, maxPrice?: Price, type?: VendorType): Promise<SearchResult> {
-    //     return new Promise<SearchResult>((resolve, reject) => {
-
-    //         // Required params
-    //         var searchTextParam = "?query=" + ((text !== undefined) ? this.capitalize(text).replace(new RegExp(" ", 'g'), "") : "BAR");
-    //         var apiKeyParam = "&key=" + GooglePlacesAPIKey;
-    //         var locationParam = "&location=" + this.userLocation.latitude.toString() + ',' + this.userLocation.longitude.toString(); // lat,long 
-    //         // Optional params
-    //         var radiusParam = "&radius=" + Radius.mi1;
-    //         var minPriceParam = "&minprice=" + ((minPrice !== undefined) ? minPrice : Price.zero); // Default is lowest
-    //         var maxPriceParam = "&maxprice=" + ((maxPrice !== undefined) ? maxPrice : Price.four); // Default is highest
-    //         var typeParam = ((type !== undefined) ? "&type=" + type : "");
-    //         // Build URL
-    //         var url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + typeParam + apiKeyParam;
-    //         // Log URL
-    //         console.log("############################### Text Search ###############################");
-    //         console.log("URL=" + url);
-    //         console.log("#############################################################################");
-    //         // API Call
-    //         this.http
-    //         .get<SearchResult>(url)
-    //             .toPromise()
-    //             .then((response: SearchResult) => {
-    //                 if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch(): ' + JSON.stringify(response));
-    //                 this.results = response;
-    //                 this.vendorResults = response['results'];
-    //                 resolve(response);
-    //             },
-    //             (error) => {
-    //                 if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
-    //             });
-    //         });
-    // }
-
-    // Default == Nearby Search 
     public urlBuilder(location: Location, nextPageToken?: string, filter?: Filter): string {
         var url: string = GooglePlacesApiUrls.nearbyApi; // Set api base
         let api: string;
