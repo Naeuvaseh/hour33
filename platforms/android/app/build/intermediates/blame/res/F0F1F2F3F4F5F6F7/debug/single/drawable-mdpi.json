@@ -1,13 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail3.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail3.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beenhere.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beenhere.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\wine2.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\wine2.png"
     },
@@ -16,80 +8,52 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\wine.png"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\settings.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\settings.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\call.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\call.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\account.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\account.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\call.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\call.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\background.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\background.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\settings.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\settings.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer4.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer4.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\info.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\info.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\launch.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\launch.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\account.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\account.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\error.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\error.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\info.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\info.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog1.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog1.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\wine.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\wine.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\info.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\info.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail2.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail2.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\music3.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music3.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\back_arrow.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\back_arrow.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog1.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog1.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail4.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail4.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\music.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\logo.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\logo.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer3.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer3.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumbs_up_down.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumbs_up_down.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\launch.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\launch.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\feedback.png",
@@ -100,240 +64,8 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\download.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\location.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\location.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\background.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\background.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumbs_up_down.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumbs_up_down.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumb_down.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumb_down.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\download.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\download.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\filter.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\filter.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\send.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\send.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\location.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\location.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\mojito.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\mojito.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\star.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\star.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\edit.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\edit.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\coffee.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\coffee.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\twitter.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\twitter.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\martini2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\martini2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\star.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\star.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\music.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\person.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\person.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\google_plus.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\google_plus.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer2.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\tequila.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\tequila.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\navigate.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\navigate.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\edit.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\edit.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\favorite_empty.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\favorite_empty.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\margarita2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\margarita2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog4.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog4.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\margarita.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\margarita.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\martini.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\martini.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\food.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\food.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\filter.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\filter.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\martini2.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\martini2.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\error.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\error.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\share.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\share.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail5.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail5.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail3.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail3.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\vodka.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\vodka.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer3.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer3.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\whiskey.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\whiskey.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\music3.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music3.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog2.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog2.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\send.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\send.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\wine2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\wine2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\coffee.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\coffee.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\logo.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\logo.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\whiskey2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\whiskey2.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\champagne.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\champagne.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumb_up.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumb_up.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\attachment.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\attachment.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\search.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\search.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail2.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail2.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\logo.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\logo.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer2.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumbs_up_down.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumbs_up_down.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer4.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer4.png"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\launch.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\launch.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\icon.png",
@@ -348,28 +80,40 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beenhere.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\music2.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music2.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\twitter.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\twitter.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumb_down.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumb_down.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\navigate.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\navigate.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\feedback.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\feedback.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\filter.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\filter.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\toast.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\toast.png"
     },
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\location.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\location.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog.png"
+    },
+    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\mimosa.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\mimosa.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\mojito.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\mojito.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog3.png",
@@ -380,40 +124,48 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail4.png"
     },
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\star.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\star.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\edit.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\edit.png"
+    },
+    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumb_up.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumb_up.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\coffee.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\coffee.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\margarita2.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\margarita2.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\favorite.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\favorite.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog3.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog3.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\thumb_down.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\thumb_down.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\icon.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\music.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\whiskey2.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\whiskey2.png"
     },
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\google_plus.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\google_plus.png"
+    },
+    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail5.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail5.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\beer2.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\beer2.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog4.png",
@@ -424,20 +176,16 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\vodka.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\mojito.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\mojito.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\favorite_empty.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\favorite_empty.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\share.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\share.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\food.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\food.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\google_plus.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\google_plus.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\margarita.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\margarita.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail.png",
@@ -448,24 +196,20 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\champagne.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\food.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\food.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\facebook.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\facebook.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\whiskey.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\whiskey.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\martini2.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\martini2.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\toast.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\toast.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\settings.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\settings.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\error.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\error.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\tequila.png",
@@ -476,6 +220,10 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\martini.png"
     },
     {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\cocktail3.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\cocktail3.png"
+    },
+    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\search.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\search.png"
     },
@@ -484,28 +232,24 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\music2.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\facebook.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\facebook.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\favorite.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\favorite.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\favorite_empty.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\favorite_empty.png"
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\whiskey.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\whiskey.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\dog2.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\dog2.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\send.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\send.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\back_arrow.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\back_arrow.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\margarita.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\margarita.png"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\mimosa.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\mimosa.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-mdpi\\attachment.png",

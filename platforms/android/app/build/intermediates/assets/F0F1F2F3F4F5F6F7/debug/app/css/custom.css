@@ -150,20 +150,16 @@ border-color: #ba262e;
 color: #ffffff;
 }
 
-.btn-outline {
-border-color: #ba262e;
-}
-
-.btn-outline {
-background-color: transparent;
-}
-
-.btn-outline {
-border-width: 1;
-}
-
-.btn-outline {
-color: #ba262e;
+.btn-outline-custom {
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 1px;
+    color: #ba262e;
+    min-height: 16;
+    max-height: 32;
+    min-width: 64;
+    font-family: 'Roboto Medium';
+    font-size: 14;
 }
 
 .btn[isEnabled=false] {

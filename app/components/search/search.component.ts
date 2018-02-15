@@ -27,7 +27,6 @@ import { Filter } from '../../interfaces/filter.interface';
 // Enums
 import { Day } from '../../enums/day.enum';
 import { Radius } from '../../enums/radius.enum';
-import { SearchMode } from '../../enums/search-mode.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
 
 @Component({
@@ -53,6 +52,8 @@ export class SearchComponent implements OnInit {
   public searchResults: SearchResult;
   public vendors: Vendor[];
   public filterSearchBtnProgress: boolean = false;
+  public showFilterCriteria: boolean = true;
+  public filterCriteria: string;
   public title: string;
   public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
   public listViewVisible: boolean = true;
@@ -65,6 +66,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
     this.setTitle();
     this.setDistanceSliderValue();
     // Check if data exists
@@ -77,48 +79,48 @@ export class SearchComponent implements OnInit {
     // load default
     else {
       this.loadingFlag = true;
-      this.search(SearchMode.Nearby, false, this.googleLocationService.searchFilter);
+      this.search(false, this.googleLocationService.searchFilter);
     }
   }
   // Local component "search" method that uses the service's Search method.
-  search(mode: SearchMode, nextPage?: boolean, filter?: Filter) {
+  search(nextPage?: boolean, filter?: Filter) {
     this.googleLocationService
-    .search(mode, nextPage, filter)
-    .then((response: SearchResult) => {
-      this.loadingFlag = false;
-      switch (response.status) {
-        case SearchStatusCode.OK:
-          // Set data at both service level and component level
-          this.setNextPageFlag(response);
-          // Remove "Load More" at bottom of list if there is not a next_page_token in result set.
-          if (!this.nextPageFlag) this.listViewComponent.listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
-          // Update search results to component and service
-          this.searchResults = this.googleLocationService.searchResults = response;
-          // Set Vendors list from results
-          this.vendors = this.googleLocationService.vendors = <Vendor[]>response.results;
-          // Update status code to display results
-          this.searchStatusCode = SearchStatusCode.OK;
-          break;
-        case SearchStatusCode.ZERO_RESULTS:
-          this.searchStatusCode = SearchStatusCode.ZERO_RESULTS;
-          break;
-        case SearchStatusCode.INVALID_REQUEST:
-          console.log('SearchComponent.ngOnInit(SearchStatusCode.INVALID_REQUEST) Message: ' + response.error_message);
-          alert('Something went wrong. Please try again.');
-          break;
-        case SearchStatusCode.UNKNOWN_ERROR:
-          console.log('SearchComponent.ngOnInit(SearchStatusCode.UNKNOWN_ERROR) Message: ' + response.error_message);
-          alert('Something went wrong. Please try again.');
-          break;
-        default:
-          console.log('SearchComponent.ngOnInit(DEFAULT)');
-          alert('The default search had an error. Please try again.');
-          break;
-      }
-      this.filterSearchBtnProgress = false;
-      // Close filter menu visibility if open
-      this.filterMenuVisible = false;
-    });
+      .search(nextPage, filter)
+      .then((response: SearchResult) => {
+        this.loadingFlag = false;
+        switch (response.status) {
+          case SearchStatusCode.OK:
+            // Set data at both service level and component level
+            this.setNextPageFlag(response);
+            // Remove "Load More" at bottom of list if there is not a next_page_token in result set.
+            if (!this.nextPageFlag) this.listViewComponent.listView.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
+            // Update search results to component and service
+            this.searchResults = this.googleLocationService.searchResults = response;
+            // Set Vendors list from results
+            this.vendors = this.googleLocationService.vendors = <Vendor[]>response.results;
+            // Update status code to display results
+            this.searchStatusCode = SearchStatusCode.OK;
+            break;
+          case SearchStatusCode.ZERO_RESULTS:
+            this.searchStatusCode = SearchStatusCode.ZERO_RESULTS;
+            break;
+          case SearchStatusCode.INVALID_REQUEST:
+            console.log('SearchComponent.ngOnInit(SearchStatusCode.INVALID_REQUEST) Message: ' + response.error_message);
+            alert('Something went wrong. Please try again.');
+            break;
+          case SearchStatusCode.UNKNOWN_ERROR:
+            console.log('SearchComponent.ngOnInit(SearchStatusCode.UNKNOWN_ERROR) Message: ' + response.error_message);
+            alert('Something went wrong. Please try again.');
+            break;
+          default:
+            console.log('SearchComponent.ngOnInit(DEFAULT)');
+            alert('The default search had an error. Please try again.');
+            break;
+        }
+        this.filterSearchBtnProgress = false;
+        // Close filter menu visibility if open
+        this.filterMenuVisible = false;
+      });
   }
 
   onFilter() {
@@ -141,7 +143,7 @@ export class SearchComponent implements OnInit {
     this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
     // API Call
     this.googleLocationService
-      .search(SearchMode.Nearby, false)
+      .search(false)
       .then((response: SearchResult) => {
         switch (response.status) {
           case SearchStatusCode.OK:
@@ -184,7 +186,7 @@ export class SearchComponent implements OnInit {
   onLoadMoreItemsRequested(args: ListViewEventData) {
     if (this.searchResults.next_page_token) {
       this.googleLocationService
-        .search(SearchMode.Nearby, true, null, this.searchResults) // 'null' for filter because the original search criteria has been requested
+        .search(true, null, this.searchResults) // 'null' for filter because the original search criteria has been requested
         .then((response) => {
           switch (response.status) {
             case SearchStatusCode.OK:
@@ -253,9 +255,7 @@ export class SearchComponent implements OnInit {
     console.log('SearchComponent.onReset() TAPPED');
     // Reset service filter
     this.googleLocationService.searchFilter = {
-      mode: SearchMode.Nearby,
-      distance: Radius.mi5,
-      searchText: null      
+      distance: Radius.mi5 
     }
     // Reset filter menu controls
     this.filterSearchBtnProgress = false;
@@ -264,43 +264,20 @@ export class SearchComponent implements OnInit {
   }
   
   onSearchTap(){
+    // Display progres circle
     this.filterSearchBtnProgress = true;
-    console.log('Current Search Filters: ' + JSON.stringify(this.googleLocationService.searchFilter));
-    switch(this.googleLocationService.searchFilter.mode){
-      case SearchMode.Nearby: {
-        console.log('SearchComponent.onSearchTap(SearchMode.Nearby)');
-        this.search(this.googleLocationService.searchFilter.mode, false, this.googleLocationService.searchFilter);
-      }
-      break;
-      case SearchMode.Text: {
-        console.log('SearchComponent.onSearchTap(SearchMode.Text)');
-        
-      }
-      break;
-      default: {
-        console.log('SearchComponent.onSearch(): ERROR. Something went wrong with the search mode selection.');
-      }
-      break;
-    }
+    console.log('SearchComponent.onSearchTap()');
+    this.search(false, this.googleLocationService.searchFilter);
+  }
+
+  onfilterCriteriaTap(){
+    this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
   }
   
   onSearchTextChange(event){
     let field = <TextField> event.object;
-    // Update SearchMode
-    switch(field.text){
-      case null || undefined || '': {
-        this.googleLocationService.searchFilter.mode = SearchMode.Nearby;
-        console.log('SearchMode: ' + this.googleLocationService.searchFilter.mode);
-      }
-      break;
-      default: {
-        this.googleLocationService.searchFilter.mode = SearchMode.Text;
-        console.log('SearchMode: ' + this.googleLocationService.searchFilter.mode);
-      }
-      break;
-    }
     // Update search text in service
-    this.googleLocationService.searchFilter.searchText = field.text;
+    this.googleLocationService.searchFilter.keyword = field.text;
   }
   
   convertToMiles(meters: number): number {

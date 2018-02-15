@@ -122,114 +122,155 @@
     </FlexboxLayout>
 </FlexboxLayout>
 <!-- Filter Menu -->
-<GridLayout
+<AbsoluteLayout
     #filterMenu
-    rows="9*, 1*"
-    columns="*, *, *"
     [visibility]="filterMenuVisible ? 'visible' : 'collapsed'"
     width="100%"
     height="100%"
     [backgroundColor]="theme.primaryColor">
-    <ScrollView 
-        row="0"
-        col="0"
-        colSpan="3"
-        width="100%" 
-        padding="10"
-        orientation="vertical" 
-        [backgroundColor]="theme.primaryColor">
-        <GridLayout 
-            rows="auto, auto, auto" 
-            columns="auto, *, *, *, *"
-            padding="10">
-            <!-- Row 0 - Search Text -->
-            <Label
-                row="0"
-                col="0"
-                colSpan="1"
-                text="Search: " 
-                fontSize="20"
-                [color]="theme.inactiveColor"></Label>
-            <TextField 
-                #search
-                row="0"
-                col="1"
-                colSpan="4"
-                [color]="theme.accentColor"></TextField>
-            <!-- Row 1-2 -->
-            <Label 
-                row="1"
-                col="0"
-                fontSize="20"
-                [color]="theme.inactiveColor"
-                text="Distance: "></Label>
-            <Label 
-                row="1"
-                col="1"
-                colSpan="2"
-                alignSelf="center">
-                <FormattedString>
-                    <Span
-                        [text]="distance"
-                        [color]="theme.accentColor"
-                        fontSize="20"
-                        fontWeight="700"></Span>
-                    <Span
-                        text=" miles"
-                        textWrap="true"
-                        fontSize="16"
-                        [color]="theme.inactiveColor"></Span>
-                </FormattedString>
-            </Label>
-            <!-- Distance -->
-            <Slider 
-                #distanceSlider
-                row="3"
-                col="0"
-                colSpan="5"
-                minValue="1"
-                maxValue="50000"
-                margin="20 0 20 0"
-                [backgroundColor]="theme.lightGrey"
-                (valueChange)="onDistanceSliderChange($event)"></Slider>
-        </GridLayout>
-    </ScrollView>
-    <FlexboxLayout
-        row="1"
-        col="0"
-        colSpan="3"
-        width="100%"
-        height="100%"
-        flexDirection="row"
-        alignItems="center">
-        <Button  
+    <GridLayout 
+        left="0" top="0"
+        rows="9*, 1*" columns="*, *, *"
+        width="100%" height="100%">
+        <ScrollView 
+            row="0"
+            col="0"
+            colSpan="3"
+            width="100%" 
+            padding="10"
+            orientation="vertical" 
+            [backgroundColor]="theme.primaryColor">            
+            <GridLayout 
+                left="0"
+                top="0"
+                rows="auto, auto, auto, auto, auto" 
+                columns="auto, *, *, *, *, *"
+                padding="10">
+                <!-- Row 0 - Filter Criteria -->
+                <Label 
+                    [text]="filterCriteria"
+                    color="#fff"
+                    [visibility]="showFilterCriteria ? 'visible' : 'collapsed'"
+                    textWrap="true"
+                    row="0"
+                    col="0"
+                    (tap)="onfilterCriteriaTap()"
+                    colSpan="6"
+                    textWrap="true"></Label>
+                <!-- Row 1 - Search Text -->
+                <Label
+                    row="1"
+                    col="0"
+                    colSpan="1"
+                    text="Search: " 
+                    fontSize="20"
+                    alignSelf="center"
+                    [color]="theme.inactiveColor"></Label>
+                <TextField 
+                    #search
+                    row="1"
+                    col="1"
+                    colSpan="4"
+                    alignSelf="center"
+                    (textChange)="onSearchTextChange($event)"
+                    [color]="theme.accentColor"></TextField>
+                <!-- Row 2-3 -->
+                <Label 
+                    row="2"
+                    col="0"
+                    fontSize="20"
+                    [color]="theme.inactiveColor"
+                    text="Distance: "></Label>
+                <Label 
+                    row="2"
+                    col="1"
+                    colSpan="2"
+                    alignSelf="center">
+                    <FormattedString>
+                        <Span
+                            [text]="distance"
+                            [color]="theme.accentColor"
+                            fontSize="20"
+                            fontWeight="700"></Span>
+                        <Span
+                            text=" miles"
+                            textWrap="true"
+                            fontSize="16"
+                            [color]="theme.inactiveColor"></Span>
+                    </FormattedString>
+                </Label>
+                <!-- Row 4 -->
+                <Slider 
+                    #distanceSlider
+                    row="4"
+                    col="0"
+                    colSpan="5"
+                    minValue="1"
+                    maxValue="48280.3"
+                    margin="20 0 20 0"
+                    [value]="setDistanceSliderValue()"
+                    [backgroundColor]="theme.lightGrey"
+                    (valueChange)="onDistanceSliderChange($event)"></Slider>
+            </GridLayout>
+        </ScrollView>
+        <!-- Bottom Button Array -->
+        <FlexboxLayout
             row="1"
             col="0"
-            width="50%"
-            text="Cancel"
-            alignSelf="center"
-            [color]="theme.inactiveColor"
-            [backgroundColor]="theme.darkGrey"
-            (tap)="cancel()"
-            class="btn btn-secondary"></Button>
-        <Button
-            row="1"
-            col="1"
-            width="50%"
-            text="Reset"
-            alignSelf="center"
-            class="btn btn-outline"
-            (tap)="onReset()"></Button>
-        <Button
-            row="1"
-            col="2"
-            width="50%"
-            text="&#xf002; Search"
-            alignSelf="center"        
-            [color]="theme.inactiveColor"                      
-            class="btn btn-primary font-awesome"></Button>
-    </FlexboxLayout>
-</GridLayout>
+            colSpan="3"
+            width="100%"
+            height="100%"
+            minHeight="100%"
+            flexDirection="row"
+            alignItems="center">
+            
+            <!-- Cancel Button -->
+            <Button  
+                row="1"
+                col="0"
+                width="50%"
+                minHeight="50%"
+                text="Cancel"
+                alignSelf="center"
+                [color]="theme.inactiveColor"
+                [backgroundColor]="theme.darkGrey"
+                (tap)="onCancelTap()"
+                class="btn btn-secondary"></Button>
+            <!-- Reset Button -->
+            <Button
+                row="1"
+                col="1"
+                width="50%"
+                minHeight="50%%"
+                text="Reset"
+                alignSelf="center"
+                class="btn btn-outline-custom"
+                (tap)="onResetTap()"></Button>
+            <!-- Search Button -->
+            <Button
+                row="1"
+                col="2"
+                width="50%"
+                minHeight="50%"
+                text="&#xf002; Search"
+                alignSelf="center"        
+                [color]="theme.inactiveColor"                      
+                class="btn btn-primary font-awesome"
+                (tap)="onSearchTap()"></Button>
+        </FlexboxLayout>
+    </GridLayout>
+    <ActivityIndicator 
+        left="50%"
+        top="50%"
+        busy="true" 
+        width="100" 
+        height="100" 
+        alignSelf="center"
+        [color]="theme.accentColor"
+        [visibility]="filterSearchBtnProgress ? 'visible' : 'collapsed'"
+        class="activity-indicator"></ActivityIndicator>
+</AbsoluteLayout>
+
 <!-- OK Display -->
 <RadListView 
     #vendorList

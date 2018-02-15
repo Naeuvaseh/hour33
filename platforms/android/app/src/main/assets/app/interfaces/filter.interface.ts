@@ -1,7 +1,7 @@
-import { SearchMode } from '../enums/search-mode.enum';
+import { VendorType } from '../enums/vendor-type.enum';
 
 export interface Filter {
-    mode: SearchMode,
-    searchText: string,
-    distance: number
+    distance: number,
+    keyword?: string, 
+    vendorType?: VendorType
 }

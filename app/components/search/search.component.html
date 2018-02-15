@@ -143,33 +143,46 @@
             <GridLayout 
                 left="0"
                 top="0"
-                rows="auto, auto, auto, auto" 
+                rows="auto, auto, auto, auto, auto" 
                 columns="auto, *, *, *, *, *"
                 padding="10">
-                <!-- Row 0 - Search Text -->
-                <Label
+                <!-- Row 0 - Filter Criteria -->
+                <Label 
+                    [text]="filterCriteria"
+                    color="#fff"
+                    [visibility]="showFilterCriteria ? 'visible' : 'collapsed'"
+                    textWrap="true"
                     row="0"
+                    col="0"
+                    (tap)="onfilterCriteriaTap()"
+                    colSpan="6"
+                    textWrap="true"></Label>
+                <!-- Row 1 - Search Text -->
+                <Label
+                    row="1"
                     col="0"
                     colSpan="1"
                     text="Search: " 
                     fontSize="20"
+                    alignSelf="center"
                     [color]="theme.inactiveColor"></Label>
                 <TextField 
                     #search
-                    row="0"
+                    row="1"
                     col="1"
                     colSpan="4"
+                    alignSelf="center"
                     (textChange)="onSearchTextChange($event)"
                     [color]="theme.accentColor"></TextField>
-                <!-- Row 1-2 -->
+                <!-- Row 2-3 -->
                 <Label 
-                    row="1"
+                    row="2"
                     col="0"
                     fontSize="20"
                     [color]="theme.inactiveColor"
                     text="Distance: "></Label>
                 <Label 
-                    row="1"
+                    row="2"
                     col="1"
                     colSpan="2"
                     alignSelf="center">
@@ -186,10 +199,10 @@
                             [color]="theme.inactiveColor"></Span>
                     </FormattedString>
                 </Label>
-                <!-- Distance -->
+                <!-- Row 4 -->
                 <Slider 
                     #distanceSlider
-                    row="3"
+                    row="4"
                     col="0"
                     colSpan="5"
                     minValue="1"
@@ -210,6 +223,7 @@
             minHeight="100%"
             flexDirection="row"
             alignItems="center">
+            
             <!-- Cancel Button -->
             <Button  
                 row="1"
