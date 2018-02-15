@@ -1,8 +1,8 @@
 export enum VendorType {
     Bar = 'bar',
-    Cafe = 'cafe',
-    Restaurant = 'restaurant',
     NightClub = 'night_club',
+    Restaurant = 'restaurant',
+    Cafe = 'cafe',
     Establishment = 'establishment',
     PointOfInterest = 'point_of_interest'   
 }
