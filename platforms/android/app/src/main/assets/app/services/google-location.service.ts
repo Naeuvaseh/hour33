@@ -47,7 +47,7 @@ export class GoogleLocationService {
         this.searchFilter = {
             vendorType: VendorType.Bar,
             distance: Radius.mi5,
-            distPop: DistPop.Distance
+            distPop: DistPop.Popularity
         }
     }
 
@@ -104,6 +104,7 @@ export class GoogleLocationService {
         let locationParam: string = '?location=' + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long;
         let apiKeyParam = "&key=" + GooglePlacesAPIKey;
         let radiusParam: string = '&radius=';
+        let rankbyParam: string = '&rankby=';
         let typeParam: string = '&type=';
         let keywordParam: string = '&keyword=';
         
@@ -111,15 +112,16 @@ export class GoogleLocationService {
         if (nextPageToken) {
             return url += nextPageParam + nextPageToken + apiKeyParam;
         }
-        
-        // Build and return URL based on mode and provided filter params
-        url += locationParam  // required param
-        url += (this.searchFilter.distance) ? radiusParam + this.searchFilter.distance.toString() : radiusParam + Radius.mi25;
-        url += (this.searchFilter.keyword && this.searchFilter.keyword != '') ? keywordParam + this.searchFilter.keyword : '';
-        url += (this.searchFilter.vendorType) ? typeParam + this.searchFilter.vendorType : typeParam + VendorType.Bar;
-        
-        // Build URL
-        return url += apiKeyParam;
+        else {
+            // Build and return URL based on mode and provided filter params
+            url += locationParam  // required param
+            url += (filter.distance && filter.distPop == DistPop.Distance) ? rankbyParam + 'distance' : '';
+            url += (filter.distPop == DistPop.Popularity) ? radiusParam + filter.distance.toString() + rankbyParam + 'prominence' : '';
+            url += (filter.keyword && filter.keyword != '')  ? keywordParam + filter.keyword : '';
+            url += (filter.vendorType) ? typeParam + filter.vendorType : typeParam + VendorType.Bar;
+            // Build URL
+            return url += apiKeyParam;
+        }
     }
 
     private handleErrorPromise (error: Response | any) {

@@ -12,10 +12,12 @@ import { Location } from 'nativescript-geolocation';
 import { Accuracy } from 'ui/enums';
 import { AbsoluteLayout } from 'tns-core-modules/ui/layouts/absolute-layout'
 import { AnimationCurve } from "ui/enums";
-import { TextField } from "ui/text-field";
+import { TextField } from "tns-core-modules/ui/text-field";
 import { Slider } from 'tns-core-modules/ui/slider/slider';
 import { Switch } from 'tns-core-modules/ui/switch/switch';
 import { RadListViewComponent } from 'nativescript-pro-ui/listview/angular';
+import * as nsObservable from "tns-core-modules/data/observable";
+import { BindingOptions } from "tns-core-modules/ui/core/bindable";
 // Plugins
 import * as geolocation from 'nativescript-geolocation';
 // Services
@@ -257,12 +259,12 @@ export class SearchComponent implements OnInit {
 
   toggleDistance(event){
     let d = <Switch>event.object;
-    this.distPop = this.googleLocationService.searchFilter.distPop = (d.checked) ? DistPop.Distance : DistPop.Poplarity;
+    this.distPop = this.googleLocationService.searchFilter.distPop = (d.checked) ? DistPop.Distance : DistPop.Popularity;
   }
 
   togglePopularity(event)  {
     let p = <Switch>event.object;
-    this.distPop = this.googleLocationService.searchFilter.distPop = (p.checked) ? DistPop.Poplarity : DistPop.Distance;
+    this.distPop = this.googleLocationService.searchFilter.distPop = (p.checked) ? DistPop.Popularity : DistPop.Distance;
   }
   
   onCancelTap(){
@@ -271,7 +273,6 @@ export class SearchComponent implements OnInit {
   }
   
   onResetTap(){
-    console.log('SearchComponent.onReset() TAPPED');
     // Reset service filter
     this.googleLocationService.searchFilter = {
       distance: Radius.mi5,
@@ -279,7 +280,7 @@ export class SearchComponent implements OnInit {
     }
     // Reset filter menu controls
     this.filterSearchBtnProgress = false;
-    this.searchTxt.text = '';
+    this.distPop = DistPop.Distance;
     this.distance = this.convertToMiles(this.googleLocationService.searchFilter.distance).toFixed(2);
   }
   
@@ -293,7 +294,7 @@ export class SearchComponent implements OnInit {
   onfilterCriteriaTap(){
     this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
   }
-  
+
   onSearchTextChange(event){
     let field = <TextField> event.object;
     // Update search text in service

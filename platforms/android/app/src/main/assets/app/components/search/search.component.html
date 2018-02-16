@@ -153,84 +153,82 @@
                         (tap)="onfilterCriteriaTap()"></Label>
                 </FlexboxLayout>
                 <!-- Search TextField -->
-                <FlexboxLayout flexDirection="row">
+                <FlexboxLayout flexDirection="row" padding="10 0 10 0" border="10">
                     <TextField 
                         #search
-                        hint="&#xf002; Search"
+                        hint=" &#xf002; Search"
                         width="100%"
                         fontSize="26"
-                        border="10"
-                        padding="10 0 20 0"
                         class="font-awesome"
                         alignSelf="center"
                         (textChange)="onSearchTextChange($event)"
-                        style="placeholder-color: {{ theme.lightGrey }}; background-color: transparent;"
+                        style="placeholder-color: {{ theme.lightGrey }}; background-color: #3D3638;"
                         [color]="theme.accentColor"></TextField>
                 </FlexboxLayout>
-                <!-- Distance Slider -->
-                <FlexboxLayout flexDirection="column">
-                    <!-- Labels -->
-                    <FlexboxLayout>
-                        <Label 
-                            fontSize="20"
-                            [color]="theme.inactiveColor"
-                            text="Distance: "></Label>
-                        <Label>
-                            <FormattedString>
-                                <Span
-                                    [text]="distance"
-                                    [color]="theme.accentColor"
-                                    fontSize="20"
-                                    fontWeight="700"></Span>
-                                <Span
-                                    text=" miles"
-                                    textWrap="true"
-                                    fontSize="14"
-                                    [color]="theme.inactiveColor"></Span>
-                            </FormattedString>
-                        </Label>
-                    </FlexboxLayout>
-                    <!-- Slider -->
-                    <FlexboxLayout>
-                        <Slider 
-                            #distanceSlider
-                            minValue="1"
-                            maxValue="48280.3"
-                            margin="20 0 20 0"
-                            width="100%"
-                            [value]="setDistanceSliderValue()"
-                            [backgroundColor]="theme.lightGrey"
-                            (valueChange)="onDistanceSliderChange($event)"></Slider>
-                    </FlexboxLayout>
-                </FlexboxLayout>
                 <!-- DistPop Switches -->
-                <FlexboxLayout alignContent="center" alignContent="center" flexDirection="column">
+                <FlexboxLayout alignContent="center" alignContent="center" padding="10 0 10 0" flexDirection="column">
                     <FlexboxLayout>
                         <Label text="Search By" [color]="theme.inactiveColor" fontSize="20"></Label>
                     </FlexboxLayout>
-                    <FlexboxLayout width="90%" alignSelf="center" padding="5 0 0 0">
-                        <FlexboxLayout width="50%" alignContent="center">
-                            <Label 
-                                #distanceSwitch
-                                text="Distance"
-                                fontSize="16"
-                                padding="0 20 0 0"
-                                alignSelf="center" 
-                                [color]="theme.inactiveColor"></Label>
-                            <Switch [checked]="distPop == 'Distance'" (checkedChange)="toggleDistance($event)"></Switch>
-                        </FlexboxLayout>
+                    <FlexboxLayout width="90%" alignSelf="center" padding="10 0 0 0">
                         <FlexboxLayout width="50%" alignContent="center">
                             <Label 
                                 #popularitySwitch
-                                text="Popularity" 
+                                text="Best Match" 
                                 fontSize="16"
                                 padding="0 20 0 0"
                                 alignSelf="center"
                                 [color]="theme.inactiveColor"></Label>
                             <Switch [checked]="distPop == 'Popularity'" (checkedChange)="togglePopularity($event)"></Switch>
                         </FlexboxLayout>
+                        <FlexboxLayout width="50%" alignContent="center">
+                            <Label 
+                                #distanceSwitch
+                                text="Nearest"
+                                fontSize="16"
+                                padding="0 20 0 0"
+                                alignSelf="center" 
+                                [color]="theme.inactiveColor"></Label>
+                            <Switch [checked]="distPop == 'Distance'" (checkedChange)="toggleDistance($event)"></Switch>
+                        </FlexboxLayout>
                     </FlexboxLayout>
                 </FlexboxLayout>
+                <!-- Distance Slider -->
+                <FlexboxLayout flexDirection="column" padding="10 0 10 0" [visibility]="distPop == 'Popularity' ? 'visible' : 'collapsed'">
+                        <!-- Labels -->
+                        <FlexboxLayout>
+                            <Label 
+                                fontSize="20"
+                                [color]="theme.inactiveColor"
+                                text="Distance: "></Label>
+                            <Label>
+                                <FormattedString>
+                                    <Span
+                                        [text]="distance"
+                                        [color]="theme.accentColor"
+                                        fontSize="20"
+                                        fontWeight="700"></Span>
+                                    <Span
+                                        text=" miles"
+                                        textWrap="true"
+                                        fontSize="14"
+                                        [color]="theme.inactiveColor"></Span>
+                                </FormattedString>
+                            </Label>
+                        </FlexboxLayout>
+                        <!-- Slider -->
+                        <FlexboxLayout>
+                            <Slider 
+                                #distanceSlider
+                                minValue="1"
+                                maxValue="48280.3"
+                                margin="20 0 20 0"
+                                width="100%"
+                                [value]="setDistanceSliderValue()"
+                                [backgroundColor]="theme.lightGrey"
+                                (valueChange)="onDistanceSliderChange($event)"></Slider>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
             </FlexboxLayout>
         </ScrollView>
         <!-- Bottom Button Array -->
