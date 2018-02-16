@@ -18,6 +18,7 @@ import { Switch } from 'tns-core-modules/ui/switch/switch';
 import { RadListViewComponent } from 'nativescript-pro-ui/listview/angular';
 import * as nsObservable from "tns-core-modules/data/observable";
 import { BindingOptions } from "tns-core-modules/ui/core/bindable";
+import * as platformModule from "tns-core-modules/platform";
 // Plugins
 import * as geolocation from 'nativescript-geolocation';
 // Services
@@ -48,6 +49,8 @@ export class SearchComponent implements OnInit {
 
   private theme;
   private debug;
+  public screenX: number;
+  public screenY: number;
   private searchStatusCode: SearchStatusCode;
   private nextPageFlag: boolean;
   private loadingFlag: boolean;
@@ -72,9 +75,12 @@ export class SearchComponent implements OnInit {
     private googleLocationService: GoogleLocationService) {
     this.theme = Theme;
     this.debug = Debug;
+    this.screenX = platformModule.screen.mainScreen.widthDIPs;
+    this.screenY = platformModule.screen.mainScreen.heightDIPs;
   }
 
   ngOnInit() {
+    console.log('X: ' + this.screenX + ', Y: ' + this.screenY);
     this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
     this.setTitle();
     this.distPop = this.googleLocationService.searchFilter.distPop;
@@ -280,7 +286,7 @@ export class SearchComponent implements OnInit {
     }
     // Reset filter menu controls
     this.filterSearchBtnProgress = false;
-    this.distPop = DistPop.Distance;
+    this.distPop = DistPop.Popularity;
     this.distance = this.convertToMiles(this.googleLocationService.searchFilter.distance).toFixed(2);
   }
   
