@@ -11,10 +11,9 @@ registerElement('MapView', () => MapView);
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
-  @ViewChild("mapView") mapView: MapView;
-  
   @Input() vendor: VendorDetail;
-
+  
+  public mapView: MapView;
   public theme;
   public latitude: number;
   public longitude: number;
@@ -38,9 +37,9 @@ export class VendorMapComponent implements OnInit {
   onMapReady (event) {
     console.log("Map Ready");
     this.mapView = <MapView> event.object;
-    this.mapView.settings.tiltGesturesEnabled = false;
-    this.mapView.settings.myLocationButtonEnabled = false;
-    this.mapView.settings.compassEnabled = false;
+    this.mapView.settings.tiltGesturesEnabled = true;
+    this.mapView.settings.myLocationButtonEnabled = true;
+    this.mapView.settings.compassEnabled = true;
     this.bounds = Bounds.fromCoordinates(
       Position.positionFromLatLng(this.vendor.result.geometry.viewport.southwest.lat, this.vendor.result.geometry.viewport.southwest.lng),
       Position.positionFromLatLng(this.vendor.result.geometry.viewport.northeast.lat, this.vendor.result.geometry.viewport.northeast.lng)
@@ -57,11 +56,7 @@ export class VendorMapComponent implements OnInit {
     marker.snippet = "Snippet Test";
   //marker.userData = {index: 1};
     this.mapView.addMarker(marker);
-    
-
   };
-
- 
 
   onMarkerEvent(args) {
     console.log("Marker Event: '" + args.eventName
@@ -76,7 +71,7 @@ export class VendorMapComponent implements OnInit {
   onCameraChanged(args) {
     console.log("Camera changed: " + JSON.stringify(args.camera), JSON.stringify(args.camera) === this.lastCamera);
     this.lastCamera = JSON.stringify(args.camera);
-}
+  }
 
 // ****** Maps Demo Code ****** //
 
