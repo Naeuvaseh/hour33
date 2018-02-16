@@ -155,7 +155,7 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\TJ\.an
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\6c2ef8300db62e55a64755ef4551788d916b1b48\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\b820f9c5c82b7a6079a1593e30def2839c379500\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\TJ\.android\build-cache\bb57e73fa87d0c082881587291366647e87cb851\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\TJ\.android\build-cache\6185116923dcb6e00a83a5eaf5da11fa98d8681f\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\TJ\.android\build-cache\e9205a6dbfcf33e9ba1c14445d6f0001b10a9ae7\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:firebase-release:] C:\Users\TJ\.android\build-cache\a8430b113c761b4751982b7697c6f139157df9e6\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Chart-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\bc4f8570b56b6603719eab07a7950bba2726a4c9\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:Common-2017.1.1030-dev-release:] C:\Users\TJ\.android\build-cache\0b1a1e51ed03bb0be2b10a42bd6d9ffdf9a208f4\output\AndroidManifest.xml:7:5-9:41

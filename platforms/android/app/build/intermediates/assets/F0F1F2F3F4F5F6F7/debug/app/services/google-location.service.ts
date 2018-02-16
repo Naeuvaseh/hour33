@@ -28,8 +28,7 @@ import { Filter } from '../interfaces/filter.interface';
 // Enums
 import { Price } from '../enums/price.enum';
 import { VendorType } from '../enums/vendor-type.enum';
-import { RadioControlRegistry } from '@angular/forms/src/directives/radio_control_value_accessor';
-
+import { DistPop } from '../enums/distance-popularity.enum';
 
 @Injectable()
 export class GoogleLocationService {
@@ -39,7 +38,6 @@ export class GoogleLocationService {
     public searchResults: SearchResult;
     public vendors: Vendor[];
     // Google Places API
-    private api = GooglePlacesApiUrls;
     public searchFilter: Filter;
     public results: SearchResult;
     public vendorResults: Array<Vendor>;
@@ -48,7 +46,8 @@ export class GoogleLocationService {
         this._debug = Debug;
         this.searchFilter = {
             vendorType: VendorType.Bar,
-            distance: Radius.mi5
+            distance: Radius.mi5,
+            distPop: DistPop.Distance
         }
     }
 
@@ -78,12 +77,12 @@ export class GoogleLocationService {
                         .toPromise()
                             .then((response: SearchResult) => {
                                 if(response){
-                                    if (this._debug.console.GoogleLocation.data) console.log('GoogleLocationService.Search(mode:Default) DATA: ' + JSON.stringify(response));                                            
+                                    if (this._debug.console.GoogleLocation.data) console.log('GoogleLocationService.search() DATA: ' + JSON.stringify(response));                                            
                                     resolve(response);
                                 }
                             },
                             (error) => {
-                                if (Debug.console.GoogleLocation.error) console.log('GoogleLocationService.textSearch() ERROR: ' + JSON.stringify(error));
+                                if (Debug.console.GoogleLocation.error) console.log('GoogleLocationService.search() ERROR: ' + JSON.stringify(error));
                             });
                 }
                 else {
@@ -98,69 +97,8 @@ export class GoogleLocationService {
         });
     }
 
-    public nearbySearch(text?: string, types?: string): Object {
-        //var searchBy = this.capitalize(text).replace(new RegExp(" ", 'g'), "");
-        // Required params
-        var location = "?location=" + this.userLocation.latitude.toString() + ',' + this.userLocation.longitude.toString(); // lat,long
-        var apiKey = "&key=" + GooglePlacesAPIKey;
-        var radius = "&radius=" + Radius.mi5;
-        // Optinal params
-        var keyword = "&keyword=bar"; //,brewery,restaurant,club,vineyard"; 
-        var language = "&language=en";
-        var rankBy = "&rankBy=distance";
-        // Build URL
-        var url = this.api.nearbyApi + location + radius + keyword + apiKey;
-        // Log URL
-        console.log("############################### Nearby Search ###############################");
-        console.log("URL=" + url);
-        console.log("#############################################################################");
-        // API Call
-        return this.http
-            .get(url)
-            .toPromise()
-            .then((response) =>{
-                console.log(JSON.stringify(response));
-            })
-            .catch(this.handleErrorPromise);
-    }
-
-    public textSearch(text?: string, radius?: Radius, language?: boolean, minPrice?: Price, maxPrice?: Price, type?: VendorType): Promise<SearchResult> {
-        return new Promise<SearchResult>((resolve, reject) => {
-
-            // Required params
-            var searchTextParam = "?query=" + ((text !== undefined) ? this.capitalize(text).replace(new RegExp(" ", 'g'), "") : "BAR");
-            var apiKeyParam = "&key=" + GooglePlacesAPIKey;
-            var locationParam = "&location=" + this.userLocation.latitude.toString() + ',' + this.userLocation.longitude.toString(); // lat,long 
-            // Optional params
-            var radiusParam = "&radius=" + Radius.mi1;
-            var minPriceParam = "&minprice=" + ((minPrice !== undefined) ? minPrice : Price.zero); // Default is lowest
-            var maxPriceParam = "&maxprice=" + ((maxPrice !== undefined) ? maxPrice : Price.four); // Default is highest
-            var typeParam = ((type !== undefined) ? "&type=" + type : "");
-            // Build URL
-            var url = this.api.textSearchApi + searchTextParam + locationParam + radiusParam + minPriceParam + maxPriceParam + typeParam + apiKeyParam;
-            // Log URL
-            console.log("############################### Text Search ###############################");
-            console.log("URL=" + url);
-            console.log("#############################################################################");
-            // API Call
-            this.http
-            .get<SearchResult>(url)
-                .toPromise()
-                .then((response: SearchResult) => {
-                    if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch(): ' + JSON.stringify(response));
-                    this.results = response;
-                    this.vendorResults = response['results'];
-                    resolve(response);
-                },
-                (error) => {
-                    if (Debug.console.GoogleLocation) console.log('GoogleLocationService.textSearch() ERROR: ' + error);
-                });
-            });
-    }
-
-    // Default == Nearby Search 
     public urlBuilder(location: Location, nextPageToken?: string, filter?: Filter): string {
-        let url: string;
+        var url: string = GooglePlacesApiUrls.nearbyApi; // Set api base
         let api: string;
         let nextPageParam = "?pagetoken=";
         let locationParam: string = '?location=' + location.latitude.toString() + ',' + location.longitude.toString(); // lat,long;
@@ -169,9 +107,6 @@ export class GoogleLocationService {
         let typeParam: string = '&type=';
         let keywordParam: string = '&keyword=';
         
-        // Set api base
-        api = this.api.nearbyApi;
-
         // Check if there is a next_page token.
         if (nextPageToken) {
             return url += nextPageParam + nextPageToken + apiKeyParam;
@@ -199,7 +134,7 @@ export class GoogleLocationService {
 
     getVendorDetails(place_id: string): Promise<VendorDetail>{
         return new Promise<VendorDetail>((resolve, reject) => {
-            let url = this.api.detailsApi;
+            let url = GooglePlacesApiUrls.detailsApi;
             let apiKeyParam = "&key=" + GooglePlacesAPIKey;
             let placeIdParam = "?placeid=" + place_id;
 

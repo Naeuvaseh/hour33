@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, OnInit, Input } from '@angular/core';
 import { registerElement } from "nativescript-angular/element-registry";
 import { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 import { Theme } from '../../../../../settings';
-import { MapView, Marker, Position } from 'nativescript-google-maps-sdk';
+import { MapView, Marker, Position, Bounds } from 'nativescript-google-maps-sdk';
 
 registerElement('MapView', () => MapView);
 
@@ -24,6 +24,8 @@ export class VendorMapComponent implements OnInit {
   public bearing: number = 0;
   public tilt: number = 0;
   public lastCamera: string;
+  
+  private bounds: Bounds;
 
   constructor() {
     this.theme = Theme;
@@ -31,17 +33,19 @@ export class VendorMapComponent implements OnInit {
 
   ngOnInit(){
     console.log('VendorMapComonent.ngOnInit() Vendor Location: ' + JSON.stringify(this.vendor.result.geometry));
-    
-    
   }
 
-  onMapReady = (event) => {
+  onMapReady (event) {
     console.log("Map Ready");
     this.mapView = <MapView> event.object;
     this.mapView.settings.tiltGesturesEnabled = false;
-    this.mapView.settings.myLocationButtonEnabled = true;
-    this.mapView.settings.compassEnabled = true;
-
+    this.mapView.settings.myLocationButtonEnabled = false;
+    this.mapView.settings.compassEnabled = false;
+    this.bounds = Bounds.fromCoordinates(
+      Position.positionFromLatLng(this.vendor.result.geometry.viewport.southwest.lat, this.vendor.result.geometry.viewport.southwest.lng),
+      Position.positionFromLatLng(this.vendor.result.geometry.viewport.northeast.lat, this.vendor.result.geometry.viewport.northeast.lng)
+    );
+    this.mapView.setViewport(this.bounds)
     this.mapView.latitude = this.vendor.result.geometry.location.lat;
     this.mapView.longitude = this.vendor.result.geometry.location.lng;
     this.mapView.zoom = this.zoom;

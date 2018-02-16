@@ -143,7 +143,7 @@
             <GridLayout 
                 left="0"
                 top="0"
-                rows="auto, auto, auto, auto, auto" 
+                rows="auto, auto, auto, auto, auto, auto" 
                 columns="auto, *, *, *, *, *"
                 padding="10">
                 <!-- Row 0 - Filter Criteria -->
@@ -158,19 +158,16 @@
                     colSpan="6"
                     textWrap="true"></Label>
                 <!-- Row 1 - Search Text -->
-                <Label
-                    row="1"
-                    col="0"
-                    colSpan="1"
-                    text="Search: " 
-                    fontSize="20"
-                    alignSelf="center"
-                    [color]="theme.inactiveColor"></Label>
                 <TextField 
                     #search
                     row="1"
-                    col="1"
-                    colSpan="4"
+                    col="0"
+                    colSpan="6"
+                    padding="10"
+                    margin="10"
+                    hint="&#xf002; Search"
+                    style="placeholder-color: {{ theme.lightGrey }}; border-bottom-color: {{ theme.lightGrey }};"
+                    class="font-awesome"
                     alignSelf="center"
                     (textChange)="onSearchTextChange($event)"
                     [color]="theme.accentColor"></TextField>
@@ -191,6 +188,8 @@
                             [text]="distance"
                             [color]="theme.accentColor"
                             fontSize="20"
+                            padding="10"
+                            alignSelf="center"
                             fontWeight="700"></Span>
                         <Span
                             text=" miles"
@@ -204,13 +203,35 @@
                     #distanceSlider
                     row="4"
                     col="0"
-                    colSpan="5"
+                    colSpan="6"
                     minValue="1"
                     maxValue="48280.3"
                     margin="20 0 20 0"
                     [value]="setDistanceSliderValue()"
                     [backgroundColor]="theme.lightGrey"
                     (valueChange)="onDistanceSliderChange($event)"></Slider>
+                <!-- Row 5 -->
+                <FlexboxLayout 
+                    row="5"
+                    col="0"
+                    colSpan="6"
+                    flexDirection="row"
+                    alignContent="center">
+                    <Label 
+                        text="Distance"
+                        fontSize="20"
+                        padding="10"
+                        alignSelf="center" 
+                        [color]="theme.inactiveColor"></Label>
+                    <Switch [checked]="distPop == 'Distance'"></Switch>
+                    <Label 
+                        text="Poplarity" 
+                        fontSize="20"
+                        padding="10"
+                        alignSelf="center"
+                        [color]="theme.inactiveColor"></Label>
+                    <Switch [checked]="distPop == 'Popularity'"></Switch>
+                </FlexboxLayout>
             </GridLayout>
         </ScrollView>
         <!-- Bottom Button Array -->

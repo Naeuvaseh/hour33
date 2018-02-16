@@ -28,6 +28,7 @@ import { Filter } from '../../interfaces/filter.interface';
 import { Day } from '../../enums/day.enum';
 import { Radius } from '../../enums/radius.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
+import { DistPop } from '../../enums/distance-popularity.enum';
 
 @Component({
   selector: 'search',
@@ -47,16 +48,19 @@ export class SearchComponent implements OnInit {
   private loadingFlag: boolean;
   private items: ObservableArray<Vendor>;
   private userLocation: Location;
-  private filterMenuVisible: boolean = false;
-
   public searchResults: SearchResult;
   public vendors: Vendor[];
+  
+  
+  //Filter Menu
+  private filterMenuVisible: boolean = false;
   public filterSearchBtnProgress: boolean = false;
   public showFilterCriteria: boolean = true;
   public filterCriteria: string;
   public title: string;
   public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
   public listViewVisible: boolean = true;
+  public searchByDist: DistPop; 
 
   constructor(private router: Router,
     private vendorService: VendorService,
@@ -68,6 +72,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
     this.setTitle();
+    this.setDistancePopularity();
     this.setDistanceSliderValue();
     // Check if data exists
     if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
@@ -143,7 +148,7 @@ export class SearchComponent implements OnInit {
     this.googleLocationService.searchResults = this.googleLocationService.vendors = undefined;
     // API Call
     this.googleLocationService
-      .search(false)
+      .search(false, this.googleLocationService.searchFilter)
       .then((response: SearchResult) => {
         switch (response.status) {
           case SearchStatusCode.OK:
@@ -194,7 +199,8 @@ export class SearchComponent implements OnInit {
               this.setNextPageFlag(response);
               if (!this.nextPageFlag) args.object.loadOnDemandMode = ListViewLoadOnDemandMode[ListViewLoadOnDemandMode.None];
               this.searchResults = this.googleLocationService.searchResults = response;
-              let tempIndex = this.vendors.length-1;
+              let tempIndex = this.vendors.length - 1;
+              // Add vendors to UI
               for (let vendor of response.results) {
                 this.vendors.push(<Vendor>vendor);
               }
@@ -245,6 +251,10 @@ export class SearchComponent implements OnInit {
   setDistanceSliderValue(): number {
     return this.googleLocationService.searchFilter.distance;
   }
+
+  setDistancePopularity(){
+    this.searchByDist = this.googleLocationService.searchFilter.distPop;
+  }
   
   onCancelTap(){
     this.filterMenuVisible = false;
@@ -255,7 +265,8 @@ export class SearchComponent implements OnInit {
     console.log('SearchComponent.onReset() TAPPED');
     // Reset service filter
     this.googleLocationService.searchFilter = {
-      distance: Radius.mi5 
+      distance: Radius.mi5,
+      distPop: DistPop.Distance
     }
     // Reset filter menu controls
     this.filterSearchBtnProgress = false;

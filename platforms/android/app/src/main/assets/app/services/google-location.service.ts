@@ -28,8 +28,7 @@ import { Filter } from '../interfaces/filter.interface';
 // Enums
 import { Price } from '../enums/price.enum';
 import { VendorType } from '../enums/vendor-type.enum';
-import { RadioControlRegistry } from '@angular/forms/src/directives/radio_control_value_accessor';
-
+import { DistPop } from '../enums/distance-popularity.enum';
 
 @Injectable()
 export class GoogleLocationService {
@@ -47,7 +46,8 @@ export class GoogleLocationService {
         this._debug = Debug;
         this.searchFilter = {
             vendorType: VendorType.Bar,
-            distance: Radius.mi5
+            distance: Radius.mi5,
+            distPop: DistPop.Distance
         }
     }
 

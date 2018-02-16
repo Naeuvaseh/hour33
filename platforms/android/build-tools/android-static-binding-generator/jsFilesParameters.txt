@@ -51,6 +51,7 @@ C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\wee
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\day.enum.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\days.enum.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\default-day.enum.js
+C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\distance-popularity.enum.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\price.enum.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\radius.enum.js
 C:\Users\TJ\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\search-mode.enum.js
