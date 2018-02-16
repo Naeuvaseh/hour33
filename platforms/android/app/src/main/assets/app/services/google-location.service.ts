@@ -134,20 +134,20 @@ export class GoogleLocationService {
         return body;
     }
 
-    getVendorDetails(place_id: string): Promise<VendorDetail>{
+    public getVendorDetails(place_id: string): Promise<VendorDetail>{
         return new Promise<VendorDetail>((resolve, reject) => {
+            console.log('Requesting vendor details.');
             let url = GooglePlacesApiUrls.detailsApi;
             let apiKeyParam = "&key=" + GooglePlacesAPIKey;
             let placeIdParam = "?placeid=" + place_id;
-
+            // Build URL
             url = url + placeIdParam + apiKeyParam;
-
+            // API call
             this.http
                 .get(url)
                 .toPromise()
                 .then(
                     (response: VendorDetail) => {
-                        //console.log(JSON.stringify(response));
                         resolve(response);
                     },
                     (error) => {
