@@ -5,6 +5,7 @@ import { ObservableArray } from 'tns-core-modules/data/observable-array/observab
 import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 // Services
 import { VendorService } from '../../services/vendor.service';
+import { GoogleLocationService } from '../../services/google-location.service';
 // Interfaces
 import { Vendor } from '../../interfaces/vendor.interface';
 // Enums
@@ -23,13 +24,15 @@ export class SearchComponent implements OnInit {
   
   public listViewVisible: boolean = true;
 
-  constructor(private router: Router, private vendorService: VendorService) {
+  constructor(private router: Router, 
+              private vendorService: VendorService,
+              private googleLocationService: GoogleLocationService) {
     this.theme = Theme;
     this.debug = Debug;
   }
 
   ngOnInit() {  
-    this.items = this.vendorService.getSetVendors();
+    this.items = this.vendorService.getVendors();
   }
 
   onFilter(){
@@ -38,6 +41,8 @@ export class SearchComponent implements OnInit {
 
   onListMapToggle(){
     console.log("ListMap toggle tapped.");
+    this.googleLocationService.onGooglePlaces();
+    this.googleLocationService.onPickPlace();
     this.listViewVisible = !this.listViewVisible;
   }
 

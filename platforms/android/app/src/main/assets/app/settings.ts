@@ -1,14 +1,35 @@
 export const Theme ={
-    accentColor: '#BA262E',
-    actionBarColor: '#3D3638',
+    // Red
+    accentColor: '#d50000',
+    // Teal
+    // accentColor: '#4CCAFF',
+    primaryColor: '#212121',
+    lightGrey: '#6d6d6d',
+    darkGrey: '#3D3638',
+    pageBackgroundColor: '#1b1819',
     actionBarTextColor: '#FFF',
-    bottombarColor: '#3D3638',
     inactiveColor: '#FFF',
-    pageBackgroundColor: '#262324',
-    darkGrey: '#8D8B8B'
+   // greenColor: '#3cba54',
+    greenColor: '#00C800',
+   // yellowColor: '#f4c20d',    
+    yellowColor: '#FAE300'
 }
 
 export const Debug = {
+    console: {
+        // APIs
+        Firebase: {
+            fullUser: false,
+            email: true
+        },
+        // Services
+        GoogleLocation: true,
+        Vendor: true,
+        // Components
+        
+        // Pipes
+        CurrentDayPipe: false
+    },
     fps: false,
     backgroundColor: false
 }

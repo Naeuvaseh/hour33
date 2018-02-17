@@ -6,7 +6,7 @@
   "nativescript": {
     "id": "org.voxlore.hour33",
     "tns-android": {
-      "version": "3.4.0"
+      "version": "3.4.1"
     }
   },
   "dependencies": {
@@ -21,14 +21,16 @@
     "moment": "2.20.1",
     "nativescript-angular": "4.4.1",
     "nativescript-bottombar": "3.0.7",
-    "nativescript-google-maps-sdk": "2.4.3",
+    "nativescript-geolocation": "^4.2.2",
     "nativescript-performance-monitor": "1.0.0",
     "nativescript-plugin-firebase": "^5.1.2",
+    "nativescript-plugin-google-places": "^1.4.1",
     "nativescript-pro-ui": "3.2.0",
     "nativescript-theme-core": "1.0.4",
     "reflect-metadata": "0.1.10",
     "rxjs": "5.5.2",
     "tns-core-modules": "^3.4.0",
+    "tns-platform-declarations": "^3.4.0",
     "zone.js": "0.8.18"
   },
   "devDependencies": {

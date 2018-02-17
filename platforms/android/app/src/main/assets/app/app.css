@@ -19,11 +19,15 @@ refer to http://docs.nativescript.org/ui/theme.
 
 .card{
     margin: 25px;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     border-radius: 25px;
     border-width: 1px;
-    border-color: #6c6064;
+    border-color: #51484b;
     background-color: #363032;
+}
+
+.font-awesome{
+    font-family: 'FontAwesome', fontawesome-webfont;
 }
 
 .text-shadow{
@@ -33,6 +37,6 @@ refer to http://docs.nativescript.org/ui/theme.
 .rows{
     padding: 10px;
     border-width: 0 0 0.5 0;
-    border-color: #6c6064;
+    border-color: #51484b;
     background-color: #363032;
 }

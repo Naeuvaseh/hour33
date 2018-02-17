@@ -1,4 +1,6 @@
-<FlexboxLayout class="card" flexDirection="column">
+<FlexboxLayout class="card"
+               [backgroundColor]="theme.darkGrey" 
+               flexDirection="column">
     <FlexboxLayout flexDirection="row" justifyContent="space-between">
         <Label padding="10">
             <FormattedString>
@@ -15,22 +17,23 @@
             </FormattedString>
         </Label>
         <FlexboxLayout alignSelf="flex-end"
-                      (tap)="openVendorWebsite()">
+                      (tap)="openVendorWebsite()"
+                      alignItems="center">
             <Label text="Website"
                    fontSize="18"
                    [color]="theme.inactiveColor"
                    padding="10 5 10 10">
                 <FormattedString>
-                    <Span text="Website"
+                    <Span text="Website "
                           fontSize="18"
+                          class="font-awesome"
                           [color]="theme.inactiveColor"></Span>
+                    <Span 
+                        text="&#xf08e;" 
+                        fontSize="24" 
+                        class="font-awesome"></Span>
                 </FormattedString>
             </Label>
-            <Image src="res://launch"
-                   width="30"
-                   height="30"
-                   margin="0 2 0 0"
-                   stretch="aspectFill"></Image>
         </FlexboxLayout>
     </FlexboxLayout>
     

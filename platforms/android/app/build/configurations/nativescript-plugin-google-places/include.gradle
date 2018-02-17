@@ -1,0 +1,27 @@
+android {
+    productFlavors {
+        "F4" {
+            dimension "nativescriptplugingoogleplaces"
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "https://maven.google.com" // Google's Maven repository
+    }
+}
+
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+	def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion: "11.2.2"
+    compile "com.google.android.gms:play-services:$googlePlayServicesVersion"
+	compile 'com.android.support:multidex:1.0.1'
+}

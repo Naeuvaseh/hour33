@@ -8,8 +8,8 @@
         "directory": "..\\..\\node_modules\\nativescript-bottombar"
     },
     {
-        "name": "nativescript-google-maps-sdk",
-        "directory": "..\\..\\node_modules\\nativescript-google-maps-sdk"
+        "name": "nativescript-geolocation",
+        "directory": "..\\..\\node_modules\\nativescript-geolocation"
     },
     {
         "name": "nativescript-performance-monitor",
@@ -18,6 +18,10 @@
     {
         "name": "nativescript-plugin-firebase",
         "directory": "..\\..\\node_modules\\nativescript-plugin-firebase"
+    },
+    {
+        "name": "nativescript-plugin-google-places",
+        "directory": "..\\..\\node_modules\\nativescript-plugin-google-places"
     },
     {
         "name": "nativescript-pro-ui",
@@ -34,6 +38,10 @@
     {
         "name": "nativescript-intl",
         "directory": "..\\..\\node_modules\\nativescript-intl"
+    },
+    {
+        "name": "nativescript-permissions",
+        "directory": "..\\..\\node_modules\\nativescript-permissions"
     },
     {
         "name": "tns-core-modules-widgets",
