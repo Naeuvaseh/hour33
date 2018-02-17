@@ -1,6 +1,6 @@
 android {
     productFlavors {
-        "F4" {
+        "F6" {
             dimension "nativescriptplugingoogleplaces"
         }
     }

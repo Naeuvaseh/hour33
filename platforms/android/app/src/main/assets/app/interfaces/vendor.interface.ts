@@ -8,5 +8,6 @@ export interface Vendor {
     phone: string,
     hoursOfOperation?: TimePeriod[],
     happyHours?: TimePeriod[],
-    rating: Rating
+    rating: Rating,
+    website?: string
 }

@@ -1,27 +1,31 @@
 {
-  "_from": "nativescript-geolocation",
+  "_args": [
+    [
+      "nativescript-geolocation@4.2.2",
+      "C:\\Users\\TJ\\Projects\\Hour 33"
+    ]
+  ],
+  "_from": "nativescript-geolocation@4.2.2",
   "_id": "nativescript-geolocation@4.2.2",
   "_inBundle": false,
   "_integrity": "sha512-mcYpRMG1vHB2fNguvQCYwR20iC+RVjVHQeEjMwyk6+J2TvMJaThc78Kk4C7N7Rwyye+FpGhDFZ1NobvaEeX5eA==",
   "_location": "/nativescript-geolocation",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "nativescript-geolocation",
+    "raw": "nativescript-geolocation@4.2.2",
     "name": "nativescript-geolocation",
     "escapedName": "nativescript-geolocation",
-    "rawSpec": "",
+    "rawSpec": "4.2.2",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "4.2.2"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.2.tgz",
-  "_shasum": "930edaec8903546028bc84f7e8f0281b91c65281",
-  "_spec": "nativescript-geolocation",
+  "_spec": "4.2.2",
   "_where": "C:\\Users\\TJ\\Projects\\Hour 33",
   "author": {
     "name": "NativeScript Team"
@@ -30,11 +34,9 @@
   "bugs": {
     "url": "https://github.com/NativeScript/nativescript-geolocation/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "nativescript-permissions": "~1.2.3"
   },
-  "deprecated": false,
   "description": "Provides API for getting and monitoring location for NativeScript app.",
   "devDependencies": {
     "prompt": "^1.0.0",

@@ -15,41 +15,48 @@
             [color]="theme.accentColor"></Label>
         <WrapLayout orientation="horizontal" 
                     padding="0 0 5 10">
-            <Image *ngFor="let icon of tempIcons | slice:0:6"
+            <!-- <Image *ngFor="let icon of tempIcons | slice:0:6"
                 [src]="icon.src"
                 width="40"
                 height="40"
                 margin="2"
-                stretch="aspectFill"></Image>
+                stretch="aspectFill"></Image> -->
         </WrapLayout>
+        <!-- Today's Happy Hours listing -->
         <FlexboxLayout flexDirection="row" padding="0 0 5 0">
             <FlexboxLayout flexDirection="column">
                 <!-- Happy Hour Label -->
-                <Label
+                <!-- <Label
                     text="Today's Happy Hours:"
                     width="100%"
                     padding="0 0 0 10"
                     fontSize="16"
                     fontWeight="700"
-                    [color]="theme.inactiveColor"></Label>
+                    [color]="theme.inactiveColor"></Label> -->
                 <!-- Happy Hour Hours -->
-                <FlexboxLayout 
+                <!-- <FlexboxLayout 
                     flexDirection="column" 
                     *ngFor="let timePeriod of vendor?.happyHours | currentDay">
-                    <Label
-                        [padding]="isActive(timePeriod)">
-                        <FormattedString>
-                            <Span
-                                width="100%"
-                                fontSize="14"
-                                fontWeight="500"
-                                class="font-awesome"
-                                [style]="isOver(timePeriod)"
-                                [text]="todaysHappyHours(timePeriod)"
-                                [color]="happyHourStatus(timePeriod)"></Span>
-                        </FormattedString>
-                    </Label>
-                </FlexboxLayout>
+                    <FlexboxLayout flexDirection="row">
+                        <Label
+                            [visibility]="isActive(timePeriod) ? 'visible' : 'collapsed'"
+                            fontSize="14"
+                            fontWeight="500"
+                            class="font-awesome"
+                            text="&#xf111; "
+                            padding="0 0 0 10"
+                            [color]="happyHourStatus(timePeriod)"></Label>
+                        <Label
+                            [padding]="isActivePadding(timePeriod)"
+                            fontSize="14"
+                            fontWeight="500"
+                            class="font-awesome"
+                            [style]="isOver(timePeriod)"
+                            [text]="todaysHappyHours(timePeriod)"
+                            [color]="isActiveText(timePeriod)">
+                        </Label>
+                    </FlexboxLayout>
+                </FlexboxLayout> -->
             </FlexboxLayout>
         </FlexboxLayout>
      </FlexboxLayout>
@@ -72,7 +79,7 @@
                     stretch="aspectFill"></Image>
                 <!-- Count -->
                 <Label 
-                    text="60"
+                    [text]="vendor?.rating | likeDislike:true"
                     horizontalAlignment="center"
                     verticalAlignment="top"
                     [color]="theme.inactiveColor"></Label>
@@ -85,7 +92,7 @@
                     stretch="aspectFill"></Image>
                 <!-- Count -->
                 <Label 
-                    text="16"
+                    [text]="vendor?.rating | likeDislike:false"
                     [color]="theme.inactiveColor"></Label>
             </FlexboxLayout>
         </FlexboxLayout>
@@ -117,7 +124,7 @@
         <Label
             horizontalAlignment="center"
             verticalAlignment="top"
-            text="(12.4 miles)"
+            [text]="vendor?.geometry?.location | distance"
             [color]="theme.lightGrey"
             fontSize="10"></Label>
     </FlexboxLayout>

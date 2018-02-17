@@ -26,6 +26,7 @@ export class VendorService {
       name: "Geckos",
       description: "All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us! All you can eat and drink during our crazy party-time happy hour! Shots on us and free Uber's for all. Come join us!",
       phone: "505-235-2833",
+      website: "http://www.geckosbar.com/",
       rating: {
         likes: 60,
         dislikes: 18
@@ -85,12 +86,12 @@ export class VendorService {
         holiday: false
       }, {
         day: Day.Thursday,
-        open: new Date("0001-01-01T11:30Z"),
+        open: new Date("0001-01-01T16:30Z"),
         close: new Date("0001-01-01T14:00Z"),
         holiday: false
       }, {
         day: Day.Thursday,
-        open: new Date("0001-01-01T14:30Z"),
+        open: new Date("0001-01-01T19:30Z"),
         close: new Date("0001-01-01T02:00Z"),
         holiday: false
       }, {
@@ -100,13 +101,13 @@ export class VendorService {
         holiday: false
       }, {
         day: Day.Friday,
-        open: new Date("0001-01-01T14:15Z"),
-        close: new Date("0001-01-01T15:00Z"),
+        open: new Date("0001-01-01T16:00Z"),
+        close: new Date("0001-01-01T17:00Z"),
         holiday: false
       },{
         day: Day.Friday,
-        open: new Date("0001-01-01T13:30Z"),
-        close: new Date("0001-01-01T16:00Z"),
+        open: new Date("0001-01-01T16:00Z"),
+        close: new Date("0001-01-01T18:00Z"),
         holiday: false
       },{
         day: Day.Friday,

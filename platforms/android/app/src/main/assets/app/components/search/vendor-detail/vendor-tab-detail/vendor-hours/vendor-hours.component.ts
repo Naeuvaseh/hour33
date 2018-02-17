@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TimePeriod } from '../../../../../interfaces/time-period.interface';
+import { Period } from '../../../../../interfaces/period.interface';
 import { Theme } from '../../../../../settings';
 import { Weekdays } from '../../../../../const/weekdays.const';
 import * as moment from 'moment';
@@ -10,7 +11,7 @@ import * as moment from 'moment';
 })
 export class VendorHoursComponent {
   @Input() happyHours: TimePeriod[];
-  @Input() regularHours: TimePeriod[];
+  @Input() regularHours: Array<Period>;
   
   public theme;
 

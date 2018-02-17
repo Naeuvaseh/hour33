@@ -15,6 +15,9 @@ export const Theme ={
     yellowColor: '#FAE300'
 }
 
+export const GooglePlacesAPIKey = "AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM";
+export const GoogleMapsAPIKey = "AIzaSyAYH6CcEihpQxV6uwWxTgY3npS00QT4xO4";
+
 export const Debug = {
     console: {
         // APIs
@@ -22,13 +25,23 @@ export const Debug = {
             fullUser: false,
             email: true
         },
+        Geolocation: {
+            init: true
+        },
         // Services
-        GoogleLocation: true,
+        GoogleLocation: {
+            url: true,
+            data: false,
+            error: true
+        },
         Vendor: true,
         // Components
-        
+        AppComponent: true,
         // Pipes
         CurrentDayPipe: false
+    },
+    display: {
+        SearchComponent: false
     },
     fps: false,
     backgroundColor: false

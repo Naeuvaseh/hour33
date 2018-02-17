@@ -7,6 +7,8 @@ import { NativeScriptRouterModule, RouterExtensions } from "nativescript-angular
 import { Router, NavigationStart, NavigationEnd } from "@angular/router";
 import { PerformanceMonitor, PerformanceMonitorSample } from 'nativescript-performance-monitor';
 import { Color } from "color";
+import * as geolocation from 'nativescript-geolocation';
+import { Accuracy } from 'ui/enums';
  
 registerElement('BottomBar', () => BottomBar);
 const performanceMonitor: PerformanceMonitor = new PerformanceMonitor();
@@ -43,9 +45,7 @@ export class AppComponent implements OnInit {
         this.selectedTab.title = 'Search';
     }
 
-    ngOnInit(){
-        this.googleLocationService.setCurrentLocation();
-    }
+    ngOnInit(){ }
     
     public items: Array<BottomBarItem> = [
         // new BottomBarItem(0, "Search", "search", "black", new Notification("blue", "white", "1")),

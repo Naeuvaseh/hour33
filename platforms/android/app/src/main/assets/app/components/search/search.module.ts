@@ -1,4 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NativeScriptHttpModule } from 'nativescript-angular/http';
+import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client/http-client.module';
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { NativeScriptUIListViewModule } from "nativescript-pro-ui/listview/angular";
 import { GoogleLocationService } from '../../services/google-location.service';
@@ -14,31 +16,44 @@ import { VendorMapComponent } from './vendor-detail/vendor-tab-map/vendor-map/ve
 import { VendorNavigationComponent } from './vendor-detail/vendor-tab-map/vendor-navigation/vendor-navigation.component';
 import { VendorReviewComponent } from './vendor-detail/vendor-tab-reviews/vendor-review.component';
 import { HourListingComponent } from "./vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-listing.component";
+import { VendorPhoneComponent } from './vendor-detail/vendor-tab-detail/vendor-phone/vendor-phone.component';
+import { VendorWebsiteComponent } from './vendor-detail/vendor-tab-detail/vendor-website/vendor-website.component';
 import { HourFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/hour-filter.pipe';
+import { PeriodFilterPipe } from './vendor-detail/vendor-tab-detail/vendor-hours/hour-listing/period-filter.pipe';
 import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
+import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
+import { DistancePipe } from './vendor-listing/distance.pipe';
+import { VendorDetailResolve } from './resolves/vendor-detail.resolve';
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
         SearchRoutingModule,
-        NativeScriptUIListViewModule
+        NativeScriptUIListViewModule,
+        NativeScriptHttpModule,
+        NativeScriptHttpClientModule
     ],
     providers: [
-        GoogleLocationService,
-        VendorService
+        VendorService,
+        VendorDetailResolve
     ],
     declarations: [
         SearchComponent,
         // Search Page
         VendorListingComponent,
         VendorDetailComponent,
+        LikeDislikePipe,
+        DistancePipe,
         CurrentDayPipe,
         // Vendor Detail - Detail Tab
         VendorDescriptionComponent,
         VendorHoursComponent,
         VendorScoreComponent,
         HourListingComponent,
+        VendorPhoneComponent,
+        VendorWebsiteComponent,
         HourFilterPipe,
+        PeriodFilterPipe,
         // Vendor Detail - Map Tab
         VendorMapComponent,
         VendorNavigationComponent,
