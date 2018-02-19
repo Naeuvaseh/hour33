@@ -26,7 +26,7 @@
             <FlexboxLayout flexDirection="row" 
                   [backgroundColor]="theme.darkGrey" 
                   class="card">
-                  <Label text="Get a $2 margarita with your student ID card" 
+                  <Label [text]="specials?.description" 
                   [color]="theme.inactiveColor"
                   textWrap="true"
                   padding="10">
