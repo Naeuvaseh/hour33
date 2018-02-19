@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Theme } from '../../../../settings';
-import { VendorService } from '../../../../services/vendor.service';
-import  { Vendor } from '../../../../interfaces/vendor.interface';
+import { VendorDetail } from '../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
+import { Reviews } from '../../../../interfaces/search-result/vendor-detail/reviews.interface';
 
 @Component({
   selector: 'vendor-review',
@@ -9,13 +9,16 @@ import  { Vendor } from '../../../../interfaces/vendor.interface';
 })
 export class VendorReviewComponent implements OnInit {
 
-  @Input() vendor: Vendor;
+  @Input() reviews: Array<Reviews>;
+  public theme;
 
-  constructor(private vendorService: VendorService) {
-
+  constructor() {
+    this.theme = Theme;
   }
 
-  ngOnInit(){
-    
+  ngOnInit(){ }
+
+  thumb(rating: number): string {
+    return (rating < 2.5) ? 'res://thumb_down' : 'res://thumb_up';
   }
 }

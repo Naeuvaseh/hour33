@@ -1,7 +1,7 @@
--injars 'C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\transforms\jarMerging\F0F1F2F3F4F5F6F7\debug\jars\1\1f\combined.jar'
--outjars 'C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\multi-dex\F0F1F2F3F4F5F6F7\debug\componentClasses.jar'
+-injars 'C:\Users\naeuv\Projects\Hour33\platforms\android\app\build\intermediates\transforms\jarMerging\F0F1F2F3F4F5F6F7\debug\jars\1\1f\combined.jar'
+-outjars 'C:\Users\naeuv\Projects\Hour33\platforms\android\app\build\intermediates\multi-dex\F0F1F2F3F4F5F6F7\debug\componentClasses.jar'
 
--libraryjars 'C:\Android\android-sdk\build-tools\26.0.2\lib\shrinkedAndroid.jar'
+-libraryjars 'C:\Android\android-sdk\build-tools\27.0.3\lib\shrinkedAndroid.jar'
 
 -forceprocessing
 -dontoptimize
@@ -10,7 +10,7 @@
 -dontpreverify
 -dontnote **
 -dontwarn **
--printconfiguration 'C:\Users\TJ\Projects\Hour 33\platforms\android\app\build\intermediates\multi-dex\F0F1F2F3F4F5F6F7\debug\components.flags'
+-printconfiguration 'C:\Users\naeuv\Projects\Hour33\platforms\android\app\build\intermediates\multi-dex\F0F1F2F3F4F5F6F7\debug\components.flags'
 
 
 # view AndroidManifest.xml #generated:43

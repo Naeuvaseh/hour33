@@ -11,18 +11,10 @@ registerElement('MapView', () => MapView);
   templateUrl: './components/search/vendor-detail/vendor-tab-map/vendor-map/vendor-map.component.html'
 })
 export class VendorMapComponent implements OnInit {
-  @ViewChild("mapView") mapView: MapView;
-  
   @Input() vendor: VendorDetail;
-
+  
+  public mapView: MapView;
   public theme;
-  public latitude: number;
-  public longitude: number;
-  public zoom: number = 16;
-  public minZoom: number = 0;
-  public maxZoom: number = 22;
-  public bearing: number = 0;
-  public tilt: number = 0;
   public lastCamera: string;
   
   private bounds: Bounds;
@@ -38,30 +30,24 @@ export class VendorMapComponent implements OnInit {
   onMapReady (event) {
     console.log("Map Ready");
     this.mapView = <MapView> event.object;
-    this.mapView.settings.tiltGesturesEnabled = false;
-    this.mapView.settings.myLocationButtonEnabled = false;
-    this.mapView.settings.compassEnabled = false;
-    this.bounds = Bounds.fromCoordinates(
-      Position.positionFromLatLng(this.vendor.result.geometry.viewport.southwest.lat, this.vendor.result.geometry.viewport.southwest.lng),
-      Position.positionFromLatLng(this.vendor.result.geometry.viewport.northeast.lat, this.vendor.result.geometry.viewport.northeast.lng)
-    );
-    this.mapView.setViewport(this.bounds)
+    this.mapView.zoom = 16;
+    // Set map viewport
+    setTimeout(() => {
+      this.bounds = Bounds.fromCoordinates(
+        Position.positionFromLatLng(this.vendor.result.geometry.viewport.southwest.lat, this.vendor.result.geometry.viewport.southwest.lng),
+        Position.positionFromLatLng(this.vendor.result.geometry.viewport.northeast.lat, this.vendor.result.geometry.viewport.northeast.lng)
+      );
+      this.mapView.setViewport(this.bounds)
+    }, 500);
     this.mapView.latitude = this.vendor.result.geometry.location.lat;
     this.mapView.longitude = this.vendor.result.geometry.location.lng;
-    this.mapView.zoom = this.zoom;
-
-    console.log('MapView Location: Lat: ' + this.mapView.latitude + ' Lng: ' + this.mapView.longitude);
+    // Set marker
     let marker = new Marker();
     marker.position = Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng);
     marker.title = "Title Test"
     marker.snippet = "Snippet Test";
-  //marker.userData = {index: 1};
     this.mapView.addMarker(marker);
-    
-
   };
-
- 
 
   onMarkerEvent(args) {
     console.log("Marker Event: '" + args.eventName
@@ -76,7 +62,7 @@ export class VendorMapComponent implements OnInit {
   onCameraChanged(args) {
     console.log("Camera changed: " + JSON.stringify(args.camera), JSON.stringify(args.camera) === this.lastCamera);
     this.lastCamera = JSON.stringify(args.camera);
-}
+  }
 
 // ****** Maps Demo Code ****** //
 

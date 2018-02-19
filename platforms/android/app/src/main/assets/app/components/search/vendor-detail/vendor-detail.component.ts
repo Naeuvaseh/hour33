@@ -22,9 +22,8 @@ export class VendorDetailComponent implements OnInit {
 
   ngOnInit(){ 
     this.vendor = this.route.snapshot.data['vendor'] as VendorDetail;
-    //console.log(JSON.stringify(this.vendor));
+    // console.log(JSON.stringify(this.vendor.result.reviews));
     console.log('Period: ' + JSON.stringify(this.vendor.result.opening_hours.periods));
-    
   }
 
   goBack(){

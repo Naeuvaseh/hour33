@@ -12,9 +12,13 @@ import { Location } from 'nativescript-geolocation';
 import { Accuracy } from 'ui/enums';
 import { AbsoluteLayout } from 'tns-core-modules/ui/layouts/absolute-layout'
 import { AnimationCurve } from "ui/enums";
-import { TextField } from "ui/text-field";
+import { TextField } from "tns-core-modules/ui/text-field";
 import { Slider } from 'tns-core-modules/ui/slider/slider';
+import { Switch } from 'tns-core-modules/ui/switch/switch';
 import { RadListViewComponent } from 'nativescript-pro-ui/listview/angular';
+import * as nsObservable from "tns-core-modules/data/observable";
+import { BindingOptions } from "tns-core-modules/ui/core/bindable";
+import * as platformModule from "tns-core-modules/platform";
 // Plugins
 import * as geolocation from 'nativescript-geolocation';
 // Services
@@ -40,9 +44,13 @@ export class SearchComponent implements OnInit {
   @ViewChild('filterMenu') filterMenu: AbsoluteLayout;
   @ViewChild('search') searchTxt: TextField;
   @ViewChild('distanceSlider') distanceSlider: Slider;
+  @ViewChild('distanceSwitch') distanceSwitch: Switch;
+  @ViewChild('popularitySwitch') popularitySwitch: Switch;  
 
   private theme;
   private debug;
+  public screenX: number;
+  public screenY: number;
   private searchStatusCode: SearchStatusCode;
   private nextPageFlag: boolean;
   private loadingFlag: boolean;
@@ -60,19 +68,22 @@ export class SearchComponent implements OnInit {
   public title: string;
   public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
   public listViewVisible: boolean = true;
-  public searchByDist: DistPop; 
+  public distPop: DistPop; 
 
   constructor(private router: Router,
     private vendorService: VendorService,
     private googleLocationService: GoogleLocationService) {
     this.theme = Theme;
     this.debug = Debug;
+    this.screenX = platformModule.screen.mainScreen.widthDIPs;
+    this.screenY = platformModule.screen.mainScreen.heightDIPs;
   }
 
   ngOnInit() {
+    console.log('X: ' + this.screenX + ', Y: ' + this.screenY);
     this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
     this.setTitle();
-    this.setDistancePopularity();
+    this.distPop = this.googleLocationService.searchFilter.distPop;
     this.setDistanceSliderValue();
     // Check if data exists
     if (this.googleLocationService.setCurrentLocation && this.googleLocationService.vendors) {
@@ -252,8 +263,14 @@ export class SearchComponent implements OnInit {
     return this.googleLocationService.searchFilter.distance;
   }
 
-  setDistancePopularity(){
-    this.searchByDist = this.googleLocationService.searchFilter.distPop;
+  toggleDistance(event){
+    let d = <Switch>event.object;
+    this.distPop = this.googleLocationService.searchFilter.distPop = (d.checked) ? DistPop.Distance : DistPop.Popularity;
+  }
+
+  togglePopularity(event)  {
+    let p = <Switch>event.object;
+    this.distPop = this.googleLocationService.searchFilter.distPop = (p.checked) ? DistPop.Popularity : DistPop.Distance;
   }
   
   onCancelTap(){
@@ -262,7 +279,6 @@ export class SearchComponent implements OnInit {
   }
   
   onResetTap(){
-    console.log('SearchComponent.onReset() TAPPED');
     // Reset service filter
     this.googleLocationService.searchFilter = {
       distance: Radius.mi5,
@@ -270,7 +286,7 @@ export class SearchComponent implements OnInit {
     }
     // Reset filter menu controls
     this.filterSearchBtnProgress = false;
-    this.searchTxt.text = '';
+    this.distPop = DistPop.Popularity;
     this.distance = this.convertToMiles(this.googleLocationService.searchFilter.distance).toFixed(2);
   }
   
@@ -284,7 +300,7 @@ export class SearchComponent implements OnInit {
   onfilterCriteriaTap(){
     this.filterCriteria = JSON.stringify(this.googleLocationService.searchFilter);
   }
-  
+
   onSearchTextChange(event){
     let field = <TextField> event.object;
     // Update search text in service
