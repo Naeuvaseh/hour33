@@ -4,8 +4,10 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 import { SpecialsComponent } from "./specials.component";
 
+
 const routes: Routes = [
-    { path: "", component: SpecialsComponent }
+    { path: "", component: SpecialsComponent },
+
 ];
 
 @NgModule({
