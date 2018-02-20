@@ -1,17 +1,9 @@
 {
-<<<<<<< HEAD
-	"time": "Mon Feb 19 2018 20:55:27 GMT-0500 (Eastern Standard Time)",
-=======
-	"time": "Mon Feb 19 2018 13:57:22 GMT-0500 (Eastern Standard Time)",
->>>>>>> search
+	"time": "Mon Feb 19 2018 21:02:10 GMT-0500 (Eastern Standard Time)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
 	"changesRequireBuild": true,
 	"projectFileHash": "680d59576491106c452494b0c8ac4cd49b456d86f14d0809c89eb0d9af704483",
-<<<<<<< HEAD
-	"changesRequireBuildTime": "Mon Feb 19 2018 20:55:27 GMT-0500 (Eastern Standard Time)"
-=======
-	"changesRequireBuildTime": "Sat Feb 17 2018 12:54:59 GMT-0500 (Eastern Standard Time)"
->>>>>>> search
+	"changesRequireBuildTime": "Mon Feb 19 2018 21:02:10 GMT-0500 (Eastern Standard Time)"
 }
