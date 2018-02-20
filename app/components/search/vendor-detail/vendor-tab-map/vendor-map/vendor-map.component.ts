@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit, Input } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, Input, AfterViewInit } from '@angular/core';
 import { registerElement } from "nativescript-angular/element-registry";
 import { VendorDetail } from '../../../../../interfaces/search-result/vendor-detail/vendor-detail.interface';
 import { Theme } from '../../../../../settings';
@@ -25,11 +25,17 @@ export class VendorMapComponent implements OnInit {
 
   ngOnInit(){
     console.log('VendorMapComonent.ngOnInit() Vendor Location: ' + JSON.stringify(this.vendor.result.geometry));
+    console.log('Vendor Geometry: ' + JSON.stringify(this.vendor.result.geometry.viewport));
+  }
+
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit()');
   }
 
   onMapReady (event) {
     console.log("Map Ready");
     this.mapView = <MapView> event.object;
+    let marker = new Marker();
     this.mapView.zoom = 16;
     // Set map viewport
     setTimeout(() => {
@@ -38,15 +44,14 @@ export class VendorMapComponent implements OnInit {
         Position.positionFromLatLng(this.vendor.result.geometry.viewport.northeast.lat, this.vendor.result.geometry.viewport.northeast.lng)
       );
       this.mapView.setViewport(this.bounds)
+      // Set marker
+      this.mapView.latitude = this.vendor.result.geometry.location.lat;
+      this.mapView.longitude = this.vendor.result.geometry.location.lng;
+      marker.title = "Title Test"
+      marker.snippet = "Snippet Test";
+      marker.position = Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng);
+      this.mapView.addMarker(marker);
     }, 500);
-    this.mapView.latitude = this.vendor.result.geometry.location.lat;
-    this.mapView.longitude = this.vendor.result.geometry.location.lng;
-    // Set marker
-    let marker = new Marker();
-    marker.position = Position.positionFromLatLng(this.vendor.result.geometry.location.lat, this.vendor.result.geometry.location.lng);
-    marker.title = "Title Test"
-    marker.snippet = "Snippet Test";
-    this.mapView.addMarker(marker);
   };
 
   onMarkerEvent(args) {

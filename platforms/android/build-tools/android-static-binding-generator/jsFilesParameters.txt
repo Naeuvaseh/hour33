@@ -67,7 +67,10 @@ C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfa
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\results.interface.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\search-result.interface.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\search-results.interface.js
+<<<<<<< HEAD
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\specials.interface.js
+=======
+>>>>>>> search
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\time-period.interface.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\vendor.interface.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\search-result\search-result.interface.js
@@ -85,7 +88,10 @@ C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfa
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\vendor-detail.interface.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\resolves\current-location.resolve.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\services\google-location.service.js
+<<<<<<< HEAD
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\services\specials.service.js
+=======
+>>>>>>> search
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\services\vendor.service.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js
