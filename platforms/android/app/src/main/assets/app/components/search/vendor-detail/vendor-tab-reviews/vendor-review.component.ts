@@ -9,7 +9,7 @@ import { Reviews } from '../../../../interfaces/search-result/vendor-detail/revi
 })
 export class VendorReviewComponent implements OnInit {
 
-  @Input() reviews: Array<Reviews>;
+  @Input() review: Reviews;
   public theme;
 
   constructor() {
