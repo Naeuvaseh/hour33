@@ -4,12 +4,24 @@
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\bottom_navigation_item.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\0a024de781679b02a63cff1a24ba8b11f376068a\\output\\res\\layout-v21\\bottom_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\d34c05781ba5a8acf5681870f58f4b36d195984a\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\notification_action_tombstone.xml",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\6f0bcc8cf770903fa3978040b28fe10aa9d84f72\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\bottom_navigation_item.xml",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\500b3c09243afef68124364d62d0fbc98ce26d81\\output\\res\\layout-v21\\bottom_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\d34c05781ba5a8acf5681870f58f4b36d195984a\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\place_autocomplete_fragment.xml",
@@ -48,11 +60,27 @@
         "source": "C:\\Users\\TJ\\.android\\build-cache\\71d5b46b4c864520b5ad40b025dac00769eb6ba3\\output\\res\\layout-v21\\place_autocomplete_fragment.xml"
     },
     {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\d34c05781ba5a8acf5681870f58f4b36d195984a\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\bottom_navigation_small_item.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\0a024de781679b02a63cff1a24ba8b11f376068a\\output\\res\\layout-v21\\bottom_navigation_small_item.xml"
+    },
+    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\notification_action.xml",
         "source": "C:\\Users\\TJ\\.android\\build-cache\\32776eb9063023fec2d79135e13ba0a5c20d4e9d\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\bottom_navigation_small_item.xml",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\500b3c09243afef68124364d62d0fbc98ce26d81\\output\\res\\layout-v21\\bottom_navigation_small_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\place_autocomplete_fragment.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\58f60d712e3866fb4ed938c13b9037ff562c2eca\\output\\res\\layout-v21\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\d34c05781ba5a8acf5681870f58f4b36d195984a\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     }
 ]

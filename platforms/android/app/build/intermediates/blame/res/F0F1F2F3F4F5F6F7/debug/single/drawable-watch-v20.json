@@ -8,6 +8,10 @@
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\302312735cec6eb04e14c6fd259d49877ab409a1\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\da1efc8fd5be5472ba8f4964794a4f3280593b7f\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\302312735cec6eb04e14c6fd259d49877ab409a1\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
     },
@@ -20,7 +24,15 @@
         "source": "C:\\Users\\TJ\\.android\\build-cache\\4f26eac0af1f9d154cbaf45de7e9426a67507fc0\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
     },
     {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\da1efc8fd5be5472ba8f4964794a4f3280593b7f\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
         "source": "C:\\Users\\naeuv\\.android\\build-cache\\302312735cec6eb04e14c6fd259d49877ab409a1\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\anhru\\.android\\build-cache\\da1efc8fd5be5472ba8f4964794a4f3280593b7f\\output\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
     }
 ]
