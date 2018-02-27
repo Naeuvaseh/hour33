@@ -8,7 +8,7 @@ package jp.wasabeef.takt;
 
 public final class R {
     public static final class id {
-        public static final int takt_fps = 0x7f0f01ba;
+        public static final int takt_fps = 0x7f0f01b9;
     }
     public static final class layout {
         public static final int stage = 0x7f030094;
