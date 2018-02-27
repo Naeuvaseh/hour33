@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:3:64-92
 		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml
@@ -215,9 +215,9 @@ MERGED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:11:22-66
 application
-ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:12:5-21:19
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:12:5-31:19
 MERGED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\F6\AndroidManifest.xml:6:5-10:19
-MERGED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:12:5-21:19
+MERGED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:12:5-31:19
 MERGED from [com.aurelhubert:ahbottomnavigation:2.1.0] C:\Users\naeuv\.android\build-cache\500b3c09243afef68124364d62d0fbc98ce26d81\output\AndroidManifest.xml:11:5-20
 MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\5e1f752898e1f6ab5eeace3fd35795aba88c572a\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:customtabs:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\9ed3caa8d841121d01cfb7d5e81f274abefd925c\output\AndroidManifest.xml:26:5-20
@@ -389,6 +389,28 @@ activity#com.tns.ErrorReportActivity
 ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:20:9-64
 	android:name
 		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:20:19-61
+service#org.nativescript.plugins.firebase.MyFirebaseInstanceIDService
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:21:9-25:19
+MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\b63905ee8f78b85be9b713d4f94bb647f3b643c0\output\AndroidManifest.xml:17:9-21:19
+	android:name
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:21:18-94
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:22:13-24:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:23:17-79
+	android:name
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:23:25-77
+service#org.nativescript.plugins.firebase.MyFirebaseMessagingService
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:26:9-30:19
+MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\b63905ee8f78b85be9b713d4f94bb647f3b643c0\output\AndroidManifest.xml:12:9-16:19
+	android:name
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:26:18-93
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:27:13-29:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\main\AndroidManifest.xml:28:25-75
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\naeuv\Projects\Hour33\platforms\android\app\src\F2\AndroidManifest.xml:4:5-78
 MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\naeuv\.android\build-cache\cb132ecfc11ae51277bd33b036b5aa8dca7342b4\output\AndroidManifest.xml:24:5-79
@@ -541,14 +563,6 @@ ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.andro
 		ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.android\build-cache\304a2887b38f47db4f460dabd1ea821401f21ab9\output\AndroidManifest.xml:30:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.android\build-cache\304a2887b38f47db4f460dabd1ea821401f21ab9\output\AndroidManifest.xml:29:13-82
-intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.android\build-cache\304a2887b38f47db4f460dabd1ea821401f21ab9\output\AndroidManifest.xml:31:13-33:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.android\build-cache\304a2887b38f47db4f460dabd1ea821401f21ab9\output\AndroidManifest.xml:31:28-51
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.android\build-cache\304a2887b38f47db4f460dabd1ea821401f21ab9\output\AndroidManifest.xml:32:17-78
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:11.8.0] C:\Users\naeuv\.android\build-cache\304a2887b38f47db4f460dabd1ea821401f21ab9\output\AndroidManifest.xml:32:25-75
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.android.gms:play-services-gcm:11.8.0] C:\Users\naeuv\.android\build-cache\7b9d2ff0f9074c044fed9bdecc61b7b4e09a353e\output\AndroidManifest.xml:23:5-82
 MERGED from [com.google.android.gms:play-services-iid:11.8.0] C:\Users\naeuv\.android\build-cache\dbb54445956d39de25dae43528df4e5a1af1d9e8\output\AndroidManifest.xml:23:5-82
@@ -663,14 +677,6 @@ ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\bui
 		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\build-cache\26768d4686332f276ea150362ecfb9dc5ffdd18a\output\AndroidManifest.xml:52:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\build-cache\26768d4686332f276ea150362ecfb9dc5ffdd18a\output\AndroidManifest.xml:51:13-77
-intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\build-cache\26768d4686332f276ea150362ecfb9dc5ffdd18a\output\AndroidManifest.xml:53:13-55:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\build-cache\26768d4686332f276ea150362ecfb9dc5ffdd18a\output\AndroidManifest.xml:53:28-51
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\build-cache\26768d4686332f276ea150362ecfb9dc5ffdd18a\output\AndroidManifest.xml:54:17-80
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\naeuv\.android\build-cache\26768d4686332f276ea150362ecfb9dc5ffdd18a\output\AndroidManifest.xml:54:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\naeuv\.android\build-cache\35de7de197db00334f3bde46197b6909ae3a38ec\output\AndroidManifest.xml:8:9-12:39
 	android:authorities
@@ -701,14 +707,6 @@ ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv
 		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv\.android\build-cache\565ce92359d5ba9982c4912f8e39a59bd943296f\output\AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv\.android\build-cache\565ce92359d5ba9982c4912f8e39a59bd943296f\output\AndroidManifest.xml:24:13-58
-service#org.nativescript.plugins.firebase.MyFirebaseMessagingService
-ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\b63905ee8f78b85be9b713d4f94bb647f3b643c0\output\AndroidManifest.xml:12:9-16:19
-	android:name
-		ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\b63905ee8f78b85be9b713d4f94bb647f3b643c0\output\AndroidManifest.xml:12:18-93
-service#org.nativescript.plugins.firebase.MyFirebaseInstanceIDService
-ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\b63905ee8f78b85be9b713d4f94bb647f3b643c0\output\AndroidManifest.xml:17:9-21:19
-	android:name
-		ADDED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\b63905ee8f78b85be9b713d4f94bb647f3b643c0\output\AndroidManifest.xml:17:18-94
 activity#com.telerik.widget.feedback.SendFeedbackActivity
 ADDED from [:Feedback-2017.1.1030-dev-release:] C:\Users\naeuv\.android\build-cache\d415334b005e493b06a3ee0186ad9b40ef44f283\output\AndroidManifest.xml:12:9-16:20
 	android:label
