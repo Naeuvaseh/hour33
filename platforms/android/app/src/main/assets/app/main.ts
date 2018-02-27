@@ -4,6 +4,7 @@ import { AppModule } from "./app.module";
 import { Debug } from './settings';
 // Firebase
 const firebase = require("nativescript-plugin-firebase");
+import { Message } from "nativescript-plugin-firebase/firebase";
 // Geolocation
 import * as geolocation from "nativescript-geolocation";
 import { Accuracy } from "ui/enums";
@@ -17,6 +18,15 @@ firebase.init({
     if (data.loggedIn && Debug.console.Firebase.fullUser) {
       console.log("User Data: " + (JSON.stringify(data)));
     }
+  },
+  onPushTokenReceivedCallback: function(token) {
+    console.log("Firebase push token: " + token);
+  },
+  onMessageReceivedCallback: (message: Message) => {
+    console.log(`Title: ${message.title}`);
+    console.log(`Body: ${message.body}`);
+    // if your server passed a custom property called 'foo', then do this:
+    console.log(`Value of 'foo': ${message.data.foo}`);
   }
 }).then(
   instance => {
