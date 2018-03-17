@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-performance-monitor",
+        "scope": null,
+        "escapedName": "nativescript-performance-monitor",
+        "name": "nativescript-performance-monitor",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour 33"
+    ]
+  ],
+  "_from": "nativescript-performance-monitor@latest",
+  "_id": "nativescript-performance-monitor@1.0.0",
+  "_inCache": true,
+  "_location": "/nativescript-performance-monitor",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/nativescript-performance-monitor-1.0.0.tgz_1485527392578_0.9102676580660045"
+  },
+  "_npmUser": {
+    "name": "eddyverbruggen",
+    "email": "eddyverbruggen@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-performance-monitor",
+    "scope": null,
+    "escapedName": "nativescript-performance-monitor",
+    "name": "nativescript-performance-monitor",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-performance-monitor/-/nativescript-performance-monitor-1.0.0.tgz",
+  "_shasum": "44643ad24996cd03a2253b3afcb73855cd77a810",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-performance-monitor",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
+  "author": {
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/EddyVerbruggen/nativescript-performance-monitor/issues"
+  },
+  "dependencies": {},
+  "description": "Measure and show FPS and (on iOS) CPU usage.",
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "rimraf": "^2.5.0",
+    "tns-core-modules": "^2.3.0",
+    "tns-platform-declarations": "^2.4.4",
+    "typescript": "^2.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "44643ad24996cd03a2253b3afcb73855cd77a810",
+    "tarball": "https://registry.npmjs.org/nativescript-performance-monitor/-/nativescript-performance-monitor-1.0.0.tgz"
+  },
+  "gitHead": "14f88296537594a917492822d9f6fc4388142434",
+  "homepage": "https://github.com/EddyVerbruggen/nativescript-performance-monitor",
+  "keywords": [
+    "ecosystem:NativeScript",
+    "NativeScript",
+    "iOS",
+    "Android",
+    "Performance",
+    "FPS",
+    "CPU"
+  ],
+  "license": "MIT",
+  "main": "performance-monitor",
+  "maintainers": [
+    {
+      "name": "eddyverbruggen",
+      "email": "eddyverbruggen@gmail.com"
+    }
+  ],
+  "name": "nativescript-performance-monitor",
+  "nativescript": {
+    "platforms": {
+      "android": "2.3.0",
+      "ios": "2.3.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddyVerbruggen/nativescript-performance-monitor.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "demo.android": "npm run preparedemo && cd demo && tns run android",
+    "demo.ios": "npm run preparedemo && cd demo && tns emulate ios --device \"iPhone SE\"",
+    "demo.ios.device": "npm run preparedemo && cd demo && tns run ios",
+    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-performance-monitor && tns plugin add .. && tns install",
+    "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd ..",
+    "test.android": "cd demo && tns test android",
+    "test.ios": "cd demo && tns test ios --emulator",
+    "test.ios.device": "cd demo && tns test ios"
+  },
+  "typings": "index.d.ts",
+  "version": "1.0.0"
+}

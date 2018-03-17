@@ -1,0 +1,37 @@
+<FlexboxLayout flexDirection="row" 
+              [backgroundColor]="theme.darkGrey" 
+               class="card">
+      <FlexboxLayout width="20%" flexDirection="column">
+            <Label [text]="specials?.name"
+                  class="text-shadow"
+                  padding="25 10" 
+                  fontSize="36"
+                  width="100%"
+                  fontWeight="500"
+                  [color]="theme.accentColor">
+            </Label>
+      </FlexboxLayout>
+      <FlexboxLayout width="80%" flexDirection="column">
+            <FlexboxLayout flexDirection="row" 
+            [backgroundColor]="theme.darkGrey" 
+            class="card">
+            <Label
+                  horizontalAlignment="right"
+                  verticalAlignment="top"
+                  text="Valid 11/2/18 - 11/12/18"
+                  [color]="theme.lightGrey"
+                  fontSize="10">
+            </Label> 
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="row" 
+                  [backgroundColor]="theme.darkGrey" 
+                  class="card">
+                  <Label [text]="specials?.description" 
+                  [color]="theme.inactiveColor"
+                  textWrap="true"
+                  padding="10">
+                  </Label> 
+            </FlexboxLayout>
+      </FlexboxLayout>
+</FlexboxLayout>
+            

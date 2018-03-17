@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-google-places",
+        "scope": null,
+        "escapedName": "nativescript-google-places",
+        "name": "nativescript-google-places",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\naeuv\\Projects\\Hour 33"
+    ]
+  ],
+  "_from": "nativescript-google-places@latest",
+  "_id": "nativescript-google-places@0.0.3",
+  "_inCache": true,
+  "_location": "/nativescript-google-places",
+  "_nodeVersion": "5.1.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-google-places-0.0.3.tgz_1465406449679_0.9059989624656737"
+  },
+  "_npmUser": {
+    "name": "sacemax",
+    "email": "sacemax21@gmail.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-google-places",
+    "scope": null,
+    "escapedName": "nativescript-google-places",
+    "name": "nativescript-google-places",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-google-places/-/nativescript-google-places-0.0.3.tgz",
+  "_shasum": "69038966ebbd68f66a8f09648597fbbdcbac81f4",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-google-places",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
+  "dependencies": {},
+  "description": "Read Google Places API Documentation at https://developers.google.com/places/android-api/?hl=pt-br",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "69038966ebbd68f66a8f09648597fbbdcbac81f4",
+    "tarball": "https://registry.npmjs.org/nativescript-google-places/-/nativescript-google-places-0.0.3.tgz"
+  },
+  "gitHead": "a55c39a4660984f2637878ff22565bd5196ec28d",
+  "main": "google-places.js",
+  "maintainers": [
+    {
+      "name": "sacemax",
+      "email": "sacemax21@gmail.com"
+    }
+  ],
+  "name": "nativescript-google-places",
+  "nativescript": {
+    "platforms": {
+      "ios": "1.4.0",
+      "android": "1.4.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {},
+  "version": "0.0.3"
+}

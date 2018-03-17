@@ -1,0 +1,22 @@
+<StackLayout    
+    [row]="row"
+    [col]="col"
+    padding="0 0 5 0">
+    <Label 
+        [visibility]="hours ? 'visible' : 'collapsed'"
+        *ngFor="let hour of hours"
+        [text]="formatHours(hour)"
+        style="text-align: center"
+        textWrap="true"
+        fontSize="16"
+        [color]="formatCurrentDay(day) ? theme.accentColor : theme.inactiveColor"
+        [fontWeight]="formatCurrentDay(day) ? '500' : '300'"></Label>
+    <!-- <Label 
+        [visibility]="period ? 'visible' : 'collapsed'"
+        [text]="formatPeriod(period)"
+        style="text-align: center"
+        textWrap="true"
+        fontSize="16"
+        [color]="formatCurrentDay(day) ? theme.accentColor : theme.inactiveColor"
+        [fontWeight]="formatCurrentDay(day) ? '500' : '300'"></Label> -->
+</StackLayout>

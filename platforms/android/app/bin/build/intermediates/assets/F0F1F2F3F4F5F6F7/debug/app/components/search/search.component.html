@@ -1,0 +1,303 @@
+<ActionBar class="action-bar" 
+           [backgroundColor]="theme.darkGrey"
+           [color]="theme.actionBarTextColor">
+    <Label class="action-bar-title" [text]="title"></Label>
+    <ActionItem (tap)="onFilter()"
+                icon="res://filter"
+                height="50%"
+                width="50%"></ActionItem>
+    <!-- <ActionItem [visibility]="listViewVisible ? 'visible' : 'collapsed'"
+                (tap)="onListMapToggle()"
+                icon="res://location"
+                android.position="actionBar"></ActionItem>
+    <ActionItem [visibility]="!listViewVisible ? 'visible' : 'collapsed'"
+                (tap)="onListMapToggle()"
+                icon="res://beenhere"
+                android.position="actionBar"></ActionItem> -->
+</ActionBar>
+<!-- Filter Menu -->
+<AbsoluteLayout
+    #filterMenu
+    [visibility]="filterMenuVisible ? 'visible' : 'collapsed'"
+    width="100%"
+    height="100%"
+    [backgroundColor]="theme.primaryColor">
+    <FlexboxLayout left="0" top="0" width="100%" height="100%" flexDirection="column">
+        <ScrollView 
+            width="100%" 
+            height="90%"
+            padding="10"
+            orientation="vertical" 
+            [backgroundColor]="theme.primaryColor">            
+            <FlexboxLayout
+                left="0"
+                top="0"
+                width="100%"
+                height="100%"
+                flexDirection="column" 
+                padding="10">
+                <!-- Search Criteria JSON -->
+                <FlexboxLayout 
+                    flexDirection="row"
+                    [visibility]="showFilterCriteria ? 'visible' : 'collapsed'">
+                    <Label 
+                        [text]="filterCriteria"
+                        color="#fff"
+                        textWrap="true"
+                        (tap)="onfilterCriteriaTap()"></Label>
+                </FlexboxLayout>
+                <!-- Search TextField -->
+                <FlexboxLayout flexDirection="row" padding="10 0 10 0" border="10">
+                    <TextField 
+                        #search
+                        hint=" &#xf002; Search"
+                        width="100%"
+                        fontSize="26"
+                        class="font-awesome"
+                        alignSelf="center"
+                        (textChange)="onSearchTextChange($event)"
+                        style="placeholder-color: {{ theme.lightGrey }}; background-color: #3D3638;"
+                        [color]="theme.accentColor"></TextField>
+                </FlexboxLayout>
+                <!-- DistPop Switches -->
+                <FlexboxLayout alignContent="center" alignContent="center" padding="10 0 10 0" flexDirection="column">
+                    <FlexboxLayout>
+                        <Label text="Search By" [color]="theme.inactiveColor" fontSize="20"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout width="90%" alignSelf="center" padding="10 0 0 0">
+                        <FlexboxLayout width="50%" alignContent="center">
+                            <Label 
+                                #popularitySwitch
+                                text="Best Match" 
+                                fontSize="16"
+                                padding="0 20 0 0"
+                                alignSelf="center"
+                                [color]="theme.inactiveColor"></Label>
+                            <Switch [checked]="distPop == 'Popularity'" (checkedChange)="togglePopularity($event)"></Switch>
+                        </FlexboxLayout>
+                        <FlexboxLayout width="50%" alignContent="center">
+                            <Label 
+                                #distanceSwitch
+                                text="Nearest"
+                                fontSize="16"
+                                padding="0 20 0 0"
+                                alignSelf="center" 
+                                [color]="theme.inactiveColor"></Label>
+                            <Switch [checked]="distPop == 'Distance'" (checkedChange)="toggleDistance($event)"></Switch>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+                <!-- Distance Slider -->
+                <FlexboxLayout flexDirection="column" padding="10 0 10 0" [visibility]="distPop == 'Popularity' ? 'visible' : 'collapsed'">
+                        <!-- Labels -->
+                        <FlexboxLayout>
+                            <Label 
+                                fontSize="20"
+                                [color]="theme.inactiveColor"
+                                text="Distance: "></Label>
+                            <Label>
+                                <FormattedString>
+                                    <Span
+                                        [text]="distance"
+                                        [color]="theme.accentColor"
+                                        fontSize="20"
+                                        fontWeight="700"></Span>
+                                    <Span
+                                        text=" miles"
+                                        textWrap="true"
+                                        fontSize="14"
+                                        [color]="theme.inactiveColor"></Span>
+                                </FormattedString>
+                            </Label>
+                        </FlexboxLayout>
+                        <!-- Slider -->
+                        <FlexboxLayout>
+                            <Slider 
+                                #distanceSlider
+                                minValue="1"
+                                maxValue="48280.3"
+                                margin="20 0 20 0"
+                                width="100%"
+                                [value]="setDistanceSliderValue()"
+                                [backgroundColor]="theme.lightGrey"
+                                (valueChange)="onDistanceSliderChange($event)"></Slider>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
+            </FlexboxLayout>
+        </ScrollView>
+        <!-- Bottom Button Array -->
+        <FlexboxLayout
+            width="100%"
+            height="10%"
+            flexDirection="row"
+            alignItems="center">
+            <!-- Cancel Button -->
+            <Button  
+                width="50%"
+                minHeight="50%"
+                text="Cancel"
+                alignSelf="center"
+                [color]="theme.inactiveColor"
+                [backgroundColor]="theme.darkGrey"
+                (tap)="onCancelTap()"
+                class="btn btn-secondary"></Button>
+            <!-- Reset Button -->
+            <Button
+                width="50%"
+                minHeight="50%%"
+                text="Reset"
+                alignSelf="center"
+                class="btn btn-outline-custom"
+                (tap)="onResetTap()"></Button>
+            <!-- Search Button -->
+            <Button
+                width="50%"
+                minHeight="50%"
+                text="&#xf002; Search"
+                alignSelf="center"        
+                [color]="theme.inactiveColor"                      
+                class="btn btn-primary font-awesome"
+                (tap)="onSearchTap()"></Button>
+        </FlexboxLayout>
+    </FlexboxLayout>
+    <ActivityIndicator 
+        [left]="(screenX/2)-(screenX*0.25)"
+        [top]="(screenY/2)-(screenY*0.25)"
+        busy="true" 
+        [width]="screenX*0.25" 
+        [height]="screenY*0.25" 
+        [color]="theme.accentColor"
+        [visibility]="filterSearchBtnProgress ? 'visible' : 'collapsed'"
+        class="activity-indicator"></ActivityIndicator>
+</AbsoluteLayout>
+<!-- Loading Inidicator -->
+<FlexboxLayout 
+    [visibility]="(loadingFlag) ? 'visible' : 'collapsed'"
+    [backgroundColor]="theme.primaryColor"
+    height="100%"
+    width="100%"
+    alignItems="center">
+    <FlexboxLayout 
+        width="100%"
+        alignItems="center"
+        flexDirection="column">
+        <ActivityIndicator 
+            busy="true" 
+            width="100" 
+            height="100" 
+            [color]="theme.accentColor"
+            class="activity-indicator"></ActivityIndicator>
+    </FlexboxLayout>
+</FlexboxLayout>
+<!-- Zero Results/Not Found Display -->
+<FlexboxLayout 
+    [visibility]="(searchStatusCode == 'ZERO_RESULTS' || searchStatusCode == 'NOT_FOUND') ? 'visible' : 'collapsed'"
+    [backgroundColor]="theme.primaryColor"
+    height="100%"
+    width="100%"
+    alignItems="center">
+    <FlexboxLayout 
+        width="100%"
+        alignItems="center"
+        flexDirection="column">
+        <Label 
+            text="No Results Found"
+            fontSize="36"
+            [color]="theme.accentColor"></Label>
+        <Button 
+            text="Refresh"
+            fontSize="16"
+            padding="20"
+            margin="50"
+            (tap)="refresh($event, 0)"
+            class="btn btn-primary"></Button>
+    </FlexboxLayout>
+</FlexboxLayout>
+<!-- Other Error Display -->
+<FlexboxLayout 
+    [visibility]="(searchStatusCode != 'ZERO_RESULTS' && searchStatusCode != 'OK') ? 'visible' : 'collapsed'"
+    [backgroundColor]="theme.primaryColor"
+    height="100%"
+    width="100%"
+    alignItems="center">
+    <FlexboxLayout 
+        width="100%"
+        alignItems="center"
+        flexDirection="column">
+        <!-- OVER_QUERY_LIMIT -->
+        <FlexboxLayout 
+            flexDirection="row"
+            [visibility]="searchStatusCode == 'OVER_QUERY_LIMIT' ? 'visible' : 'collapsed'">
+            <Label 
+                text="Too many requests have been made. Try again tomorrow."
+                fontSize="36"
+                [color]="theme.accentColor"></Label>
+        </FlexboxLayout>
+        <!-- REQUEST_DENIED -->
+        <FlexboxLayout 
+            flexDirection="row"
+            [visibility]="searchStatusCode == 'REQUEST_DENIED' ? 'visible' : 'collapsed'">
+            <Label 
+                text="Too many requests have been made. Try again tomorrow."
+                fontSize="36"
+                [color]="theme.accentColor"></Label>
+        </FlexboxLayout>
+        <!-- INVALID_REQUEST -->
+        <FlexboxLayout 
+            flexDirection="row"
+            [visibility]="searchStatusCode == 'INVALID_REQUEST' ? 'visible' : 'collapsed'">
+            <Label 
+                text="Your request is invalid. Please try again."
+                fontSize="36"
+                [color]="theme.accentColor"></Label>
+            <Button 
+                text="Retry"
+                fontSize="16"
+                padding="20"
+                margin="50"
+                (tap)="refresh($event, 0)"
+                class="btn btn-primary"></Button>
+        </FlexboxLayout>
+        <!-- UNKNOWN_ERROR -->
+        <FlexboxLayout 
+            flexDirection="row"
+            [visibility]="searchStatusCode == 'UNKNOWN_ERROR' ? 'visible' : 'collapsed'">
+            <Label 
+                text="An unknown error has occurred. Please try again."
+                fontSize="36"
+                [color]="theme.accentColor"></Label>
+            <Button 
+                text="Retry"
+                fontSize="16"
+                padding="20"
+                margin="50"
+                (tap)="refresh($event, 0)"
+                class="btn btn-primary"></Button>
+        </FlexboxLayout>
+    </FlexboxLayout>
+</FlexboxLayout>
+<!-- OK Display -->
+<RadListView 
+    #vendorList
+    [visibility]="(searchStatusCode == 'OK') ? 'visible' : 'collapsed'"
+    [backgroundColor]="theme.primaryColor"
+    [items]="vendors" 
+    pullToRefresh="true" 
+    [color]="theme.accentColor"
+    (pullToRefreshInitiated)="refresh($event, 1)" 
+    selectionBehavior="Press"
+    (itemSelected)="onVendorTap($event)"
+    multileSelection="false"
+    loadOnDemandMode="Manual"
+    (loadMoreDataRequested)="onLoadMoreItemsRequested($event)">
+    <ng-template let-vendor="item" let-i="index">
+        <vendor-listing [vendor]="vendor" [index]="index"></vendor-listing>
+    </ng-template>
+</RadListView>
+
+
+
+
+
+
+

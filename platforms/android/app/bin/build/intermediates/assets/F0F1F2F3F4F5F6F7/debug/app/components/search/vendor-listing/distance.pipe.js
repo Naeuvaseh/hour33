@@ -1,0 +1,42 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var google_location_service_1 = require("../../../services/google-location.service");
+var DistancePipe = /** @class */ (function () {
+    function DistancePipe(googleLocationService) {
+        this.googleLocationService = googleLocationService;
+        this.userLocation = this.googleLocationService.userLocation;
+    }
+    DistancePipe.prototype.transform = function (vendorLocation) {
+        var lat1 = vendorLocation.lat;
+        var lon1 = vendorLocation.lng;
+        var lat2 = this.userLocation.latitude;
+        var lon2 = this.userLocation.longitude;
+        // Checking for undefined param
+        if (vendorLocation === undefined || this.userLocation === undefined) {
+            return null;
+        }
+        ;
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
+        var dLon = this.deg2rad(lon2 - lon1);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        return '(' + (d / 0.621371).toFixed(2).toString() + ' miles)'; // Distance in miles
+    };
+    DistancePipe.prototype.deg2rad = function (deg) {
+        return deg * (Math.PI / 180);
+    };
+    DistancePipe = __decorate([
+        core_1.Pipe({
+            name: 'distance'
+        }),
+        __metadata("design:paramtypes", [google_location_service_1.GoogleLocationService])
+    ], DistancePipe);
+    return DistancePipe;
+}());
+exports.DistancePipe = DistancePipe;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGlzdGFuY2UucGlwZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRpc3RhbmNlLnBpcGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxzQ0FBb0Q7QUFFcEQscUZBQWtGO0FBS2xGO0lBR0ksc0JBQW9CLHFCQUE0QztRQUE1QywwQkFBcUIsR0FBckIscUJBQXFCLENBQXVCO1FBQzVELElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLHFCQUFxQixDQUFDLFlBQVksQ0FBQztJQUNoRSxDQUFDO0lBRUQsZ0NBQVMsR0FBVCxVQUFVLGNBQWM7UUFDcEIsSUFBSSxJQUFJLEdBQUcsY0FBYyxDQUFDLEdBQUcsQ0FBQztRQUM5QixJQUFJLElBQUksR0FBRyxjQUFjLENBQUMsR0FBRyxDQUFDO1FBQzlCLElBQUksSUFBSSxHQUFHLElBQUksQ0FBQyxZQUFZLENBQUMsUUFBUSxDQUFDO1FBQ3RDLElBQUksSUFBSSxHQUFHLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1FBQ3ZDLCtCQUErQjtRQUMvQixFQUFFLENBQUMsQ0FBQyxjQUFjLEtBQUssU0FBUyxJQUFJLElBQUksQ0FBQyxZQUFZLEtBQUssU0FBUyxDQUFDLENBQUMsQ0FBQztZQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUE7UUFBQyxDQUFDO1FBQUEsQ0FBQztRQUNyRixJQUFJLENBQUMsR0FBRyxJQUFJLENBQUMsQ0FBQyw0QkFBNEI7UUFDMUMsSUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLEdBQUMsSUFBSSxDQUFDLENBQUMsQ0FBRSxnQkFBZ0I7UUFDckQsSUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLEdBQUMsSUFBSSxDQUFDLENBQUM7UUFDbkMsSUFBSSxDQUFDLEdBQ0QsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEdBQUMsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEdBQUMsQ0FBQyxDQUFDO1lBQ25DLElBQUksQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztnQkFDM0QsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEdBQUMsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEdBQUMsQ0FBQyxDQUFDLENBQ2xDO1FBQ0wsSUFBSSxDQUFDLEdBQUcsQ0FBQyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsRUFBRSxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUMsR0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQ3JELElBQUksQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxpQkFBaUI7UUFDaEMsTUFBTSxDQUFDLEdBQUcsR0FBRyxDQUFDLENBQUMsR0FBRyxRQUFRLENBQUMsQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxFQUFFLEdBQUcsU0FBUyxDQUFBLENBQUMsb0JBQW9CO0lBQ3RGLENBQUM7SUFFRCw4QkFBTyxHQUFQLFVBQVEsR0FBRztRQUNQLE1BQU0sQ0FBQyxHQUFHLEdBQUcsQ0FBQyxJQUFJLENBQUMsRUFBRSxHQUFDLEdBQUcsQ0FBQyxDQUFBO0lBQzlCLENBQUM7SUE3QlEsWUFBWTtRQUh4QixXQUFJLENBQUM7WUFDRixJQUFJLEVBQUUsVUFBVTtTQUNuQixDQUFDO3lDQUk2QywrQ0FBcUI7T0FIdkQsWUFBWSxDQThCeEI7SUFBRCxtQkFBQztDQUFBLEFBOUJELElBOEJDO0FBOUJZLG9DQUFZIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUGlwZSwgUGlwZVRyYW5zZm9ybSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5pbXBvcnQgeyBMb2NhdGlvbiB9IGZyb20gJ25hdGl2ZXNjcmlwdC1wbHVnaW4tZ29vZ2xlLXBsYWNlcyc7XHJcbmltcG9ydCB7IEdvb2dsZUxvY2F0aW9uU2VydmljZSB9IGZyb20gJy4uLy4uLy4uL3NlcnZpY2VzL2dvb2dsZS1sb2NhdGlvbi5zZXJ2aWNlJztcclxuXHJcbkBQaXBlKHtcclxuICAgIG5hbWU6ICdkaXN0YW5jZSdcclxufSlcclxuZXhwb3J0IGNsYXNzIERpc3RhbmNlUGlwZSBpbXBsZW1lbnRzIFBpcGVUcmFuc2Zvcm17XHJcbiAgICBwcml2YXRlIHVzZXJMb2NhdGlvbjogTG9jYXRpb247XHJcbiAgICBcclxuICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgZ29vZ2xlTG9jYXRpb25TZXJ2aWNlOiBHb29nbGVMb2NhdGlvblNlcnZpY2UpIHtcclxuICAgICAgICB0aGlzLnVzZXJMb2NhdGlvbiA9IHRoaXMuZ29vZ2xlTG9jYXRpb25TZXJ2aWNlLnVzZXJMb2NhdGlvbjtcclxuICAgIH1cclxuICAgIFxyXG4gICAgdHJhbnNmb3JtKHZlbmRvckxvY2F0aW9uKXtcclxuICAgICAgICBsZXQgbGF0MSA9IHZlbmRvckxvY2F0aW9uLmxhdDtcclxuICAgICAgICBsZXQgbG9uMSA9IHZlbmRvckxvY2F0aW9uLmxuZztcclxuICAgICAgICBsZXQgbGF0MiA9IHRoaXMudXNlckxvY2F0aW9uLmxhdGl0dWRlO1xyXG4gICAgICAgIGxldCBsb24yID0gdGhpcy51c2VyTG9jYXRpb24ubG9uZ2l0dWRlO1xyXG4gICAgICAgIC8vIENoZWNraW5nIGZvciB1bmRlZmluZWQgcGFyYW1cclxuICAgICAgICBpZiAodmVuZG9yTG9jYXRpb24gPT09IHVuZGVmaW5lZCB8fCB0aGlzLnVzZXJMb2NhdGlvbiA9PT0gdW5kZWZpbmVkKSB7IHJldHVybiBudWxsIH07XHJcbiAgICAgICAgbGV0IFIgPSA2MzcxOyAvLyBSYWRpdXMgb2YgdGhlIGVhcnRoIGluIGttXHJcbiAgICAgICAgbGV0IGRMYXQgPSB0aGlzLmRlZzJyYWQobGF0Mi1sYXQxKTsgIC8vIGRlZzJyYWQgYmVsb3dcclxuICAgICAgICBsZXQgZExvbiA9IHRoaXMuZGVnMnJhZChsb24yLWxvbjEpOyBcclxuICAgICAgICBsZXQgYSA9IFxyXG4gICAgICAgICAgICBNYXRoLnNpbihkTGF0LzIpICogTWF0aC5zaW4oZExhdC8yKSArXHJcbiAgICAgICAgICAgIE1hdGguY29zKHRoaXMuZGVnMnJhZChsYXQxKSkgKiBNYXRoLmNvcyh0aGlzLmRlZzJyYWQobGF0MikpICogXHJcbiAgICAgICAgICAgIE1hdGguc2luKGRMb24vMikgKiBNYXRoLnNpbihkTG9uLzIpXHJcbiAgICAgICAgICAgIDsgXHJcbiAgICAgICAgbGV0IGMgPSAyICogTWF0aC5hdGFuMihNYXRoLnNxcnQoYSksIE1hdGguc3FydCgxLWEpKTsgXHJcbiAgICAgICAgbGV0IGQgPSBSICogYzsgLy8gRGlzdGFuY2UgaW4ga21cclxuICAgICAgICByZXR1cm4gJygnICsgKGQgLyAwLjYyMTM3MSkudG9GaXhlZCgyKS50b1N0cmluZygpICsgJyBtaWxlcyknIC8vIERpc3RhbmNlIGluIG1pbGVzXHJcbiAgICB9XHJcblxyXG4gICAgZGVnMnJhZChkZWcpIHtcclxuICAgICAgICByZXR1cm4gZGVnICogKE1hdGguUEkvMTgwKVxyXG4gICAgfVxyXG59XHJcblxyXG4iXX0=

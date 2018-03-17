@@ -1,0 +1,38 @@
+<ActionBar 
+    class="action-bar"
+    [backgroundColor]="theme.darkGrey">
+    <NavigationButton icon="res://back_arrow" (tap)="goBack()"></NavigationButton>
+    <Label class="action-bar-title" [text]="vendor.result.name" [color]="theme.accentColor"></Label>
+    <ActionItem icon="res://share" (tap)="onShare()"></ActionItem>
+</ActionBar>
+<TabView [tabBackgroundColor]="theme.darkGrey" 
+         [selectedTabTextColor]="theme.accentColor"
+         [tabTextColor]="theme.inactiveColor" 
+         [androidSelectedTabHighlightColor]="theme.accentColor"
+         [backgroundColor]="theme.pageBackgroundColor">
+    <ScrollView *tabItem="{title: 'Details'}" orientation="vertical" height="100%">
+        <FlexboxLayout flexDirection="column">
+            <vendor-score [vendor]="vendor"></vendor-score>
+            <FlexboxLayout flexDirection="row">
+                <vendor-phone [vendor]="vendor"></vendor-phone>
+                <vendor-website [vendor]="vendor"></vendor-website>                
+            </FlexboxLayout>
+            <vendor-description [vendor]="vendor"></vendor-description>
+            <vendor-hours [happyHours]="vendor?.happyHours" [regularHours]="vendor?.result?.opening_hours?.periods"></vendor-hours>
+        </FlexboxLayout>
+    </ScrollView>
+    <FlexboxLayout *tabItem="{title: 'Map'}" flexDirection="column">
+        <vendor-map [vendor]="vendor"></vendor-map>
+        <vendor-navigation [vendor]="vendor"></vendor-navigation>
+    </FlexboxLayout>
+    <StackLayout *tabItem="{title: 'Menu'}">
+        <!-- TODO -->
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Reviews'}">
+        <ListView [items]="vendor?.result?.reviews">
+            <ng-template let-review="item">
+                <vendor-review [review]="review"></vendor-review>
+            </ng-template>
+        </ListView>
+    </StackLayout>
+</TabView>
