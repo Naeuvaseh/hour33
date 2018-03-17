@@ -61,12 +61,10 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <color name="autocomplete_primary">#1886A1</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <color name="black">#FF000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -90,7 +88,6 @@
     <color name="cast_libraries_material_featurehighlight_outer_highlight_default_color">#2196F3</color>
     <color name="cast_libraries_material_featurehighlight_text_body_color">#FFFFFFFF</color>
     <color name="cast_libraries_material_featurehighlight_text_header_color">#FFFFFFFF</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="colorBottomNavigationAccent">#FF4081</color>
     <color name="colorBottomNavigationActiveColored">#FFFFFF</color>
     <color name="colorBottomNavigationDisable">#3A000000</color>
@@ -100,8 +97,6 @@
     <color name="colorBottomNavigationPrimary">#3F51B5</color>
     <color name="colorBottomNavigationPrimaryDark">#303F9F</color>
     <color name="colorBottomNavigationSelectedBackground">#17000000</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -176,7 +171,6 @@
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="progress_bar_background">#FFFFFFFF</color>
-    <color name="red">#FFFF0000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -209,7 +203,7 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
     <declare-styleable name="AHBottomNavigationBehavior_Params"><attr format="reference" name="tabLayoutId"/><attr format="boolean" name="selectedBackgroundVisible"/><attr format="boolean" name="translucentNavigationEnabled"/><attr format="boolean" name="colored"/><attr format="color" name="accentColor"/><attr format="color" name="inactiveColor"/><attr format="color" name="disableColor"/><attr format="color" name="coloredActive"/><attr format="color" name="coloredInactive"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
             
@@ -274,7 +268,15 @@
         </attr><attr format="reference" name="actionBarDivider"/><attr format="reference" name="actionBarItemBackground"/><attr format="reference" name="actionMenuTextAppearance"/><attr format="color|reference" name="actionMenuTextColor"/><attr format="reference" name="actionModeStyle"/><attr format="reference" name="actionModeCloseButtonStyle"/><attr format="reference" name="actionModeBackground"/><attr format="reference" name="actionModeSplitBackground"/><attr format="reference" name="actionModeCloseDrawable"/><attr format="reference" name="actionModeCutDrawable"/><attr format="reference" name="actionModeCopyDrawable"/><attr format="reference" name="actionModePasteDrawable"/><attr format="reference" name="actionModeSelectAllDrawable"/><attr format="reference" name="actionModeShareDrawable"/><attr format="reference" name="actionModeFindDrawable"/><attr format="reference" name="actionModeWebSearchDrawable"/><attr format="reference" name="actionModePopupWindowStyle"/><attr format="reference" name="textAppearanceLargePopupMenu"/><attr format="reference" name="textAppearanceSmallPopupMenu"/><attr format="reference" name="textAppearancePopupMenuHeader"/><attr format="reference" name="dialogTheme"/><attr format="dimension" name="dialogPreferredPadding"/><attr format="reference" name="listDividerAlertDialog"/><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="spinnerDropDownItemStyle"/><attr format="reference" name="homeAsUpIndicator"/><attr format="reference" name="actionButtonStyle"/><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/><attr format="reference" name="selectableItemBackground"/><attr format="reference" name="selectableItemBackgroundBorderless"/><attr format="reference" name="borderlessButtonStyle"/><attr format="reference" name="dividerVertical"/><attr format="reference" name="dividerHorizontal"/><attr format="reference" name="activityChooserViewStyle"/><attr format="reference" name="toolbarStyle"/><attr format="reference" name="toolbarNavigationButtonStyle"/><attr format="reference" name="popupMenuStyle"/><attr format="reference" name="popupWindowStyle"/><attr format="reference|color" name="editTextColor"/><attr format="reference" name="editTextBackground"/><attr format="reference" name="imageButtonStyle"/><attr format="reference" name="textAppearanceSearchResultTitle"/><attr format="reference" name="textAppearanceSearchResultSubtitle"/><attr format="reference|color" name="textColorSearchUrl"/><attr format="reference" name="searchViewStyle"/><attr format="dimension" name="listPreferredItemHeight"/><attr format="dimension" name="listPreferredItemHeightSmall"/><attr format="dimension" name="listPreferredItemHeightLarge"/><attr format="dimension" name="listPreferredItemPaddingLeft"/><attr format="dimension" name="listPreferredItemPaddingRight"/><attr format="reference" name="dropDownListViewStyle"/><attr format="reference" name="listPopupWindowStyle"/><attr format="reference" name="textAppearanceListItem"/><attr format="reference" name="textAppearanceListItemSmall"/><attr format="reference" name="panelBackground"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/><attr format="color" name="colorPrimary"/><attr format="color" name="colorPrimaryDark"/><attr format="color" name="colorAccent"/><attr format="color" name="colorControlNormal"/><attr format="color" name="colorControlActivated"/><attr format="color" name="colorControlHighlight"/><attr format="color" name="colorButtonNormal"/><attr format="color" name="colorSwitchThumbNormal"/><attr format="reference" name="controlBackground"/><attr format="color" name="colorBackgroundFloating"/><attr format="reference" name="alertDialogStyle"/><attr format="reference" name="alertDialogButtonGroupStyle"/><attr format="boolean" name="alertDialogCenterButtons"/><attr format="reference" name="alertDialogTheme"/><attr format="reference|color" name="textColorAlertDialogListItem"/><attr format="reference" name="buttonBarPositiveButtonStyle"/><attr format="reference" name="buttonBarNegativeButtonStyle"/><attr format="reference" name="buttonBarNeutralButtonStyle"/><attr format="reference" name="autoCompleteTextViewStyle"/><attr format="reference" name="buttonStyle"/><attr format="reference" name="buttonStyleSmall"/><attr format="reference" name="checkboxStyle"/><attr format="reference" name="checkedTextViewStyle"/><attr format="reference" name="editTextStyle"/><attr format="reference" name="radioButtonStyle"/><attr format="reference" name="ratingBarStyle"/><attr format="reference" name="ratingBarStyleIndicator"/><attr format="reference" name="ratingBarStyleSmall"/><attr format="reference" name="seekBarStyle"/><attr format="reference" name="spinnerStyle"/><attr format="reference" name="switchStyle"/><attr format="reference" name="listMenuViewStyle"/></declare-styleable>
     <declare-styleable name="AppDataSearch"/>
     <declare-styleable name="AreaSeries"><attr name="fillColor"/></declare-styleable>
-    <declare-styleable name="Axis"><attr format="float" name="labelRotationAngle"/><attr name="lineThickness"/><attr format="enum" name="axisLastLabelVisibility"><enum name="Visible" value="0"/><enum name="Hidden" value="1"/><enum name="Clip" value="2"/></attr><attr name="labelSize"/><attr name="labelColor"/><attr name="labelMargin"/><attr name="labelFont"/><attr name="labelFontStyle"/><attr format="integer" name="majorTickOffset"/><attr format="integer" name="labelOffset"/><attr name="showLabels"/><attr name="labelFormat"/><attr format="enum" name="axisLabelFitMode"><enum name="None" value="0"/><enum name="Multiline" value="1"/><enum name="Rotate" value="2"/></attr><attr format="string" name="axisTitle"/><attr format="dimension" name="tickThickness"/><attr format="integer" name="labelInterval"/></declare-styleable>
+    <declare-styleable name="Axis"><attr format="float" name="labelRotationAngle"/><attr name="lineThickness"/><attr format="enum" name="axisLastLabelVisibility">
+            <enum name="Visible" value="0"/>
+            <enum name="Hidden" value="1"/>
+            <enum name="Clip" value="2"/>
+        </attr><attr name="labelSize"/><attr name="labelColor"/><attr name="labelMargin"/><attr name="labelFont"/><attr name="labelFontStyle"/><attr format="integer" name="majorTickOffset"/><attr format="integer" name="labelOffset"/><attr name="showLabels"/><attr name="labelFormat"/><attr format="enum" name="axisLabelFitMode">
+            <enum name="None" value="0"/>
+            <enum name="Multiline" value="1"/>
+            <enum name="Rotate" value="2"/>
+        </attr><attr format="string" name="axisTitle"/><attr format="dimension" name="tickThickness"/><attr format="integer" name="labelInterval"/></declare-styleable>
     <declare-styleable name="BarSeries"><attr name="strokeWidth"/><attr name="strokeColor"/><attr name="fillColor"/><attr name="areBarsRounded"/><attr name="roundBarsRadius"/></declare-styleable>
     <declare-styleable name="BottomNavigationView"><attr name="menu"/><attr name="itemIconTint"/><attr name="itemTextColor"/><attr name="itemBackground"/><attr name="elevation"/></declare-styleable>
     <declare-styleable name="BottomSheetBehavior_Layout"><attr format="dimension" name="behavior_peekHeight">
@@ -285,15 +287,34 @@
     <declare-styleable name="CalendarCellState"><attr format="boolean" name="state_calendar_cell_today"/></declare-styleable>
     <declare-styleable name="CalendarTheme"><attr format="reference" name="calendarStyle"/></declare-styleable>
     <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
-    <declare-styleable name="CartesianAxis"><attr format="enum" name="horizontalLocation"><enum name="Left" value="0"/><enum name="Right" value="1"/></attr><attr format="enum" name="verticalLocation"><enum name="Bottom" value="0"/><enum name="Top" value="1"/></attr></declare-styleable>
-    <declare-styleable name="CartesianCustomAnnotation"><attr format="float" name="horizontalOffset"/><attr format="float" name="verticalOffset"/><attr format="reference" name="content"/><attr format="enum" name="horizontalAlignment"><enum name="left" value="0"/><enum name="center" value="1"/><enum name="right" value="2"/></attr><attr format="enum" name="verticalAlignment"><enum name="top" value="0"/><enum name="bottom" value="1"/><enum name="center" value="2"/></attr></declare-styleable>
+    <declare-styleable name="CartesianAxis"><attr format="enum" name="horizontalLocation">
+            <enum name="Left" value="0"/>
+            <enum name="Right" value="1"/>
+        </attr><attr format="enum" name="verticalLocation">
+            <enum name="Bottom" value="0"/>
+            <enum name="Top" value="1"/>
+        </attr></declare-styleable>
+    <declare-styleable name="CartesianCustomAnnotation"><attr format="float" name="horizontalOffset"/><attr format="float" name="verticalOffset"/><attr format="reference" name="content"/><attr format="enum" name="horizontalAlignment">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr><attr format="enum" name="verticalAlignment">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+            <enum name="center" value="2"/>
+        </attr></declare-styleable>
     <declare-styleable name="CartesianPlotBandAnnotation"><attr name="fillColor"/></declare-styleable>
     <declare-styleable name="CartesianStrokedAnnotation"><attr name="strokeColor"/><attr name="strokeWidth"/><attr format="string" name="label"/></declare-styleable>
     <declare-styleable name="CastExpandedController"><attr name="castButtonColor"/><attr name="castControlButtons"/><attr format="reference" name="castSeekBarProgressDrawable"/><attr format="reference" name="castSeekBarThumbDrawable"/><attr name="castPlayButtonDrawable"/><attr name="castPauseButtonDrawable"/><attr name="castStopButtonDrawable"/><attr name="castSkipPreviousButtonDrawable"/><attr name="castSkipNextButtonDrawable"/><attr name="castRewind30ButtonDrawable"/><attr name="castForward30ButtonDrawable"/><attr name="castMuteToggleButtonDrawable"/><attr name="castClosedCaptionsButtonDrawable"/></declare-styleable>
     <declare-styleable name="CastIntroOverlay"><attr format="color|reference" name="castBackgroundColor"/><attr format="color|reference" name="castButtonBackgroundColor"/><attr format="reference" name="castButtonTextAppearance"/><attr format="reference|string" name="castButtonText"/><attr format="reference" name="castTitleTextAppearance"/><attr format="dimension|reference" name="castFocusRadius"/></declare-styleable>
     <declare-styleable name="CastMiniController"><attr format="boolean" name="castShowImageThumbnail"/><attr name="castTitleTextAppearance"/><attr format="reference" name="castSubtitleTextAppearance"/><attr format="reference" name="castControlButtons"/><attr format="color|reference" name="castBackground"/><attr format="color" name="castProgressBarColor"/><attr format="color|reference" name="castButtonColor"/><attr format="reference" name="castPlayButtonDrawable"/><attr format="reference" name="castPauseButtonDrawable"/><attr format="reference" name="castStopButtonDrawable"/><attr format="reference" name="castLargePlayButtonDrawable"/><attr format="reference" name="castLargePauseButtonDrawable"/><attr format="reference" name="castLargeStopButtonDrawable"/><attr format="reference" name="castSkipPreviousButtonDrawable"/><attr format="reference" name="castSkipNextButtonDrawable"/><attr format="reference" name="castRewind30ButtonDrawable"/><attr format="reference" name="castForward30ButtonDrawable"/><attr format="reference" name="castMuteToggleButtonDrawable"/><attr format="reference" name="castClosedCaptionsButtonDrawable"/></declare-styleable>
     <declare-styleable name="CategoricalAxis"><attr format="integer" name="majorTickInterval"/><attr name="plotMode"/><attr name="gapLength"/></declare-styleable>
-    <declare-styleable name="CategoricalSeries"><attr format="enum" name="combineMode"><enum name="None" value="0"/><enum name="Cluster" value="1"/><enum name="Stack" value="2"/><enum name="Stack100" value="3"/></attr></declare-styleable>
+    <declare-styleable name="CategoricalSeries"><attr format="enum" name="combineMode">
+            <enum name="None" value="0"/>
+            <enum name="Cluster" value="1"/>
+            <enum name="Stack" value="2"/>
+            <enum name="Stack100" value="3"/>
+        </attr></declare-styleable>
     <declare-styleable name="CategoricalStrokedSeries"><attr name="strokeColor"/><attr name="strokeWidth"/></declare-styleable>
     <declare-styleable name="ChartAnnotation"><attr name="clipToPlotArea"/></declare-styleable>
     <declare-styleable name="ChartSeries"><attr name="clipToPlotArea"/><attr name="showLabels"/><attr name="labelColor"/><attr name="labelSize"/><attr name="labelFont"/><attr name="labelFontStyle"/><attr name="labelFormat"/></declare-styleable>
@@ -438,8 +459,32 @@
 <enum name="dark" value="2"/>
 
 </attr></declare-styleable>
-    <declare-styleable name="DateTimeCategoricalAxis"><attr format="string" name="dateFormat"/><attr format="enum" name="dateTimeComponent"><enum name="Year" value="0"/><enum name="Quarter" value="1"/><enum name="Month" value="2"/><enum name="Week" value="3"/><enum name="Hour" value="4"/><enum name="Minute" value="5"/><enum name="Second" value="6"/><enum name="Millisecond" value="7"/><enum name="Date" value="8"/><enum name="TimeOfDay" value="9"/><enum name="Day" value="10"/><enum name="DayOfWeek" value="11"/><enum name="DayOfYear" value="12"/></attr></declare-styleable>
-    <declare-styleable name="DateTimeContinuousAxis"><attr format="integer" name="maximumTicks"/><attr name="gapLength"/><attr format="float" name="majorStep"/><attr format="enum" name="majorStepUnit"><enum name="Year" value="0"/><enum name="Quarter" value="1"/><enum name="Month" value="2"/><enum name="Week" value="3"/><enum name="Day" value="4"/><enum name="Hour" value="5"/><enum name="Minute" value="6"/><enum name="Second" value="7"/><enum name="Millisecond" value="8"/></attr><attr name="plotMode"/></declare-styleable>
+    <declare-styleable name="DateTimeCategoricalAxis"><attr format="string" name="dateFormat"/><attr format="enum" name="dateTimeComponent">
+            <enum name="Year" value="0"/>
+            <enum name="Quarter" value="1"/>
+            <enum name="Month" value="2"/>
+            <enum name="Week" value="3"/>
+            <enum name="Hour" value="4"/>
+            <enum name="Minute" value="5"/>
+            <enum name="Second" value="6"/>
+            <enum name="Millisecond" value="7"/>
+            <enum name="Date" value="8"/>
+            <enum name="TimeOfDay" value="9"/>
+            <enum name="Day" value="10"/>
+            <enum name="DayOfWeek" value="11"/>
+            <enum name="DayOfYear" value="12"/>
+        </attr></declare-styleable>
+    <declare-styleable name="DateTimeContinuousAxis"><attr format="integer" name="maximumTicks"/><attr name="gapLength"/><attr format="float" name="majorStep"/><attr format="enum" name="majorStepUnit">
+            <enum name="Year" value="0"/>
+            <enum name="Quarter" value="1"/>
+            <enum name="Month" value="2"/>
+            <enum name="Week" value="3"/>
+            <enum name="Day" value="4"/>
+            <enum name="Hour" value="5"/>
+            <enum name="Minute" value="6"/>
+            <enum name="Second" value="7"/>
+            <enum name="Millisecond" value="8"/>
+        </attr><attr name="plotMode"/></declare-styleable>
     <declare-styleable name="DesignTheme"><attr format="reference" name="bottomSheetDialogTheme"/><attr format="reference" name="bottomSheetStyle"/><attr format="color" name="textColorError"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="FeatureParam"><attr format="string" name="paramName"/><attr format="string" name="paramValue"/></declare-styleable>
@@ -453,12 +498,21 @@
         </attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout"><attr format="boolean" name="behavior_autoHide"/></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
-    <declare-styleable name="GaugeBarIndicator"><attr name="maximum"/><attr name="minimum"/><attr name="animationStartValue"/><attr format="float" name="location"/><attr format="enum" name="cap"><enum name="round" value="0"/><enum name="edge" value="1"/></attr></declare-styleable>
+    <declare-styleable name="GaugeBarIndicator"><attr name="maximum"/><attr name="minimum"/><attr name="animationStartValue"/><attr format="float" name="location"/><attr format="enum" name="cap">
+            <enum name="round" value="0"/>
+            <enum name="edge" value="1"/>
+        </attr></declare-styleable>
     <declare-styleable name="GaugeIndicator"><attr name="strokeColor"/><attr name="strokeWidthF"/><attr name="fillColor"/><attr format="boolean" name="animated"/><attr format="integer" name="animationDuration"/></declare-styleable>
     <declare-styleable name="GaugeRadialBarIndicator"/>
     <declare-styleable name="GaugeRadialNeedle"><attr format="float" name="length"/><attr format="float" name="bottomWidth"/><attr format="float" name="topWidth"/><attr format="float" name="circleRadius"/><attr format="float" name="circleInnerRadius"/><attr format="float" name="offset"/><attr format="color" name="circleFillColor"/><attr format="color" name="circleStrokeColor"/><attr format="float" name="value"/><attr name="animationStartValue"/></declare-styleable>
     <declare-styleable name="GaugeRadialScale"><attr format="float" name="startAngle"/><attr format="float" name="sweepAngle"/><attr format="float" name="radius"/></declare-styleable>
-    <declare-styleable name="GaugeScale"><attr name="maximum"/><attr name="minimum"/><attr format="boolean" name="lineVisible"/><attr name="fillColor"/><attr name="strokeColor"/><attr name="strokeWidthF"/><attr format="color" name="majorTicksFillColor"/><attr format="color" name="majorTicksStrokeColor"/><attr format="color" name="minorTicksFillColor"/><attr format="color" name="minorTicksStrokeColor"/><attr format="integer" name="majorTicksCount"/><attr format="integer" name="minorTicksCount"/><attr format="boolean" name="ticksVisible"/><attr format="float" name="majorTicksLength"/><attr format="float" name="minorTicksLength"/><attr format="float" name="majorTicksWidth"/><attr format="float" name="minorTicksWidth"/><attr format="float" name="ticksOffset"/><attr format="enum" name="ticksLayoutMode"><enum name="outer" value="0"/><enum name="inner" value="1"/></attr><attr format="boolean" name="labelsVisible"/><attr format="integer" name="labelsCount"/><attr format="color" name="labelsColor"/><attr format="enum" name="labelsLayoutMode"><enum name="outer" value="0"/><enum name="inner" value="1"/></attr><attr format="float" name="labelsOffset"/></declare-styleable>
+    <declare-styleable name="GaugeScale"><attr name="maximum"/><attr name="minimum"/><attr format="boolean" name="lineVisible"/><attr name="fillColor"/><attr name="strokeColor"/><attr name="strokeWidthF"/><attr format="color" name="majorTicksFillColor"/><attr format="color" name="majorTicksStrokeColor"/><attr format="color" name="minorTicksFillColor"/><attr format="color" name="minorTicksStrokeColor"/><attr format="integer" name="majorTicksCount"/><attr format="integer" name="minorTicksCount"/><attr format="boolean" name="ticksVisible"/><attr format="float" name="majorTicksLength"/><attr format="float" name="minorTicksLength"/><attr format="float" name="majorTicksWidth"/><attr format="float" name="minorTicksWidth"/><attr format="float" name="ticksOffset"/><attr format="enum" name="ticksLayoutMode">
+            <enum name="outer" value="0"/>
+            <enum name="inner" value="1"/>
+        </attr><attr format="boolean" name="labelsVisible"/><attr format="integer" name="labelsCount"/><attr format="color" name="labelsColor"/><attr format="enum" name="labelsLayoutMode">
+            <enum name="outer" value="0"/>
+            <enum name="inner" value="1"/>
+        </attr><attr format="float" name="labelsOffset"/></declare-styleable>
     <declare-styleable name="GlobalSearch"><attr format="boolean" name="searchEnabled"/><attr format="string" name="searchLabel"/><attr format="string" name="settingsDescription"/><attr format="string" name="defaultIntentAction"/><attr format="string" name="defaultIntentData"/><attr format="string" name="defaultIntentActivity"/></declare-styleable>
     <declare-styleable name="GlobalSearchCorpus"><attr format="boolean" name="allowShortcuts"/></declare-styleable>
     <declare-styleable name="GlobalSearchSection"><attr name="sectionType">
@@ -533,20 +587,37 @@
             <flag name="withText" value="4"/>
             
             <flag name="collapseActionView" value="8"/>
-        </attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
+        </attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/><attr format="string" name="contentDescription"/><attr format="string" name="tooltipText"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/><attr format="reference" name="subMenuArrow"/></declare-styleable>
     <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/></declare-styleable>
     <declare-styleable name="PointerLayout"><attr format="dimension" name="pointerSize"/><attr format="dimension" name="pointerMargin"/><attr format="color" name="pointerFill"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/><attr name="android:popupAnimationStyle"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
-    <declare-styleable name="RadCalendarView"><attr format="color" name="calendarBackground"/><attr format="boolean" name="tkShowTitle"/><attr format="boolean" name="showDayNames"/><attr format="boolean" name="showGridLines"/><attr format="boolean" name="showCellDecorations"/><attr format="enum" name="selectionMode"><enum name="Single" value="0"/><enum name="Range" value="1"/><enum name="Multiple" value="2"/></attr><attr format="enum" name="displayMode"><enum name="Month" value="0"/><enum name="Year" value="1"/><enum name="Week" value="2"/></attr><attr format="enum" name="weekNumberDisplayMode"><enum name="None" value="0"/><enum name="Inline" value="1"/><enum name="Block" value="2"/></attr><attr format="boolean" name="isYearModeCompact"/></declare-styleable>
+    <declare-styleable name="RadCalendarView"><attr format="color" name="calendarBackground"/><attr format="boolean" name="tkShowTitle"/><attr format="boolean" name="showDayNames"/><attr format="boolean" name="showGridLines"/><attr format="boolean" name="showCellDecorations"/><attr format="enum" name="selectionMode">
+            <enum name="Single" value="0"/>
+            <enum name="Range" value="1"/>
+            <enum name="Multiple" value="2"/>
+        </attr><attr format="enum" name="displayMode">
+            <enum name="Month" value="0"/>
+            <enum name="Year" value="1"/>
+            <enum name="Week" value="2"/>
+        </attr><attr format="enum" name="weekNumberDisplayMode">
+            <enum name="None" value="0"/>
+            <enum name="Inline" value="1"/>
+            <enum name="Block" value="2"/>
+        </attr><attr format="boolean" name="isYearModeCompact"/></declare-styleable>
     <declare-styleable name="RadChartViewBase"><attr format="string" name="pan"/><attr format="string" name="chartZoom"/><attr format="string" name="maxZoom"/><attr format="boolean" name="clipToBounds"/><attr format="string" name="emptyContent"/><attr format="string" name="palette"/></declare-styleable>
     <declare-styleable name="RadGaugeView"><attr format="integer" name="titleHorizontalOffset"/><attr format="integer" name="titleVerticalOffset"/><attr format="integer" name="subtitleHorizontalOffset"/><attr format="integer" name="subtitleVerticalOffset"/><attr name="fillColor"/></declare-styleable>
-    <declare-styleable name="RadScrollView"><attr format="boolean" name="fillViewport"/><attr name="scrollMode"><flag name="none" value="0"/><flag name="vertical" value="1"/><flag name="horizontal" value="2"/><flag name="both" value="3"/></attr></declare-styleable>
+    <declare-styleable name="RadScrollView"><attr format="boolean" name="fillViewport"/><attr name="scrollMode">
+            <flag name="none" value="0"/>
+            <flag name="vertical" value="1"/>
+            <flag name="horizontal" value="2"/>
+            <flag name="both" value="3"/>
+        </attr></declare-styleable>
     <declare-styleable name="RadScrollViewTheme"><attr format="reference" name="radScrollViewStyle"/></declare-styleable>
     <declare-styleable name="RangeBarSeries"><attr name="strokeWidth"/><attr name="strokeColor"/><attr name="fillColor"/><attr name="areBarsRounded"/><attr name="roundBarsRadius"/></declare-styleable>
     <declare-styleable name="RecycleListView"><attr format="dimension" name="paddingBottomNoButtons"/><attr format="dimension" name="paddingTopNoTitle"/></declare-styleable>
-    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
+    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/><attr format="boolean" name="fastScrollEnabled"/><attr format="reference" name="fastScrollVerticalThumbDrawable"/><attr format="reference" name="fastScrollVerticalTrackDrawable"/><attr format="reference" name="fastScrollHorizontalThumbDrawable"/><attr format="reference" name="fastScrollHorizontalTrackDrawable"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
@@ -927,6 +998,9 @@
     <dimen name="design_tab_text_size_2line">12sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fastscroll_default_thickness">8dp</dimen>
+    <dimen name="fastscroll_margin">0dp</dimen>
+    <dimen name="fastscroll_minimum_range">50dp</dimen>
     <dimen name="feedback_indicator_size">32dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
@@ -1000,6 +1074,7 @@
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
     <item name="transition_current_scene" type="id"/>
+    <item name="transition_layout_save" type="id"/>
     <item name="transition_scene_layoutid_cache" type="id"/>
     <item name="up" type="id"/>
     <item name="view_offset_helper" type="id"/>
@@ -1204,8 +1279,6 @@
     <string name="title_activity_send_feedback">Send feedback</string>
     <string name="title_activity_view_feedback">Your feedback</string>
     <string name="title_activity_view_item_feedback">Edit feedback</string>
-    <string name="trial_message">To get access to the latest updates across Android suite and Progress\' dedicated support please purchase a commercial license now.</string>
-    <string name="trial_message_caption">Telerik UI for Android by Progress Trial</string>
     <string name="view_feedback_desc">"See what's happening with the feedback you've already sent us."</string>
     <string name="view_feedback_tab_all">ALL</string>
     <string name="view_feedback_tab_open">OPEN</string>
@@ -2379,13 +2452,6 @@
         <item name="strokeWidth">2dp</item>
         <item name="areBarsRounded">false</item>
         <item name="roundBarsRadius">5</item>
-    </style>
-    <style name="ChartSeriesStyle.CategoricalSeriesStyle.TestBarSeriesStyle">
-        <item name="fillColor">#ff00ff00</item>
-        <item name="strokeColor">#ff00ff00</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="areBarsRounded">true</item>
-        <item name="roundBarsRadius">2</item>
     </style>
     <style name="CustomCastTheme">
 <item name="castExpandedControllerStyle">@style/CastExpandedController</item>

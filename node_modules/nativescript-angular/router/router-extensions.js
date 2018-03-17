@@ -33,12 +33,15 @@ var RouterExtensions = /** @class */ (function () {
     RouterExtensions.prototype.canGoBackToPreviousPage = function () {
         return this.frame.canGoBack();
     };
-    RouterExtensions = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [router_1.Router,
-            ns_location_strategy_1.NSLocationStrategy,
-            frame_1.Frame])
-    ], RouterExtensions);
+    RouterExtensions.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    RouterExtensions.ctorParameters = function () { return [
+        { type: router_1.Router, },
+        { type: ns_location_strategy_1.NSLocationStrategy, },
+        { type: frame_1.Frame, },
+    ]; };
     return RouterExtensions;
 }());
 exports.RouterExtensions = RouterExtensions;

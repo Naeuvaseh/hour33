@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var observable_array_1 = require("tns-core-modules/data/observable-array/observable-array");
-var SpecialsService = (function () {
+var SpecialsService = /** @class */ (function () {
     function SpecialsService() {
         this.specialsList = new observable_array_1.ObservableArray([{
                 id: 1,

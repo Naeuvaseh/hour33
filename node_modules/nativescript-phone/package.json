@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-phone@^1.3.1",
+        "raw": "nativescript-phone",
         "scope": null,
         "escapedName": "nativescript-phone",
         "name": "nativescript-phone",
-        "rawSpec": "^1.3.1",
-        "spec": ">=1.3.1 <2.0.0",
-        "type": "range"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-phone@>=1.3.1 <2.0.0",
+  "_from": "nativescript-phone@latest",
   "_id": "nativescript-phone@1.3.1",
   "_inCache": true,
   "_location": "/nativescript-phone",
@@ -29,22 +29,23 @@
   "_npmVersion": "3.10.5",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-phone@^1.3.1",
+    "raw": "nativescript-phone",
     "scope": null,
     "escapedName": "nativescript-phone",
     "name": "nativescript-phone",
-    "rawSpec": "^1.3.1",
-    "spec": ">=1.3.1 <2.0.0",
-    "type": "range"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-phone/-/nativescript-phone-1.3.1.tgz",
   "_shasum": "d1718c51a06c5f834e4456264e31e862cd845fa2",
   "_shrinkwrap": null,
-  "_spec": "nativescript-phone@^1.3.1",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "nativescript-phone",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "Mike Sywensky",
     "email": "michael.sywensky@gmail.com"

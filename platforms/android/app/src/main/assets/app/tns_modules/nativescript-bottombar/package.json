@@ -2,25 +2,25 @@
   "_args": [
     [
       {
-        "raw": "nativescript-bottombar@3.0.7",
+        "raw": "nativescript-bottombar",
         "scope": null,
         "escapedName": "nativescript-bottombar",
         "name": "nativescript-bottombar",
-        "rawSpec": "3.0.7",
-        "spec": "3.0.7",
-        "type": "version"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-bottombar@3.0.7",
-  "_id": "nativescript-bottombar@3.0.7",
+  "_from": "nativescript-bottombar@latest",
+  "_id": "nativescript-bottombar@3.0.8",
   "_inCache": true,
   "_location": "/nativescript-bottombar",
   "_nodeVersion": "7.10.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-bottombar-3.0.7.tgz_1508334138391_0.7479458863381296"
+    "tmp": "tmp/nativescript-bottombar-3.0.8.tgz_1513939049495_0.645268727093935"
   },
   "_npmUser": {
     "name": "rhanb",
@@ -29,22 +29,23 @@
   "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-bottombar@3.0.7",
+    "raw": "nativescript-bottombar",
     "scope": null,
     "escapedName": "nativescript-bottombar",
     "name": "nativescript-bottombar",
-    "rawSpec": "3.0.7",
-    "spec": "3.0.7",
-    "type": "version"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-bottombar/-/nativescript-bottombar-3.0.7.tgz",
-  "_shasum": "55bd56bd696e01b06605a3a456838de1824c8676",
+  "_resolved": "https://registry.npmjs.org/nativescript-bottombar/-/nativescript-bottombar-3.0.8.tgz",
+  "_shasum": "9d65f0d23c32d8cd6e1dc9d572b7acfaba1ccc05",
   "_shrinkwrap": null,
-  "_spec": "nativescript-bottombar@3.0.7",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "nativescript-bottombar",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "rhanbIT",
     "email": "aniel.jeanbaptiste@gmail.com"
@@ -61,10 +62,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "55bd56bd696e01b06605a3a456838de1824c8676",
-    "tarball": "https://registry.npmjs.org/nativescript-bottombar/-/nativescript-bottombar-3.0.7.tgz"
+    "shasum": "9d65f0d23c32d8cd6e1dc9d572b7acfaba1ccc05",
+    "tarball": "https://registry.npmjs.org/nativescript-bottombar/-/nativescript-bottombar-3.0.8.tgz"
   },
-  "gitHead": "084ad52f33cc9c337ac8c727277c247bb554d93a",
+  "gitHead": "93fc722540937a5b59e4a2b0652eac36c244d236",
   "homepage": "https://github.com/rhanbIT/nativescript-bottombar",
   "keywords": [
     "NativeScript",
@@ -117,11 +118,11 @@
   "scripts": {
     "build": "tsc",
     "demo.android": "npm run preparedemo && cd demo-ng && tns run android",
-    "demo.ios": "npm run preparedemo && cd demo-ng && tns emulate ios",
+    "demo.ios": "npm run preparedemo && cd demo-ng && tns run ios",
     "preparedemo": "npm run build && cd demo-ng && tns plugin remove nativescript-bottombar && tns plugin add .. && tns install",
     "setup": "cd demo-ng && npm install && cd .. && npm run build && cd demo-ng && tns plugin add .. && cd ..",
     "typingz": "cd demo-ng && TNS_TYPESCRIPT_DECLARATIONS_PATH='$(pwd)/typingz' tns build ios"
   },
   "typings": "index.d.ts",
-  "version": "3.0.7"
+  "version": "3.0.8"
 }

@@ -23,10 +23,14 @@ var NsHttpBackEnd = /** @class */ (function (_super) {
     NsHttpBackEnd.prototype.handleLocalFileRequest = function (url) {
         return http_utils_1.processLocalFileRequest(url, this.nsFileSystem, createSuccessResponse, createErrorResponse);
     };
-    NsHttpBackEnd = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.XhrFactory, ns_file_system_1.NSFileSystem])
-    ], NsHttpBackEnd);
+    NsHttpBackEnd.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    NsHttpBackEnd.ctorParameters = function () { return [
+        { type: http_1.XhrFactory, },
+        { type: ns_file_system_1.NSFileSystem, },
+    ]; };
     return NsHttpBackEnd;
 }(http_1.HttpXhrBackend));
 exports.NsHttpBackEnd = NsHttpBackEnd;

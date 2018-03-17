@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var settings_1 = require("../../settings");
 // Services
 var specials_service_1 = require("../../services/specials.service");
-var SpecialsComponent = (function () {
+var SpecialsComponent = /** @class */ (function () {
     function SpecialsComponent(specialsService) {
         this.specialsService = specialsService;
         this.theme = settings_1.Theme;

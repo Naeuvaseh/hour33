@@ -29,7 +29,7 @@ var BottomBar = (function (_super) {
                 return that.get();
             },
             onTabSelected: function (position, wasSelected) {
-                if (this.owner && !wasSelected && this.owner.selectedIndex !== position) {
+                if (this.owner && !wasSelected) {
                     var eventData = {
                         eventName: "tabSelected",
                         object: this,

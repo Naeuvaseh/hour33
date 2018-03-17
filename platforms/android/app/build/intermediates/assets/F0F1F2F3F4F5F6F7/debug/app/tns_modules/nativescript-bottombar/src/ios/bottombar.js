@@ -112,16 +112,14 @@ var BottomBar = (function (_super) {
         this.nativeView.changeBadgeItem(badgeIndex, badgeValue);
     };
     BottomBar.prototype.tabSelected = function (index) {
-        if (index !== this.selectedIndex) {
-            var eventData = {
-                eventName: "tabSelected",
-                object: this,
-                oldIndex: this.selectedIndex,
-                newIndex: index
-            };
-            this.selectedIndex = index;
-            this.notify(eventData);
-        }
+        var eventData = {
+            eventName: "tabSelected",
+            object: this,
+            oldIndex: this.selectedIndex,
+            newIndex: index
+        };
+        this.selectedIndex = index;
+        this.notify(eventData);
     };
     BottomBar.prototype.selectItemNative = function (index) {
         this.nativeView.selectItemAnimated(index, true);

@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var settings_1 = require("../../settings");
 var router_1 = require("@angular/router");
 var firebase = require('nativescript-plugin-firebase');
-var AccountComponent = (function () {
+var AccountComponent = /** @class */ (function () {
     function AccountComponent(router) {
         this.router = router;
         this.user = {

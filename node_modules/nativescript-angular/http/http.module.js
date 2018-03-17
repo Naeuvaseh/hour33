@@ -16,24 +16,26 @@ exports.nsXSRFStrategyFactory = nsXSRFStrategyFactory;
 var NativeScriptHttpModule = /** @class */ (function () {
     function NativeScriptHttpModule() {
     }
-    NativeScriptHttpModule = __decorate([
-        core_1.NgModule({
-            providers: [
-                { provide: http_1.XSRFStrategy, useFactory: nsXSRFStrategyFactory },
-                ns_file_system_1.NSFileSystem,
-                {
-                    provide: http_1.Http, useFactory: nsHttpFactory,
-                    deps: [http_1.XHRBackend, http_1.RequestOptions, ns_file_system_1.NSFileSystem]
-                }
-            ],
-            imports: [
-                http_1.HttpModule,
-            ],
-            exports: [
-                http_1.HttpModule,
-            ]
-        })
-    ], NativeScriptHttpModule);
+    NativeScriptHttpModule.decorators = [
+        { type: core_1.NgModule, args: [{
+                    providers: [
+                        { provide: http_1.XSRFStrategy, useFactory: nsXSRFStrategyFactory },
+                        ns_file_system_1.NSFileSystem,
+                        {
+                            provide: http_1.Http, useFactory: nsHttpFactory,
+                            deps: [http_1.XHRBackend, http_1.RequestOptions, ns_file_system_1.NSFileSystem]
+                        }
+                    ],
+                    imports: [
+                        http_1.HttpModule,
+                    ],
+                    exports: [
+                        http_1.HttpModule,
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    NativeScriptHttpModule.ctorParameters = function () { return []; };
     return NativeScriptHttpModule;
 }());
 exports.NativeScriptHttpModule = NativeScriptHttpModule;

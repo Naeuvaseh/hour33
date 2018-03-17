@@ -15,7 +15,7 @@ var routes = [
         }
     }
 ];
-var SearchRoutingModule = (function () {
+var SearchRoutingModule = /** @class */ (function () {
     function SearchRoutingModule() {
     }
     SearchRoutingModule = __decorate([

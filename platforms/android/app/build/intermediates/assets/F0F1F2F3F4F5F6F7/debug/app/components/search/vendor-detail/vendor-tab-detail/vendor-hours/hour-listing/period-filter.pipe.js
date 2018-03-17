@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var PeriodFilterPipe = (function () {
+var PeriodFilterPipe = /** @class */ (function () {
     function PeriodFilterPipe() {
     }
     PeriodFilterPipe.prototype.transform = function (period, day) {

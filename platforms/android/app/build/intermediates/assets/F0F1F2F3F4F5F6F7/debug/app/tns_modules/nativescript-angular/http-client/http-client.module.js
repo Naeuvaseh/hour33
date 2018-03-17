@@ -10,21 +10,23 @@ var ns_http_backend_1 = require("./ns-http-backend");
 var NativeScriptHttpClientModule = /** @class */ (function () {
     function NativeScriptHttpClientModule() {
     }
-    NativeScriptHttpClientModule = __decorate([
-        core_1.NgModule({
-            providers: [
-                ns_file_system_1.NSFileSystem,
-                ns_http_backend_1.NsHttpBackEnd,
-                { provide: http_1.HttpBackend, useExisting: ns_http_backend_1.NsHttpBackEnd },
-            ],
-            imports: [
-                http_1.HttpClientModule,
-            ],
-            exports: [
-                http_1.HttpClientModule,
-            ]
-        })
-    ], NativeScriptHttpClientModule);
+    NativeScriptHttpClientModule.decorators = [
+        { type: core_1.NgModule, args: [{
+                    providers: [
+                        ns_file_system_1.NSFileSystem,
+                        ns_http_backend_1.NsHttpBackEnd,
+                        { provide: http_1.HttpBackend, useExisting: ns_http_backend_1.NsHttpBackEnd },
+                    ],
+                    imports: [
+                        http_1.HttpClientModule,
+                    ],
+                    exports: [
+                        http_1.HttpClientModule,
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    NativeScriptHttpClientModule.ctorParameters = function () { return []; };
     return NativeScriptHttpClientModule;
 }());
 exports.NativeScriptHttpClientModule = NativeScriptHttpClientModule;

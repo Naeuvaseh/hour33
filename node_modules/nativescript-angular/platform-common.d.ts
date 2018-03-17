@@ -4,7 +4,7 @@ import "./zone-js/dist/zone-nativescript";
 import "reflect-metadata";
 import "./polyfills/array";
 import "./polyfills/console";
-import { Type, Injector, CompilerOptions, PlatformRef, NgModuleFactory, NgModuleRef, EventEmitter, Provider, Sanitizer, InjectionToken } from "@angular/core";
+import { Type, Injector, CompilerOptions, PlatformRef, NgModuleFactory, NgModuleRef, EventEmitter, Sanitizer, InjectionToken, StaticProvider } from "@angular/core";
 import { PageFactory } from "./platform-providers";
 import "nativescript-intl";
 export declare const onBeforeLivesync: EventEmitter<NgModuleRef<any>>;
@@ -14,7 +14,7 @@ export interface AppOptions {
     cssFile?: string;
     startPageActionBarHidden?: boolean;
 }
-export declare type PlatformFactory = (extraProviders?: Provider[]) => PlatformRef;
+export declare type PlatformFactory = (extraProviders?: StaticProvider[]) => PlatformRef;
 export declare class NativeScriptSanitizer extends Sanitizer {
     sanitize(_context: any, value: string): string;
 }
@@ -27,9 +27,11 @@ export declare const COMMON_PROVIDERS: ({
 } | {
     provide: typeof Sanitizer;
     useClass: typeof NativeScriptSanitizer;
+    deps: any[];
 } | {
     provide: InjectionToken<Document>;
     useClass: typeof NativeScriptDocument;
+    deps: any[];
 })[];
 export declare class NativeScriptPlatformRef extends PlatformRef {
     private platform;

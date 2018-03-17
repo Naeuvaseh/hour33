@@ -6,7 +6,7 @@ var favorites_component_1 = require("./favorites.component");
 var routes = [
     { path: "", component: favorites_component_1.FavoritesComponent }
 ];
-var FavoritesRoutingModule = (function () {
+var FavoritesRoutingModule = /** @class */ (function () {
     function FavoritesRoutingModule() {
     }
     FavoritesRoutingModule = __decorate([

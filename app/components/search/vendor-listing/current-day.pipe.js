@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var moment = require("moment");
 var settings_1 = require("../../../settings");
-var CurrentDayPipe = (function () {
+var CurrentDayPipe = /** @class */ (function () {
     function CurrentDayPipe() {
     }
     CurrentDayPipe.prototype.transform = function (timePeriods) {

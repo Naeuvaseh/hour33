@@ -27,6 +27,19 @@ application_1.android.on(application_1.AndroidApplication.activityResultEvent, f
         }
     }
 });
+function isAirplaneModeOn() {
+    return android.provider.Settings.System.getInt(application_1.android.context.getContentResolver(), android.provider.Settings.System.AIRPLANE_MODE_ON) !== 0;
+}
+function isProviderEnabled(provider) {
+    try {
+        var locationManager = application_1.android.context
+            .getSystemService(android.content.Context.LOCATION_SERVICE);
+        return locationManager.isProviderEnabled(provider);
+    }
+    catch (ex) {
+        return false;
+    }
+}
 function getCurrentLocation(options) {
     return new Promise(function (resolve, reject) {
         enableLocationRequest().then(function () {
@@ -153,20 +166,25 @@ function enableLocationRequest(always) {
                 _isLocationServiceEnabled().then(function () {
                     resolve();
                 }, function (ex) {
-                    var statusCode = ex.getStatusCode();
-                    if (statusCode === com.google.android.gms.common.api.CommonStatusCodes.RESOLUTION_REQUIRED) {
-                        try {
-                            _onEnableLocationSuccess = resolve;
-                            _onEnableLocationFail = reject;
-                            ex.startResolutionForResult(application_1.android.foregroundActivity, REQUEST_ENABLE_LOCATION);
+                    if (typeof ex.getStatusCode === "function") {
+                        var statusCode = ex.getStatusCode();
+                        if (statusCode === com.google.android.gms.location.LocationSettingsStatusCodes.RESOLUTION_REQUIRED) {
+                            try {
+                                _onEnableLocationSuccess = resolve;
+                                _onEnableLocationFail = reject;
+                                return ex.startResolutionForResult(application_1.android.foregroundActivity, REQUEST_ENABLE_LOCATION);
+                            }
+                            catch (sendEx) {
+                                return resolve();
+                            }
                         }
-                        catch (sendEx) {
-                            resolve();
+                        else if (statusCode === com.google.android.gms.location.LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE
+                            && isAirplaneModeOn()
+                            && isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
+                            return resolve();
                         }
                     }
-                    else {
-                        reject(new Error("Cannot enable the location service"));
-                    }
+                    reject(new Error("Cannot enable the location service. " + ex));
                 });
             }, reject);
         }, reject);
@@ -227,7 +245,13 @@ function isEnabled(options) {
         else {
             _isLocationServiceEnabled(options).then(function () {
                 resolve(true);
-            }, function () {
+            }, function (ex) {
+                if (typeof ex.getStatusCode === "function"
+                    && ex.getStatusCode() === com.google.android.gms.location.LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE
+                    && isAirplaneModeOn()
+                    && isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
+                    return resolve(true);
+                }
                 resolve(false);
             });
         }

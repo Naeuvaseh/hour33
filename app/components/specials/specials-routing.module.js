@@ -6,7 +6,7 @@ var specials_component_1 = require("./specials.component");
 var routes = [
     { path: "", component: specials_component_1.SpecialsComponent },
 ];
-var SpecialsRoutingModule = (function () {
+var SpecialsRoutingModule = /** @class */ (function () {
     function SpecialsRoutingModule() {
     }
     SpecialsRoutingModule = __decorate([

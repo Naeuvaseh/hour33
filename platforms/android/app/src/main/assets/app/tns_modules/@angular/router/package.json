@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/router@4.4.6",
+        "raw": "@angular/router@~5.2.0",
         "scope": "@angular",
         "escapedName": "@angular%2frouter",
         "name": "@angular/router",
-        "rawSpec": "4.4.6",
-        "spec": "4.4.6",
-        "type": "version"
+        "rawSpec": "~5.2.0",
+        "spec": ">=5.2.0 <5.3.0",
+        "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng"
     ]
   ],
-  "_from": "@angular/router@4.4.6",
-  "_id": "@angular/router@4.4.6",
+  "_from": "@angular/router@>=5.2.0 <5.3.0",
+  "_id": "@angular/router@5.2.9",
   "_inCache": true,
   "_location": "/@angular/router",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "8.9.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/router-4.4.6.tgz_1508372376238_0.34675138955935836"
+    "tmp": "tmp/router_5.2.9_1521066029232_0.10981147442706196"
   },
   "_npmUser": {
     "name": "angular",
-    "email": "angular-core+npm@google.com"
+    "email": "devops+npm@angular.io"
   },
-  "_npmVersion": "4.6.1",
+  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/router@4.4.6",
+    "raw": "@angular/router@~5.2.0",
     "scope": "@angular",
     "escapedName": "@angular%2frouter",
     "name": "@angular/router",
-    "rawSpec": "4.4.6",
-    "spec": "4.4.6",
-    "type": "version"
+    "rawSpec": "~5.2.0",
+    "spec": ">=5.2.0 <5.3.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/tns-template-blank-ng"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-4.4.6.tgz",
-  "_shasum": "0f6ad29ae0ff8d2c9ea379bd320447217b7ec866",
+  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-5.2.9.tgz",
+  "_shasum": "0369df6e60c6da3a5842c6eb35e3958d4ffe727e",
   "_shrinkwrap": null,
-  "_spec": "@angular/router@4.4.6",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "@angular/router@~5.2.0",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng",
   "author": {
     "name": "angular"
   },
@@ -58,10 +58,13 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "0f6ad29ae0ff8d2c9ea379bd320447217b7ec866",
-    "tarball": "https://registry.npmjs.org/@angular/router/-/router-4.4.6.tgz"
+    "integrity": "sha512-NtDbFK0EA1rfFc+5Dqd5mIv8E1Wcc5rDUnSty4cX2V+HxTEZvQ9DRdpO2Q0abWU5siXyqponuPHJzF08OVGyNA==",
+    "shasum": "0369df6e60c6da3a5842c6eb35e3958d4ffe727e",
+    "tarball": "https://registry.npmjs.org/@angular/router/-/router-5.2.9.tgz",
+    "fileCount": 70,
+    "unpackedSize": 2826158
   },
-  "es2015": "./@angular/router.js",
+  "es2015": "./esm2015/router.js",
   "homepage": "https://github.com/angular/angular/tree/master/packages/router",
   "keywords": [
     "angular",
@@ -72,24 +75,23 @@
   "maintainers": [
     {
       "name": "angular",
-      "email": "angular-core+npm@google.com"
+      "email": "devops+npm@angular.io"
     }
   ],
-  "module": "./@angular/router.es5.js",
+  "module": "./esm5/router.js",
   "name": "@angular/router",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "4.4.6",
-    "@angular/common": "4.4.6",
-    "@angular/platform-browser": "4.4.6",
-    "rxjs": "^5.0.1"
+    "@angular/core": "5.2.9",
+    "@angular/common": "5.2.9",
+    "@angular/platform-browser": "5.2.9",
+    "rxjs": "^5.5.0"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
-  "scripts": {},
   "typings": "./router.d.ts",
-  "version": "4.4.6"
+  "version": "5.2.9"
 }

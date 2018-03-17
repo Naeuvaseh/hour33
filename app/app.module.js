@@ -9,7 +9,7 @@ var google_location_service_1 = require("./services/google-location.service");
 var current_location_resolve_1 = require("./resolves/current-location.resolve");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
-var AppModule = (function () {
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([

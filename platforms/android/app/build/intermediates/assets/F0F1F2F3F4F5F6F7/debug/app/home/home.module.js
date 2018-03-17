@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var common_1 = require("nativescript-angular/common");
 var home_routing_module_1 = require("./home-routing.module");
 var home_component_1 = require("./home.component");
-var HomeModule = (function () {
+var HomeModule = /** @class */ (function () {
     function HomeModule() {
     }
     HomeModule = __decorate([

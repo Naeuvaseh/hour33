@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
 var settings_1 = require("../../../settings");
-var VendorDetailComponent = (function () {
+var VendorDetailComponent = /** @class */ (function () {
     function VendorDetailComponent(location, route) {
         this.location = location;
         this.route = route;

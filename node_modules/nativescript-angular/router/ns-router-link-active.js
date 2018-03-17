@@ -96,7 +96,9 @@ var NSRouterLinkActive = /** @class */ (function () {
         if (this.active !== hasActiveLinks) {
             var currentUrlTree = this.router.parseUrl(this.router.url);
             var isActiveLinks_1 = this.reduceList(currentUrlTree, this.links);
-            this.classes.forEach(function (c) { return _this.renderer.setElementClass(_this.element.nativeElement, c, isActiveLinks_1); });
+            this.classes.forEach(function (c) {
+                return _this.renderer.setElementClass(_this.element.nativeElement, c, isActiveLinks_1);
+            });
         }
         Promise.resolve(hasActiveLinks).then(function (active) { return _this.active = active; });
     };
@@ -115,26 +117,23 @@ var NSRouterLinkActive = /** @class */ (function () {
     NSRouterLinkActive.prototype.hasActiveLinks = function () {
         return this.links.some(this.isLinkActive(this.router));
     };
-    __decorate([
-        core_1.ContentChildren(ns_router_link_1.NSRouterLink),
-        __metadata("design:type", core_1.QueryList)
-    ], NSRouterLinkActive.prototype, "links", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], NSRouterLinkActive.prototype, "nsRouterLinkActiveOptions", void 0);
-    __decorate([
-        core_1.Input("nsRouterLinkActive"),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], NSRouterLinkActive.prototype, "nsRouterLinkActive", null);
-    NSRouterLinkActive = __decorate([
-        core_1.Directive({
-            selector: "[nsRouterLinkActive]",
-            exportAs: "routerLinkActive",
-        }),
-        __metadata("design:paramtypes", [router_1.Router, core_1.ElementRef, core_1.Renderer])
-    ], NSRouterLinkActive);
+    NSRouterLinkActive.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: "[nsRouterLinkActive]",
+                    exportAs: "routerLinkActive",
+                },] },
+    ];
+    /** @nocollapse */
+    NSRouterLinkActive.ctorParameters = function () { return [
+        { type: router_1.Router, },
+        { type: core_1.ElementRef, },
+        { type: core_1.Renderer, },
+    ]; };
+    NSRouterLinkActive.propDecorators = {
+        "links": [{ type: core_1.ContentChildren, args: [ns_router_link_1.NSRouterLink,] },],
+        "nsRouterLinkActiveOptions": [{ type: core_1.Input },],
+        "nsRouterLinkActive": [{ type: core_1.Input, args: ["nsRouterLinkActive",] },],
+    };
     return NSRouterLinkActive;
 }());
 exports.NSRouterLinkActive = NSRouterLinkActive;

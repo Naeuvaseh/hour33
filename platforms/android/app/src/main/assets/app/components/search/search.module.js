@@ -25,7 +25,7 @@ var current_day_pipe_1 = require("./vendor-listing/current-day.pipe");
 var like_dislike_pipe_1 = require("./vendor-listing/like-dislike.pipe");
 var distance_pipe_1 = require("./vendor-listing/distance.pipe");
 var vendor_detail_resolve_1 = require("./resolves/vendor-detail.resolve");
-var SearchModule = (function () {
+var SearchModule = /** @class */ (function () {
     function SearchModule() {
     }
     SearchModule = __decorate([

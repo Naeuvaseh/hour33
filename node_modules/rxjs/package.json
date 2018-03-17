@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "rxjs@5.5.2",
+        "raw": "rxjs@~5.5.5",
         "scope": null,
         "escapedName": "rxjs",
         "name": "rxjs",
-        "rawSpec": "5.5.2",
-        "spec": "5.5.2",
-        "type": "version"
+        "rawSpec": "~5.5.5",
+        "spec": ">=5.5.5 <5.6.0",
+        "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng"
     ]
   ],
-  "_from": "rxjs@5.5.2",
-  "_id": "rxjs@5.5.2",
+  "_from": "rxjs@>=5.5.5 <5.6.0",
+  "_id": "rxjs@5.5.7",
   "_inCache": true,
   "_location": "/rxjs",
-  "_nodeVersion": "7.7.2",
+  "_nodeVersion": "8.6.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/rxjs-5.5.2.tgz_1508947611567_0.14474608609452844"
+    "tmp": "tmp/rxjs_5.5.7_1520915517472_0.3314225803032831"
   },
   "_npmUser": {
     "name": "blesh",
     "email": "ben@benlesh.com"
   },
-  "_npmVersion": "5.3.0",
+  "_npmVersion": "5.6.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "rxjs@5.5.2",
+    "raw": "rxjs@~5.5.5",
     "scope": null,
     "escapedName": "rxjs",
     "name": "rxjs",
-    "rawSpec": "5.5.2",
-    "spec": "5.5.2",
-    "type": "version"
+    "rawSpec": "~5.5.5",
+    "spec": ">=5.5.5 <5.6.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/tns-template-blank-ng"
   ],
-  "_resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.2.tgz",
-  "_shasum": "28d403f0071121967f18ad665563255d54236ac3",
+  "_resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.7.tgz",
+  "_shasum": "afb3d1642b069b2fbf203903d6501d1acb4cda27",
   "_shrinkwrap": null,
-  "_spec": "rxjs@5.5.2",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "rxjs@~5.5.5",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng",
   "author": {
     "name": "Ben Lesh",
     "email": "ben@benlesh.com"
@@ -84,7 +84,7 @@
     }
   ],
   "dependencies": {
-    "symbol-observable": "^1.0.1"
+    "symbol-observable": "1.0.1"
   },
   "description": "Reactive Extensions for modern JavaScript",
   "devDependencies": {
@@ -147,9 +147,11 @@
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-oRYoIKWBU3Ic37fLA5VJu31VqQO4bWubRntcHSJ+cwaDQBwdnZ9x4zmhJfm/nFQ2E82/I4loSioHnACamrKGgA==",
-    "shasum": "28d403f0071121967f18ad665563255d54236ac3",
-    "tarball": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.2.tgz"
+    "integrity": "sha512-Hxo2ac8gRQjwjtKgukMIwBRbq5+KAeEV5hXM4obYBOAghev41bDQWgFH4svYiU9UnQ5kNww2LgfyBdevCd2HXA==",
+    "shasum": "afb3d1642b069b2fbf203903d6501d1acb4cda27",
+    "tarball": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.7.tgz",
+    "fileCount": 3661,
+    "unpackedSize": 8855516
   },
   "engines": {
     "npm": ">=2.0.0"
@@ -229,5 +231,5 @@
     "watch": "Watch codebase, trigger compile when source code changes"
   },
   "typings": "./Rx.d.ts",
-  "version": "5.5.2"
+  "version": "5.5.7"
 }

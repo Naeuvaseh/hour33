@@ -5,7 +5,7 @@ var common_1 = require("nativescript-angular/common");
 var forms_1 = require("nativescript-angular/forms");
 var account_routing_module_1 = require("./account-routing.module");
 var account_component_1 = require("./account.component");
-var AccountModule = (function () {
+var AccountModule = /** @class */ (function () {
     function AccountModule() {
     }
     AccountModule = __decorate([

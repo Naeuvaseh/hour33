@@ -80,11 +80,13 @@ var NSLocationStrategy = /** @class */ (function (_super) {
             var state = this.peekState();
             if (state.isPageNavigation) {
                 // This was a page navigation - so navigate through frame.
+                // This was a page navigation - so navigate through frame.
                 trace_1.routerLog("NSLocationStrategy.back() while not navigating back but top" +
                     " state is page - will call frame.goBack()");
                 this.frame.goBack();
             }
             else {
+                // Nested navigation - just pop the state
                 // Nested navigation - just pop the state
                 trace_1.routerLog("NSLocationStrategy.back() while not navigating back but top" +
                     " state is not page - just pop");
@@ -124,7 +126,10 @@ var NSLocationStrategy = /** @class */ (function (_super) {
             .join("\n");
     };
     // Methods for syncing with page navigation in PageRouterOutlet
-    NSLocationStrategy.prototype._beginBackPageNavigation = function () {
+    // Methods for syncing with page navigation in PageRouterOutlet
+    NSLocationStrategy.prototype._beginBackPageNavigation = 
+    // Methods for syncing with page navigation in PageRouterOutlet
+    function () {
         trace_1.routerLog("NSLocationStrategy.startGoBack()");
         if (this._isPageNavigationBack) {
             throw new Error("Calling startGoBack while going back.");
@@ -167,10 +172,13 @@ var NSLocationStrategy = /** @class */ (function (_super) {
     NSLocationStrategy.prototype._getStates = function () {
         return this.states.slice();
     };
-    NSLocationStrategy = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [frame_1.Frame])
-    ], NSLocationStrategy);
+    NSLocationStrategy.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    NSLocationStrategy.ctorParameters = function () { return [
+        { type: frame_1.Frame, },
+    ]; };
     return NSLocationStrategy;
 }(common_1.LocationStrategy));
 exports.NSLocationStrategy = NSLocationStrategy;

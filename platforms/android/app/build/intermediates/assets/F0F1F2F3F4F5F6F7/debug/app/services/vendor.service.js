@@ -5,7 +5,7 @@ var observable_array_1 = require("tns-core-modules/data/observable-array/observa
 var day_enum_1 = require("../enums/day.enum");
 // Firebase
 var firebase = require('nativescript-plugin-firebase');
-var VendorService = (function () {
+var VendorService = /** @class */ (function () {
     function VendorService() {
         this.vendorList = new observable_array_1.ObservableArray([{
                 id: 1,

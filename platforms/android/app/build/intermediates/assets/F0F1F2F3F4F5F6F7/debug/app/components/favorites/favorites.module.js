@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var common_1 = require("nativescript-angular/common");
 var favorites_routing_module_1 = require("./favorites-routing.module");
 var favorites_component_1 = require("./favorites.component");
-var FavoritesModule = (function () {
+var FavoritesModule = /** @class */ (function () {
     function FavoritesModule() {
     }
     FavoritesModule = __decorate([

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var HourFilterPipe = (function () {
+var HourFilterPipe = /** @class */ (function () {
     function HourFilterPipe() {
     }
     HourFilterPipe.prototype.transform = function (hours, day) {

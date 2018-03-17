@@ -29,6 +29,10 @@
         <!-- TODO -->
     </StackLayout>
     <StackLayout *tabItem="{title: 'Reviews'}">
-        <vendor-review [reviews]="vendor?.result?.reviews"></vendor-review>
+        <ListView [items]="vendor?.result?.reviews">
+            <ng-template let-review="item">
+                <vendor-review [review]="review"></vendor-review>
+            </ng-template>
+        </ListView>
     </StackLayout>
 </TabView>

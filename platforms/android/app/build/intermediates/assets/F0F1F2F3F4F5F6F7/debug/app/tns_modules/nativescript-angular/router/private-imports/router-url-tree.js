@@ -1,6 +1,4 @@
 Object.defineProperty(exports, "__esModule", { value: true });
-/* tslint:disable:forin */
-// Copied unexported functions from @angular/router/src/url_tree
 var router_1 = require("@angular/router");
 function containsTree(container, containee, exact) {
     if (exact) {

@@ -6,6 +6,4 @@ export declare class FileSystemResourceLoader extends ResourceLoader {
     get(url: string): Promise<string>;
     resolve(url: string): string;
     private resolveRelativeUrls(url);
-    private fallbackResolve(url);
-    private replaceExtension(fileName, oldExtension, newExtension);
 }

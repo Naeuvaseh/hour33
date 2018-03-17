@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/platform-browser@4.4.6",
+        "raw": "@angular/platform-browser@~5.2.0",
         "scope": "@angular",
         "escapedName": "@angular%2fplatform-browser",
         "name": "@angular/platform-browser",
-        "rawSpec": "4.4.6",
-        "spec": "4.4.6",
-        "type": "version"
+        "rawSpec": "~5.2.0",
+        "spec": ">=5.2.0 <5.3.0",
+        "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng"
     ]
   ],
-  "_from": "@angular/platform-browser@4.4.6",
-  "_id": "@angular/platform-browser@4.4.6",
+  "_from": "@angular/platform-browser@>=5.2.0 <5.3.0",
+  "_id": "@angular/platform-browser@5.2.9",
   "_inCache": true,
   "_location": "/@angular/platform-browser",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "8.9.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/platform-browser-4.4.6.tgz_1508372365966_0.5037521154154092"
+    "tmp": "tmp/platform-browser_5.2.9_1521066017920_0.8124812170214211"
   },
   "_npmUser": {
     "name": "angular",
-    "email": "angular-core+npm@google.com"
+    "email": "devops+npm@angular.io"
   },
-  "_npmVersion": "4.6.1",
+  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/platform-browser@4.4.6",
+    "raw": "@angular/platform-browser@~5.2.0",
     "scope": "@angular",
     "escapedName": "@angular%2fplatform-browser",
     "name": "@angular/platform-browser",
-    "rawSpec": "4.4.6",
-    "spec": "4.4.6",
-    "type": "version"
+    "rawSpec": "~5.2.0",
+    "spec": ">=5.2.0 <5.3.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/tns-template-blank-ng"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-4.4.6.tgz",
-  "_shasum": "a9839c547e1b654fa1d24a89780c8ba6ab8dcce0",
+  "_resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-5.2.9.tgz",
+  "_shasum": "9ee76327b1b3affad68ffa839058661b7704bc2c",
   "_shrinkwrap": null,
-  "_spec": "@angular/platform-browser@4.4.6",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "@angular/platform-browser@~5.2.0",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng",
   "author": {
     "name": "angular"
   },
@@ -58,32 +58,34 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "a9839c547e1b654fa1d24a89780c8ba6ab8dcce0",
-    "tarball": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-4.4.6.tgz"
+    "integrity": "sha512-P6iviRTuLsLRuqtZNOO0fd4cjTo8DWsDCecwntUlI08R3kH5qeqvqarTzlw/4oD+wBzZY6bfb89JyY+n5XbX3Q==",
+    "shasum": "9ee76327b1b3affad68ffa839058661b7704bc2c",
+    "tarball": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-5.2.9.tgz",
+    "fileCount": 83,
+    "unpackedSize": 2103105
   },
-  "es2015": "./@angular/platform-browser.js",
+  "es2015": "./esm2015/platform-browser.js",
   "homepage": "https://github.com/angular/angular#readme",
   "license": "MIT",
   "main": "./bundles/platform-browser.umd.js",
   "maintainers": [
     {
       "name": "angular",
-      "email": "angular-core+npm@google.com"
+      "email": "devops+npm@angular.io"
     }
   ],
-  "module": "./@angular/platform-browser.es5.js",
+  "module": "./esm5/platform-browser.js",
   "name": "@angular/platform-browser",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "4.4.6",
-    "@angular/common": "4.4.6"
+    "@angular/core": "5.2.9",
+    "@angular/common": "5.2.9"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
-  "scripts": {},
   "typings": "./platform-browser.d.ts",
-  "version": "4.4.6"
+  "version": "5.2.9"
 }

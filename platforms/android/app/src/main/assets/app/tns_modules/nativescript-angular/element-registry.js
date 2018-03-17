@@ -46,6 +46,8 @@ var TextNode = /** @class */ (function (_super) {
 }(InvisibleNode));
 exports.TextNode = TextNode;
 var getClassName = function (instance) { return instance.constructor.name; };
+var ɵ0 = getClassName;
+exports.ɵ0 = ɵ0;
 function isDetachedElement(element) {
     return (element && element.meta && element.meta.skipAddToDom);
 }

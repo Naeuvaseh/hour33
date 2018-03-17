@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var settings_1 = require("../../../../../settings");
 var permissions = require("nativescript-permissions");
 var TNSPhone = require("nativescript-phone");
-var VendorPhoneComponent = (function () {
+var VendorPhoneComponent = /** @class */ (function () {
     function VendorPhoneComponent() {
     }
     VendorPhoneComponent.prototype.ngOnInit = function () {

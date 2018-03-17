@@ -8,7 +8,6 @@ com/google/android/gms/games/video/VideoConfiguration$ValidCaptureModes.class
 com/google/android/gms/wallet/fragment/WalletFragmentStyle$BuyButtonText.class
 com/google/android/gms/wearable/DataClient.class
 android/support/v4/app/NotificationCompat$Extender.class
-com/telerik/widget/calendar/R.class
 android/support/v4/media/session/MediaControllerCompat.class
 android/support/v4/view/ViewGroupCompat.class
 com/google/ads/mediation/customevent/CustomEvent.class
@@ -65,7 +64,6 @@ android/support/v4/app/NotificationCompat$NotificationCompatBaseImpl.class
 com/telerik/widget/dataform/engine/EntityProperty.class
 android/support/v7/widget/RecyclerView.class
 com/google/android/gms/internal/zzth.class
-com/telerik/widget/calendar/R$dimen.class
 com/google/android/gms/common/api/internal/zzh.class
 android/support/multidex/MultiDexExtractor$1.class
 com/google/android/gms/internal/zzagd.class
@@ -190,6 +188,7 @@ com/telerik/widget/dataform/engine/EmptyValidator.class
 com/google/android/gms/cast/CastRemoteDisplayClient.class
 com/google/firebase/dynamiclinks/ShortDynamicLink.class
 android/support/annotation/DrawableRes.class
+com/telerik/widget/dataform/R$dimen.class
 com/google/android/gms/internal/zzaji.class
 com/google/android/gms/games/request/GameRequestBuffer.class
 com/google/android/gms/internal/zzbdq.class
@@ -475,7 +474,6 @@ android/support/v4/view/AbsSavedState.class
 com/google/android/gms/analytics/Logger.class
 com/google/android/gms/wallet/LoyaltyWalletObject.class
 android/support/v4/app/TaskStackBuilder.class
-com/telerik/widget/calendar/R$id.class
 android/support/v7/app/ActionBar$TabListener.class
 android/support/v7/app/AppCompatDelegateImplN.class
 com/google/android/gms/appinvite/AppInvite.class
@@ -637,6 +635,7 @@ com/google/android/gms/wearable/ChannelApi$ChannelListener.class
 com/google/android/gms/common/api/internal/zzda.class
 android/support/v4/view/PagerTitleStrip.class
 android/support/design/widget/ViewUtilsLollipop.class
+com/telerik/widget/dataform/R.class
 com/google/android/gms/wearable/CapabilityApi.class
 com/google/android/gms/internal/zzhp.class
 com/google/android/gms/internal/zzang.class
@@ -1475,6 +1474,7 @@ com/google/android/gms/internal/zztg.class
 com/google/android/gms/games/leaderboard/Leaderboards$SubmitScoreResult.class
 com/google/android/gms/internal/zzjg.class
 com/google/android/gms/wearable/CapabilityClient$NodeFilterType.class
+com/telerik/widget/dataform/R$id.class
 com/google/android/gms/ads/internal/overlay/zzc.class
 com/google/android/gms/common/api/GoogleApi$zza.class
 com/google/android/gms/gcm/GoogleCloudMessaging.class

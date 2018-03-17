@@ -1,39 +1,36 @@
-<ListView [items]="reviews" padding="10">
-    <ng-template let-review="item" padding="10">
-        <FlexboxLayout class="card" padding="10" flexDirection="row">
-            <FlexboxLayout width="20%" alignContent="center">
-                <Image 
-                    [src]=thumb(review.rating)
-                    width="50"
-                    height="50"
-                    horizontalAlignment="center"
-                    verticalAlignment="top"
-                    stretch="none"></Image>
+<FlexboxLayout class="card" flexDirection="row" padding="10" margin="10">
+    <FlexboxLayout width="20%" alignContent="center">
+        <Image 
+            [src]=thumb(review.rating)
+            width="50"
+            height="50"
+            horizontalAlignment="center"
+            verticalAlignment="top"
+            stretch="none"></Image>
+    </FlexboxLayout>
+    <FlexboxLayout width="80%" flexDirection="column">
+        <FlexboxLayout width="100%" flexDirection="column">
+            <FlexboxLayout margin="0 0 10 0">
+                <Label 
+                    [text]="review.text" 
+                    textWrap="true"
+                    [color]="theme.inactiveColor"></Label>
             </FlexboxLayout>
-            <FlexboxLayout width="80%" flexDirection="column">
-                <FlexboxLayout width="100%">
-                    <Label 
-                        [text]="review.author_name" 
-                        [color]="theme.inactiveColor"
-                        fontSize="18"
-                        width="60%"
-                        fontWeight="700"></Label>
-                    <Label 
-                        [text]="review.relative_time_description"
-                        [color]="theme.accentColor"
-                        wordWrap="true"
-                        fontSize="16"
-                        textAlignment="right"
-                        width="40%"
-                        fontWeight="300"></Label>
-                </FlexboxLayout>
-                <FlexboxLayout>
-                    <Label 
-                        [text]="review.text" 
-                        textWrap="true"
-                        [color]="theme.inactiveColor"></Label>
-                </FlexboxLayout>
-            </FlexboxLayout>
+            <Label 
+                [text]="'- ' + review.author_name" 
+                [color]="theme.inactiveColor"   
+                fontSize="16"
+                fontWeight="700"
+                width="100%"
+                textAlignment="right"></Label>
+            <Label
+                [text]="' (' + review.relative_time_description + ')'"
+                [color]="theme.lightGrey"
+                wordWrap="true"
+                fontSize="14"
+                width="100%"
+                fontWeight="300"
+                textAlignment="right"></Label>
         </FlexboxLayout>
-    </ng-template>
-</ListView>
+    </FlexboxLayout>
+</FlexboxLayout>

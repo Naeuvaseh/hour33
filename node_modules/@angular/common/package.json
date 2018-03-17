@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/common@4.4.6",
+        "raw": "@angular/common@~5.2.0",
         "scope": "@angular",
         "escapedName": "@angular%2fcommon",
         "name": "@angular/common",
-        "rawSpec": "4.4.6",
-        "spec": "4.4.6",
-        "type": "version"
+        "rawSpec": "~5.2.0",
+        "spec": ">=5.2.0 <5.3.0",
+        "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng"
     ]
   ],
-  "_from": "@angular/common@4.4.6",
-  "_id": "@angular/common@4.4.6",
+  "_from": "@angular/common@>=5.2.0 <5.3.0",
+  "_id": "@angular/common@5.2.9",
   "_inCache": true,
   "_location": "/@angular/common",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "8.9.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/common-4.4.6.tgz_1508372341681_0.8242098202463239"
+    "tmp": "tmp/common_5.2.9_1521065999494_0.06103591782153961"
   },
   "_npmUser": {
     "name": "angular",
-    "email": "angular-core+npm@google.com"
+    "email": "devops+npm@angular.io"
   },
-  "_npmVersion": "4.6.1",
+  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/common@4.4.6",
+    "raw": "@angular/common@~5.2.0",
     "scope": "@angular",
     "escapedName": "@angular%2fcommon",
     "name": "@angular/common",
-    "rawSpec": "4.4.6",
-    "spec": "4.4.6",
-    "type": "version"
+    "rawSpec": "~5.2.0",
+    "spec": ">=5.2.0 <5.3.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "/"
+    "/tns-template-blank-ng"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/common/-/common-4.4.6.tgz",
-  "_shasum": "4b81420724e0828a0e839b95a55eb1a7e83918f2",
+  "_resolved": "https://registry.npmjs.org/@angular/common/-/common-5.2.9.tgz",
+  "_shasum": "beb25d4434498abae56bd8dc2c01ade3f6c45e81",
   "_shrinkwrap": null,
-  "_spec": "@angular/common@4.4.6",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33",
+  "_spec": "@angular/common@~5.2.0",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng",
   "author": {
     "name": "angular"
   },
@@ -58,31 +58,34 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "4b81420724e0828a0e839b95a55eb1a7e83918f2",
-    "tarball": "https://registry.npmjs.org/@angular/common/-/common-4.4.6.tgz"
+    "integrity": "sha512-g2hPcI0fnT4TV+Fd+1IohjuqBxPvxwyH9IzTn8PkU9X2M+F6cHCUvHxL1sWI2sF8pYcaHzVjq9WClym10X36Lg==",
+    "shasum": "beb25d4434498abae56bd8dc2c01ade3f6c45e81",
+    "tarball": "https://registry.npmjs.org/@angular/common/-/common-5.2.9.tgz",
+    "fileCount": 3259,
+    "unpackedSize": 7624208
   },
-  "es2015": "./@angular/common.js",
+  "es2015": "./esm2015/common.js",
   "homepage": "https://github.com/angular/angular#readme",
   "license": "MIT",
   "main": "./bundles/common.umd.js",
   "maintainers": [
     {
       "name": "angular",
-      "email": "angular-core+npm@google.com"
+      "email": "devops+npm@angular.io"
     }
   ],
-  "module": "./@angular/common.es5.js",
+  "module": "./esm5/common.js",
   "name": "@angular/common",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "4.4.6"
+    "rxjs": "^5.5.0",
+    "@angular/core": "5.2.9"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
-  "scripts": {},
   "typings": "./common.d.ts",
-  "version": "4.4.6"
+  "version": "5.2.9"
 }

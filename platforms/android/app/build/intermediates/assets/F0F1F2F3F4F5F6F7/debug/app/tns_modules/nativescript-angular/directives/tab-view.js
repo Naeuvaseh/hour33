@@ -28,17 +28,18 @@ var TabViewDirective = /** @class */ (function () {
             this.tabView.selectedIndex = this._selectedIndex;
         }
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Object])
-    ], TabViewDirective.prototype, "selectedIndex", null);
-    TabViewDirective = __decorate([
-        core_1.Directive({
-            selector: "TabView",
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], TabViewDirective);
+    TabViewDirective.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: "TabView",
+                },] },
+    ];
+    /** @nocollapse */
+    TabViewDirective.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+    ]; };
+    TabViewDirective.propDecorators = {
+        "selectedIndex": [{ type: core_1.Input },],
+    };
     return TabViewDirective;
 }());
 exports.TabViewDirective = TabViewDirective;
@@ -98,28 +99,22 @@ var TabViewItemDirective = /** @class */ (function () {
             this.owner.tabView.items = newItems;
         }
     };
-    __decorate([
-        core_1.Input("tabItem"),
-        __metadata("design:type", Object)
-    ], TabViewItemDirective.prototype, "config", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [String])
-    ], TabViewItemDirective.prototype, "title", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [String])
-    ], TabViewItemDirective.prototype, "iconSource", null);
-    TabViewItemDirective = __decorate([
-        core_1.Directive({
-            selector: "[tabItem]" // tslint:disable-line:directive-selector
-        }),
-        __metadata("design:paramtypes", [TabViewDirective,
-            core_1.TemplateRef,
-            core_1.ViewContainerRef])
-    ], TabViewItemDirective);
+    TabViewItemDirective.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: "[tabItem]" // tslint:disable-line:directive-selector
+                },] },
+    ];
+    /** @nocollapse */
+    TabViewItemDirective.ctorParameters = function () { return [
+        { type: TabViewDirective, },
+        { type: core_1.TemplateRef, },
+        { type: core_1.ViewContainerRef, },
+    ]; };
+    TabViewItemDirective.propDecorators = {
+        "config": [{ type: core_1.Input, args: ["tabItem",] },],
+        "title": [{ type: core_1.Input },],
+        "iconSource": [{ type: core_1.Input },],
+    };
     return TabViewItemDirective;
 }());
 exports.TabViewItemDirective = TabViewItemDirective;

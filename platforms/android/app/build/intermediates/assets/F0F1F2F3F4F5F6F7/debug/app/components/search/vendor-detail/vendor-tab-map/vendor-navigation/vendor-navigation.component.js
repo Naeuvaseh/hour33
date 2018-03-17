@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var settings_1 = require("../../../../../settings");
 var utilityModule = require("utils/utils");
-var VendorNavigationComponent = (function () {
+var VendorNavigationComponent = /** @class */ (function () {
     function VendorNavigationComponent() {
         this.theme = settings_1.Theme;
     }

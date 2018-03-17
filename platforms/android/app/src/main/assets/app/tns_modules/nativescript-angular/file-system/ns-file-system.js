@@ -15,9 +15,11 @@ var NSFileSystem = /** @class */ (function () {
     NSFileSystem.prototype.fileExists = function (path) {
         return file_system_1.File.exists(path);
     };
-    NSFileSystem = __decorate([
-        core_1.Injectable()
-    ], NSFileSystem);
+    NSFileSystem.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    NSFileSystem.ctorParameters = function () { return []; };
     return NSFileSystem;
 }());
 exports.NSFileSystem = NSFileSystem;

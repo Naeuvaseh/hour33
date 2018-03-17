@@ -10,7 +10,7 @@
         "spec": ">=0.1.0 <0.2.0",
         "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\nativescript-plugin-firebase"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-plugin-firebase"
     ]
   ],
   "_from": "prompt-lite@>=0.1.0 <0.2.0",
@@ -39,7 +39,7 @@
   "_shasum": "fa848f81ba139e7d3f321773ddafc93d32857c75",
   "_shrinkwrap": null,
   "_spec": "prompt-lite@~0.1.0",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\nativescript-plugin-firebase",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-plugin-firebase",
   "author": {
     "name": "Joshua Holbrook"
   },

@@ -5,7 +5,7 @@ var settings_1 = require("../../../settings");
 var common_1 = require("@angular/common");
 var specials_service_1 = require("../../../services/specials.service");
 var moment = require("moment");
-var StarComponent = (function () {
+var StarComponent = /** @class */ (function () {
     /*public specials: Specials;*/
     function StarComponent(location, specialsService) {
         this.location = location;

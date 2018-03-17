@@ -1,11 +1,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
-var proxy_view_container_1 = require("tns-core-modules/ui/proxy-view-container");
+var css_selector_1 = require("tns-core-modules/ui/styling/css-selector");
+var properties_1 = require("tns-core-modules/ui/core/properties");
 var view_1 = require("tns-core-modules/ui/core/view");
+var proxy_view_container_1 = require("tns-core-modules/ui/proxy-view-container");
 var animation_player_1 = require("./animation-player");
 var utils_1 = require("./utils");
 var element_registry_1 = require("../element-registry");
 var trace_1 = require("../trace");
-var css_selector_1 = require("tns-core-modules/ui/styling/css-selector");
 var Selector = /** @class */ (function () {
     function Selector(rawSelector) {
         this.parse(rawSelector);
@@ -30,7 +31,14 @@ var Selector = /** @class */ (function () {
     // we're using that instead of match for classes
     // that are dynamically added by the animation engine
     // such as .ng-trigger, that's added for every :enter view
-    Selector.prototype.hasClass = function (element, cls) {
+    // we're using that instead of match for classes
+    // that are dynamically added by the animation engine
+    // such as .ng-trigger, that's added for every :enter view
+    Selector.prototype.hasClass = 
+    // we're using that instead of match for classes
+    // that are dynamically added by the animation engine
+    // such as .ng-trigger, that's added for every :enter view
+    function (element, cls) {
         return element && element["$$classes"] && element["$$classes"][cls];
     };
     return Selector;
@@ -38,6 +46,10 @@ var Selector = /** @class */ (function () {
 var NativeScriptAnimationDriver = /** @class */ (function () {
     function NativeScriptAnimationDriver() {
     }
+    NativeScriptAnimationDriver.prototype.validateStyleProperty = function (property) {
+        trace_1.animationsLog("CssAnimationProperty.validateStyleProperty: " + property);
+        return NativeScriptAnimationDriver.validProperties.indexOf(property) !== -1;
+    };
     NativeScriptAnimationDriver.prototype.matchesElement = function (element, rawSelector) {
         trace_1.animationsLog("NativeScriptAnimationDriver.matchesElement " +
             ("element: " + element + ", selector: " + rawSelector));
@@ -47,6 +59,10 @@ var NativeScriptAnimationDriver = /** @class */ (function () {
     NativeScriptAnimationDriver.prototype.containsElement = function (elm1, elm2) {
         trace_1.animationsLog("NativeScriptAnimationDriver.containsElement " +
             ("element1: " + elm1 + ", element2: " + elm2));
+        // Checking if the parent is our fake body object
+        if (elm1["isOverride"]) {
+            return true;
+        }
         var params = { originalView: elm2 };
         var result = this.visitDescendants(elm1, viewMatches, params);
         return result.found;
@@ -79,9 +95,13 @@ var NativeScriptAnimationDriver = /** @class */ (function () {
     NativeScriptAnimationDriver.prototype.visitDescendants = function (element, cb, cbParams) {
         var result = {};
         // fill the result obj with the result from the callback function
+        // fill the result obj with the result from the callback function
         view_1.eachDescendant(element, function (child) { return cb(child, result, cbParams); });
         return result;
     };
+    NativeScriptAnimationDriver.validProperties = properties_1.CssAnimationProperty._getPropertyNames().concat([
+        "transform",
+    ]);
     return NativeScriptAnimationDriver;
 }());
 exports.NativeScriptAnimationDriver = NativeScriptAnimationDriver;

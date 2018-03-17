@@ -7,7 +7,7 @@ var specials_service_1 = require("../../services/specials.service");
 var specials_routing_module_1 = require("./specials-routing.module");
 var specials_component_1 = require("./specials.component");
 var star_component_1 = require("./star/star.component");
-var SpecialsModule = (function () {
+var SpecialsModule = /** @class */ (function () {
     function SpecialsModule() {
     }
     SpecialsModule = __decorate([

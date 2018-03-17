@@ -4,7 +4,7 @@ var core_1 = require("@angular/core");
 var google_location_service_1 = require("../services/google-location.service");
 var geolocation = require("nativescript-geolocation");
 var enums_1 = require("ui/enums");
-var CurrentLocationResolver = (function () {
+var CurrentLocationResolver = /** @class */ (function () {
     function CurrentLocationResolver(googleLocationService) {
         this.googleLocationService = googleLocationService;
     }

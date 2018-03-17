@@ -11,7 +11,7 @@ var routes = [
     { path: "favorites", loadChildren: './components/favorites/favorites.module#FavoritesModule' },
     { path: "account", loadChildren: './components/account/account.module#AccountModule' },
 ];
-var AppRoutingModule = (function () {
+var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([

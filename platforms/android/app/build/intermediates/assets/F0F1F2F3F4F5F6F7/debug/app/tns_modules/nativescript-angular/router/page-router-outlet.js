@@ -87,11 +87,12 @@ var PageRouterOutlet = /** @class */ (function () {
         this.changeDetector = changeDetector;
         this.pageFactory = pageFactory;
         this.routeReuseStrategy = routeReuseStrategy;
+        // tslint:disable-line:directive-class-suffix
         this.activated = null;
         this._activatedRoute = null;
         this.isInitialPage = true;
-        this.activateEvents = new core_1.EventEmitter(); // tslint:disable-line:no-output-rename
-        this.deactivateEvents = new core_1.EventEmitter(); // tslint:disable-line:no-output-rename
+        this.activateEvents = new core_1.EventEmitter();
+        this.deactivateEvents = new core_1.EventEmitter();
         this.name = name || router_1.PRIMARY_OUTLET;
         parentContexts.onChildOutletCreated(this.name, this);
         this.viewUtil = new view_util_1.ViewUtil(device);
@@ -99,13 +100,15 @@ var PageRouterOutlet = /** @class */ (function () {
     }
     Object.defineProperty(PageRouterOutlet.prototype, "locationInjector", {
         /** @deprecated from Angular since v4 */
-        get: function () { return this.location.injector; },
+        get: /** @deprecated from Angular since v4 */
+        function () { return this.location.injector; },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(PageRouterOutlet.prototype, "locationFactoryResolver", {
         /** @deprecated from Angular since v4 */
-        get: function () { return this.resolver; },
+        get: /** @deprecated from Angular since v4 */
+        function () { return this.resolver; },
         enumerable: true,
         configurable: true
     });
@@ -176,7 +179,13 @@ var PageRouterOutlet = /** @class */ (function () {
     /**
      * Called when the `RouteReuseStrategy` instructs to detach the subtree
      */
-    PageRouterOutlet.prototype.detach = function () {
+    /**
+         * Called when the `RouteReuseStrategy` instructs to detach the subtree
+         */
+    PageRouterOutlet.prototype.detach = /**
+         * Called when the `RouteReuseStrategy` instructs to detach the subtree
+         */
+    function () {
         if (!this.isActivated) {
             throw new Error("Outlet is not activated");
         }
@@ -189,7 +198,13 @@ var PageRouterOutlet = /** @class */ (function () {
     /**
      * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
      */
-    PageRouterOutlet.prototype.attach = function (ref, activatedRoute) {
+    /**
+         * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
+         */
+    PageRouterOutlet.prototype.attach = /**
+         * Called when the `RouteReuseStrategy` instructs to re-attach a previously detached subtree
+         */
+    function (ref, activatedRoute) {
         trace_1.routerLog("PageRouterOutlet.attach() - " + routeToString(activatedRoute));
         this.activated = ref;
         this._activatedRoute = activatedRoute;
@@ -200,7 +215,15 @@ var PageRouterOutlet = /** @class */ (function () {
      * Called by the Router to instantiate a new component during the commit phase of a navigation.
      * This method in turn is responsible for calling the `routerOnActivate` hook of its child.
      */
-    PageRouterOutlet.prototype.activateWith = function (activatedRoute, resolver) {
+    /**
+         * Called by the Router to instantiate a new component during the commit phase of a navigation.
+         * This method in turn is responsible for calling the `routerOnActivate` hook of its child.
+         */
+    PageRouterOutlet.prototype.activateWith = /**
+         * Called by the Router to instantiate a new component during the commit phase of a navigation.
+         * This method in turn is responsible for calling the `routerOnActivate` hook of its child.
+         */
+    function (activatedRoute, resolver) {
         if (this.locationStrategy._isPageNavigatingBack()) {
             throw new Error("Currently in page back navigation - component should be reattached instead of activated.");
         }
@@ -262,10 +285,12 @@ var PageRouterOutlet = /** @class */ (function () {
         var navOptions = this.locationStrategy._beginPageNavigation();
         // Clear refCache if navigation with clearHistory
         if (navOptions.clearHistory) {
-            var clearCallback_1 = function () { return setTimeout(function () {
-                _this.routeReuseStrategy.clearCache();
-                page.off(page_1.Page.navigatedToEvent, clearCallback_1);
-            }); };
+            var clearCallback_1 = function () {
+                return setTimeout(function () {
+                    _this.routeReuseStrategy.clearCache();
+                    page.off(page_1.Page.navigatedToEvent, clearCallback_1);
+                });
+            };
             page.on(page_1.Page.navigatedToEvent, clearCallback_1);
         }
         this.frame.navigate({
@@ -280,26 +305,38 @@ var PageRouterOutlet = /** @class */ (function () {
         nodeToMark[exports.pageRouterActivatedSymbol] = true;
         trace_1.routerLog("Activated route marked as page: " + routeToString(nodeToMark));
     };
-    // NOTE: Using private APIs - potential break point!
     PageRouterOutlet.prototype.getComponentFactory = function (activatedRoute, loadedResolver) {
-        var snapshot = activatedRoute._futureSnapshot;
-        var component = snapshot._routeConfig.component;
+        var component = activatedRoute.routeConfig.component;
         return loadedResolver ?
             loadedResolver.resolveComponentFactory(component) :
             this.componentFactoryResolver.resolveComponentFactory(component);
     };
-    __decorate([
-        core_1.Output("activate"),
-        __metadata("design:type", Object)
-    ], PageRouterOutlet.prototype, "activateEvents", void 0);
-    __decorate([
-        core_1.Output("deactivate"),
-        __metadata("design:type", Object)
-    ], PageRouterOutlet.prototype, "deactivateEvents", void 0);
+    PageRouterOutlet.decorators = [
+        { type: core_1.Directive, args: [{ selector: "page-router-outlet" },] },
+    ];
+    /** @nocollapse */
+    PageRouterOutlet.ctorParameters = function () { return [
+        { type: router_1.ChildrenOutletContexts, },
+        { type: core_1.ViewContainerRef, },
+        { type: undefined, decorators: [{ type: core_1.Attribute, args: ["name",] },] },
+        { type: ns_location_strategy_1.NSLocationStrategy, },
+        { type: core_1.ComponentFactoryResolver, },
+        { type: core_1.ComponentFactoryResolver, },
+        { type: frame_1.Frame, },
+        { type: core_1.ChangeDetectorRef, },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [platform_providers_1.DEVICE,] },] },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [platform_providers_1.PAGE_FACTORY,] },] },
+        { type: ns_route_reuse_strategy_1.NSRouteReuseStrategy, },
+    ]; };
+    PageRouterOutlet.propDecorators = {
+        "activateEvents": [{ type: core_1.Output, args: ["activate",] },],
+        "deactivateEvents": [{ type: core_1.Output, args: ["deactivate",] },],
+    };
     __decorate([
         profiling_1.profile,
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute, Object]),
+        __metadata("design:paramtypes", [router_1.ActivatedRoute,
+            core_1.ComponentFactoryResolver]),
         __metadata("design:returntype", void 0)
     ], PageRouterOutlet.prototype, "activateWith", null);
     __decorate([
@@ -308,19 +345,6 @@ var PageRouterOutlet = /** @class */ (function () {
         __metadata("design:paramtypes", [page_1.Page, core_1.ComponentRef]),
         __metadata("design:returntype", void 0)
     ], PageRouterOutlet.prototype, "loadComponentInPage", null);
-    PageRouterOutlet = __decorate([
-        core_1.Directive({ selector: "page-router-outlet" }) // tslint:disable-line:directive-selector
-        ,
-        __param(2, core_1.Attribute("name")),
-        __param(8, core_1.Inject(platform_providers_1.DEVICE)),
-        __param(9, core_1.Inject(platform_providers_1.PAGE_FACTORY)),
-        __metadata("design:paramtypes", [router_1.ChildrenOutletContexts,
-            core_1.ViewContainerRef, String, ns_location_strategy_1.NSLocationStrategy,
-            core_1.ComponentFactoryResolver,
-            core_1.ComponentFactoryResolver,
-            frame_1.Frame,
-            core_1.ChangeDetectorRef, Object, Function, ns_route_reuse_strategy_1.NSRouteReuseStrategy])
-    ], PageRouterOutlet);
     return PageRouterOutlet;
 }());
 exports.PageRouterOutlet = PageRouterOutlet;

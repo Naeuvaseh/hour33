@@ -25,19 +25,22 @@ var DateValueAccessor = /** @class */ (function (_super) {
         var normalized = _super.prototype.normalizeValue.call(this, value);
         this.view.date = normalized;
     };
-    DateValueAccessor = __decorate([
-        core_1.Directive({
-            selector: "DatePicker[ngModel],DatePicker[formControlName],DatePicker[formControl]," +
-                "datepicker[ngModel],datepicker[formControlName],datepicker[formControl]," +
-                "datePicker[ngModel],datePicker[formControlName],datePicker[formControl]," +
-                "date-picker[ngModel],date-picker[formControlName],date-picker[formControl]",
-            providers: [DATE_VALUE_ACCESSOR],
-            host: {
-                "(dateChange)": "onChange($event.value)",
-            },
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], DateValueAccessor);
+    DateValueAccessor.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: "DatePicker[ngModel],DatePicker[formControlName],DatePicker[formControl]," +
+                        "datepicker[ngModel],datepicker[formControlName],datepicker[formControl]," +
+                        "datePicker[ngModel],datePicker[formControlName],datePicker[formControl]," +
+                        "date-picker[ngModel],date-picker[formControlName],date-picker[formControl]",
+                    providers: [DATE_VALUE_ACCESSOR],
+                    host: {
+                        "(dateChange)": "onChange($event.value)",
+                    },
+                },] },
+    ];
+    /** @nocollapse */
+    DateValueAccessor.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+    ]; };
     return DateValueAccessor;
 }(base_value_accessor_1.BaseValueAccessor));
 exports.DateValueAccessor = DateValueAccessor;

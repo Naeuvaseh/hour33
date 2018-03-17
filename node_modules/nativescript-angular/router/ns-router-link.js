@@ -35,6 +35,7 @@ var NSRouterLink = /** @class */ (function () {
         this.navigator = navigator;
         this.route = route;
         this.pageRoute = pageRoute;
+        // tslint:disable-line:directive-class-suffix
         this.commands = [];
         this.pageTransition = true;
         this.usePageRoute = (this.pageRoute && this.route === this.pageRoute.activatedRoute.getValue());
@@ -104,45 +105,25 @@ var NSRouterLink = /** @class */ (function () {
     NSRouterLink.prototype.updateUrlTree = function () {
         this.urlTree = this.router.createUrlTree(this.commands, { relativeTo: this.currentRoute, queryParams: this.queryParams, fragment: this.fragment });
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], NSRouterLink.prototype, "target", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], NSRouterLink.prototype, "queryParams", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], NSRouterLink.prototype, "fragment", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], NSRouterLink.prototype, "clearHistory", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], NSRouterLink.prototype, "pageTransition", void 0);
-    __decorate([
-        core_1.Input("nsRouterLink"),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], NSRouterLink.prototype, "params", null);
-    __decorate([
-        core_1.HostListener("tap"),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], NSRouterLink.prototype, "onTap", null);
-    NSRouterLink = __decorate([
-        core_1.Directive({ selector: "[nsRouterLink]" }),
-        __param(3, core_1.Optional()),
-        __metadata("design:paramtypes", [router_1.Router,
-            router_extensions_1.RouterExtensions,
-            router_1.ActivatedRoute,
-            page_router_outlet_1.PageRoute])
-    ], NSRouterLink);
+    NSRouterLink.decorators = [
+        { type: core_1.Directive, args: [{ selector: "[nsRouterLink]" },] },
+    ];
+    /** @nocollapse */
+    NSRouterLink.ctorParameters = function () { return [
+        { type: router_1.Router, },
+        { type: router_extensions_1.RouterExtensions, },
+        { type: router_1.ActivatedRoute, },
+        { type: page_router_outlet_1.PageRoute, decorators: [{ type: core_1.Optional },] },
+    ]; };
+    NSRouterLink.propDecorators = {
+        "target": [{ type: core_1.Input },],
+        "queryParams": [{ type: core_1.Input },],
+        "fragment": [{ type: core_1.Input },],
+        "clearHistory": [{ type: core_1.Input },],
+        "pageTransition": [{ type: core_1.Input },],
+        "params": [{ type: core_1.Input, args: ["nsRouterLink",] },],
+        "onTap": [{ type: core_1.HostListener, args: ["tap",] },],
+    };
     return NSRouterLink;
 }());
 exports.NSRouterLink = NSRouterLink;

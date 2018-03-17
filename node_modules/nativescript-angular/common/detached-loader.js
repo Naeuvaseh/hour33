@@ -30,22 +30,28 @@ var DetachedLoader = /** @class */ (function () {
         this.changeDetector.markForCheck();
     };
     // TODO: change this API -- async promises not needed here anymore.
-    DetachedLoader.prototype.loadComponent = function (componentType) {
+    // TODO: change this API -- async promises not needed here anymore.
+    DetachedLoader.prototype.loadComponent = 
+    // TODO: change this API -- async promises not needed here anymore.
+    function (componentType) {
         log("DetachedLoader.loadComponent");
         return this.loadInLocation(componentType);
     };
     DetachedLoader.prototype.loadWithFactory = function (factory) {
         return this.containerRef.createComponent(factory, this.containerRef.length, this.containerRef.parentInjector, null);
     };
-    DetachedLoader = __decorate([
-        core_1.Component({
-            selector: "DetachedContainer",
-            template: "<Placeholder #loader></Placeholder>"
-        }),
-        __metadata("design:paramtypes", [core_1.ComponentFactoryResolver,
-            core_1.ChangeDetectorRef,
-            core_1.ViewContainerRef])
-    ], DetachedLoader);
+    DetachedLoader.decorators = [
+        { type: core_1.Component, args: [{
+                    selector: "DetachedContainer",
+                    template: "<Placeholder #loader></Placeholder>"
+                },] },
+    ];
+    /** @nocollapse */
+    DetachedLoader.ctorParameters = function () { return [
+        { type: core_1.ComponentFactoryResolver, },
+        { type: core_1.ChangeDetectorRef, },
+        { type: core_1.ViewContainerRef, },
+    ]; };
     return DetachedLoader;
 }());
 exports.DetachedLoader = DetachedLoader;

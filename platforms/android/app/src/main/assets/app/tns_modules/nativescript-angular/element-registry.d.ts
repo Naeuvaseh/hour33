@@ -4,7 +4,7 @@ export interface ViewExtensions {
     meta: ViewClassMeta;
     nodeType: number;
     nodeName: string;
-    templateParent: NgView;
+    parentNode: NgView;
     nextSibling: NgView;
     firstChild: NgView;
     lastChild: NgView;
@@ -19,7 +19,7 @@ export declare abstract class InvisibleNode extends View implements NgView {
     };
     nodeType: number;
     nodeName: string;
-    templateParent: NgView;
+    parentNode: NgView;
     nextSibling: NgView;
     firstChild: NgView;
     lastChild: NgView;

@@ -3,21 +3,24 @@ var core_1 = require("@angular/core");
 var animations_1 = require("@angular/animations");
 var browser_1 = require("@angular/animations/browser");
 var animations_2 = require("@angular/platform-browser/animations");
-var animation_engine_1 = require("./animation-engine");
-var animation_driver_1 = require("./animation-driver");
 var nativescript_module_1 = require("../nativescript.module");
 var renderer_1 = require("../renderer");
+var animation_driver_1 = require("./animation-driver");
 var InjectableAnimationEngine = /** @class */ (function (_super) {
     __extends(InjectableAnimationEngine, _super);
     function InjectableAnimationEngine(driver, normalizer) {
         return _super.call(this, driver, normalizer) || this;
     }
-    InjectableAnimationEngine = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [browser_1.AnimationDriver, browser_1.ɵAnimationStyleNormalizer])
-    ], InjectableAnimationEngine);
+    InjectableAnimationEngine.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    InjectableAnimationEngine.ctorParameters = function () { return [
+        { type: browser_1.AnimationDriver, },
+        { type: browser_1.ɵAnimationStyleNormalizer, },
+    ]; };
     return InjectableAnimationEngine;
-}(animation_engine_1.NativeScriptAnimationEngine));
+}(browser_1.ɵAnimationEngine));
 exports.InjectableAnimationEngine = InjectableAnimationEngine;
 function instantiateSupportedAnimationDriver() {
     return new animation_driver_1.NativeScriptAnimationDriver();
@@ -32,25 +35,27 @@ function instantiateDefaultStyleNormalizer() {
 }
 exports.instantiateDefaultStyleNormalizer = instantiateDefaultStyleNormalizer;
 exports.NATIVESCRIPT_ANIMATIONS_PROVIDERS = [
-    { provide: animations_1.AnimationBuilder, useClass: animations_2.ɵBrowserAnimationBuilder },
     { provide: browser_1.AnimationDriver, useFactory: instantiateSupportedAnimationDriver },
+    { provide: animations_1.AnimationBuilder, useClass: animations_2.ɵBrowserAnimationBuilder },
     { provide: browser_1.ɵAnimationStyleNormalizer, useFactory: instantiateDefaultStyleNormalizer },
-    { provide: animation_engine_1.NativeScriptAnimationEngine, useClass: InjectableAnimationEngine },
+    { provide: browser_1.ɵAnimationEngine, useClass: InjectableAnimationEngine },
     {
         provide: core_1.RendererFactory2,
         useFactory: instantiateRendererFactory,
-        deps: [renderer_1.NativeScriptRendererFactory, animation_engine_1.NativeScriptAnimationEngine, core_1.NgZone]
+        deps: [renderer_1.NativeScriptRendererFactory, browser_1.ɵAnimationEngine, core_1.NgZone]
     }
 ];
 var NativeScriptAnimationsModule = /** @class */ (function () {
     function NativeScriptAnimationsModule() {
     }
-    NativeScriptAnimationsModule = __decorate([
-        core_1.NgModule({
-            imports: [nativescript_module_1.NativeScriptModule],
-            providers: exports.NATIVESCRIPT_ANIMATIONS_PROVIDERS,
-        })
-    ], NativeScriptAnimationsModule);
+    NativeScriptAnimationsModule.decorators = [
+        { type: core_1.NgModule, args: [{
+                    imports: [nativescript_module_1.NativeScriptModule],
+                    providers: exports.NATIVESCRIPT_ANIMATIONS_PROVIDERS,
+                },] },
+    ];
+    /** @nocollapse */
+    NativeScriptAnimationsModule.ctorParameters = function () { return []; };
     return NativeScriptAnimationsModule;
 }());
 exports.NativeScriptAnimationsModule = NativeScriptAnimationsModule;

@@ -48,12 +48,15 @@ var NativeScriptRendererFactory = /** @class */ (function () {
         this.componentRenderers.set(type.id, renderer);
         return renderer;
     };
-    NativeScriptRendererFactory = __decorate([
-        core_1.Injectable(),
-        __param(0, core_1.Optional()), __param(0, core_1.Inject(platform_providers_1.APP_ROOT_VIEW)),
-        __param(1, core_1.Inject(platform_providers_1.DEVICE)),
-        __metadata("design:paramtypes", [view_1.View, Object, core_1.NgZone])
-    ], NativeScriptRendererFactory);
+    NativeScriptRendererFactory.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    NativeScriptRendererFactory.ctorParameters = function () { return [
+        { type: view_1.View, decorators: [{ type: core_1.Optional }, { type: core_1.Inject, args: [platform_providers_1.APP_ROOT_VIEW,] },] },
+        { type: undefined, decorators: [{ type: core_1.Inject, args: [platform_providers_1.DEVICE,] },] },
+        { type: core_1.NgZone, },
+    ]; };
     return NativeScriptRendererFactory;
 }());
 exports.NativeScriptRendererFactory = NativeScriptRendererFactory;
@@ -88,7 +91,7 @@ var NativeScriptRenderer = /** @class */ (function (_super) {
     };
     NativeScriptRenderer.prototype.parentNode = function (node) {
         trace_1.rendererLog("NativeScriptRenderer.parentNode for node: " + node);
-        return node.parent || node.templateParent;
+        return node.parentNode;
     };
     NativeScriptRenderer.prototype.nextSibling = function (node) {
         trace_1.rendererLog("NativeScriptRenderer.nextSibling of " + node + " is " + node.nextSibling);
@@ -152,7 +155,12 @@ var NativeScriptRenderer = /** @class */ (function (_super) {
     };
     // Used only in debug mode to serialize property changes to comment nodes,
     // such as <template> placeholders.
-    NativeScriptRenderer.prototype.setBindingDebugInfo = function (renderElement, propertyName, propertyValue) {
+    // Used only in debug mode to serialize property changes to comment nodes,
+    // such as <template> placeholders.
+    NativeScriptRenderer.prototype.setBindingDebugInfo = 
+    // Used only in debug mode to serialize property changes to comment nodes,
+    // such as <template> placeholders.
+    function (renderElement, propertyName, propertyValue) {
         trace_1.rendererLog("NativeScriptRenderer.setBindingDebugInfo: " + renderElement + ", " +
             propertyName + " = " + propertyValue);
     };
@@ -369,10 +377,12 @@ var EmulatedRenderer = /** @class */ (function (_super) {
     ], EmulatedRenderer.prototype, "addStyles", null);
     return EmulatedRenderer;
 }(NativeScriptRenderer));
-// tslint:disable-next-line
-var addStyleToCss = profiling_1.profile('"renderer".addStyleToCss', function addStyleToCss(style) {
+var ɵ0 = function addStyleToCss(style) {
     application_1.addCss(style);
-});
+};
+exports.ɵ0 = ɵ0;
+// tslint:disable-next-line
+var addStyleToCss = profiling_1.profile('"renderer".addStyleToCss', ɵ0);
 function replaceNgAttribute(input, componentId) {
     return input.replace(COMPONENT_REGEX, componentId);
 }

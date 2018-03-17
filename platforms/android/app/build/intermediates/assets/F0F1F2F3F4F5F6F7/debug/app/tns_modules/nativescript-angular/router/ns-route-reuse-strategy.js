@@ -6,7 +6,10 @@ var page_router_outlet_1 = require("./page-router-outlet");
 /**
  * Detached state cache
  */
-var DetachedStateCache = /** @class */ (function () {
+var /**
+ * Detached state cache
+ */
+DetachedStateCache = /** @class */ (function () {
     function DetachedStateCache() {
         this.cache = new Array();
     }
@@ -108,10 +111,13 @@ var NSRouteReuseStrategy = /** @class */ (function () {
     NSRouteReuseStrategy.prototype.clearCache = function () {
         this.cache.clear();
     };
-    NSRouteReuseStrategy = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [ns_location_strategy_1.NSLocationStrategy])
-    ], NSRouteReuseStrategy);
+    NSRouteReuseStrategy.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    NSRouteReuseStrategy.ctorParameters = function () { return [
+        { type: ns_location_strategy_1.NSLocationStrategy, },
+    ]; };
     return NSRouteReuseStrategy;
 }());
 exports.NSRouteReuseStrategy = NSRouteReuseStrategy;

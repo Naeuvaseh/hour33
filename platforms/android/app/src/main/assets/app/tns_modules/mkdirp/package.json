@@ -10,7 +10,7 @@
         "spec": ">=0.5.1 <0.6.0",
         "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\nativescript-hook"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-hook"
     ]
   ],
   "_from": "mkdirp@>=0.5.1 <0.6.0",
@@ -34,13 +34,14 @@
     "type": "range"
   },
   "_requiredBy": [
+    "/nativescript-dev-webpack/nativescript-hook",
     "/nativescript-hook"
   ],
   "_resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
   "_shasum": "30057438eac6cf7f8c4767f38648d6697d75c903",
   "_shrinkwrap": null,
   "_spec": "mkdirp@^0.5.1",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\nativescript-hook",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-hook",
   "author": {
     "name": "James Halliday",
     "email": "mail@substack.net",

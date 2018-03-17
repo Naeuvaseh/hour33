@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var firebase = require("../../firebase");
+var NextPushId_1 = require("./util/NextPushId");
 var database;
 (function (database) {
     var Query = (function () {
@@ -123,6 +124,21 @@ var database;
         function Reference() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
+        Reference.prototype.getKey = function () {
+            if (!this.path) {
+                return null;
+            }
+            else {
+                return this.path.lastIndexOf("/") === -1 ? this.path : this.path.substring(this.path.lastIndexOf("/") + 1);
+            }
+        };
+        Object.defineProperty(Reference.prototype, "key", {
+            get: function () {
+                return this.getKey();
+            },
+            enumerable: true,
+            configurable: true
+        });
         Reference.prototype.set = function (value, onComplete) {
             var _this = this;
             return new Promise(function (resolve, reject) {
@@ -134,6 +150,29 @@ var database;
                     reject(err);
                 });
             });
+        };
+        Reference.prototype.child = function (path) {
+            return new Reference(this.path ? this.path + "/" + path : path);
+        };
+        Reference.prototype.push = function (value, onComplete) {
+            var now = new Date().getTime();
+            var name = NextPushId_1.nextPushId(now);
+            var thennablePushRef = this.child(name);
+            var pushRef = this.child(name);
+            var promise;
+            if (value != null) {
+                promise = thennablePushRef.set(value, onComplete).then(function () { return pushRef; });
+            }
+            else {
+                promise = Promise.resolve(pushRef);
+            }
+            thennablePushRef.then = promise.then.bind(promise);
+            thennablePushRef.catch = promise.then.bind(promise, undefined);
+            if (typeof onComplete === 'function') {
+                promise.catch(function () {
+                });
+            }
+            return thennablePushRef;
         };
         Reference.prototype.remove = function (onComplete) {
             var _this = this;

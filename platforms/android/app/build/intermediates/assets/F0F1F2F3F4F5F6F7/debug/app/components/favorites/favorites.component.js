@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var settings_1 = require("../../settings");
-var FavoritesComponent = (function () {
+var FavoritesComponent = /** @class */ (function () {
     function FavoritesComponent() {
         this.theme = settings_1.Theme;
     }

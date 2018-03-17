@@ -1,38 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\view_feedback_items_activity_menu.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\d415334b005e493b06a3ee0186ad9b40ef44f283\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\view_feedback_items_activity_menu.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\b42c5f57c5683224f88dfcc39b86bde8267ae48b\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
     },
     {
-        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\view_feedback_items_activity_menu.xml",
-        "source": "C:\\Users\\anhru\\.android\\build-cache\\3b770951763e43a9e0fb7d1f2a73b092ffefe75d\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\edit_details.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\b42c5f57c5683224f88dfcc39b86bde8267ae48b\\output\\res\\menu\\edit_details.xml"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\edit_details.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\714fcccc29b4dddf25077cfa6f4772d080d54421\\output\\res\\menu\\edit_details.xml"
-    },
-    {
-        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\edit_details.xml",
-        "source": "C:\\Users\\anhru\\.android\\build-cache\\3b770951763e43a9e0fb7d1f2a73b092ffefe75d\\output\\res\\menu\\edit_details.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\edit_details.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\d415334b005e493b06a3ee0186ad9b40ef44f283\\output\\res\\menu\\edit_details.xml"
-    },
-    {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\send_feedback_activity_menu.xml",
-        "source": "C:\\Users\\naeuv\\.android\\build-cache\\d415334b005e493b06a3ee0186ad9b40ef44f283\\output\\res\\menu\\send_feedback_activity_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\view_feedback_items_activity_menu.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\714fcccc29b4dddf25077cfa6f4772d080d54421\\output\\res\\menu\\view_feedback_items_activity_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\send_feedback_activity_menu.xml",
-        "source": "C:\\Users\\TJ\\.android\\build-cache\\714fcccc29b4dddf25077cfa6f4772d080d54421\\output\\res\\menu\\send_feedback_activity_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\send_feedback_activity_menu.xml",
-        "source": "C:\\Users\\anhru\\.android\\build-cache\\3b770951763e43a9e0fb7d1f2a73b092ffefe75d\\output\\res\\menu\\send_feedback_activity_menu.xml"
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\menu\\send_feedback_activity_menu.xml",
+        "source": "C:\\Users\\naeuv\\.android\\build-cache\\b42c5f57c5683224f88dfcc39b86bde8267ae48b\\output\\res\\menu\\send_feedback_activity_menu.xml"
     }
 ]

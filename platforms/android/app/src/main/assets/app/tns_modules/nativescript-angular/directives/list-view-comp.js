@@ -18,9 +18,8 @@ var ListItemContext = /** @class */ (function () {
 }());
 exports.ListItemContext = ListItemContext;
 var ListViewComponent = /** @class */ (function () {
-    function ListViewComponent(_elementRef, _iterableDiffers, _cdr) {
+    function ListViewComponent(_elementRef, _iterableDiffers) {
         this._iterableDiffers = _iterableDiffers;
-        this._cdr = _cdr;
         this.setupItemView = new core_1.EventEmitter();
         this.listView = _elementRef.nativeElement;
         this.listView.on("itemLoading", this.onItemLoading, this);
@@ -44,7 +43,7 @@ var ListViewComponent = /** @class */ (function () {
             }
             if (needDiffer && !this._differ && core_1.ɵisListLikeIterable(value)) {
                 this._differ = this._iterableDiffers.find(this._items)
-                    .create(this._cdr, function (_index, item) { return item; });
+                    .create(function (_index, item) { return item; });
             }
             this.listView.items = this._items;
         },
@@ -142,23 +141,24 @@ var ListViewComponent = /** @class */ (function () {
             }
         }
     };
-    __decorate([
-        core_1.ViewChild("loader", { read: core_1.ViewContainerRef }),
-        __metadata("design:type", core_1.ViewContainerRef)
-    ], ListViewComponent.prototype, "loader", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], ListViewComponent.prototype, "setupItemView", void 0);
-    __decorate([
-        core_1.ContentChild(core_1.TemplateRef),
-        __metadata("design:type", core_1.TemplateRef)
-    ], ListViewComponent.prototype, "itemTemplateQuery", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], ListViewComponent.prototype, "items", null);
+    ListViewComponent.decorators = [
+        { type: core_1.Component, args: [{
+                    selector: "ListView",
+                    template: "\n        <DetachedContainer>\n            <Placeholder #loader></Placeholder>\n        </DetachedContainer>",
+                    changeDetection: core_1.ChangeDetectionStrategy.OnPush
+                },] },
+    ];
+    /** @nocollapse */
+    ListViewComponent.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+        { type: core_1.IterableDiffers, },
+    ]; };
+    ListViewComponent.propDecorators = {
+        "loader": [{ type: core_1.ViewChild, args: ["loader", { read: core_1.ViewContainerRef },] },],
+        "setupItemView": [{ type: core_1.Output },],
+        "itemTemplateQuery": [{ type: core_1.ContentChild, args: [core_1.TemplateRef,] },],
+        "items": [{ type: core_1.Input },],
+    };
     __decorate([
         profiling_1.profile,
         __metadata("design:type", Function),
@@ -171,16 +171,6 @@ var ListViewComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [core_1.EmbeddedViewRef, Number]),
         __metadata("design:returntype", void 0)
     ], ListViewComponent.prototype, "detectChangesOnChild", null);
-    ListViewComponent = __decorate([
-        core_1.Component({
-            selector: "ListView",
-            template: "\n        <DetachedContainer>\n            <Placeholder #loader></Placeholder>\n        </DetachedContainer>",
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef,
-            core_1.IterableDiffers,
-            core_1.ChangeDetectorRef])
-    ], ListViewComponent);
     return ListViewComponent;
 }());
 exports.ListViewComponent = ListViewComponent;
@@ -204,17 +194,17 @@ var TemplateKeyDirective = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], TemplateKeyDirective.prototype, "nsTemplateKey", null);
-    TemplateKeyDirective = __decorate([
-        core_1.Directive({ selector: "[nsTemplateKey]" }),
-        __param(1, core_1.Host()),
-        __metadata("design:paramtypes", [core_1.TemplateRef,
-            ListViewComponent])
-    ], TemplateKeyDirective);
+    TemplateKeyDirective.decorators = [
+        { type: core_1.Directive, args: [{ selector: "[nsTemplateKey]" },] },
+    ];
+    /** @nocollapse */
+    TemplateKeyDirective.ctorParameters = function () { return [
+        { type: core_1.TemplateRef, },
+        { type: ListViewComponent, decorators: [{ type: core_1.Host },] },
+    ]; };
+    TemplateKeyDirective.propDecorators = {
+        "nsTemplateKey": [{ type: core_1.Input },],
+    };
     return TemplateKeyDirective;
 }());
 exports.TemplateKeyDirective = TemplateKeyDirective;

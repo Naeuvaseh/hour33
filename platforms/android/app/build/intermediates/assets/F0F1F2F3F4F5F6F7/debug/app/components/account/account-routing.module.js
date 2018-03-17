@@ -6,7 +6,7 @@ var account_component_1 = require("./account.component");
 var routes = [
     { path: "", component: account_component_1.AccountComponent }
 ];
-var AccountRoutingModule = (function () {
+var AccountRoutingModule = /** @class */ (function () {
     function AccountRoutingModule() {
     }
     AccountRoutingModule = __decorate([

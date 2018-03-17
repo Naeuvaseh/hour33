@@ -68,7 +68,7 @@ geolocation.getCurrentLocation({ desiredAccuracy: Accuracy.high, maximumAge: 500
 
 | Property | Default | Description |
 | --- | --- | --- |
-| desiredAccuracy? | Accuracy.high | Specifies desired accuracy in meters. |
+| desiredAccuracy? | Accuracy.high | This will return the finest location available but use more power than `any` option. `Accuracy.any` is considered to be about 100 meter accuracy. Using a coarse accuracy such as this often consumes less power. |
 | updateDistance | iOS - no filter | Update distance filter in meters. Specifies how often to update the location (ignored on Android). |
 | updateTime | 1 minute | Interval between location updates, in milliseconds (ignored on iOS). Read more in [Google document](https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest#setInterval(long)).|
 | minimumUpdateTime | 5 secs | Minimum time interval between location updates, in milliseconds (ignored on iOS). Read more in [Google document](https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest#setFastestInterval(long)).|
@@ -92,7 +92,7 @@ geolocation.getCurrentLocation({ desiredAccuracy: Accuracy.high, maximumAge: 500
 | getCurrentLocation(options: Options) | Promise<Location> | Get current location applying the specified options (if any). |
 | watchLocation(successCallback: successCallbackType, errorCallback: errorCallbackType, options: Options) | number | Monitor for location change. |
 | clearWatch(watchId: number) | void | Stop monitoring for location change. Parameter expected is the watchId returned from `watchLocation`. |
-| enableLocationRequest(always?: boolean) | Promise\<void\> | Ask for permissions to use location services. The option `always` is application for iOS only. [Read more about its usage](https://developer.apple.com/documentation/corelocation/cllocationmanager/1620551-requestalwaysauthorization) . |
+| enableLocationRequest(always?: boolean) | Promise\<void\> | Ask for permissions to use location services. The option `always` is application for iOS only. For a custom prompt message on IOS, the following keys are required. NSLocationAlwaysUsageDescription, NSLocationUsageDescription and NSLocationWhenInUseUsageDescription [Read more about its usage](https://developer.apple.com/documentation/corelocation/cllocationmanager/1620551-requestalwaysauthorization) . |
 | isEnabled | Promise\<boolean\>| Resolves `true` or `false` based on the location services availability.  |
 | distance(loc1: Location, loc2: Location) | number | Calculate the distance between two locations. Returns the distance in meters. |
 
@@ -113,6 +113,12 @@ android {  
 }
 ```
 
-## License
+## Contribute
+We love PRs! Check out the [contributing guidelines](CONTRIBUTING.md). If you want to contribute, but you are not sure where to start - look for [issues labeled `help wanted`](https://github.com/NativeScript/nativescript-geolocation/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22).
 
-Apache License Version 2.0, January 2004
+  
+## Get Help 
+Please, use [github issues](https://github.com/NativeScript/nativescript-geolocation/issues) strictly for [reporting bugs](CONTRIBUTING.md#reporting-bugs) or [requesting features](CONTRIBUTING.md#requesting-new-features). For general questions and support, check out the [NativeScript community forum](https://discourse.nativescript.org/) or ask our experts in [NativeScript community Slack channel](http://developer.telerik.com/wp-login.php?action=slack-invitation).
+  
+![](https://ga-beacon.appspot.com/UA-111455-24/nativescript/nativescript-geolocation?pixel) 
+

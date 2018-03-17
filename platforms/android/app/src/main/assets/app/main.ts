@@ -37,6 +37,31 @@ firebase.init({
   }
 );
 
+firebase.admob.showBanner({
+  size: firebase.admob.AD_SIZE.SMART_BANNER, // see firebase.admob.AD_SIZE for all options
+  margins: { // optional nr of device independent pixels from the top or bottom (don't set both)
+    bottom: 10,
+    top: 0
+  },
+  androidBannerId: "ca-app-pub-7969618441217720/9053703415",
+  testing: true, // when not running in production set this to true, Google doesn't like it any other way
+  // iosTestDeviceIds: [ //Android automatically adds the connected device as test device with testing:true, iOS does not
+  //     "45d77bf513dfabc2949ba053da83c0c7b7e87715", // Eddy's iPhone 6s
+  //     "fee4cf319a242eab4701543e4c16db89c722731f"  // Eddy's iPad Pro
+  // ]
+}).then(
+    function () {
+      console.log("AdMob banner showing");
+    },
+    function (errorMessage) {
+      alert({
+        title: "AdMob error",
+        message: errorMessage,
+        okButtonText: "Hmmkay"
+      });
+    }
+);
+
 // Init Location
 if (!geolocation.isEnabled) geolocation.enableLocationRequest();
 // Init Google Places API

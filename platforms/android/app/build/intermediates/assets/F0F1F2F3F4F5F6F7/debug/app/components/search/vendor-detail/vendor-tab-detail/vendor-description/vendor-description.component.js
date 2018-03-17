@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var settings_1 = require("../../../../../settings");
-var VendorDescriptionComponent = (function () {
+var VendorDescriptionComponent = /** @class */ (function () {
     function VendorDescriptionComponent() {
         this.theme = settings_1.Theme;
         this.websiteText = 'Website ' + String.fromCharCode(0xf08e);

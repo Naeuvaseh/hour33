@@ -34,7 +34,7 @@ var ViewUtil = /** @class */ (function () {
         }
         this.addToQueue(extendedParent, extendedChild, previous, next);
         if (element_registry_1.isInvisibleNode(child)) {
-            extendedChild.templateParent = extendedParent;
+            extendedChild.parentNode = extendedParent;
         }
         if (!element_registry_1.isDetachedElement(child)) {
             var nextVisual = this.findNextVisual(next);
@@ -128,7 +128,10 @@ var ViewUtil = /** @class */ (function () {
         }
     };
     // NOTE: This one is O(n) - use carefully
-    ViewUtil.prototype.findPreviousElement = function (parent, child) {
+    // NOTE: This one is O(n) - use carefully
+    ViewUtil.prototype.findPreviousElement = 
+    // NOTE: This one is O(n) - use carefully
+    function (parent, child) {
         trace_1.viewUtilLog("ViewUtil.findPreviousElement parent: " + parent + " child: " + child);
         var previousVisual;
         if (isLayout(parent)) {
@@ -150,7 +153,10 @@ var ViewUtil = /** @class */ (function () {
         }
     };
     // NOTE: This one is O(n) - use carefully
-    ViewUtil.prototype.getChildIndex = function (parent, child) {
+    // NOTE: This one is O(n) - use carefully
+    ViewUtil.prototype.getChildIndex = 
+    // NOTE: This one is O(n) - use carefully
+    function (parent, child) {
         if (isLayout(parent)) {
             return parent.getChildIndex(child);
         }
@@ -218,7 +224,7 @@ var ViewUtil = /** @class */ (function () {
         return ngView;
     };
     ViewUtil.prototype.setProperty = function (view, attributeName, value, namespace) {
-        if (namespace && !this.runsIn(namespace)) {
+        if (!view || (namespace && !this.runsIn(namespace))) {
             return;
         }
         if (attributeName.indexOf(".") !== -1) {
@@ -273,6 +279,7 @@ var ViewUtil = /** @class */ (function () {
         if (!propertyMaps.has(type)) {
             var propMap = new Map();
             for (var propName in instance) {
+                // tslint:disable:forin
                 propMap.set(propName.toLowerCase(), propName);
             }
             propertyMaps.set(type, propMap);

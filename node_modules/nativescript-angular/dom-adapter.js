@@ -118,6 +118,7 @@ var NativeScriptDomAdapter = /** @class */ (function () {
     NativeScriptDomAdapter.prototype.templateAwareRoot = function (_el /** TODO #9100 */) { throw new Error("Not implemented!"); };
     NativeScriptDomAdapter.prototype.createHtmlDocument = function () { throw new Error("Not implemented!"); };
     NativeScriptDomAdapter.prototype.defaultDoc = function () { throw new Error("Not implemented!"); };
+    NativeScriptDomAdapter.prototype.getDefaultDocument = function () { throw new Error("Not implemented!"); };
     NativeScriptDomAdapter.prototype.getBoundingClientRect = function (_el /** TODO #9100 */) { throw new Error("Not implemented!"); };
     NativeScriptDomAdapter.prototype.getTitle = function () { throw new Error("Not implemented!"); };
     NativeScriptDomAdapter.prototype.setTitle = function (_doc, _newTitle) { throw new Error("Not implemented!"); };

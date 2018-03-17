@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var google_location_service_1 = require("../../../services/google-location.service");
-var DistancePipe = (function () {
+var DistancePipe = /** @class */ (function () {
     function DistancePipe(googleLocationService) {
         this.googleLocationService = googleLocationService;
         this.userLocation = this.googleLocationService.userLocation;

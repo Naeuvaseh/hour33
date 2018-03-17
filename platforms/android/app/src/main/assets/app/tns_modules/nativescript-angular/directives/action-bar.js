@@ -12,42 +12,45 @@ function isNavigationButton(view) {
     return view instanceof action_bar_1.NavigationButton;
 }
 exports.isNavigationButton = isNavigationButton;
+var ɵ0 = function (parent, child, next) {
+    if (element_registry_1.isInvisibleNode(child)) {
+        return;
+    }
+    else if (isNavigationButton(child)) {
+        parent.navigationButton = child;
+        child.parentNode = parent;
+    }
+    else if (isActionItem(child)) {
+        addActionItem(parent, child, next);
+        child.parentNode = parent;
+    }
+    else if (element_registry_1.isView(child)) {
+        parent.titleView = child;
+    }
+}, ɵ1 = function (parent, child) {
+    if (element_registry_1.isInvisibleNode(child)) {
+        return;
+    }
+    else if (isNavigationButton(child)) {
+        if (parent.navigationButton === child) {
+            parent.navigationButton = null;
+        }
+        child.parentNode = null;
+    }
+    else if (isActionItem(child)) {
+        parent.actionItems.removeItem(child);
+        child.parentNode = null;
+    }
+    else if (element_registry_1.isView(child) && parent.titleView && parent.titleView === child) {
+        parent.titleView = null;
+    }
+};
+exports.ɵ0 = ɵ0;
+exports.ɵ1 = ɵ1;
 var actionBarMeta = {
     skipAddToDom: true,
-    insertChild: function (parent, child, next) {
-        if (element_registry_1.isInvisibleNode(child)) {
-            return;
-        }
-        else if (isNavigationButton(child)) {
-            parent.navigationButton = child;
-            child.templateParent = parent;
-        }
-        else if (isActionItem(child)) {
-            addActionItem(parent, child, next);
-            child.templateParent = parent;
-        }
-        else if (element_registry_1.isView(child)) {
-            parent.titleView = child;
-        }
-    },
-    removeChild: function (parent, child) {
-        if (element_registry_1.isInvisibleNode(child)) {
-            return;
-        }
-        else if (isNavigationButton(child)) {
-            if (parent.navigationButton === child) {
-                parent.navigationButton = null;
-            }
-            child.templateParent = null;
-        }
-        else if (isActionItem(child)) {
-            parent.actionItems.removeItem(child);
-            child.templateParent = null;
-        }
-        else if (element_registry_1.isView(child) && parent.titleView && parent.titleView === child) {
-            parent.titleView = null;
-        }
-    },
+    insertChild: ɵ0,
+    removeChild: ɵ1,
 };
 var addActionItem = function (bar, item, next) {
     if (next) {
@@ -57,6 +60,8 @@ var addActionItem = function (bar, item, next) {
         appendActionItem(bar, item);
     }
 };
+var ɵ2 = addActionItem;
+exports.ɵ2 = ɵ2;
 var insertActionItemBefore = function (bar, item, next) {
     var actionItems = bar.actionItems;
     var actionItemsCollection = actionItems.getItems();
@@ -64,9 +69,13 @@ var insertActionItemBefore = function (bar, item, next) {
     actionItemsCollection.splice(indexToInsert, 0, item);
     actionItems.setItems(actionItemsCollection);
 };
+var ɵ3 = insertActionItemBefore;
+exports.ɵ3 = ɵ3;
 var appendActionItem = function (bar, item) {
     bar.actionItems.addItem(item);
 };
+var ɵ4 = appendActionItem;
+exports.ɵ4 = ɵ4;
 element_registry_1.registerElement("ActionBar", function () { return require("ui/action-bar").ActionBar; }, actionBarMeta);
 element_registry_1.registerElement("ActionItem", function () { return require("ui/action-bar").ActionItem; });
 element_registry_1.registerElement("NavigationButton", function () { return require("ui/action-bar").NavigationButton; });
@@ -80,13 +89,17 @@ var ActionBarComponent = /** @class */ (function () {
         this.page.actionBar = this.element.nativeElement;
         this.page.actionBar.update();
     }
-    ActionBarComponent = __decorate([
-        core_1.Component({
-            selector: "ActionBar",
-            template: "<ng-content></ng-content>"
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef, page_1.Page])
-    ], ActionBarComponent);
+    ActionBarComponent.decorators = [
+        { type: core_1.Component, args: [{
+                    selector: "ActionBar",
+                    template: "<ng-content></ng-content>"
+                },] },
+    ];
+    /** @nocollapse */
+    ActionBarComponent.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+        { type: page_1.Page, },
+    ]; };
     return ActionBarComponent;
 }());
 exports.ActionBarComponent = ActionBarComponent;
@@ -111,13 +124,16 @@ var ActionBarScope = /** @class */ (function () {
             this.page.actionBar.actionItems.removeItem(item.element.nativeElement);
         }
     };
-    ActionBarScope = __decorate([
-        core_1.Component({
-            selector: "ActionBarExtension",
-            template: ""
-        }),
-        __metadata("design:paramtypes", [page_1.Page])
-    ], ActionBarScope);
+    ActionBarScope.decorators = [
+        { type: core_1.Component, args: [{
+                    selector: "ActionBarExtension",
+                    template: ""
+                },] },
+    ];
+    /** @nocollapse */
+    ActionBarScope.ctorParameters = function () { return [
+        { type: page_1.Page, },
+    ]; };
     return ActionBarScope;
 }());
 exports.ActionBarScope = ActionBarScope;
@@ -134,13 +150,16 @@ var ActionItemDirective = /** @class */ (function () {
             this.ownerScope.onActionDestroy(this);
         }
     };
-    ActionItemDirective = __decorate([
-        core_1.Directive({
-            selector: "ActionItem" // tslint:disable-line:directive-selector
-        }),
-        __param(1, core_1.Optional()),
-        __metadata("design:paramtypes", [core_1.ElementRef, ActionBarScope])
-    ], ActionItemDirective);
+    ActionItemDirective.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: "ActionItem" // tslint:disable-line:directive-selector
+                },] },
+    ];
+    /** @nocollapse */
+    ActionItemDirective.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+        { type: ActionBarScope, decorators: [{ type: core_1.Optional },] },
+    ]; };
     return ActionItemDirective;
 }());
 exports.ActionItemDirective = ActionItemDirective;
@@ -157,13 +176,16 @@ var NavigationButtonDirective = /** @class */ (function () {
             this.ownerScope.onNavButtonDestroy(this);
         }
     };
-    NavigationButtonDirective = __decorate([
-        core_1.Directive({
-            selector: "NavigationButton" // tslint:disable-line:directive-selector
-        }),
-        __param(1, core_1.Optional()),
-        __metadata("design:paramtypes", [core_1.ElementRef, ActionBarScope])
-    ], NavigationButtonDirective);
+    NavigationButtonDirective.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: "NavigationButton" // tslint:disable-line:directive-selector
+                },] },
+    ];
+    /** @nocollapse */
+    NavigationButtonDirective.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+        { type: ActionBarScope, decorators: [{ type: core_1.Optional },] },
+    ]; };
     return NavigationButtonDirective;
 }());
 exports.NavigationButtonDirective = NavigationButtonDirective;

@@ -55,10 +55,13 @@ var NativescriptPlatformLocation = /** @class */ (function (_super) {
     NativescriptPlatformLocation.prototype.back = function () {
         this.locationStartegy.back();
     };
-    NativescriptPlatformLocation = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [ns_location_strategy_1.NSLocationStrategy])
-    ], NativescriptPlatformLocation);
+    NativescriptPlatformLocation.decorators = [
+        { type: core_1.Injectable },
+    ];
+    /** @nocollapse */
+    NativescriptPlatformLocation.ctorParameters = function () { return [
+        { type: ns_location_strategy_1.NSLocationStrategy, },
+    ]; };
     return NativescriptPlatformLocation;
 }(common_1.PlatformLocation));
 exports.NativescriptPlatformLocation = NativescriptPlatformLocation;

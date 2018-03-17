@@ -8,7 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.Hour33"  
+    applicationId = "org.voxlore.hour33"  
     multiDexEnabled true
   }  
   aaptOptions {  

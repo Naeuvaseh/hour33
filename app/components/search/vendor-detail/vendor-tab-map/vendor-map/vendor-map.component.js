@@ -5,7 +5,7 @@ var element_registry_1 = require("nativescript-angular/element-registry");
 var settings_1 = require("../../../../../settings");
 var nativescript_google_maps_sdk_1 = require("nativescript-google-maps-sdk");
 element_registry_1.registerElement('MapView', function () { return nativescript_google_maps_sdk_1.MapView; });
-var VendorMapComponent = (function () {
+var VendorMapComponent = /** @class */ (function () {
     function VendorMapComponent() {
         this.theme = settings_1.Theme;
     }

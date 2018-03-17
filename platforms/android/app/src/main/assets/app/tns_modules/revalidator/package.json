@@ -10,7 +10,7 @@
         "spec": ">=0.1.0 <0.2.0",
         "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\prompt-lite"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\prompt-lite"
     ]
   ],
   "_from": "revalidator@>=0.1.0 <0.2.0",
@@ -39,7 +39,7 @@
   "_shasum": "fece61bfa0c1b52a206bd6b18198184bdd523a3b",
   "_shrinkwrap": null,
   "_spec": "revalidator@0.1.x",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour33\\node_modules\\prompt-lite",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\prompt-lite",
   "author": {
     "name": "Nodejitsu Inc.",
     "email": "info@nodejitsu.com"

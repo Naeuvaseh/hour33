@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-sw320dp-v13\\values-sw320dp-v13.xml",
+        "outputFile": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-sw320dp-v13\\values-sw320dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,55 +11,7 @@
                     "endOffset": 105
                 },
                 "from": {
-                    "file": "C:\\Users\\TJ\\.android\\build-cache\\8c3f38a2dacde534541b2210ffb3e2823bbe13b4\\output\\res\\values-sw320dp-v13\\values-sw320dp-v13.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 54,
-                        "endOffset": 105
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-sw320dp-v13\\values-sw320dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 54,
-                    "endOffset": 105
-                },
-                "from": {
-                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\ab5d0f4f0cd571f885de1fe914468827c3e97fcb\\output\\res\\values-sw320dp-v13\\values-sw320dp-v13.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 54,
-                        "endOffset": 105
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\anhru\\Hour%2033\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-sw320dp-v13\\values-sw320dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 54,
-                    "endOffset": 105
-                },
-                "from": {
-                    "file": "C:\\Users\\anhru\\.android\\build-cache\\b7be3f40c35f793f8241ddaff68ca311c4f2057f\\output\\res\\values-sw320dp-v13\\values-sw320dp-v13.xml",
+                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\d016ab0076490d0cbeee8d36b0de457da75e22cf\\output\\res\\values-sw320dp-v13\\values-sw320dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

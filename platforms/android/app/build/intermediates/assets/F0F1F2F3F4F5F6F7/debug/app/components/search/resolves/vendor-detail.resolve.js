@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var google_location_service_1 = require("../../../services/google-location.service");
-var VendorDetailResolve = (function () {
+var VendorDetailResolve = /** @class */ (function () {
     function VendorDetailResolve(googleLocationService) {
         this.googleLocationService = googleLocationService;
     }
