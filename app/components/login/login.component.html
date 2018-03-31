@@ -3,35 +3,66 @@
            [color]="theme.actionBarTextColor">
         <Label class="action-bar-title" text="Login"></Label>
     </ActionBar>
-<StackLayout *ngIf="!forgotPassword">
-        <TextField autocorrect="false" 
+<!-- Login / Create Account -->
+<StackLayout *ngIf="loginState == 'Login' || loginState == 'CreateAccount'">
+        <TextField 
+                #email
+                autocorrect="false" 
                 hint="Email address"
                 keyboardType="email" 
                 autocorrect="false" 
                 autocapitalizationType="none"
                 [(ngModel)]="user.email"></TextField>
-        <TextField autocorrect="false" 
+        <TextField 
+                #password
+                autocorrect="false" 
                 hint="Password" 
                 secure="true"
                 autocapitalizationType="none"
                 [(ngModel)]="user.password"></TextField>
-        <Button text="Login"
+        <TextField 
+                *ngIf="loginState == 'CreateAccount'"
+                #confirmPassword
+                autocorrect="false" 
+                hint="Confirm Password" 
+                secure="true"
+                autocapitalizationType="none"
+                [(ngModel)]="user.confirmPassword"></TextField>        
+        <Button 
+                *ngIf="loginState == 'Login'"
+                text="Login"
                 class="btn btn-primary"
                 (tap)="onLogin()"></Button>
-        <Button text="Logout"
+        <Button 
+                *ngIf="loginState == 'CreateAccount'"
+                text="Create"
                 class="btn btn-primary"
-                (tap)="onLogout()"></Button>
-        <Label text="Forgot Password?" (tap)="toggleForgotPassword()"></Label>
+                (tap)="onCreateAccount(email.text, password.text, confirmPassword.text)"></Button>
+        <Button 
+                *ngIf="loginState == 'CreateAccount'"
+                text="Cancel"
+                class="btn btn-primary"
+                (tap)="onCancel()"></Button>
+        <!-- <Button 
+                text="Logout"
+                class="btn btn-primary"
+                (tap)="onLogout()"></Button> -->
+        <StackLayout orientation="horizontal" alignSelf="center">
+                <Label text="Create an account" padding="0 30 0 50" (tap)="toggleCreateAccount()"></Label> 
+                <Label text="Forgot Password?" (tap)="toggleForgotPassword()"></Label>
+        </StackLayout>
 </StackLayout>
-<StackLayout *ngIf="forgotPassword">
-        <TextField autocorrect="false" 
+<!-- Forgot Password -->
+<StackLayout *ngIf="loginState == 'ForgotPassword'">
+        <TextField 
+                #forgottenEmail
+                autocorrect="false" 
                 hint="Email address"
                 keyboardType="email" 
                 autocorrect="false" 
-                autocapitalizationType="none"
-                [(ngModel)]="user.forgottenEmailPassword"></TextField>
+                autocapitalizationType="none"></TextField>
         <Button text="Reset Password"
                 class="btn btn-primary"
-                (tap)="resetPassword()"></Button>
-        <Label text="Login" (tap)="toggleForgotPassword()"></Label>
+                (tap)="resetPassword(forgottenEmail.text)"></Button>
+        <Label text="Login to account" padding="0 0 0 50" (tap)="toggleLogin()"></Label>
 </StackLayout>  

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Theme } from '../../settings';
 import { errorHandler } from '@angular/platform-browser/src/browser';
 import { Router } from '@angular/router';
+import { LoginState } from '../../enums/login-state.enum';
+
 const firebase = require('nativescript-plugin-firebase');
 
 @Component({
@@ -10,39 +12,80 @@ const firebase = require('nativescript-plugin-firebase');
 })
 export class LoginComponent {
 
-  public user = {
-    email: '',
-    password: '',
-    forgottenEmailPassword: ''
-  }
-
-  private theme;
-  public forgotPassword: boolean = false;
+    private theme;
+    public user = {
+        email: '',
+        password: '',
+        confirmPassword: ''
+    }
+    public loginState: string = LoginState.Login;
   
     constructor(private router: Router) {
       this.theme = Theme;
     }
 
     toggleForgotPassword(){
-        this.forgotPassword = !this.forgotPassword;
+        this.loginState = LoginState.ForgotPassword;
     }
 
-    resetPassword(){
-        console.log('Email: ' + this.user.email);
+    toggleLogin(){
+        this.loginState = LoginState.Login;
+    }
+
+    resetPassword(email: string){
+        console.log('Email: ' + email);
         firebase.resetPassword({
-            email: this.user.forgottenEmailPassword
+            email: email
           }).then(
-            function () {
+            success => {
                 // called when password reset was successful,
                 // you could now prompt the user to check his email
-                this.forgotPassword = !this.forgotPassword;
-              },
-              function (errorMessage) {
-                console.log(errorMessage);
+                this.loginState = LoginState.Login;
+            },
+            error => {
+                console.log(error);
               }
           );
+    }
 
+    toggleCreateAccount(){
+        this.loginState = LoginState.CreateAccount;
+    }
+
+    onCancel(){
         
+    }
+
+    onCreateAccount(email: string, password: string, confirmPassword: string){
+        if (email){
+            if (password == confirmPassword){
+                firebase.createUser({
+                    email: this.user.email,
+                    password: this.user.password
+                  }).then(
+                      function (result) {
+                        alert({
+                          title: "User created",
+                          message: "userid: " + result.key,
+                          okButtonText: "Nice!"
+                        })
+                      },
+                      function (errorMessage) {
+                        alert({
+                          title: "No user created",
+                          message: errorMessage,
+                          okButtonText: "OK, got it"
+                        })
+                      }
+                  );
+            }
+            else{
+                alert('Your passwords must match.');
+            }
+        }
+        else {
+            alert('You must include an email');
+        }
     }
 
     onLogin(){
