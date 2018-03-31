@@ -33,6 +33,8 @@ import { Day } from '../../enums/day.enum';
 import { Radius } from '../../enums/radius.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
 import { DistPop } from '../../enums/distance-popularity.enum';
+import { Prices } from '../../const/price-filter.enum';
+import { SelectedIndexChangedEventData } from 'nativescript-bottombar';
 
 @Component({
   selector: 'search',
@@ -69,6 +71,7 @@ export class SearchComponent implements OnInit {
   public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
   public listViewVisible: boolean = true;
   public distPop: DistPop; 
+  public prices: Prices;
 
   constructor(private router: Router,
     private vendorService: VendorService,
@@ -327,5 +330,29 @@ export class SearchComponent implements OnInit {
       this.title = 'Today\'s Happy Hours';
       break;
     }
+  }
+
+  public onMinPriceChange(args: SelectedIndexChangedEventData) {
+    console.log(`Drop Down selected index changed from ${args.oldIndex} to ${args.newIndex}`);
+  }
+
+  public onMinPriceOpen() {
+      console.log("Drop Down opened.");
+  }
+
+  public onMinPriceClose() {
+      console.log("Drop Down closed.");
+  }
+
+  public onMaxPriceChange(args: SelectedIndexChangedEventData) {
+    console.log(`Drop Down selected index changed from ${args.oldIndex} to ${args.newIndex}`);
+  }
+
+  public onMaxPriceOpen() {
+      console.log("Drop Down opened.");
+  }
+
+  public onMaxPriceClose() {
+      console.log("Drop Down closed.");
   }
 }

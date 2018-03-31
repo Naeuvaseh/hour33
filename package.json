@@ -22,6 +22,7 @@
     "moment": "^2.21.0",
     "nativescript-angular": "~5.2.0",
     "nativescript-bottombar": "^3.0.8",
+    "nativescript-drop-down": "^3.2.4",
     "nativescript-geolocation": "^4.2.4",
     "nativescript-google-maps-sdk": "^2.5.0",
     "nativescript-google-places": "0.0.3",

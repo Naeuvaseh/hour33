@@ -1,4 +1,4 @@
-#Sat Mar 17 15:11:34 EDT 2018
+#Wed Mar 21 15:58:53 EDT 2018
 base.0=C\:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\F0F1F2F3F4F5F6F7\\debug\\folders\\1000\\1f\\main
 renamed.1=classes.dex
 renamed.0=classes2.dex

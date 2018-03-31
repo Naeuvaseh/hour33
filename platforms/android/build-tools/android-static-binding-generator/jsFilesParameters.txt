@@ -46,6 +46,7 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\compon
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\specials\star\star.component.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\default-day.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\google-places-api-urls.const.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\price-filter.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\radius.const.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\temp-icons.const.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\time-period-threshold.const.js
@@ -55,6 +56,7 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\days.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\default-day.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\distance-popularity.enum.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\price-filter.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\price.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\radius.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\search-mode.enum.js
@@ -163,6 +165,10 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_mo
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\android\bottombar.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar-item.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-bottombar\src\ios\bottombar.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down-common.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\drop-down.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\uglify-mangle-excludes.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-drop-down\angular\index.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-geolocation\geolocation.common.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-geolocation\geolocation.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-google-maps-sdk\map-view-common.js

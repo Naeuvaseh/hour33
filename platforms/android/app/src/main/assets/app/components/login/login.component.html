@@ -1,0 +1,37 @@
+<ActionBar class="action-bar"
+           [backgroundColor]="theme.darkGrey"
+           [color]="theme.actionBarTextColor">
+        <Label class="action-bar-title" text="Login"></Label>
+    </ActionBar>
+<StackLayout *ngIf="!forgotPassword">
+        <TextField autocorrect="false" 
+                hint="Email address"
+                keyboardType="email" 
+                autocorrect="false" 
+                autocapitalizationType="none"
+                [(ngModel)]="user.email"></TextField>
+        <TextField autocorrect="false" 
+                hint="Password" 
+                secure="true"
+                autocapitalizationType="none"
+                [(ngModel)]="user.password"></TextField>
+        <Button text="Login"
+                class="btn btn-primary"
+                (tap)="onLogin()"></Button>
+        <Button text="Logout"
+                class="btn btn-primary"
+                (tap)="onLogout()"></Button>
+        <Label text="Forgot Password?" (tap)="toggleForgotPassword()"></Label>
+</StackLayout>
+<StackLayout *ngIf="forgotPassword">
+        <TextField autocorrect="false" 
+                hint="Email address"
+                keyboardType="email" 
+                autocorrect="false" 
+                autocapitalizationType="none"
+                [(ngModel)]="user.forgottenEmailPassword"></TextField>
+        <Button text="Reset Password"
+                class="btn btn-primary"
+                (tap)="resetPassword()"></Button>
+        <Label text="Login" (tap)="toggleForgotPassword()"></Label>
+</StackLayout>  

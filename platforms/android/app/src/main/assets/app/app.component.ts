@@ -9,6 +9,7 @@ import { PerformanceMonitor, PerformanceMonitorSample } from 'nativescript-perfo
 import { Color } from "color";
 import * as geolocation from 'nativescript-geolocation';
 import { Accuracy } from 'ui/enums';
+import { UserService } from "./services/user.service";
  
 registerElement('BottomBar', () => BottomBar);
 const performanceMonitor: PerformanceMonitor = new PerformanceMonitor();
@@ -35,17 +36,21 @@ export class AppComponent implements OnInit {
         duration: 200,
         curve: 'linear'
     };
+    private _user: any;
  
     constructor(private router: Router, 
                 private routerExt: RouterExtensions,
-                private googleLocationService: GoogleLocationService){
+                private googleLocationService: GoogleLocationService,
+                private userService: UserService){
         this.theme = Theme;
         this.debug = Debug;
         this.selectedTab.index = 0;
         this.selectedTab.title = 'Search';
     }
 
-    ngOnInit(){ }
+    ngOnInit(){
+       this._user = this.userService.user;
+    }
     
     public items: Array<BottomBarItem> = [
         // new BottomBarItem(0, "Search", "search", "black", new Notification("blue", "white", "1")),

@@ -33,6 +33,7 @@ import { Day } from '../../enums/day.enum';
 import { Radius } from '../../enums/radius.enum';
 import { SearchStatusCode } from '../../enums/search-status.enum';
 import { DistPop } from '../../enums/distance-popularity.enum';
+import { Prices } from '../../enums/price-filter.enum';
 
 @Component({
   selector: 'search',
@@ -69,6 +70,7 @@ export class SearchComponent implements OnInit {
   public distance: string = this.convertToMiles(Radius.mi5).toFixed(2);
   public listViewVisible: boolean = true;
   public distPop: DistPop; 
+  public prices: Prices;
 
   constructor(private router: Router,
     private vendorService: VendorService,
