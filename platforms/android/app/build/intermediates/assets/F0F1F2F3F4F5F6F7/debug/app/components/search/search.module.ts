@@ -24,6 +24,7 @@ import { CurrentDayPipe } from './vendor-listing/current-day.pipe';
 import { LikeDislikePipe } from './vendor-listing/like-dislike.pipe';
 import { DistancePipe } from './vendor-listing/distance.pipe';
 import { VendorDetailResolve } from './resolves/vendor-detail.resolve';
+import { DropDownModule } from "nativescript-drop-down/angular";
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import { VendorDetailResolve } from './resolves/vendor-detail.resolve';
         SearchRoutingModule,
         NativeScriptUIListViewModule,
         NativeScriptHttpModule,
-        NativeScriptHttpClientModule
+        NativeScriptHttpClientModule,
+        DropDownModule
     ],
     providers: [
         VendorService,

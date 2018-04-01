@@ -1,0 +1,68 @@
+<ActionBar class="action-bar"
+           [backgroundColor]="theme.darkGrey"
+           [color]="theme.actionBarTextColor">
+        <Label class="action-bar-title" [text]="title"></Label>
+</ActionBar>
+<!-- <Image src="res://logo"></Image> -->
+<!-- Login / Create Account -->
+<FlexboxLayout 
+        *ngIf="loginState == 'Login' || loginState == 'CreateAccount'"
+        flexDirection="column">
+        
+        <FlexboxLayout flexDirection="column" padding="10">
+                <TextField 
+                        #email
+                        autocorrect="false" 
+                        hint="Email address"
+                        keyboardType="email" 
+                        autocorrect="false" 
+                        autocapitalizationType="none"></TextField>
+                <TextField 
+                        #password
+                        autocorrect="false" 
+                        hint="Password" 
+                        secure="true"
+                        autocapitalizationType="none"></TextField>
+                <TextField 
+                        #confirmPassword
+                        [visibility]="loginState == loginStates.CreateAccount ? 'visible' : 'collapsed'"
+                        autocorrect="false" 
+                        hint="Confirm Password" 
+                        secure="true"
+                        autocapitalizationType="none"></TextField>
+                <Button 
+                        *ngIf="loginState == 'Login'"
+                        text="Login"
+                        class="btn btn-primary"
+                        (tap)="onLogin(email.text, password.text)"></Button>
+                <Button 
+                        *ngIf="loginState == 'CreateAccount'"
+                        text="Create"
+                        class="btn btn-primary"
+                        (tap)="onCreateAccount(email.text, password.text, confirmPassword.text)"></Button>
+                <Button 
+                        *ngIf="loginState == 'CreateAccount'"
+                        text="Cancel"
+                        class="btn btn-primary"
+                        (tap)="onCancel()"></Button>   
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="row" alignSelf="center" alignContent="center">
+                <Label text="Login to account" alignSelf="center" *ngIf="loginState == loginStates.CreateAccount" width="50%" textAlignment="center" (tap)="toggleView(loginStates.Login)"></Label>
+                <Label text="Create an account" alignSelf="center" *ngIf="loginState == loginStates.Login" width="50%" textAlignment="center" (tap)="toggleView(loginStates.CreateAccount)"></Label> 
+                <Label text="Forgot Password?" alignSelf="center" width="50%" textAlignment="center" (tap)="toggleView(loginStates.ForgotPassword)"></Label>
+        </FlexboxLayout>
+</FlexboxLayout>
+<!-- Forgot Password -->
+<StackLayout *ngIf="loginState == 'ForgotPassword'" padding="10">
+        <TextField 
+                #forgottenEmail
+                autocorrect="false" 
+                hint="Email address"
+                keyboardType="email" 
+                autocorrect="false" 
+                autocapitalizationType="none"></TextField>
+        <Button text="Reset Password"
+                class="btn btn-primary"
+                (tap)="resetPassword(forgottenEmail.text)"></Button>
+        <Label text="Login to account" padding="0 0 0 50" (tap)="toggleLogin()"></Label>
+</StackLayout>  

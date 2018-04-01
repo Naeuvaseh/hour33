@@ -11,6 +11,7 @@
     "moment": true,
     "nativescript-angular": true,
     "nativescript-bottombar": true,
+    "nativescript-drop-down": true,
     "nativescript-geolocation": true,
     "nativescript-google-maps-sdk": true,
     "nativescript-google-places": true,

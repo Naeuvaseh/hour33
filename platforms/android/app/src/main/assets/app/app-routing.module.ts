@@ -4,8 +4,8 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { CurrentLocationResolver } from './resolves/current-location.resolve';
 
 const routes: Routes = [
-    { path: "", redirectTo: "/search", pathMatch: "full" },
-    { path: "home", loadChildren: './home/home.module#HomeModule'},
+    { path: "", redirectTo: "/login", pathMatch: "full" },
+    { path: "login", loadChildren: './components/login/login.module#LoginModule'},
     { path: "search", loadChildren: './components/search/search.module#SearchModule'},
     { path: "specials", loadChildren: './components/specials/specials.module#SpecialsModule' },
     { path: "favorites", loadChildren: './components/favorites/favorites.module#FavoritesModule' },

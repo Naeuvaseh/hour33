@@ -155,17 +155,17 @@ MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\naeuv\
 MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\e55e0b9d533167f2e00924b4da547be4b26743dd\output\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\5e51635721497f8a857825462b65b4e1bdd7bb10\output\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\b3f5bbb07f8b99b378ca0033581208ec5ec8a0c7\output\AndroidManifest.xml:21:5-23:58
-MERGED from [:nativescript-optimized:] C:\Users\naeuv\.android\build-cache\02d4cb5f1a8f45d18aeac1c52ea8a2285ed08f47\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized:] C:\Users\naeuv\.android\build-cache\14d206db233bc41b6d7d93cea620a212d49a16ea\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\0a1ad3872782f54874ecf801fa1d0f8774311add\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSAutoComplete-release:] C:\Users\naeuv\.android\build-cache\00e4457c6413b33998f11eb6bdd50847540b7ebb\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSCalendar-release:] C:\Users\naeuv\.android\build-cache\d016ab0076490d0cbeee8d36b0de457da75e22cf\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSChart-release:] C:\Users\naeuv\.android\build-cache\251795d20fc112b18323c693ead73a7267668d4f\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSCore-release:] C:\Users\naeuv\.android\build-cache\ac0910d7751700c04e70297a3112a07d72716248\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSDataForm-release:] C:\Users\naeuv\.android\build-cache\1262ac850a8cd20ca69395a19bff9ceed0d56556\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSGauge-release:] C:\Users\naeuv\.android\build-cache\77314cf648d200326cc147ba683619a5f429ed25\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSListView-release:] C:\Users\naeuv\.android\build-cache\05d5f9cd58e2ae4adec590aa7e151b5f3791ec0c\output\AndroidManifest.xml:7:5-9:41
-MERGED from [:TNSSideDrawer-release:] C:\Users\naeuv\.android\build-cache\9c3dca62fbc9328bab414947078ea4de40d1dd41\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSAutoComplete-release:] C:\Users\naeuv\.android\build-cache\ac6ba8fa2ccafe088e514689ff9b25d94f53bfcf\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSCalendar-release:] C:\Users\naeuv\.android\build-cache\a030e88a19dfb4765469798e99d5ab414abe8b94\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSChart-release:] C:\Users\naeuv\.android\build-cache\adf753dc22469092ab371b4ba47d44f5639d1b15\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSCore-release:] C:\Users\naeuv\.android\build-cache\eeaf3d501121a9998b7e37d979beb2e3029d5af5\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSDataForm-release:] C:\Users\naeuv\.android\build-cache\cb14c2558763e80fdb734ff7df5e7be59100d627\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSGauge-release:] C:\Users\naeuv\.android\build-cache\e1661d866005522ff503a9f48dafb3b80b8f1dcd\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSListView-release:] C:\Users\naeuv\.android\build-cache\3c1821e38bd9804cabbefc2f7d8727127041c909\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSSideDrawer-release:] C:\Users\naeuv\.android\build-cache\33ea3a325cda8514f995fa6a39b2ecfbb7df0ba4\output\AndroidManifest.xml:7:5-9:41
 MERGED from [:widgets-release:] C:\Users\naeuv\.android\build-cache\ab0f6f74f891fc1ea23fc1ca43947d335bf5f166\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\665a6fd6274b582a8ceb94c9b0178f8695cb3431\output\AndroidManifest.xml:23:9-59
@@ -331,7 +331,7 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\naeuv\.
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\5e51635721497f8a857825462b65b4e1bdd7bb10\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\naeuv\.android\build-cache\b3f5bbb07f8b99b378ca0033581208ec5ec8a0c7\output\AndroidManifest.xml:29:5-20
 MERGED from [:firebase-release:] C:\Users\naeuv\.android\build-cache\0a1ad3872782f54874ecf801fa1d0f8774311add\output\AndroidManifest.xml:11:5-22:19
-MERGED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:11:5-32:19
+MERGED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:11:5-32:19
 MERGED from [:widgets-release:] C:\Users\naeuv\.android\build-cache\ab0f6f74f891fc1ea23fc1ca43947d335bf5f166\output\AndroidManifest.xml:11:5-12:19
 	android:label
 		ADDED from C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\AndroidManifest.xml:12:122-138
@@ -702,34 +702,34 @@ ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\naeuv\.android\build-cache\565ce92359d5ba9982c4912f8e39a59bd943296f\output\AndroidManifest.xml:24:13-58
 activity#com.telerik.widget.feedback.SendFeedbackActivity
-ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:12:9-16:20
+ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:12:9-16:20
 	android:label
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:14:13-65
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:14:13-65
 	android:theme
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:15:13-50
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:15:13-50
 	android:name
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:13:13-76
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:13:13-76
 activity#com.telerik.widget.feedback.ViewFeedbackActivity
-ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:17:9-21:20
+ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:17:9-21:20
 	android:label
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:19:13-65
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:19:13-65
 	android:theme
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:20:13-50
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:20:13-50
 	android:name
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:18:13-76
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:18:13-76
 activity#com.telerik.widget.feedback.ViewFeedbackItemActivity
-ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:22:9-26:20
+ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:22:9-26:20
 	android:label
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:24:13-65
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:24:13-65
 	android:theme
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:25:13-50
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:25:13-50
 	android:name
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:23:13-80
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:23:13-80
 activity#com.telerik.widget.feedback.EditDetailsActivity
-ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:27:9-31:20
+ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:27:9-31:20
 	android:label
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:29:13-64
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:29:13-64
 	android:theme
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:30:13-50
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:30:13-50
 	android:name
-		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\b42c5f57c5683224f88dfcc39b86bde8267ae48b\output\AndroidManifest.xml:28:13-75
+		ADDED from [:Feedback-release:] C:\Users\naeuv\.android\build-cache\0fb58b7cd5da5d2e61378f8679966f46079ab439\output\AndroidManifest.xml:28:13-75
