@@ -1,32 +1,12 @@
-<ActionBar class="action-bar"
-           [backgroundColor]="theme.darkGrey"
-           [color]="theme.actionBarTextColor">
+<ActionBar class="action-bar" [backgroundColor]="theme.darkGrey" [color]="theme.actionBarTextColor">
         <Label class="action-bar-title" text="Account"></Label>
-    </ActionBar>
-<FlexboxLayout>
-        <FlexboxLayout>
+</ActionBar>
+<FlexboxLayout [backgroundColor]="theme.primaryColor" height="100%">
+        <GridLayout rows="auto, *, *" columns="auto">
 
-        </FlexboxLayout>
-        <FlexboxLayout>
-                
-        </FlexboxLayout>
+                <FlexboxLayout row="2" col="0" flexDirection="column">
+                        <Button *ngIf="!loginState" text="Login" class="btn btn-primary" (tap)="onLogin()"></Button>
+                        <Button *ngIf="loginState" text="Logout" class="btn btn-primary" (tap)="onLogout()"></Button>
+                </FlexboxLayout>
+        </GridLayout>
 </FlexboxLayout>
-<TextField autocorrect="false" 
-           hint="Email address"
-           keyboardType="email" 
-           autocorrect="false" 
-           autocapitalizationType="none"
-           [(ngModel)]="user.email"></TextField>
-<TextField autocorrect="false" 
-           hint="Password" 
-           secure="true"
-           autocapitalizationType="none"
-           [(ngModel)]="user.password"></TextField>
-
-<Label [text]="ngModel"></Label>
-<Button text="Login"
-        class="btn btn-primary"
-        (tap)="onLogin()"></Button>
-<Button text="Logout"
-        class="btn btn-primary"
-        (tap)="onLogout()"></Button>
