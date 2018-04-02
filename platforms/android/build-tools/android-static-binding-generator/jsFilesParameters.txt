@@ -94,6 +94,7 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interf
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\reviews.interface.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\search-result\vendor-detail\vendor-detail.interface.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\resolves\current-location.resolve.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\bottom-bar.service.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\google-location.service.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\specials.service.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\user.service.js
