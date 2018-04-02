@@ -128,12 +128,24 @@
                     <FlexboxLayout flexDirection="row" width="50%">
                         <Label text="Min:"
                                 [color]="theme.inactiveColor"></Label>
-                        <ListPicker [items]="prices" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)"></ListPicker>
+                        <DropDown #minDD
+                            backroundColor="red"
+                            [items]="prices"
+                            [(ngModel)]="selectedIndex"
+                            (selectedIndexChanged)="onMinPriceChange($event)"
+                            (opened)="onMinPriceOpen()"
+                            (closed)="onMinPriceClose()"></DropDown>
                     </FlexboxLayout>
                     <FlexboxLayout flexDirection="row" width="50%">
                         <Label text="Max:"
                                 [color]="theme.inactiveColor"></Label>
-                        <ListPicker [items]="prices" selectedIndex="4" (selectedIndexChange)="selectedIndexChanged($event)"></ListPicker>
+                        <DropDown #maxDD
+                            backroundColor="red"
+                            [items]="prices"
+                            [(ngModel)]="selectedIndex"
+                            (selectedIndexChanged)="onMaxPriceChange($event)"
+                            (opened)="onMaxPriceOpen()"
+                            (closed)="onMaxPriceClose()"></DropDown>
                     </FlexboxLayout>
                 </FlexboxLayout>
             </FlexboxLayout>

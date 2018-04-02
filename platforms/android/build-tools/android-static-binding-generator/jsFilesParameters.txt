@@ -12,6 +12,12 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\compon
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\favorites\favorites-routing.module.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\favorites\favorites.component.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\favorites\favorites.module.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\login\home-routing.module.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\login\home.component.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\login\home.module.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\login\login-routing.module.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\login\login.component.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\login\login.module.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\default-search.resolve.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\search-routing.module.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\search\search.component.js
@@ -46,6 +52,7 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\compon
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\components\specials\star\star.component.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\default-day.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\google-places-api-urls.const.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\price-filter.const.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\price-filter.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\radius.const.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\const\temp-icons.const.js
@@ -56,6 +63,7 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\days.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\default-day.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\distance-popularity.enum.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\login-state.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\price-filter.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\price.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\radius.enum.js
@@ -63,9 +71,6 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\search-status.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\search-type.enum.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\enums\vendor-type.enum.js
-C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\home\home-routing.module.js
-C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\home\home.component.js
-C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\home\home.module.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\filter.interface.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\period.interface.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interfaces\rating.interface.js
@@ -91,6 +96,7 @@ C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\interf
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\resolves\current-location.resolve.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\google-location.service.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\specials.service.js
+C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\user.service.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\services\vendor.service.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\common.js
 C:\Users\naeuv\Projects\Hour 33\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js

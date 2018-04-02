@@ -44,28 +44,28 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\wine2.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\dog3.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\dog3.png"
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\star.png",
+        "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\star.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\thumb_down.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\thumb_down.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\star.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\star.png"
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\dog3.png",
+        "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\dog3.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\dog.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\dog.png"
     },
     {
-        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\feedback.png",
-        "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\feedback.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\account.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\account.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\feedback.png",
+        "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\feedback.png"
     },
     {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxxhdpi\\dog1.png",

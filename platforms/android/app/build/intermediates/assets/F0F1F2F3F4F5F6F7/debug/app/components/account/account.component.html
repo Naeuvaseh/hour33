@@ -3,8 +3,18 @@
            [color]="theme.actionBarTextColor">
         <Label class="action-bar-title" text="Account"></Label>
     </ActionBar>
+<FlexboxLayout>
+        <FlexboxLayout>
+
+        </FlexboxLayout>
+        <FlexboxLayout>
+                
+        </FlexboxLayout>
+</FlexboxLayout>
 <TextField autocorrect="false" 
-           hint="Email address" 
+           hint="Email address"
+           keyboardType="email" 
+           autocorrect="false" 
            autocapitalizationType="none"
            [(ngModel)]="user.email"></TextField>
 <TextField autocorrect="false" 

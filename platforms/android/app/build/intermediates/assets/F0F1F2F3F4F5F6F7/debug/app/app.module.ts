@@ -7,6 +7,7 @@ import { GoogleLocationService } from './services/google-location.service';
 import { CurrentLocationResolver } from './resolves/current-location.resolve';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { UserService } from "./services/user.service";
 
 @NgModule({
     bootstrap: [
@@ -22,9 +23,8 @@ import { AppComponent } from "./app.component";
         AppComponent
     ],
     providers: [
-        { provide: NgModuleFactoryLoader, 
-          useClass: NSModuleFactoryLoader },
           GoogleLocationService,
+          UserService,
           CurrentLocationResolver
     ],
     schemas: [
