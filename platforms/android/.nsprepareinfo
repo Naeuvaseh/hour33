@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
 	"time": "Mon Apr 02 2018 13:40:04 GMT-0400 (Eastern Daylight Time)",
+=======
+	"time": "Mon Apr 02 2018 15:12:10 GMT-0400 (Eastern Daylight Time)",
+>>>>>>> search
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
