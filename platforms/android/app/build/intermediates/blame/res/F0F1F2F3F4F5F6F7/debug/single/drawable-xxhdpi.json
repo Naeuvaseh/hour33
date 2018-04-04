@@ -8,12 +8,12 @@
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\beer2.png"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxhdpi\\cocktail5.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\cocktail5.png"
-    },
-    {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxhdpi\\settings.png",
         "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxhdpi\\cocktail5.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xxhdpi\\cocktail5.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xxhdpi\\wine.png",

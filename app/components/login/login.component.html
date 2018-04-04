@@ -1,9 +1,11 @@
 <ActionBar class="action-bar" [backgroundColor]="theme.darkGrey" [color]="theme.actionBarTextColor">
         <Label class="action-bar-title" [text]="title"></Label>
 </ActionBar>
-<FlexboxLayout flexDirection="column" [backgroundColor]="theme.primaryColor" height="100%">
-        <Image src="res://logo" horizontalAlignment="center" margin="10" verticalAlignment="center" alignSelf="center" stretch="none"></Image>
-        <FlexboxLayout>
+<GridLayout rows="auto, *, auto" columns="auto" [backgroundColor]="theme.primaryColor" width="100%" height="100%">
+        <Image src="res://logo" row="0" col="0" horizontalAlignment="center" margin="10" verticalAlignment="center" alignSelf="center"
+                stretch="none"></Image>
+        <FlexboxLayout row="1" col="0"></FlexboxLayout>
+        <FlexboxLayout row="2" col="0" width="100%" padding="0 0 25 0">
                 <!-- CreateAccount / Login / Forgot Password -->
                 <FlexboxLayout flexDirection="column" [backgroundColor]="theme.primaryColor">
                         <FlexboxLayout flexDirection="column" padding="10">
@@ -35,3 +37,4 @@
                         </FlexboxLayout>
                 </FlexboxLayout>
         </FlexboxLayout>
+</GridLayout>
