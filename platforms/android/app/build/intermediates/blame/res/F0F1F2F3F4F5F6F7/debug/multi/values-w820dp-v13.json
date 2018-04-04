@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeF0F1F2F3F4F5F6F7DebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\naeuv\\.android\\build-cache\\0fb58b7cd5da5d2e61378f8679966f46079ab439\\output\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "file": "C:\\Users\\TJ\\.android\\build-cache\\2ae0018e81512fade243635ff9dcd5a67258413e\\output\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
