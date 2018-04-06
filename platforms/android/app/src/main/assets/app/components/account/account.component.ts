@@ -19,7 +19,12 @@ export class AccountComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loginState = this.userService.user ? true : false;
+    console.log(
+      "AccountComponent.OnInit(): User: " +
+        JSON.stringify(this.userService.getUser())
+    );
+    this.loginState = this.userService.loggedIn;
+    console.log("AccountComponent.OnInit(): LoginState:" + this.loginState);
   }
 
   onLogin() {
@@ -27,7 +32,7 @@ export class AccountComponent implements OnInit {
   }
 
   onLogout() {
-    firebase.logout();
+    this.userService.logout();
     alert({
       title: "User logged out",
       message: "Sorry to see you go!",

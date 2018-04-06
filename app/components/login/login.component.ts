@@ -27,8 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("LoginComponent()");
-    if (this.userService.user) {
+    if (this.userService.getUser()) {
       this.router.navigate(["/search"]);
     }
   }
@@ -133,13 +132,14 @@ export class LoginComponent implements OnInit {
         })
         .then(
           // Success
-          function(result) {
-            console.log(JSON.stringify(result));
+          data => {
+            console.log(JSON.stringify(data));
+            this.userService.setUser(data);
             //Redirect to Search screen
             router.navigate(["/search"]);
           },
           // Error
-          function(errorMessage) {
+          errorMessage => {
             console.log(errorMessage);
             // Login Failed
             if (
@@ -153,48 +153,6 @@ export class LoginComponent implements OnInit {
                   "The password is invalid or the user does not have a password.",
                 okButtonText: "Ok"
               });
-            }
-            // User doesn't exist
-            if (
-              errorMessage.match(
-                "There is no user record corresponding to this identifier. The user may have been deleted."
-              )
-            ) {
-              // Create User
-              firebase
-                .createUser({
-                  email: this.user.email,
-                  password: this.user.password
-                })
-                .then(
-                  function(result) {
-                    alert({
-                      title: "User created sucessfully",
-                      message: "Congratulations! Happy Drinking!",
-                      okButtonText: "Sweet!"
-                    });
-                    // Send confirmation email
-                    firebase.sendEmailVerification().then(
-                      function() {
-                        console.log("Email verification sent");
-                      },
-                      function(error) {
-                        console.log(
-                          "Error sending email verification: " + error
-                        );
-                      }
-                    );
-                    //Redirect to Search screen
-                    router.navigate(["/search"]);
-                  },
-                  function(errorMessage) {
-                    alert({
-                      title: "No user created",
-                      message: errorMessage,
-                      okButtonText: "OK, got it"
-                    });
-                  }
-                );
             }
           }
         );
@@ -257,51 +215,5 @@ export class LoginComponent implements OnInit {
   passwordConfirmTextChange(args) {
     let passwordConfirm = <TextField>args.object;
     this._confirmPassword = passwordConfirm.text;
-  }
-
-  onReturn(args) {
-    switch (this.loginState) {
-      case LoginState.Login:
-        {
-          if (
-            this.isValidString(this._email) &&
-            this.isValidString(this._password)
-          ) {
-            this.onLogin();
-          } else {
-            alert({
-              title: "Email or password invalid",
-              message:
-                "The email or password you have entered is invalid. Please try again.",
-              okButtonText: "Gotcha"
-            });
-          }
-        }
-        break;
-      case LoginState.CreateAccount:
-        {
-          if (
-            this.isValidString(this._email) &&
-            this.isValidString(this._password) &&
-            this.isValidString(this._confirmPassword)
-          ) {
-            if (this._password == this._confirmPassword) {
-              this.onCreateAccount();
-            }
-          }
-        }
-        break;
-      case LoginState.ForgotPassword:
-        {
-          if (this.isValidString(this._email)) {
-            this.resetPassword();
-          }
-        }
-        break;
-    }
-  }
-
-  isValidString(str: string): boolean {
-    return !str || /^\s*$/.test(str);
   }
 }

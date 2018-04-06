@@ -9,15 +9,14 @@
                 <!-- CreateAccount / Login / Forgot Password -->
                 <FlexboxLayout flexDirection="column" [backgroundColor]="theme.primaryColor">
                         <FlexboxLayout flexDirection="column" padding="10">
-                                <TextField autocorrect="false" (textChange)="emailTextChange($event)" (returnPress)="onReturn($event)" hint="Email address"
-                                        keyboardType="email" autocorrect="false" style="placeholder-color: {{ theme.lightGrey }};"
-                                        [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
+                                <TextField autocorrect="false" (textChange)="emailTextChange($event)" hint="Email address" keyboardType="email" autocorrect="false"
+                                        style="placeholder-color: {{ theme.lightGrey }};" [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
                                 <TextField autocorrect="false" *ngIf="loginState != loginStates.ForgotPassword" (textChange)="passwordTextChange($event)"
-                                        (returnPress)="onReturn($event)" hint="Password" secure="true" style="placeholder-color: {{ theme.lightGrey }};"
-                                        [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
+                                        hint="Password" secure="true" style="placeholder-color: {{ theme.lightGrey }};" [color]="theme.inactiveColor"
+                                        autocapitalizationType="none"></TextField>
                                 <TextField [visibility]="loginState == loginStates.CreateAccount ? 'visible' : 'collapsed'" (textChange)="passwordConfirmTextChange($event)"
-                                        (returnPress)="onReturn($event)" style="placeholder-color: {{ theme.lightGrey }};" autocorrect="false"
-                                        hint="Confirm Password" secure="true" [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
+                                        style="placeholder-color: {{ theme.lightGrey }};" autocorrect="false" hint="Confirm Password"
+                                        secure="true" [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
                                 <FlexboxLayout flexDirection="row">
                                         <Button *ngIf="loginState == loginStates.Login" width="100%" text="Login" class="btn btn-primary" (tap)="onLogin()"></Button>
                                         <Button *ngIf="loginState == loginStates.ForgotPassword" text="Reset Password" class="btn btn-primary" width="100%" (tap)="resetPassword()"></Button>
