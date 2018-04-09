@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.userService.getUser()) {
-      this.router.navigate(["/search"]);
-    }
+    this.userService.getUser().subscribe(user => {
+      if (user) this.router.navigate(["/search"]);
+    });
   }
 
   resetPassword() {
@@ -172,13 +172,14 @@ export class LoginComponent implements OnInit {
   }
 
   onLogout() {
-    firebase.logout();
-    alert({
-      title: "User logged out",
-      message: "Sorry to see you go!",
-      okButtonText: "Ok"
+    this.userService.logout().subscribe(success => {
+      alert({
+        title: "User logged out",
+        message: "Sorry to see you go!",
+        okButtonText: "Ok"
+      });
+      this.router.navigate(["/search"]);
     });
-    this.router.navigate(["/search"]);
   }
 
   toggleView(action: string) {

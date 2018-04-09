@@ -10,6 +10,7 @@ const firebase = require("nativescript-plugin-firebase");
   templateUrl: "./components/account/account.component.html"
 })
 export class AccountComponent implements OnInit {
+  public user;
   public loginState: boolean;
 
   private theme;
@@ -19,12 +20,14 @@ export class AccountComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(
-      "AccountComponent.OnInit(): User: " +
-        JSON.stringify(this.userService.getUser())
-    );
-    this.loginState = this.userService.loggedIn;
-    console.log("AccountComponent.OnInit(): LoginState:" + this.loginState);
+    this.userService.getUser().subscribe(user => {
+      this.user = user;
+      this.loginState = user ? true : false;
+      console.log(
+        "AccountComponent.OnInit() GetUser(): " + JSON.stringify(user)
+      );
+      console.log("AccountComponent.OnInit(): LoginState:" + this.loginState);
+    });
   }
 
   onLogin() {

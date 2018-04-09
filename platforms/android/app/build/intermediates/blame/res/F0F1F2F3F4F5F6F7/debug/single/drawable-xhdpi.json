@@ -8,12 +8,12 @@
         "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\background.png"
     },
     {
-        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xhdpi\\dog1.png",
-        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\dog1.png"
-    },
-    {
         "merged": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xhdpi\\whiskey2.png",
         "source": "C:\\Users\\naeuv\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\whiskey2.png"
+    },
+    {
+        "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xhdpi\\dog1.png",
+        "source": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\dog1.png"
     },
     {
         "merged": "C:\\Users\\TJ\\Projects\\Hour 33\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3F4F5F6F7\\debug\\drawable-xhdpi\\martini2.png",
