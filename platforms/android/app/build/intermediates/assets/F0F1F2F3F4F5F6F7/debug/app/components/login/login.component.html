@@ -1,21 +1,22 @@
 <ActionBar class="action-bar" [backgroundColor]="theme.darkGrey" [color]="theme.actionBarTextColor">
         <Label class="action-bar-title" [text]="title"></Label>
 </ActionBar>
-<FlexboxLayout flexDirection="column" [backgroundColor]="theme.primaryColor" height="100%">
-        <Image src="res://logo" horizontalAlignment="center" margin="10" verticalAlignment="center" alignSelf="center" stretch="none"></Image>
-        <FlexboxLayout>
+<GridLayout rows="auto, *, auto" columns="auto" [backgroundColor]="theme.primaryColor" width="100%" height="100%">
+        <Image src="res://logo" row="0" col="0" horizontalAlignment="center" margin="10" verticalAlignment="center" alignSelf="center"
+                stretch="none"></Image>
+        <FlexboxLayout row="1" col="0"></FlexboxLayout>
+        <FlexboxLayout row="2" col="0" width="100%" padding="0 0 25 0">
                 <!-- CreateAccount / Login / Forgot Password -->
                 <FlexboxLayout flexDirection="column" [backgroundColor]="theme.primaryColor">
                         <FlexboxLayout flexDirection="column" padding="10">
-                                <TextField autocorrect="false" (textChange)="emailTextChange($event)" (returnPress)="onReturn($event)" hint="Email address"
-                                        keyboardType="email" autocorrect="false" style="placeholder-color: {{ theme.lightGrey }};"
-                                        [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
+                                <TextField autocorrect="false" (textChange)="emailTextChange($event)" hint="Email address" keyboardType="email" autocorrect="false"
+                                        style="placeholder-color: {{ theme.lightGrey }};" [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
                                 <TextField autocorrect="false" *ngIf="loginState != loginStates.ForgotPassword" (textChange)="passwordTextChange($event)"
-                                        (returnPress)="onReturn($event)" hint="Password" secure="true" style="placeholder-color: {{ theme.lightGrey }};"
-                                        [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
+                                        hint="Password" secure="true" style="placeholder-color: {{ theme.lightGrey }};" [color]="theme.inactiveColor"
+                                        autocapitalizationType="none"></TextField>
                                 <TextField [visibility]="loginState == loginStates.CreateAccount ? 'visible' : 'collapsed'" (textChange)="passwordConfirmTextChange($event)"
-                                        (returnPress)="onReturn($event)" style="placeholder-color: {{ theme.lightGrey }};" autocorrect="false"
-                                        hint="Confirm Password" secure="true" [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
+                                        style="placeholder-color: {{ theme.lightGrey }};" autocorrect="false" hint="Confirm Password"
+                                        secure="true" [color]="theme.inactiveColor" autocapitalizationType="none"></TextField>
                                 <FlexboxLayout flexDirection="row">
                                         <Button *ngIf="loginState == loginStates.Login" width="100%" text="Login" class="btn btn-primary" (tap)="onLogin()"></Button>
                                         <Button *ngIf="loginState == loginStates.ForgotPassword" text="Reset Password" class="btn btn-primary" width="100%" (tap)="resetPassword()"></Button>
@@ -35,3 +36,4 @@
                         </FlexboxLayout>
                 </FlexboxLayout>
         </FlexboxLayout>
+</GridLayout>
