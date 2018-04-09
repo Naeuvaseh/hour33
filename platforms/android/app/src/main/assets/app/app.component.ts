@@ -60,7 +60,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._user = this.userService.getUser();
+    this.userService.getUser().subscribe(user => {
+      console.log("AppComponent.OnInit(): GetUser(): " + JSON.stringify(user));
+      this._user = user;
+    });
   }
 
   public items: Array<BottomBarItem> = [
