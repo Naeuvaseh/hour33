@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var dialogs_1 = require("tns-core-modules/ui/dialogs");
+var applicationSettings = require("tns-core-modules/application-settings");
 exports.firebase = {
     initialized: false,
     instance: null,
@@ -49,7 +50,8 @@ exports.firebase = {
         PHONE: "phone",
         CUSTOM: "custom",
         FACEBOOK: "facebook",
-        GOOGLE: "google"
+        GOOGLE: "google",
+        EMAIL_LINK: "emailLink"
     },
     QueryOrderByType: {
         KEY: "key",
@@ -99,6 +101,12 @@ exports.firebase = {
                 console.error("Firebase AuthStateListener failed to trigger", listener, ex);
             }
         });
+    },
+    rememberEmailForEmailLinkLogin: function (email) {
+        applicationSettings.setString("FirebasePlugin.EmailLinkLogin", email);
+    },
+    getRememberedEmailForEmailLinkLogin: function () {
+        return applicationSettings.getString("FirebasePlugin.EmailLinkLogin");
     },
     strongTypeify: function (value) {
         if (value === "true") {
@@ -190,10 +198,10 @@ exports.firebase = {
     }
 };
 var DocumentSnapshot = (function () {
-    function DocumentSnapshot(id, exists, data) {
+    function DocumentSnapshot(id, exists, documentData) {
         this.id = id;
         this.exists = exists;
-        this.data = data;
+        this.data = function () { return exists ? documentData : undefined; };
     }
     return DocumentSnapshot;
 }());

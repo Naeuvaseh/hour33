@@ -2,25 +2,25 @@
   "_args": [
     [
       {
-        "raw": "nativescript-hook@^0.2.0",
+        "raw": "nativescript-hook@~0.2.0",
         "scope": null,
         "escapedName": "nativescript-hook",
         "name": "nativescript-hook",
-        "rawSpec": "^0.2.0",
+        "rawSpec": "~0.2.0",
         "spec": ">=0.2.0 <0.3.0",
         "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-dev-typescript"
+      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-plugin-firebase"
     ]
   ],
   "_from": "nativescript-hook@>=0.2.0 <0.3.0",
-  "_id": "nativescript-hook@0.2.3",
+  "_id": "nativescript-hook@0.2.4",
   "_inCache": true,
   "_location": "/nativescript-hook",
-  "_nodeVersion": "9.2.0",
+  "_nodeVersion": "9.6.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-hook_0.2.3_1519049390220_0.4462383102787466"
+    "tmp": "tmp/nativescript-hook_0.2.4_1523961132286_0.2534204845748629"
   },
   "_npmUser": {
     "name": "rosen-vladimirov",
@@ -29,22 +29,23 @@
   "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-hook@^0.2.0",
+    "raw": "nativescript-hook@~0.2.0",
     "scope": null,
     "escapedName": "nativescript-hook",
     "name": "nativescript-hook",
-    "rawSpec": "^0.2.0",
+    "rawSpec": "~0.2.0",
     "spec": ">=0.2.0 <0.3.0",
     "type": "range"
   },
   "_requiredBy": [
-    "/nativescript-dev-typescript"
+    "/nativescript-dev-typescript",
+    "/nativescript-plugin-firebase"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.3.tgz",
-  "_shasum": "17c01fe14f95eaefdbd21747507933e998044c02",
+  "_resolved": "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.4.tgz",
+  "_shasum": "e591e1d9ad415a8b4f3309c15731577af44a3dd4",
   "_shrinkwrap": null,
-  "_spec": "nativescript-hook@^0.2.0",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-dev-typescript",
+  "_spec": "nativescript-hook@~0.2.0",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\nativescript-plugin-firebase",
   "author": {
     "name": "NativeScript"
   },
@@ -59,10 +60,11 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "17c01fe14f95eaefdbd21747507933e998044c02",
-    "tarball": "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.3.tgz",
+    "shasum": "e591e1d9ad415a8b4f3309c15731577af44a3dd4",
+    "tarball": "https://registry.npmjs.org/nativescript-hook/-/nativescript-hook-0.2.4.tgz",
     "fileCount": 6,
-    "unpackedSize": 20010
+    "unpackedSize": 20032,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa1c0sCRA9TVsSAnZWagAA6xIP/0IAdK3t5jV2Ij4CiLXE\n0neTx07UvRMxmYkz+IkUpVijraUloRFXhCr+IuFpn4+xxbSTLkpP0ZaHDcAl\nIGkHQ8WCShib2NSKlCyF0POhjq6RDWRK8dI6d4hNWoDsbmvvzfyfjKXdl91e\nO95Uqump6xLMwk1hx7JmI9bhevKVVtNdk9CaKMzeXnH30i73nBPmdxLxsSjv\nw9HejPhQxLrZurfvmyZ+/VNxxAXsysCgmPReDIMtOhLzyO6heeVZBW+G2Xxg\nCYM6amOIKkTOPoPjJtrfmXeMBrZrcfk/ibGRKYyNllW4y+voTXCXpoI9qHWw\nFJmqyOofG34IZRwP2Yo6RuiJAjqQoztxs6iDHBVJ/R5skbrby1ZP7LvqeXzn\nLSq3g5O+o0HC3tcVCbLw6f4K6PxsMotqFGNsgUE7scmdZ8KxTzvnQZy8GI5G\nbPRycTePWVOgLpoZRIPY5Qh2kFkdYHDU7hB5cJkw5xWQ3XuLFCXx+jGNWYuL\npGX5LVPi+NYX90Dx08hQ+ZSXx7G+wlF5SaSTeI540DPvVMAcXJWWR+209AQc\ncsqZJ16bh8sIGlQpHkfSYH1FFxmr5SM5DoTIT8aB7UIcwGFyivdXeR1CL7XR\nFXvBdBtWpt6JjNkzvrIqBrWSUtzbSNQvXwcpFMZm/Bb+2IbHOffWE4VcgK7w\nGwZL\r\n=eFB/\r\n-----END PGP SIGNATURE-----\r\n"
   },
   "homepage": "https://github.com/NativeScript/nativescript-hook#readme",
   "license": "Apache-2.0",
@@ -123,5 +125,5 @@
   "scripts": {
     "test": "exit 0"
   },
-  "version": "0.2.3"
+  "version": "0.2.4"
 }

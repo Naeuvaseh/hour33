@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\c97a8839e26c75e55979dc1a69cd3749\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\wallet_secondary_text_holo_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.2.2.aar\\7b82e15e979bafc47ece1973535f3662\\res\\color\\wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\c97a8839e26c75e55979dc1a69cd3749\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\wallet_primary_text_holo_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.2.2.aar\\7b82e15e979bafc47ece1973535f3662\\res\\color\\wallet_primary_text_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\c97a8839e26c75e55979dc1a69cd3749\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\color\\abc_btn_colored_text_material.xml"
+    }
+]

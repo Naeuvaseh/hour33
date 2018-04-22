@@ -48,6 +48,26 @@ var auth;
                 }));
             });
         };
+        Auth.prototype.sendSignInLinkToEmail = function (email, actionCodeSettings) {
+            var _this = this;
+            return new Promise(function (resolve, reject) {
+                firebase.login({
+                    type: firebase_1.LoginType.EMAIL_LINK,
+                    emailLinkOptions: {
+                        email: email,
+                        url: actionCodeSettings.url,
+                    }
+                }).then(function (user) {
+                    _this.currentUser = user;
+                    _this.authStateChangedHandler && _this.authStateChangedHandler(user);
+                    resolve();
+                }, (function (err) {
+                    reject({
+                        message: err
+                    });
+                }));
+            });
+        };
         Auth.prototype.createUserWithEmailAndPassword = function (email, password) {
             return firebase.createUser({
                 email: email,
@@ -72,6 +92,9 @@ var auth;
         };
         Auth.prototype.fetchProvidersForEmail = function (email) {
             return firebase.fetchProvidersForEmail(email);
+        };
+        Auth.prototype.fetchSignInMethodsForEmail = function (email) {
+            return firebase.fetchSignInMethodsForEmail(email);
         };
         return Auth;
     }());

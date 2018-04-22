@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.2.2.aar\\cb5d40859ee926391100841771552524\\res\\drawable-watch-v20\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.2.2.aar\\cb5d40859ee926391100841771552524\\res\\drawable-watch-v20\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.2.2.aar\\cb5d40859ee926391100841771552524\\res\\drawable-watch-v20\\common_google_signin_btn_text_disabled.xml"
+    }
+]

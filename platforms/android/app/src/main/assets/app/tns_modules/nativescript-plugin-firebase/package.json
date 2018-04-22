@@ -2,25 +2,25 @@
   "_args": [
     [
       {
-        "raw": "nativescript-plugin-firebase",
+        "raw": "nativescript-plugin-firebase@^5.1.8",
         "scope": null,
         "escapedName": "nativescript-plugin-firebase",
         "name": "nativescript-plugin-firebase",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^5.1.8",
+        "spec": ">=5.1.8 <6.0.0",
+        "type": "range"
       },
       "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-plugin-firebase@latest",
-  "_id": "nativescript-plugin-firebase@5.1.8",
+  "_from": "nativescript-plugin-firebase@>=5.1.8 <6.0.0",
+  "_id": "nativescript-plugin-firebase@5.2.0",
   "_inCache": true,
   "_location": "/nativescript-plugin-firebase",
   "_nodeVersion": "6.12.3",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-plugin-firebase_5.1.8_1519896850240_0.17732531583748368"
+    "tmp": "tmp/nativescript-plugin-firebase_5.2.0_1522694461593_0.14325271817374507"
   },
   "_npmUser": {
     "name": "eddyverbruggen",
@@ -29,22 +29,21 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-plugin-firebase",
+    "raw": "nativescript-plugin-firebase@^5.1.8",
     "scope": null,
     "escapedName": "nativescript-plugin-firebase",
     "name": "nativescript-plugin-firebase",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^5.1.8",
+    "spec": ">=5.1.8 <6.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.8.tgz",
-  "_shasum": "4604368e8ac36d6f45b0d9de04e44d8fa9f89f37",
+  "_resolved": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.2.0.tgz",
+  "_shasum": "412265d7f8c2252ceef0b1edb1767daa9cc95bbf",
   "_shrinkwrap": null,
-  "_spec": "nativescript-plugin-firebase",
+  "_spec": "nativescript-plugin-firebase@^5.1.8",
   "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "Eddy Verbruggen",
@@ -69,10 +68,10 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "4604368e8ac36d6f45b0d9de04e44d8fa9f89f37",
-    "tarball": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.1.8.tgz",
+    "shasum": "412265d7f8c2252ceef0b1edb1767daa9cc95bbf",
+    "tarball": "https://registry.npmjs.org/nativescript-plugin-firebase/-/nativescript-plugin-firebase-5.2.0.tgz",
     "fileCount": 33,
-    "unpackedSize": 409913
+    "unpackedSize": 423066
   },
   "homepage": "https://github.com/eddyverbruggen/nativescript-plugin-firebase",
   "keywords": [
@@ -137,12 +136,10 @@
   "scripts": {
     "ci.tslint": "npm run tslint && npm run tslint.demo",
     "config": "node scripts/postinstall.js config",
-    "demo-ng.android": "npm run preparedemo-ng && cd ../demo-ng && tns run android --justlaunch",
-    "demo-ng.ios": "npm run preparedemo-ng && cd ../demo-ng && tns run ios --emulator",
-    "demo-ng.ios.device": "npm run preparedemo-ng && cd ../demo-ng && tns platform remove ios && tns run ios",
+    "demo-ng.android": "npm run preparedemo-ng && cd ../demo-ng && tns run android",
+    "demo-ng.ios": "npm run preparedemo-ng && cd ../demo-ng && tns platform remove ios && tns run ios",
     "demo.android": "npm run preparedemo && cd ../demo && tns platform remove android && tns run android --justlaunch",
-    "demo.ios": "npm run preparedemo && cd ../demo && tns run ios --emulator",
-    "demo.ios.device": "npm run preparedemo && cd ../demo && tns platform remove ios && tns run ios",
+    "demo.ios": "npm run preparedemo && cd ../demo && tns platform remove ios && tns run ios",
     "development.setup": "npm run setup && npm link && cd ../demo && npm link nativescript-plugin-firebase && cd ../src",
     "generate.typings.android": "java -jar ../../android-dts-generator/dts-generator/build/libs/dts-generator.jar -input ../$npm_package_config_typingsproject/platforms/android/build/intermediates/exploded-aar/com.google.firebase/firebase-$npm_package_config_typings/**/jars/classes.jar -output platforms/android/typings/$npm_package_config_typings",
     "generate.typings.android.analytics": "npm run generate.typings.android --nativescript-plugin-firebase:typings=analytics-impl",
@@ -152,7 +149,7 @@
     "generate.typings.android.firestore": "npm run generate.typings.android --nativescript-plugin-firebase:typings=firestore",
     "generate.typings.android.messaging": "npm run generate.typings.android --nativescript-plugin-firebase:typings=messaging",
     "generate.typings.android.storage": "npm run generate.typings.android --nativescript-plugin-firebase:typings=storage",
-    "generate.typings.ios": "cd ../demo && TNS_DEBUG_METADATA_PATH=\"$(pwd)/metadata\" tns build ios && TNS_TYPESCRIPT_DECLARATIONS_PATH=\"$(pwd)/typings\" tns build ios && echo 'Now look for your library typings in demo/typings!'",
+    "generate.typings.ios": "cd ../demo-ng && TNS_DEBUG_METADATA_PATH=\"$(pwd)/metadata\" tns build ios && TNS_TYPESCRIPT_DECLARATIONS_PATH=\"$(pwd)/typings\" tns build ios && echo 'Now look for your library typings in demo-ng/typings!'",
     "package": "cd ../publish && rm -rf ./package && ./pack.sh",
     "plugin.tscwatch": "npm run tsc -- -w",
     "postinstall": "node postinstall-hooks.js && node scripts/postinstall.js",
@@ -170,5 +167,5 @@
     "tslint.demo": "tslint --config '../tslint.json' '../demo/app/*.ts' --exclude '**/node_modules/**'"
   },
   "typings": "index.d.ts",
-  "version": "5.1.8"
+  "version": "5.2.0"
 }

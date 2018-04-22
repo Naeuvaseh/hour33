@@ -1,0 +1,3 @@
+# Referenced at C:\Users\naeuv\Projects\Hour33\platforms\android\app\build\intermediates\manifests\full\debug\AndroidManifest.xml:43
+-keep class com.tns.NativeScriptApplication { <init>(...); }
+

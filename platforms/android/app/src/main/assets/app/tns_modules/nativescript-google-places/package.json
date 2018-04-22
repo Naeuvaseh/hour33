@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-google-places",
+        "raw": "nativescript-google-places@0.0.3",
         "scope": null,
         "escapedName": "nativescript-google-places",
         "name": "nativescript-google-places",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "0.0.3",
+        "spec": "0.0.3",
+        "type": "version"
       },
       "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-google-places@latest",
+  "_from": "nativescript-google-places@0.0.3",
   "_id": "nativescript-google-places@0.0.3",
   "_inCache": true,
   "_location": "/nativescript-google-places",
@@ -29,22 +29,21 @@
   "_npmVersion": "3.3.12",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-google-places",
+    "raw": "nativescript-google-places@0.0.3",
     "scope": null,
     "escapedName": "nativescript-google-places",
     "name": "nativescript-google-places",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "0.0.3",
+    "spec": "0.0.3",
+    "type": "version"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-google-places/-/nativescript-google-places-0.0.3.tgz",
   "_shasum": "69038966ebbd68f66a8f09648597fbbdcbac81f4",
   "_shrinkwrap": null,
-  "_spec": "nativescript-google-places",
+  "_spec": "nativescript-google-places@0.0.3",
   "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "dependencies": {},
   "description": "Read Google Places API Documentation at https://developers.google.com/places/android-api/?hl=pt-br",

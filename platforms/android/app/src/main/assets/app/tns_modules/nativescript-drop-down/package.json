@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-drop-down",
+        "raw": "nativescript-drop-down@^3.2.4",
         "scope": null,
         "escapedName": "nativescript-drop-down",
         "name": "nativescript-drop-down",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^3.2.4",
+        "spec": ">=3.2.4 <4.0.0",
+        "type": "range"
       },
       "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-drop-down@latest",
+  "_from": "nativescript-drop-down@>=3.2.4 <4.0.0",
   "_id": "nativescript-drop-down@3.2.4",
   "_inCache": true,
   "_location": "/nativescript-drop-down",
@@ -29,22 +29,21 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-drop-down",
+    "raw": "nativescript-drop-down@^3.2.4",
     "scope": null,
     "escapedName": "nativescript-drop-down",
     "name": "nativescript-drop-down",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^3.2.4",
+    "spec": ">=3.2.4 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-drop-down/-/nativescript-drop-down-3.2.4.tgz",
   "_shasum": "382bc836800551c5de12bf05b4696c22061c163a",
   "_shrinkwrap": null,
-  "_spec": "nativescript-drop-down",
+  "_spec": "nativescript-drop-down@^3.2.4",
   "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "Peter Staev",

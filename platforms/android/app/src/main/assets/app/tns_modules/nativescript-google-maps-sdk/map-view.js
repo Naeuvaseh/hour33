@@ -30,6 +30,13 @@ var MapView = (function (_super) {
         application.android.off(application.AndroidApplication.activityDestroyedEvent, this.onActivityDestroyed, this);
     };
     MapView.prototype.disposeNativeView = function () {
+        if (this.nativeView) {
+            this.nativeView.onDestroy();
+        }
+        if (this._gMap) {
+            this._gMap.setMyLocationEnabled(false);
+            this._gMap.clear();
+        }
         this._context = undefined;
         this._gMap = undefined;
         this._markers = undefined;
@@ -883,9 +890,9 @@ var Marker = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Marker.CLASS = 'com.google.android.gms.maps.model.Marker';
     return Marker;
 }(map_view_common_1.MarkerBase));
-Marker.CLASS = 'com.google.android.gms.maps.model.Marker';
 exports.Marker = Marker;
 var Polyline = (function (_super) {
     __extends(Polyline, _super);
@@ -1015,9 +1022,9 @@ var Polyline = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Polyline.CLASS = 'com.google.android.gms.maps.model.Polyline';
     return Polyline;
 }(map_view_common_1.PolylineBase));
-Polyline.CLASS = 'com.google.android.gms.maps.model.Polyline';
 exports.Polyline = Polyline;
 var Polygon = (function (_super) {
     __extends(Polygon, _super);
@@ -1148,9 +1155,9 @@ var Polygon = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Polygon.CLASS = 'com.google.android.gms.maps.model.Polygon';
     return Polygon;
 }(map_view_common_1.PolygonBase));
-Polygon.CLASS = 'com.google.android.gms.maps.model.Polygon';
 exports.Polygon = Polygon;
 var Circle = (function (_super) {
     __extends(Circle, _super);
@@ -1294,7 +1301,7 @@ var Circle = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    Circle.CLASS = 'com.google.android.gms.maps.model.Circle';
     return Circle;
 }(map_view_common_1.CircleBase));
-Circle.CLASS = 'com.google.android.gms.maps.model.Circle';
 exports.Circle = Circle;

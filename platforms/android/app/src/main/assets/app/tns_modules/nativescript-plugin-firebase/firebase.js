@@ -1,4 +1,5 @@
 "use strict";
+var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var firebase_common_1 = require("./firebase-common");
 var appModule = require("tns-core-modules/application");
@@ -48,31 +49,59 @@ var dynamicLinksEnabled = lazy_1.default(function () { return typeof (com.google
             }
         }
         else if (isLaunchIntent && dynamicLinksEnabled()) {
-            var getDynamicLinksCallback = new com.google.android.gms.tasks.OnCompleteListener({
-                onComplete: function (task) {
-                    if (task.isSuccessful() && task.getResult() !== null) {
-                        var result_2 = task.getResult();
-                        if (firebase_common_1.firebase._dynamicLinkCallback === null) {
-                            firebase_common_1.firebase._cachedDynamicLink = {
-                                url: result_2.getLink().toString(),
-                                matchConfidence: 1,
-                                minimumAppVersion: result_2.getMinimumAppVersion()
-                            };
+            var firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
+            var emailLink = "" + intent.getData();
+            if (firebaseAuth.isSignInWithEmailLink(emailLink)) {
+                var rememberedEmail = firebase_common_1.firebase.getRememberedEmailForEmailLinkLogin();
+                if (rememberedEmail !== undefined) {
+                    var emailLinkOnCompleteListener = new com.google.android.gms.tasks.OnCompleteListener({
+                        onComplete: function (task) {
+                            if (task.isSuccessful()) {
+                                var authResult = task.getResult();
+                                firebase_common_1.firebase.notifyAuthStateListeners({
+                                    loggedIn: true,
+                                    user: authResult.getUser()
+                                });
+                            }
                         }
-                        else {
-                            setTimeout(function () {
-                                firebase_common_1.firebase._dynamicLinkCallback({
+                    });
+                    var user = com.google.firebase.auth.FirebaseAuth.getInstance().getCurrentUser();
+                    if (user) {
+                        var authCredential = com.google.firebase.auth.EmailAuthProvider.getCredentialWithLink(rememberedEmail, emailLink);
+                        user.linkWithCredential(authCredential).addOnCompleteListener(emailLinkOnCompleteListener);
+                    }
+                    else {
+                        firebaseAuth.signInWithEmailLink(rememberedEmail, emailLink).addOnCompleteListener(emailLinkOnCompleteListener);
+                    }
+                }
+            }
+            else {
+                var getDynamicLinksCallback = new com.google.android.gms.tasks.OnCompleteListener({
+                    onComplete: function (task) {
+                        if (task.isSuccessful() && task.getResult() !== null) {
+                            var result_2 = task.getResult();
+                            if (firebase_common_1.firebase._dynamicLinkCallback === null) {
+                                firebase_common_1.firebase._cachedDynamicLink = {
                                     url: result_2.getLink().toString(),
                                     matchConfidence: 1,
                                     minimumAppVersion: result_2.getMinimumAppVersion()
+                                };
+                            }
+                            else {
+                                setTimeout(function () {
+                                    firebase_common_1.firebase._dynamicLinkCallback({
+                                        url: result_2.getLink().toString(),
+                                        matchConfidence: 1,
+                                        minimumAppVersion: result_2.getMinimumAppVersion()
+                                    });
                                 });
-                            });
+                            }
                         }
                     }
-                }
-            });
-            var firebaseDynamicLinks = com.google.firebase.dynamiclinks.FirebaseDynamicLinks.getInstance();
-            firebaseDynamicLinks.getDynamicLink(intent).addOnCompleteListener(getDynamicLinksCallback);
+                });
+                var firebaseDynamicLinks = com.google.firebase.dynamiclinks.FirebaseDynamicLinks.getInstance();
+                firebaseDynamicLinks.getDynamicLink(intent).addOnCompleteListener(getDynamicLinksCallback);
+            }
         }
     });
 })();
@@ -337,6 +366,32 @@ firebase_common_1.firebase.fetchProvidersForEmail = function (email) {
         }
     });
 };
+firebase_common_1.firebase.fetchSignInMethodsForEmail = function (email) {
+    return new Promise(function (resolve, reject) {
+        try {
+            if (typeof (email) !== "string") {
+                reject("A parameter representing an email address is required.");
+                return;
+            }
+            var onCompleteListener = new com.google.android.gms.tasks.OnCompleteListener({
+                onComplete: function (task) {
+                    if (!task.isSuccessful()) {
+                        reject((task.getException() && task.getException().getReason ? task.getException().getReason() : task.getException()));
+                    }
+                    else {
+                        var signInMethods = task.getResult().getSignInMethods();
+                        resolve(firebase_common_1.firebase.toJsObject(signInMethods));
+                    }
+                }
+            });
+            com.google.firebase.auth.FirebaseAuth.getInstance().fetchSignInMethodsForEmail(email).addOnCompleteListener(onCompleteListener);
+        }
+        catch (ex) {
+            console.log("Error in firebase.fetchSignInMethodsForEmail: " + ex);
+            reject(ex);
+        }
+    });
+};
 firebase_common_1.firebase.getCurrentPushToken = function () {
     return new Promise(function (resolve, reject) {
         try {
@@ -473,6 +528,22 @@ firebase_common_1.firebase.analytics.logEvent = function (arg) {
         }
     });
 };
+firebase_common_1.firebase.analytics.setUserId = function (arg) {
+    return new Promise(function (resolve, reject) {
+        try {
+            if (arg.userId === undefined) {
+                reject("Argument 'userId' is missing");
+                return;
+            }
+            com.google.firebase.analytics.FirebaseAnalytics.getInstance(appModule.android.currentContext || com.tns.NativeScriptApplication.getInstance()).setUserId(arg.userId);
+            resolve();
+        }
+        catch (ex) {
+            console.log("Error in firebase.analytics.setUserId: " + ex);
+            reject(ex);
+        }
+    });
+};
 firebase_common_1.firebase.analytics.setUserProperty = function (arg) {
     return new Promise(function (resolve, reject) {
         try {
@@ -523,12 +594,16 @@ firebase_common_1.firebase.admob.showBanner = function (arg) {
             firebase_common_1.firebase.admob.adView.setAdUnitId(settings.androidBannerId);
             var bannerType = firebase_common_1.firebase.admob._getBannerType(settings.size);
             firebase_common_1.firebase.admob.adView.setAdSize(bannerType);
+            _this.resolve = resolve;
+            _this.reject = reject;
             var BannerAdListener = com.google.android.gms.ads.AdListener.extend({
+                resolve: null,
+                reject: null,
                 onAdLoaded: function () {
-                    resolve();
+                    _this.resolve();
                 },
                 onAdFailedToLoad: function (errorCode) {
-                    reject(errorCode);
+                    _this.reject(errorCode);
                 }
             });
             firebase_common_1.firebase.admob.adView.setAdListener(new BannerAdListener());
@@ -641,6 +716,11 @@ firebase_common_1.firebase.admob._buildAdRequest = function (settings) {
             deviceId = deviceId.toUpperCase();
             console.log("Treating this deviceId as testdevice: " + deviceId);
             builder.addTestDevice(deviceId);
+        }
+    }
+    if (settings.keywords !== undefined && settings.keywords.length > 0) {
+        for (var i = 0; i < settings.keywords.length; i++) {
+            builder.addKeyword(settings.keywords[i]);
         }
     }
     var bundle = new android.os.Bundle();
@@ -912,6 +992,34 @@ firebase_common_1.firebase.login = function (arg) {
                     firebaseAuth_1.signInWithEmailAndPassword(arg.passwordOptions.email, arg.passwordOptions.password).addOnCompleteListener(onCompleteListener_1);
                 }
             }
+            else if (arg.type === firebase_common_1.firebase.LoginType.EMAIL_LINK) {
+                if (!arg.emailLinkOptions || !arg.emailLinkOptions.email) {
+                    reject("Auth type EMAIL_LINK requires an 'emailLinkOptions.email' argument");
+                    return;
+                }
+                if (!arg.emailLinkOptions.url) {
+                    reject("Auth type EMAIL_LINK requires an 'emailLinkOptions.url' argument");
+                    return;
+                }
+                var actionCodeSettings = com.google.firebase.auth.ActionCodeSettings.newBuilder()
+                    .setUrl(arg.emailLinkOptions.url)
+                    .setHandleCodeInApp(true)
+                    .setIOSBundleId(arg.emailLinkOptions.iOS ? arg.emailLinkOptions.iOS.bundleId : appModule.android.context.getPackageName())
+                    .setAndroidPackageName(arg.emailLinkOptions.android ? arg.emailLinkOptions.android.packageName : appModule.android.context.getPackageName(), arg.emailLinkOptions.android ? arg.emailLinkOptions.android.installApp || false : false, arg.emailLinkOptions.android ? arg.emailLinkOptions.android.minimumVersion || "1" : "1")
+                    .build();
+                var onEmailLinkCompleteListener = new com.google.android.gms.tasks.OnCompleteListener({
+                    onComplete: function (task) {
+                        if (!task.isSuccessful()) {
+                            reject((task.getException() && task.getException().getReason ? task.getException().getReason() : task.getException()));
+                        }
+                        else {
+                            firebase_common_1.firebase.rememberEmailForEmailLinkLogin(arg.emailLinkOptions.email);
+                            resolve();
+                        }
+                    }
+                });
+                firebaseAuth_1.sendSignInLinkToEmail(arg.emailLinkOptions.email, actionCodeSettings).addOnCompleteListener(onEmailLinkCompleteListener);
+            }
             else if (arg.type === firebase_common_1.firebase.LoginType.PHONE) {
                 if (!arg.phoneOptions || !arg.phoneOptions.phoneNumber) {
                     reject("Auth type PHONE requires a 'phoneOptions.phoneNumber' argument");
@@ -922,6 +1030,8 @@ firebase_common_1.firebase.login = function (arg) {
                     resolve(toLoginResult(user));
                     return;
                 }
+                _this.resolve = resolve;
+                _this.reject = reject;
                 var OnVerificationStateChangedCallbacks = com.google.firebase.auth.PhoneAuthProvider.OnVerificationStateChangedCallbacks.extend({
                     onVerificationCompleted: function (phoneAuthCredential) {
                         firebase_common_1.firebase._verifyPhoneNumberInProgress = false;
@@ -937,10 +1047,10 @@ firebase_common_1.firebase.login = function (arg) {
                         firebase_common_1.firebase._verifyPhoneNumberInProgress = false;
                         var errorMessage = firebaseException.getMessage();
                         if (errorMessage.indexOf("INVALID_APP_CREDENTIAL") > -1) {
-                            reject("Please upload the SHA1 fingerprint of your debug and release keystores to the Firebase console, see https://github.com/EddyVerbruggen/nativescript-plugin-firebase/blob/master/docs/AUTHENTICATION.md#phone-verification");
+                            _this.reject("Please upload the SHA1 fingerprint of your debug and release keystores to the Firebase console, see https://github.com/EddyVerbruggen/nativescript-plugin-firebase/blob/master/docs/AUTHENTICATION.md#phone-verification");
                         }
                         else {
-                            reject(errorMessage);
+                            _this.reject(errorMessage);
                         }
                     },
                     onCodeSent: function (verificationId, forceResendingToken) {
@@ -1736,14 +1846,10 @@ firebase_common_1.firebase.downloadFile = function (arg) {
             }
             var storageReference = storageRef.child(arg.remoteFullPath);
             var onSuccessListener = new com.google.android.gms.tasks.OnSuccessListener({
-                onSuccess: function (downloadTaskSnapshot) {
-                    resolve();
-                }
+                onSuccess: function (downloadTaskSnapshot) { return resolve(); }
             });
             var onFailureListener = new com.google.android.gms.tasks.OnFailureListener({
-                onFailure: function (exception) {
-                    reject("Download failed. " + exception);
-                }
+                onFailure: function (exception) { return reject("Download failed. " + exception); }
             });
             var localFilePath = void 0;
             if (arg.localFile) {
@@ -2010,10 +2116,9 @@ firebase_common_1.firebase.firestore.collection = function (collectionPath) {
 firebase_common_1.firebase.firestore.onDocumentSnapshot = function (docRef, callback) {
     var listener = docRef.addSnapshotListener(new com.google.firebase.firestore.EventListener({
         onEvent: (function (snapshot, exception) {
-            if (exception !== null) {
-                return;
+            if (exception === null) {
+                callback(new firebase_common_1.DocumentSnapshot(snapshot ? snapshot.getId() : null, snapshot.exists(), firebase_common_1.firebase.toJsObject(snapshot.getData())));
             }
-            callback(new firebase_common_1.DocumentSnapshot(snapshot ? snapshot.getId() : null, snapshot.exists(), snapshot ? function () { return firebase_common_1.firebase.toJsObject(snapshot.getData()); } : null));
         })
     }));
     return function () { return listener.remove(); };
@@ -2025,12 +2130,9 @@ firebase_common_1.firebase.firestore.onCollectionSnapshot = function (colRef, ca
                 return;
             }
             var docSnapshots = [];
-            var _loop_1 = function (i) {
-                var documentSnapshot = snapshot.getDocuments().get(i);
-                docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, function () { return firebase_common_1.firebase.toJsObject(documentSnapshot.getData()); }));
-            };
             for (var i = 0; i < snapshot.size(); i++) {
-                _loop_1(i);
+                var documentSnapshot = snapshot.getDocuments().get(i);
+                docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, firebase_common_1.firebase.toJsObject(documentSnapshot.getData())));
             }
             var snap = new firebase_common_1.QuerySnapshot();
             snap.docSnapshots = docSnapshots;
@@ -2205,12 +2307,9 @@ firebase_common_1.firebase.firestore.getCollection = function (collectionPath) {
                     else {
                         var result = task.getResult();
                         var docSnapshots = [];
-                        var _loop_2 = function (i) {
-                            var documentSnapshot = result.getDocuments().get(i);
-                            docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, function () { return firebase_common_1.firebase.toJsObject(documentSnapshot.getData()); }));
-                        };
                         for (var i = 0; i < result.size(); i++) {
-                            _loop_2(i);
+                            var documentSnapshot = result.getDocuments().get(i);
+                            docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, firebase_common_1.firebase.toJsObject(documentSnapshot.getData())));
                         }
                         var snap = new firebase_common_1.QuerySnapshot();
                         snap.docSnapshots = docSnapshots;
@@ -2252,9 +2351,9 @@ firebase_common_1.firebase.firestore.getDocument = function (collectionPath, doc
                         reject(ex && ex.getReason ? ex.getReason() : ex);
                     }
                     else {
-                        var result_3 = task.getResult();
-                        var exists_1 = result_3.exists();
-                        resolve(new firebase_common_1.DocumentSnapshot(exists_1 ? result_3.getId() : null, exists_1, function () { return exists_1 ? firebase_common_1.firebase.toJsObject(result_3.getData()) : null; }));
+                        var result = task.getResult();
+                        var exists = result.exists();
+                        resolve(new firebase_common_1.DocumentSnapshot(exists ? result.getId() : null, exists, firebase_common_1.firebase.toJsObject(result.getData())));
                     }
                 }
             });
@@ -2287,12 +2386,9 @@ firebase_common_1.firebase.firestore._getQuery = function (collectionPath, query
                     else {
                         var result = task.getResult();
                         var docSnapshots = [];
-                        var _loop_3 = function (i) {
-                            var documentSnapshot = result.getDocuments().get(i);
-                            docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, function () { return firebase_common_1.firebase.toJsObject(documentSnapshot.getData()); }));
-                        };
                         for (var i = 0; i < result.size(); i++) {
-                            _loop_3(i);
+                            var documentSnapshot = result.getDocuments().get(i);
+                            docSnapshots.push(new firebase_common_1.DocumentSnapshot(documentSnapshot.getId(), true, firebase_common_1.firebase.toJsObject(documentSnapshot.getData())));
                         }
                         var snap = new firebase_common_1.QuerySnapshot();
                         snap.docSnapshots = docSnapshots;

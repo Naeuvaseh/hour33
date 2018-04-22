@@ -1,0 +1,39 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+	package
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:70-130
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:1-6:12
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:3:3-5:17
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:4:5-119
+	android:value
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:4:62-117
+	android:name
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml:4:16-61
+uses-sdk
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+		ADDED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naeuv\Projects\Hour33\platforms\tempPlugin\nativescript_plugin_google_places\src\main\AndroidManifest.xml

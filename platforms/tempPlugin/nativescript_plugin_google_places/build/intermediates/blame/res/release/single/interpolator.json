@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\interpolator\\mr_fast_out_slow_in.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ecf48ddc4500ad04638b6ed91af95615\\res\\interpolator\\mr_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\interpolator\\mr_linear_out_slow_in.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.2.0.aar\\ecf48ddc4500ad04638b6ed91af95615\\res\\interpolator\\mr_linear_out_slow_in.xml"
+    }
+]

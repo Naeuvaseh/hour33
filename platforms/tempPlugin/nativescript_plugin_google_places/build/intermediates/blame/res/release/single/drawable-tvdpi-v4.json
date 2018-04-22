@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-plus-11.2.2.aar\\6f8ee18805f9d5e292d05575a0df6986\\res\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-plus-11.2.2.aar\\6f8ee18805f9d5e292d05575a0df6986\\res\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-plus-11.2.2.aar\\6f8ee18805f9d5e292d05575a0df6986\\res\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-plus-11.2.2.aar\\6f8ee18805f9d5e292d05575a0df6986\\res\\drawable-tvdpi-v4\\ic_plusone_small_off_client.png"
+    }
+]

@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-bottombar",
+        "raw": "nativescript-bottombar@^3.0.8",
         "scope": null,
         "escapedName": "nativescript-bottombar",
         "name": "nativescript-bottombar",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^3.0.8",
+        "spec": ">=3.0.8 <4.0.0",
+        "type": "range"
       },
       "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-bottombar@latest",
+  "_from": "nativescript-bottombar@>=3.0.8 <4.0.0",
   "_id": "nativescript-bottombar@3.0.8",
   "_inCache": true,
   "_location": "/nativescript-bottombar",
@@ -29,22 +29,21 @@
   "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-bottombar",
+    "raw": "nativescript-bottombar@^3.0.8",
     "scope": null,
     "escapedName": "nativescript-bottombar",
     "name": "nativescript-bottombar",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^3.0.8",
+    "spec": ">=3.0.8 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-bottombar/-/nativescript-bottombar-3.0.8.tgz",
   "_shasum": "9d65f0d23c32d8cd6e1dc9d572b7acfaba1ccc05",
   "_shrinkwrap": null,
-  "_spec": "nativescript-bottombar",
+  "_spec": "nativescript-bottombar@^3.0.8",
   "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "rhanbIT",

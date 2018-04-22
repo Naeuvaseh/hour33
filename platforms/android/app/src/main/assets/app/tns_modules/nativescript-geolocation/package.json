@@ -2,49 +2,48 @@
   "_args": [
     [
       {
-        "raw": "nativescript-geolocation",
+        "raw": "nativescript-geolocation@^4.2.4",
         "scope": null,
         "escapedName": "nativescript-geolocation",
         "name": "nativescript-geolocation",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^4.2.4",
+        "spec": ">=4.2.4 <5.0.0",
+        "type": "range"
       },
       "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
-  "_from": "nativescript-geolocation@latest",
-  "_id": "nativescript-geolocation@4.2.4",
+  "_from": "nativescript-geolocation@>=4.2.4 <5.0.0",
+  "_id": "nativescript-geolocation@4.2.6",
   "_inCache": true,
   "_location": "/nativescript-geolocation",
-  "_nodeVersion": "8.9.4",
+  "_nodeVersion": "6.13.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nativescript-geolocation_4.2.4_1521123350957_0.802776647776368"
+    "tmp": "tmp/nativescript-geolocation_4.2.6_1521814083187_0.36008896025151427"
   },
   "_npmUser": {
     "name": "tns-bot",
     "email": "nativescript@telerik.com"
   },
-  "_npmVersion": "5.6.0",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-geolocation",
+    "raw": "nativescript-geolocation@^4.2.4",
     "scope": null,
     "escapedName": "nativescript-geolocation",
     "name": "nativescript-geolocation",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^4.2.4",
+    "spec": ">=4.2.4 <5.0.0",
+    "type": "range"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.4.tgz",
-  "_shasum": "01eb71bc6f3873cc8b816cbe654620f52a63827c",
+  "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.6.tgz",
+  "_shasum": "4c1a7c8bd9205d7cf29dee2cb7abd45210203942",
   "_shrinkwrap": null,
-  "_spec": "nativescript-geolocation",
+  "_spec": "nativescript-geolocation@^4.2.4",
   "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "NativeScript Team"
@@ -67,11 +66,10 @@
   },
   "directories": {},
   "dist": {
-    "integrity": "sha512-L/Dak7THKFPLKfTvnIq4lNCju/GT5KThYyWkW2u54iMjEjFoieu0c8mILzUsecFBAf5kGD8nvApdN/R7ImwJog==",
-    "shasum": "01eb71bc6f3873cc8b816cbe654620f52a63827c",
-    "tarball": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.4.tgz",
+    "shasum": "4c1a7c8bd9205d7cf29dee2cb7abd45210203942",
+    "tarball": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-4.2.6.tgz",
     "fileCount": 13,
-    "unpackedSize": 54045
+    "unpackedSize": 56488
   },
   "homepage": "https://github.com/NativeScript/nativescript-geolocation",
   "keywords": [
@@ -146,5 +144,5 @@
     "tsc": "tsc -skipLibCheck",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\""
   },
-  "version": "4.2.4"
+  "version": "4.2.6"
 }

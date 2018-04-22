@@ -38,7 +38,8 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/nativescript-geolocation"
+    "/nativescript-geolocation",
+    "/nativescript-phone"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-permissions/-/nativescript-permissions-1.2.3.tgz",
   "_shasum": "e3e65545f98fe488dd5578f7ff90ebae3088e700",

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\layout-v21\\place_autocomplete_fragment.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-11.2.2.aar\\dbc2f9ed6400dc93c92b98f9ebb77eeb\\res\\layout-v21\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\naeuv\\Projects\\Hour33\\platforms\\tempPlugin\\nativescript_plugin_google_places\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\naeuv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.2.0.aar\\6416f1481e932810a3cf8ac52eee97d6\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]

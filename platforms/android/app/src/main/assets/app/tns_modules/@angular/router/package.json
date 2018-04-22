@@ -10,23 +10,23 @@
         "spec": ">=5.2.0 <5.3.0",
         "type": "range"
       },
-      "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng"
+      "C:\\Users\\naeuv\\Projects\\Hour 33"
     ]
   ],
   "_from": "@angular/router@>=5.2.0 <5.3.0",
-  "_id": "@angular/router@5.2.9",
+  "_id": "@angular/router@5.2.10",
   "_inCache": true,
   "_location": "/@angular/router",
-  "_nodeVersion": "8.9.1",
+  "_nodeVersion": "8.9.4",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/router_5.2.9_1521066029232_0.10981147442706196"
+    "tmp": "tmp/router_5.2.10_1523864320128_0.5359124148583434"
   },
   "_npmUser": {
     "name": "angular",
     "email": "devops+npm@angular.io"
   },
-  "_npmVersion": "5.5.1",
+  "_npmVersion": "5.7.1",
   "_phantomChildren": {},
   "_requested": {
     "raw": "@angular/router@~5.2.0",
@@ -38,13 +38,13 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/tns-template-blank-ng"
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-5.2.9.tgz",
-  "_shasum": "0369df6e60c6da3a5842c6eb35e3958d4ffe727e",
+  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-5.2.10.tgz",
+  "_shasum": "cb36c32de0a233a9b49789e11ca0f96c5304f25a",
   "_shrinkwrap": null,
   "_spec": "@angular/router@~5.2.0",
-  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33\\node_modules\\tns-template-blank-ng",
+  "_where": "C:\\Users\\naeuv\\Projects\\Hour 33",
   "author": {
     "name": "angular"
   },
@@ -58,11 +58,12 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "integrity": "sha512-NtDbFK0EA1rfFc+5Dqd5mIv8E1Wcc5rDUnSty4cX2V+HxTEZvQ9DRdpO2Q0abWU5siXyqponuPHJzF08OVGyNA==",
-    "shasum": "0369df6e60c6da3a5842c6eb35e3958d4ffe727e",
-    "tarball": "https://registry.npmjs.org/@angular/router/-/router-5.2.9.tgz",
+    "integrity": "sha512-63op4yExVsm+Ng4dlCeexQdXKYMnzxtmX116V3hY/mHi1MPTR20uPCx55U8xR0kQvxs0ea8tmJxHdMpz76edqA==",
+    "shasum": "cb36c32de0a233a9b49789e11ca0f96c5304f25a",
+    "tarball": "https://registry.npmjs.org/@angular/router/-/router-5.2.10.tgz",
     "fileCount": 70,
-    "unpackedSize": 2826158
+    "unpackedSize": 2826770,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa1FMACRA9TVsSAnZWagAAouYP/32RkX79FAxhUtodJ+if\nE9MOiijV+uFcqeXmc74/bKdmBQ/LG6E6oIBkbeGEmG3e1bdGbQYlufjqm/o8\nTKkRAcritQDmqS89PdrxEprS9AHsxhBIjIJs7xhyP16V3VLVMojbZCBA0Kl6\nEoNU6R+44DzGFPbniTTGXJfxtxJBRyDFSw7g6kqN2V2dpxkigWMe9SZNybXP\np5fOEz55cl9BKqKboznAH7WgFoE+nJdOpwCjL9P+gomsU6q5b+cyGpkUYPz7\nGRVy/mQ2qQdZsNDUbhD7Sun5AOTU1A0QALCY43jKV7Qvs/yKTZmvMfvczJeW\nuaYvVR1bBPYaEX91zFyXOg9+3jC0oG/VZJ4T+IhzpuvJmmJSz4dJJNNuWRCg\nM90RunvaejuGIjIgnpQXK2hM9XfFBtRevRF2FwJYsS+OVJH6wliaNq/k8L7l\nmNwHeclwXBJG+0Xjhn6/BAypmqdzpE8p8WQuTrptbGETg/HFN6A3JloOum1L\nhdxhfkZ1/BK9PeKRCZNiA1hhDLVdNMR4bvxqMVQMzL1xgtAT7b+RVAaLP5Gg\ntQKyIY07Sf6oTSDnB6s630D2WRU9HE064AMck7vpaEE3l8REz/g7/V8IbnAI\nDwAJ5LnZVWx0aHHRVicIkRNhucWKGuQu/uxZV9ueTLILQ67C9HeHS2z32xU6\nFY+1\r\n=qKaY\r\n-----END PGP SIGNATURE-----\r\n"
   },
   "es2015": "./esm2015/router.js",
   "homepage": "https://github.com/angular/angular/tree/master/packages/router",
@@ -82,9 +83,9 @@
   "name": "@angular/router",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "5.2.9",
-    "@angular/common": "5.2.9",
-    "@angular/platform-browser": "5.2.9",
+    "@angular/core": "5.2.10",
+    "@angular/common": "5.2.10",
+    "@angular/platform-browser": "5.2.10",
     "rxjs": "^5.5.0"
   },
   "readme": "ERROR: No README data found!",
@@ -93,5 +94,5 @@
     "url": "git+https://github.com/angular/angular.git"
   },
   "typings": "./router.d.ts",
-  "version": "5.2.9"
+  "version": "5.2.10"
 }
