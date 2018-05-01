@@ -16,8 +16,8 @@ exports.Theme = {
     // yellowColor: '#f4c20d',    
     yellowColor: '#FAE300'
 };
-exports.GooglePlacesAPIKey = "AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM";
-exports.GoogleMapsAPIKey = "AIzaSyAYH6CcEihpQxV6uwWxTgY3npS00QT4xO4";
+exports.GooglePlacesAPIKey = "";
+exports.GoogleMapsAPIKey = "";
 exports.Debug = {
     console: {
         // APIs
