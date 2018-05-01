@@ -15,8 +15,8 @@ export const Theme ={
     yellowColor: '#FAE300'
 }
 
-export const GooglePlacesAPIKey = "AIzaSyDbY1JhYKBsuzW80PFMjWa2Pg3QMveBNSM";
-export const GoogleMapsAPIKey = "AIzaSyAYH6CcEihpQxV6uwWxTgY3npS00QT4xO4";
+export const GooglePlacesAPIKey = "";
+export const GoogleMapsAPIKey = "";
 
 export const Debug = {
     console: {
